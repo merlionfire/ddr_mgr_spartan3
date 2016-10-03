@@ -1,61 +1,18 @@
 ;;////////////////////////////////////////////////////////////////////////////////
 ;; Author: merlionfire 
 ;; 
-;; Create Date:    06/07/2015 
+;; Create Date:    10/07/2016
 ;; Design Name: 
 ;; File Name:      picocode.psm   
-;; Project Name: 
+;; Project Name:   test_ddr_mgr 
 ;; Target Devices: 
-;; Tool versions: 
+;; Tool versions:  ISE14.5
 ;; Description: 
 ;;
 ;; Dependencies: 
 ;;
 ;; Revision: 
 ;; Revision 0.01 - File Created
-;; Revision 1.00 - Fractal Engin works and can shows on screen 
-
-;; variable 
-;;   px : pixel position for x
-;;   cx : poisition of fractal calculation 
-;; px0   =  0;  (0,767) is the origin of pixel position  
-;; py0   =  767 ; 
-;; cx0   = -2 ; 
-;; cy0   = -1.5
-;; delta = 1/256 ;  delta =  fract_width/ pixel_width = ( 1.5- (-1.5 ) ) / 768 = 3/768 = 1/256
-
-;; 
-;; cy = cy0 ; ;; 
-;; for ( py = py0 ; py >= 0 ; py-- )  // from bottom to top 
-;; {
-;;    cx = cx0 ; 
-;;    for ( px = px0 ; px < (width + px0 ) ; px ++ ) // from left to right
-;;    {
-;;       if ( cal_fract( cx, cy ) ) 
-;;       {
-;;          result <- 1 ; 
-;; 
-;;       } else {
-;;          result <- 0 ;
-;;       }
-;; 
-;;       if ( result has 4bits ) 
-;;       {
-;;          foreach ( result[i] ) 
-;;          {
-;;             reg  <- resilt[i] 
-;;             addr <- ( px, py ) 
-;;          }
-;; 
-;;          result = 0 ; 
-;;       }
-;;       
-;;       cx += delta ; 
-;; 
-;;    }
-;; 
-;;    cy += delta  ; 
-;; }
 
 
 
@@ -236,43 +193,6 @@ CONSTANT delay_1us_const  , 10    ; delay 1 us value
 CONSTANT ZERO             , 00    ; zero
 CONSTANT ONE              , 01    ; one
 
-;;============================================================================
-;; Fractal calculation constants.
-;;============================================================================
-CONSTANT PX0_0   ,  0   ;  low  byte of  pixel_x origin 
-CONSTANT PX0_1   ,  0   ;  high byte of  pixel_x origin 
-;; 0x2FF = 767 = ( 767 ---> 0 == 768 ) 
-CONSTANT PY0_0   ,  FF  ;  low  byte of  pixel_y origin 
-CONSTANT PY0_1   ,  02  ;  high byte of  pixel_y origin 
-
-;; cx0 = -2 ( 0xe0_00_00_00 ) 
-CONSTANT CX0_0 ,  00  ;  LSB of fractal x origin 
-CONSTANT CX0_1 ,  00  ;  2nd of fractal x origin 
-CONSTANT CX0_2 ,  00  ;  3nd of fractal x origin 
-CONSTANT CX0_3 ,  e0  ;  MSB of fractal x origin 
-
-;; cy0 = -1.5 ( 0xe8_00_00_00 ) 
-CONSTANT CY0_0 ,  00  ;  LSB of fractal y origin 
-CONSTANT CY0_1 ,  00  ;  2nd of fractal y origin 
-CONSTANT CY0_2 ,  00  ;  3nd of fractal y origin 
-CONSTANT CY0_3 ,  e8  ;  MSB of fractal y origin 
-
-;; delta = 1/256 = 0x00_10_00_00  
-CONSTANT DELTA_0, 00  ; 
-CONSTANT DELTA_1, 00  ; 
-CONSTANT DELTA_2, 10  ; 
-CONSTANT DELTA_3, 00  ; 
-
-;; interation number = 32 
-CONSTANT ITER_0,  20  ; 
-CONSTANT ITER_1,  00  ; 
-
-;; memory location of Pixel x and y 
-CONSTANT PX0_MEM    , 00  ; 
-CONSTANT PX1_MEM    , 01  ; 
-CONSTANT PY0_MEM    , 02  ; 
-CONSTANT PY1_MEM    , 03  ; 
-
 
 ;;============================================================================
 ;; NAMEREG
@@ -280,17 +200,21 @@ CONSTANT PY1_MEM    , 03  ;
 
 namereg  s7,   result 
 
-namereg  s8,   cx0    ; 1st byte 
-namereg  s9,   cx1    ; 
-namereg  sA,   cx2    ; 
-namereg  sB,   cx3    ; 
-
-namereg  sC,   cy0    ; 1st byte 
-namereg  sD,   cy1    ; 
-namereg  sE,   cy2    ; 
-namereg  sF,   cy3    ; 
+namereg  s8,   b0    ; 1st byte 
+namereg  s9,   b1    ; 
+namereg  sA,   b22    ; 
+namereg  sB,   b33    ; 
 
 
+
+CONSTANT BYTE_0         , 10  ;
+CONSTANT BYTE_1         , 86  ;
+CONSTANT BYTE_2         , CB  ;
+CONSTANT BYTE_3         , FD  ;
+
+;;============================================================================
+;; Fractal calculation constants.
+;;===========================================================================
 
 ;;============================================================================
 ;; Start up routine goes here.
@@ -298,70 +222,9 @@ namereg  sF,   cy3    ;
 ;; Register usage convention is:
 ;; * s0, s1, s2, s3, s4, and s5 are are for general
 ;;   use in the main program loop.
-;; * s7 is reserved for multiboot select variable.
-;; * s8 is reserved for display state variable.
-;; * s6, s9, sA, sB, sC, sD, sE are for general use
-;;   in the interrupt service routine.
 ;; * sF is reserved for the control state variable.
 ;;============================================================================
 
-;;      cold_start: LOAD     s0, set_auto_inc 
-      cold_start: LOAD     s0, 3 
-                  OUTPUT   s0, pt_disp_cs  
-                  LOAD     s0, ONE        
-                  OUTPUT   s0, pt_cw_row
-                  LOAD     s0, 02                       
-                  OUTPUT   s0, pt_cw_col
-                  LOAD     s0, ascii_M 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_e 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_n 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_u 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_e 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_COLON      
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, 02              ; write - load zoom level     
-                  OUTPUT   s0, pt_cw_row
-                  LOAD     s0, 02                       
-                  OUTPUT   s0, pt_cw_col
-                  LOAD     s0, ascii_MINUS 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_SPACE 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_l 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_o 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_a 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_d      
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_SPACE 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_z 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_o 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_o 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_m      
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_SPACE 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_l 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_e 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_v 
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_e      
-                  OUTPUT   s0, pt_cb_wr_data
-                  LOAD     s0, ascii_l      
-                  OUTPUT   s0, pt_cb_wr_data
 ;;============================================================================
 ;; Main program loop; for the most part, this continuously updates the LCD.
 ;; Everything else is done in the interrupt service routine.
@@ -369,66 +232,10 @@ namereg  sF,   cy3    ;
 
          main:
                     CALL     init_iter
-                    CALL     init_cy
-                    CALL     clear_result
-                    CALL     init_py_orig  ; for ( py = py0 ; 
-         loop_py_body:
-                    CALL    set_py_reg  
-                    CALL    init_cx_orig ;       cx = cx0     
-         loop_px_init:
-                    CALL    init_px_orig   ;       for ( px = px0;
-         loop_px_body:
-                    CALL    set_px_reg  
-                    CALL    start_calc  
-         update_cx_advance:
-                    CALL    inc_cx                       ;cx += delta ;  
-         wait_calc_done:                                 ;wait for calc done 
-                    INPUT   s0,  REG_FRAC_CTRL_STATUS
-                    TEST    s0,  frac_busy 
-                    JUMP    NZ,  wait_calc_done
-;;   
-;;         ---------------------------------
-;;         | 0 | 0 | 0 | 1 | x | x | x | x | <-- R0  ( 1 : found ; 0: No found )
-;;         ---------------------------------
-;;
-;;         ---------------------------------
-;;         | 0 | 0 | 1 | x | x | x | x | R0| <-- R1 
-;;         ---------------------------------
-;;                   | |
-;;                   V V
-;; ---     ---------------------------------
-;; |1| <-- | x | x | x | x | R0| R1| R2| R3|  
-;; ---     ---------------------------------
-         
-         store_result:
-                    INPUT   s0,  REG_FRAC_CTRL_STATUS    
-                    TEST    s0,  frac_found 
-                    JUMP    z,   frac_no_found         ;  if ( found ) {
-                    SL1     result                     ;     result <-1 ; 
-;;To accelerate sim, only run frac engine once and set result for all 4 points                     
-                    JUMP    check_result_full          ;  } else { 
-         frac_no_found: 
-                    SL0     result                     ;     result <- 0 
-         check_result_full:                            ;  }
-                    JUMP    NC,  continue_calc         ;          if ( result has got 4 results )  go to "px++" of px loop ( cx+=delta has been done before )  
-                    CALL    write_to_mem  
-                    CALL    clear_result  
-         continue_calc: 
-                    CALL    inc_px                     ;  px++;    
-                    CALL    check_px                   ;  check px >= width + px0 ; carry = 1 if  ">=" else carry = 0
-                    JUMP    NC,   outside_of_px_loop   ;  exit px loop if px >= width + px0     
-                    JUMP    loop_px_body
-         outside_of_px_loop:
-                    CALL    inc_cy                     ;  cy += delat
-                    CALL    dec_py                     ;  py++      
-                    CALL    check_py                   ;  check py == -1 ; 
-                    JUMP    C,   outside_of_py_loop    ;  exit px loop if px >= width + px0     
-
-                    JUMP    loop_py_body
-         outside_of_py_loop:
          finish:    CALL     delay_20ms
                     LOAD     s0, 03
                     OUTPUT   s0, pt_disp_cs  
+                    LOAD     s0, set_auto_inc 
          end_loop:  JUMP    end_loop                    ; 
 
 ;;============================================================================

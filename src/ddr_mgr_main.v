@@ -70,12 +70,12 @@ module ddr_mgr_main
    wire [((`ROW_ADDRESS + `COLUMN_ADDRESS + `BANK_ADDRESS)-1): 0] mig_user_input_addr;
    wire                                  rst_dqs_div_loop;
 
-   wire  mem_clk0, mem_clk90, mem_rst0, mem_rst90, mem_rst180 ; 
+   wire  mem_clk0, mem_clk90, mem_rst, mem_rst0, mem_rst90, mem_rst180 ; 
 
 
    wire rd_mem_req, rd_mem_grant, rd_data_valid;
    wire [24:0] rd_mem_addr; 
-   wire [9:0]  rd_xfr_len; 
+   reg  [9:0]  rd_xfr_len; 
    wire [31:0] rd_data;
 
    picoblaze  picoblaze_inst (
@@ -166,6 +166,9 @@ module ddr_mgr_main
       .cntrl0_rst_dqs_div_out       (ddr2_rst_dqs_div_out)
    );
 
+
+
+
    //*************************************************************//
    // Register address decoder   
    //*************************************************************//
@@ -183,7 +186,6 @@ module ddr_mgr_main
 
    // Register configuraton for disp_pi
    reg   [7:0] cw_cs ; 
-   wire        buffer_init_done ; 
    parameter   REG_CW_CS_ADDR    =  4'h0;             
    always @( posedge clk ) begin    
       if ( rst ) begin 
@@ -197,13 +199,37 @@ module ddr_mgr_main
       end
    end
 
-   assign buffer_init_done =  cw_cs[1] ;   
 
 
    // verification logic 
 
-  assign rd_go  =  buffer_init_done &     ;  
+   reg   rd_go, buffer_init_done_1d ; 
+   reg   rd_xfr_done, rd_xfr_done_nxt ; 
+   wire  buffer_init_done, buffer_init_done_pulse ;  
+   reg [12:0] req_addr_row ; 
+   reg [15:0]  screen_cnt   ;  
+   reg   screen_cnt_overrun ; 
 
+   // Create rd_go signal, which initiates state machine to issue read request to ddr2_mgr ;  
+   // rd_go is asserted :
+   //    *) once register CW_CS[1] indicating memory init is done 
+   //    *) after every data read finishes 
+   assign buffer_init_done =  cw_cs[1] ;   
+
+   assign buffer_init_done_pulse  =  buffer_init_done & ~buffer_init_done_1d ;    
+   always @( negedge mem_clk0 ) begin    
+      if ( mem_rst ) begin 
+         rd_go                <= 1'b0 ;
+         buffer_init_done_1d  <= 1'b0 ; 
+      end else begin 
+         buffer_init_done_1d  <= buffer_init_done; 
+         if ( buffer_init_done_pulse | rd_xfr_done ) begin  
+            rd_go          <= 1'b1 ;
+         end else begin 
+            rd_go          <= 1'b0 ;
+         end
+      end
+   end
 
 
    /// ----- Below is from frame_buf.v
@@ -211,18 +237,29 @@ module ddr_mgr_main
    reg   [ `ROW_ADDRESS-1:0 ]     addr_row , addr_row_nxt ;  
    reg   [ `BANK_ADDRESS-1:0 ]    addr_bank   = 'h0 ; 
 
-   reg [12:0] req_addr_row ; 
+
+   parameter   MAX_ROW_NUM    =  13'h02FF ; 
 
    always @( negedge mem_clk0 ) begin    
       if ( mem_rst ) begin 
          req_addr_row   <= 'h0 ;  
-         screen_cntr    <= 'h0 ; 
+         rd_go          <= 1'b0 ;
+         screen_cnt     <= 'h0 ; 
+         screen_cnt_overrun   <= 1'b0 ; 
       end else begin 
-         
-         req_addr_row   <= req_addr_row + 1'b1 ;   
-         if ( reg_addr_row == 13'h1FFF ) begin 
-            screen_cntr <= scree_cntr  +  1'b1 ; 
-         end 
+         if ( rd_xfr_done == 1'b1 ) begin  
+            if ( req_addr_row == MAX_ROW_NUM ) begin 
+               req_addr_row   <= 'h0 ; 
+               screen_cnt     <= screen_cnt + 1'b1 ; 
+               if ( screen_cnt == 16'hFFFF ) begin 
+                  screen_cnt_overrun   <= 1'b1 ; 
+               end
+            end else begin 
+               req_addr_row   <= req_addr_row + 1'b1 ;   
+            end
+         end
+
+
       end 
 
    end
@@ -230,6 +267,13 @@ module ddr_mgr_main
    // It measn how many transfer between ddr_mgr
    // Since 32bit data_width rd_data of  ddr_mg output, which read from outside ddr2.
    //
+   
+   reg   [1:0] req_st_nxt, req_st_r ; 
+   reg   rd_req_nxt, rd_req_r ; 
+   reg   [9:0] rd_xfr_len_nxt ;
+   wire  rd_xfr_en, rd_xfr_en_sync, rd_data_valid_sync, rd_go_sync  ;
+
+
    parameter  XFR_LEN_PER_LINE  = 10'h200 ; 
 
    parameter ST_IDLE       =  2'b00,
@@ -256,6 +300,7 @@ module ddr_mgr_main
          addr_row    <= addr_row_nxt  ; 
          addr_col    <= addr_col_nxt  ; 
          rd_xfr_len  <= rd_xfr_len_nxt ; 
+         rd_xfr_done <= rd_xfr_done_nxt ; 
       end
    end 
 
@@ -266,6 +311,7 @@ module ddr_mgr_main
       addr_row_nxt   =  addr_row; 
       addr_col_nxt   =  addr_col; 
       rd_xfr_len_nxt =  rd_xfr_len ; 
+      rd_xfr_done_nxt    =  1'b0 ; 
       case ( req_st_r  )  
          ST_IDLE  : begin 
             if ( rd_go ) begin 
@@ -290,7 +336,8 @@ module ddr_mgr_main
          end
          ST_DATA_XFR : begin 
             if ( ~ rd_data_valid_sync ) begin 
-               req_st_nxt  =  ST_IDLE ; 
+               req_st_nxt         =  ST_IDLE ; 
+               rd_xfr_done_nxt    =  1'b1 ; 
             end
          end
       endcase 
@@ -298,16 +345,23 @@ module ddr_mgr_main
 
    synchro synchro_rd_xfr_en (.async(rd_xfr_en),.sync( rd_xfr_en_sync ),.clk( mem_clk90 ) ) ;
 
+
+   // Verify the data read from memory through ddr2_mgr with preloaded data
+   //           16'b1001_0110_1100_0011
+   reg   data_fault ; 
+   parameter   BYTE_0   =  8'h10 ; 
+   parameter   BYTE_1   =  8'h86 ; 
+   parameter   BYTE_2   =  8'hCB ; 
+   parameter   BYTE_3   =  8'hFD ; 
+
    always @( posedge mem_clk90 ) begin
       if ( rd_data_valid & rd_xfr_en_sync  ) begin 
-         if ( rd_data != DWORD_PRELOAD ) begin 
+         if ( rd_data != { BYTE_3, BYTE_2, BYTE_1, BYTE_0 } ) begin 
             data_fault  <= 1'b1 ; 
          end 
       end 
       
    end 
-
-
 
 
    //*************************************************************//
@@ -326,6 +380,6 @@ module ddr_mgr_main
    assign   mem_rst0   =  mig_rst0 ; 
    assign   mem_rst90  =  mig_rst90;
    assign   mem_rst180 =  mig_rst180 ; 
-   assign   mem_rst    =  mem_rst180
+   assign   mem_rst    =  mem_rst180 ; 
 
 endmodule
