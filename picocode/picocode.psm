@@ -200,10 +200,15 @@ CONSTANT ONE              , 01    ; one
 
 namereg  s7,   result 
 
-namereg  s8,   b0    ; 1st byte 
-namereg  s9,   b1    ; 
-namereg  sA,   b22    ; 
-namereg  sB,   b33    ; 
+namereg  s8,   cx0    ; 1st byte 
+namereg  s9,   cx1    ; 
+namereg  sA,   cx2    ; 
+namereg  sB,   cx3    ; 
+
+namereg  sC,   cy0    ; 1st byte 
+namereg  sD,   cy1    ; 
+namereg  sE,   cy2    ; 
+namereg  sF,   cy3    ; 
 
 
 
@@ -225,15 +230,15 @@ CONSTANT BYTE_3         , FD  ;
 ;; * sF is reserved for the control state variable.
 ;;============================================================================
 
+      cold_start: LOAD     s0, 3 
 ;;============================================================================
 ;; Main program loop; for the most part, this continuously updates the LCD.
 ;; Everything else is done in the interrupt service routine.
 ;;============================================================================
 
-         main:
-                    CALL     init_iter
+         main:      CALL     init_data_reg 
+                     
          finish:    CALL     delay_20ms
-                    LOAD     s0, 03
                     OUTPUT   s0, pt_disp_cs  
                     LOAD     s0, set_auto_inc 
          end_loop:  JUMP    end_loop                    ; 
@@ -262,112 +267,38 @@ CONSTANT BYTE_3         , FD  ;
                   SUB s3, ONE
                   JUMP NZ, wait_20ms
                   RETURN
-      write_to_mem:
+      init_data_reg:
                   ; Set btyes for 4 words of data. 
+                  LOAD     s0,   BYTE_0
+                  OUTPUT   s0,   reg_ddr2_data0_7_0
+                  OUTPUT   s0,   reg_ddr2_data1_7_0
 
-                  CALL     set_frac_fg_bg_color
-                  OUTPUT   s0,  reg_ddr2_data0_7_0
-                  OUTPUT   s1,  reg_ddr2_data0_15_8
-                  CALL     set_frac_fg_bg_color
-                  OUTPUT   s0,  reg_ddr2_data0_23_16
-                  OUTPUT   s1,  reg_ddr2_data0_31_24
-                  CALL     set_frac_fg_bg_color
-                  OUTPUT   s0,  reg_ddr2_data1_7_0
-                  OUTPUT   s1,  reg_ddr2_data1_15_8
-                  CALL     set_frac_fg_bg_color
-                  OUTPUT   s0,  reg_ddr2_data1_23_16
-                  OUTPUT   s1,  reg_ddr2_data1_31_24
+                  LOAD     s0,   BYTE_1
+                  OUTPUT   s0,   reg_ddr2_data0_15_8
+                  OUTPUT   s0,   reg_ddr2_data1_15_8
 
-                  ; Set addr 
-                  ;-------------------------------------- 
-                  ;| py1, py0   |   px1,  px0           | 
-                  ;--------------------------------------
-                  ;23         10 9                     1
+                  LOAD     s0,   BYTE_2
+                  OUTPUT   s0,   reg_ddr2_data0_23_16
+                  OUTPUT   s0,   reg_ddr2_data1_23_16
 
-                  ; addr[7:0] = { px0[6:0] , 1'b0 } 
-                  FETCH    s0,   PX0_MEM
-                  AND      s0,   FC   ;; set 0 to 2LSB to make address 4-words alignment.   
-                  SL0      s0,        ;; px0 << 1 
-                  OUTPUT   s0,   reg_ddr2_addr_7_0
-      
-                  ; addr[15:8] = { py0[4:0], px1[2:0] } 
-                  FETCH    s1,   PX1_MEM
-                  SLA      s1
-                  AND      s1,   07
-                  FETCH    s2,   PY0_MEM
-                  SL0      s2
-                  SL0      s2
-                  SL0      s2
-                  OR       s1,   s2
-                  OUTPUT   s1,   reg_ddr2_addr_15_8
-
-                  ; addr[23:16] = { py1[4:0], py0[7:5] } 
-                  FETCH    s2,   PY0_MEM
-                  SR0      s2, 
-                  SR0      s2, 
-                  SR0      s2, 
-                  SR0      s2, 
-                  SR0      s2, 
-                  FETCH    s1,   PY1_MEM
-                  SL0      s1
-                  SL0      s1
-                  SL0      s1
-                  OR       s1,   s2
-                  OUTPUT   s1,   reg_ddr2_addr_23_16
-
-                  ; initial write command 
-
-                  LOAD     s0,  active_ddr2_write
-                  OUTPUT   s0,  reg_ddr2_status_ctrl 
+                  LOAD     s0,   BYTE_3
+                  OUTPUT   s0,   reg_ddr2_data0_31_24
+                  OUTPUT   s0,   reg_ddr2_data1_31_24
                   RETURN
+   inc_cx:
+                  ADD      cx0,  01
+                  ADDCY    cx1,  00
+                  ADDCY    cx2,  00
+                  ADDCY    cx3,  00
+                  return 
+   inc_cy:
+                  ADD      cx0,  01
+                  ADDCY    cx1,  00
+                  ADDCY    cx2,  00
+                  ADDCY    cx3,  00
+                  return 
 
-set_frac_fg_bg_color:    ;;  According to fractal result, set color to fg ( front graphic ) or bg ( background graphic ) 
-                  SR0      result
-                  JUMP     NC,  draw_bg  
-                  LOAD     s0,  frac_fg_low
-                  LOAD     s1,  frac_fg_high
-                  RETURN
-      draw_bg:    LOAD     s0,  frac_bg_low
-                  LOAD     s1,  frac_bg_high
-                  RETURN 
-                           
-      init_iter:
-                 LOAD     s0, ITER_0  ; reg  <- max iteration number   
-                 OUTPUT   s0, REG_FRAC_MAX_ITER_LOW_ADDR
-                 LOAD     s0, ITER_1 
-                 OUTPUT   s0, REG_FRAC_MAX_ITER_HIGH_ADDR
-                 RETURN 
-      init_cy:
-                 LOAD    cy0, CY0_0   ; cy = cy0 
-                 LOAD    cy1, CY0_1  
-                 LOAD    cy2, CY0_2  
-                 LOAD    cy3, CY0_3  
-                 RETURN 
-   clear_result: ;; result = 0001_0000
-                 LOAD      result,  00  
-                 SR1       result 
-                 SR0       result
-                 SR0       result
-                 SR0       result
-                 RETURN   
-   init_py_orig:
-                 LOAD      s0, PY0_0
-                 STORE     s0, PY0_MEM
-                 LOAD      s0, PY0_1
-                 STORE     s0, PY1_MEM
-                 RETURN
-   init_cx_orig:
-                 LOAD      cx0, CX0_0   ;       cx = cx0
-                 LOAD      cx1, CX0_1 
-                 LOAD      cx2, CX0_2 
-                 LOAD      cx3, CX0_3 
-   init_px_orig:
-                 LOAD      s0, PX0_0
-                 STORE     s0, PX0_MEM
-                 LOAD      s0, PX0_1
-                 STORE     s0, PX1_MEM
-                 RETURN
-   start_calc:
+   config_addr_reg:
                  OUTPUT    cx0, REG_FRAC_CX_7_0_ADDR     ; reg <- cx  
                  OUTPUT    cx1, REG_FRAC_CX_15_8_ADDR
                  OUTPUT    cx2, REG_FRAC_CX_23_16_ADDR
@@ -378,51 +309,5 @@ set_frac_fg_bg_color:    ;;  According to fractal result, set color to fg ( fron
                  OUTPUT    cy3, REG_FRAC_CY_31_24_ADDR
                  LOAD      s0,  start_frac_calc          ; start fractal calcualtion 
                  OUTPUT    s0,  REG_FRAC_CTRL_STATUS  
-                 RETURN
-   inc_cx: 
-                 ADD       cx0,  DELTA_0 
-                 ADDCY     cx1,  DELTA_1 
-                 ADDCY     cx2,  DELTA_2 
-                 ADDCY     cx3,  DELTA_3 
-                 RETURN   
-   inc_cy: 
-                 ADD       cy0,  DELTA_0 
-                 ADDCY     cy1,  DELTA_1 
-                 ADDCY     cy2,  DELTA_2 
-                 ADDCY     cy3,  DELTA_3 
-                 RETURN   
-   inc_px:  
-                 FETCH     s0,   PX0_MEM
-                 FETCH     s1,   PX1_MEM
-                 ADD       s0,   01
-                 ADDCY     s1,   00
-                 STORE     s0,   PX0_MEM
-                 STORE     s1,   PX1_MEM
-                 RETURN
-   check_px:
-                 SUB       s0,   00   ;; px - 0x300 < 0 
-                 SUBCY     s1,   03
-                 RETURN
-   dec_py:  
-                 FETCH     s0,   PY0_MEM
-                 FETCH     s1,   PY1_MEM
-                 SUB       s0,   01
-                 SUBCY     s1,   00
-                 STORE     s0,   PY0_MEM
-                 STORE     s1,   PY1_MEM
-                 RETURN
-   check_py:
-                 RETURN
-   set_py_reg:
-                 FETCH     s0,   PY0_MEM
-                 OUTPUT    s0,   REG_FRAC_PY_7_0_ADDR    
-                 FETCH     s1,   PY1_MEM
-                 OUTPUT    s1,   REG_FRAC_PY_15_8_ADDR    
-                 RETURN
-   set_px_reg:
-                 FETCH     s0,   PX0_MEM
-                 OUTPUT    s0,   REG_FRAC_PX_7_0_ADDR    
-                 FETCH     s1,   PX1_MEM
-                 OUTPUT    s1,   REG_FRAC_PX_15_8_ADDR    
                  RETURN
 
