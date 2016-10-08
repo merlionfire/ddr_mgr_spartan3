@@ -200,22 +200,35 @@ CONSTANT ONE              , 01    ; one
 
 namereg  s7,   result 
 
-namereg  s8,   cx0    ; 1st byte 
-namereg  s9,   cx1    ; 
-namereg  sA,   cx2    ; 
-namereg  sB,   cx3    ; 
+namereg  s8,   c0    ;  Column address low byte 
+namereg  s9,   c1    ;  Column address high byte
 
-namereg  sC,   cy0    ; 1st byte 
-namereg  sD,   cy1    ; 
-namereg  sE,   cy2    ; 
-namereg  sF,   cy3    ; 
-
-
+namereg  sA,   r0    ;  Row address low byte 
+namereg  sB,   r1    ;  Row address high byte
 
 CONSTANT BYTE_0         , 10  ;
 CONSTANT BYTE_1         , 86  ;
 CONSTANT BYTE_2         , CB  ;
 CONSTANT BYTE_3         , FD  ;
+
+CONSTANT EXTRA_BYTE_0   , EF  ;
+CONSTANT EXTRA_BYTE_1   , 7C  ;
+CONSTANT EXTRA_BYTE_2   , 36  ;
+CONSTANT EXTRA_BYTE_3   , 02  ;
+
+;; CHECK_MAX_COL indicates max column where data are prealod.
+;; Hardware will check data read from this area with hardcode. 
+;; This area is expected to [0,1023], which corresponds to the width of 1024*768 VGA screen resolution. 
+;; Since column address is incremetal by 4, set "1024" as max colum value instead of "1023". But pls note comparison must be taken after colum address is updated ( That is , added by 4 ) 
+;; 1024 = 0x4_0_0   
+CONSTANT CHECK_MAX_COL_0  ,  00 ;  
+CONSTANT CHECK_MAX_COL_1  ,  04 ; 
+
+
+;; Extra 8 words are preload following testing data. It will check if more data than expected are read from DDR due to FW or ddr_mgr bug.  
+;; 1024 + 8 = 1032 = 0x4_08
+CONSTANT PRE_MAX_COL_0    ,  08 ;  
+CONSTANT PRE_MAX_COL_1    ,  04 ;  
 
 ;;============================================================================
 ;; Fractal calculation constants.
@@ -230,7 +243,7 @@ CONSTANT BYTE_3         , FD  ;
 ;; * sF is reserved for the control state variable.
 ;;============================================================================
 
-      cold_start: LOAD     s0, 3 
+      cold_start:   LOAD     s0, 3 
 ;;============================================================================
 ;; Main program loop; for the most part, this continuously updates the LCD.
 ;; Everything else is done in the interrupt service routine.
@@ -267,7 +280,7 @@ CONSTANT BYTE_3         , FD  ;
                   SUB s3, ONE
                   JUMP NZ, wait_20ms
                   RETURN
-      init_data_reg:
+      set_test_data_reg:
                   ; Set btyes for 4 words of data. 
                   LOAD     s0,   BYTE_0
                   OUTPUT   s0,   reg_ddr2_data0_7_0
@@ -285,29 +298,54 @@ CONSTANT BYTE_3         , FD  ;
                   OUTPUT   s0,   reg_ddr2_data0_31_24
                   OUTPUT   s0,   reg_ddr2_data1_31_24
                   RETURN
-   inc_cx:
-                  ADD      cx0,  01
-                  ADDCY    cx1,  00
-                  ADDCY    cx2,  00
-                  ADDCY    cx3,  00
-                  return 
-   inc_cy:
-                  ADD      cx0,  01
-                  ADDCY    cx1,  00
-                  ADDCY    cx2,  00
-                  ADDCY    cx3,  00
-                  return 
+      set_extra_data_reg:
+                  ; Set btyes for 4 words of data. 
+                  LOAD     s0,   EXTRA_BYTE_0
+                  OUTPUT   s0,   reg_ddr2_data0_7_0
+                  OUTPUT   s0,   reg_ddr2_data1_7_0
 
+                  LOAD     s0,   EXTRA_BYTE_1
+                  OUTPUT   s0,   reg_ddr2_data0_15_8
+                  OUTPUT   s0,   reg_ddr2_data1_15_8
+
+                  LOAD     s0,   EXTRA_BYTE_2
+                  OUTPUT   s0,   reg_ddr2_data0_23_16
+                  OUTPUT   s0,   reg_ddr2_data1_23_16
+
+                  LOAD     s0,   EXTRA_BYTE_3
+                  OUTPUT   s0,   reg_ddr2_data0_31_24
+                  OUTPUT   s0,   reg_ddr2_data1_31_24
+                  RETURN
+      
+
+   ;; About column address for MIG                
+   ;; 1. Column addr is from 0-1024 words ( word = 2 bytes )                
+   ;; 2. One transfer of MIG has :
+   ;;      *) 2 burst / transfter ( Default burst size is 2 )  
+   ;;      *) 2 words / burst ( double sampling leads to 2 words wihtin one clock 
+   ;;      *) 16 bits / word ( 16 bits data width between MIG and DDR ) 
+
+   ;; Conclusionn: 
+   ;;    After one transfrer, total 4 words are written out. So "4" is supposed to be added into column address. ( Note Column address is based on "word" rather than byte
+
+   clr_col_addr:
+                  LOAD     c0,   ZERO
+                  LOAD     c1,   ZERO
+                  RETURN
+   inc_col_addr:
+                  ADD      c0,   04   ;; See above analysis
+                  ADDCY    c1,   00
+                  RETURN
+   clr_row_addr:
+                  LOAD     r0,   ZERO
+                  LOAD     r1,   ZERO
+                  RETURN
+   inc_row_addr:
+                  ADD      r0,   01   ;; 
+                  ADDCY    r1,   00
+
+                  
    config_addr_reg:
-                 OUTPUT    cx0, REG_FRAC_CX_7_0_ADDR     ; reg <- cx  
-                 OUTPUT    cx1, REG_FRAC_CX_15_8_ADDR
-                 OUTPUT    cx2, REG_FRAC_CX_23_16_ADDR
-                 OUTPUT    cx3, REG_FRAC_CX_31_24_ADDR
-                 OUTPUT    cy0, REG_FRAC_CY_7_0_ADDR     ; reg <- cy  
-                 OUTPUT    cy1, REG_FRAC_CY_15_8_ADDR
-                 OUTPUT    cy2, REG_FRAC_CY_23_16_ADDR
-                 OUTPUT    cy3, REG_FRAC_CY_31_24_ADDR
-                 LOAD      s0,  start_frac_calc          ; start fractal calcualtion 
-                 OUTPUT    s0,  REG_FRAC_CTRL_STATUS  
+
                  RETURN
 
