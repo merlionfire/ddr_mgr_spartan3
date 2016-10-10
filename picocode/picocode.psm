@@ -149,9 +149,11 @@ CONSTANT reg_ddr2_addr_7_0     , 19    ; port
 CONSTANT reg_ddr2_addr_15_8    , 1a    ; port 
 CONSTANT reg_ddr2_addr_23_16   , 1b    ; port 
 
-CONSTANT active_ddr2_write     , 01    ; set auto in 
-CONSTANT pic_fg_red_green      , 00    ; set auto in 
-CONSTANT pic_fg_blue_bg        , F1    ; set auto in 
+CONSTANT active_ddr2_write     , 01    ; 
+CONSTANT BIT_DDR2_BUSY         , 01    ;
+
+CONSTANT pic_fg_red_green      , 00    ;
+CONSTANT pic_fg_blue_bg        , F1    ;
 
 
 ;;---------------- frac unit registers ----------------------
@@ -206,6 +208,9 @@ namereg  s9,   c1    ;  Column address high byte
 namereg  sA,   r0    ;  Row address low byte 
 namereg  sB,   r1    ;  Row address high byte
 
+;;============================================================================
+;; Test Parameters  
+;;===========================================================================
 CONSTANT BYTE_0         , 10  ;
 CONSTANT BYTE_1         , 86  ;
 CONSTANT BYTE_2         , CB  ;
@@ -220,19 +225,27 @@ CONSTANT EXTRA_BYTE_3   , 02  ;
 ;; Hardware will check data read from this area with hardcode. 
 ;; This area is expected to [0,1023], which corresponds to the width of 1024*768 VGA screen resolution. 
 ;; Since column address is incremetal by 4, set "1024" as max colum value instead of "1023". But pls note comparison must be taken after colum address is updated ( That is , added by 4 ) 
-;; 1024 = 0x4_0_0   
+;; But adddress register is based on byte, then value should be <<1 
+;; 1024 << 1 = 0x4_0_0 << 1 = 0x8_0_0   
 CONSTANT CHECK_MAX_COL_0  ,  00 ;  
-CONSTANT CHECK_MAX_COL_1  ,  04 ; 
+CONSTANT CHECK_MAX_COL_1  ,  08 ; 
 
 
 ;; Extra 8 words are preload following testing data. It will check if more data than expected are read from DDR due to FW or ddr_mgr bug.  
-;; 1024 + 8 = 1032 = 0x4_08
-CONSTANT PRE_MAX_COL_0    ,  08 ;  
-CONSTANT PRE_MAX_COL_1    ,  04 ;  
+;; (1024 + 8 ) << 1 = (1032) << 1 = 0x4_08 << 1 = 0x8_1_0
+CONSTANT PRE_MAX_COL_0    ,  10 ;  
+CONSTANT PRE_MAX_COL_1    ,  08 ;  
 
-;;============================================================================
-;; Fractal calculation constants.
-;;===========================================================================
+
+;; 768 = 0x3_0_0  ; << 1 = 0x6_0_0 
+CONSTANT CHECK_MAX_ROW_0  ,  00 ;  
+CONSTANT CHECK_MAX_ROW_1  ,  06 ; 
+
+
+;; Extra 8 words are preload following testing data. It will check if more data than expected are read from DDR due to FW or ddr_mgr bug.  
+;; 768 + 8 = 776 = 0x3_08
+CONSTANT PRE_MAX_ROW_0    ,  10 ;  
+CONSTANT PRE_MAX_ROW_1    ,  06 ;  
 
 ;;============================================================================
 ;; Start up routine goes here.
@@ -243,14 +256,27 @@ CONSTANT PRE_MAX_COL_1    ,  04 ;
 ;; * sF is reserved for the control state variable.
 ;;============================================================================
 
-      cold_start:   LOAD     s0, 3 
+      cold_start:   LOAD     s0, 0 
 ;;============================================================================
 ;; Main program loop; for the most part, this continuously updates the LCD.
 ;; Everything else is done in the interrupt service routine.
 ;;============================================================================
 
-         main:      CALL     init_data_reg 
-                     
+         main:      CALL     set_test_data_reg 
+                    CALL     clr_col_addr    
+                    CALL     clr_row_addr    
+                    CALL     set_addr_reg 
+          col_loop:
+                    CALL     execute_mem_write 
+                    CALL     inc_col_addr ; moving it ahead of checking busy  status is to make sure that state machine has been initiated to execute command  
+                    CALL     wait_mem_write_done           
+                    CALL     compare_col_addr 
+                    JUMP     NZ, col_loop ; contiue  
+                    CALL   
+                  
+                    CALL     inc_row_addr 
+
+
          finish:    CALL     delay_20ms
                     OUTPUT   s0, pt_disp_cs  
                     LOAD     s0, set_auto_inc 
@@ -327,13 +353,14 @@ CONSTANT PRE_MAX_COL_1    ,  04 ;
 
    ;; Conclusionn: 
    ;;    After one transfrer, total 4 words are written out. So "4" is supposed to be added into column address. ( Note Column address is based on "word" rather than byte
+   ;; But address register is based on BYTE, one transfter will write 8 bytes. So incremental step is 8.    
 
    clr_col_addr:
                   LOAD     c0,   ZERO
                   LOAD     c1,   ZERO
                   RETURN
    inc_col_addr:
-                  ADD      c0,   04   ;; See above analysis
+                  ADD      c0,   08   ;; See above analysis
                   ADDCY    c1,   00
                   RETURN
    clr_row_addr:
@@ -343,9 +370,22 @@ CONSTANT PRE_MAX_COL_1    ,  04 ;
    inc_row_addr:
                   ADD      r0,   01   ;; 
                   ADDCY    r1,   00
+                  RETURN
 
-                  
-   config_addr_reg:
+                  ;-------------------------------------- 
+                  ;| py1, py0   |   px1,  px0           | 
+                  ;--------------------------------------
+                  ;23         10 9                     1
+   set_addr_reg:
+   execute_mem_write:
+                  LOAD     s0,  active_ddr2_write
+                  OUTPUT   s0,  reg_ddr2_status_ctrl 
+                  RETURN
+   wait_mem_write_done:
+                  INPUT    s0,  reg_ddr2_status_ctrl
+                  TEST     s0,  BIT_DDR2_BUSY 
+                  JUMP     NZ,  wait_mem_write_done
+                  RETURN
+   compare_col_addr:
 
-                 RETURN
-
+                    CALL     COMPARE_COL_ADDR_WITH_CHECK_MAX
