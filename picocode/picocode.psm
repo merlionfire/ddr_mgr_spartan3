@@ -265,8 +265,8 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
          main:      CALL     set_test_data_reg 
                     CALL     clr_col_addr    
                     CALL     clr_row_addr    
-                    CALL     set_addr_reg 
           col_loop:
+                    CALL     set_addr_reg 
                     CALL     execute_mem_write 
                     CALL     inc_col_addr ; moving it ahead of checking busy  status is to make sure that state machine has been initiated to execute command  
                     CALL     wait_mem_write_done           
@@ -305,6 +305,7 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                   SUB s3, ONE
                   JUMP NZ, wait_20ms
                   RETURN
+
       set_test_data_reg:
                   ; Set btyes for 4 words of data. 
                   LOAD     s0,   BYTE_0
@@ -323,6 +324,7 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                   OUTPUT   s0,   reg_ddr2_data0_31_24
                   OUTPUT   s0,   reg_ddr2_data1_31_24
                   RETURN
+
       set_extra_data_reg:
                   ; Set btyes for 4 words of data. 
                   LOAD     s0,   EXTRA_BYTE_0
