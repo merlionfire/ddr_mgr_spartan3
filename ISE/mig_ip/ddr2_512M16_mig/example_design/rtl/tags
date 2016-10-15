@@ -1,0 +1,833 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BANK_ADDRESS	ddr2_512M16_mig_parameters_0.v	/^`define   BANK_ADDRESS                             2$/;"	c
+CKE_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   CKE_WIDTH                                1$/;"	c
+CLK_TYPE	ddr2_512M16_mig_parameters_0.v	/^`define   CLK_TYPE                                 "SINGLE_ENDED"$/;"	c
+CLK_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   CLK_WIDTH                                1$/;"	c
+COLUMN_ADDRESS	ddr2_512M16_mig_parameters_0.v	/^`define   COLUMN_ADDRESS                           10$/;"	c
+COL_WIDTH	ddr2_512M16_mig_controller_0.v	/^   parameter COL_WIDTH          = `COLUMN_ADDRESS;$/;"	c
+DATABITSPERSTROBE	ddr2_512M16_mig_parameters_0.v	/^`define   DATABITSPERSTROBE                        8$/;"	c
+DATA_MASK_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   DATA_MASK_WIDTH                          2$/;"	c
+DATA_STROBE_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   DATA_STROBE_WIDTH                        2$/;"	c
+DATA_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   DATA_WIDTH                               16$/;"	c
+DEBUG_EN	ddr2_512M16_mig_parameters_0.v	/^`define   DEBUG_EN                                 0$/;"	c
+EXT_LOAD_MODE_REGISTER	ddr2_512M16_mig_parameters_0.v	/^`define   EXT_LOAD_MODE_REGISTER                   13'b0000000000000$/;"	c
+LOAD_MODE_REGISTER	ddr2_512M16_mig_parameters_0.v	/^`define   LOAD_MODE_REGISTER                       13'b0010100110010$/;"	c
+MASK_ENABLE	ddr2_512M16_mig_parameters_0.v	/^`define   MASK_ENABLE                              1$/;"	c
+MAX_REF_CNT	ddr2_512M16_mig_parameters_0.v	/^`define   MAX_REF_CNT                              10'b1111100111$/;"	c
+MAX_REF_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   MAX_REF_WIDTH                            10$/;"	c
+MEMORY_WIDTH	ddr2_512M16_mig_parameters_0.v	/^`define   MEMORY_WIDTH                             8$/;"	c
+RAS_COUNT_VALUE	ddr2_512M16_mig_parameters_0.v	/^`define   RAS_COUNT_VALUE                          5'b00101$/;"	c
+REGISTERED	ddr2_512M16_mig_parameters_0.v	/^`define   REGISTERED                               0$/;"	c
+RESET_ACTIVE_LOW	ddr2_512M16_mig_parameters_0.v	/^`define   RESET_ACTIVE_LOW                         1'b1$/;"	c
+RESET_PORT	ddr2_512M16_mig_parameters_0.v	/^`define   RESET_PORT                               0$/;"	c
+RFC_COUNT_VALUE	ddr2_512M16_mig_parameters_0.v	/^`define   RFC_COUNT_VALUE                          8'b00001101$/;"	c
+ROW_ADDRESS	ddr2_512M16_mig_parameters_0.v	/^`define   ROW_ADDRESS                              13$/;"	c
+ROW_WIDTH	ddr2_512M16_mig_controller_0.v	/^   parameter ROW_WIDTH          = `ROW_ADDRESS;$/;"	c
+RP_COUNT_VALUE	ddr2_512M16_mig_parameters_0.v	/^`define   RP_COUNT_VALUE                           3'b001$/;"	c
+TWR_COUNT_VALUE	ddr2_512M16_mig_parameters_0.v	/^`define   TWR_COUNT_VALUE                          3'b010$/;"	c
+USE_DM_PORT	ddr2_512M16_mig_parameters_0.v	/^`define   USE_DM_PORT                              1$/;"	c
+accept_cmd_in	ddr2_512M16_mig_controller_0.v	/^   reg                           accept_cmd_in;$/;"	r
+ack_o	ddr2_512M16_mig_controller_0.v	/^   wire                          ack_o;$/;"	n
+ack_reg	ddr2_512M16_mig_controller_0.v	/^   wire                          ack_reg;$/;"	n
+addr_inc	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         addr_inc;$/;"	n
+addr_inc_p	ddr2_512M16_mig_cmd_fsm_0.v	/^   wire       addr_inc_p;$/;"	n
+addr_out	ddr2_512M16_mig_test_bench_0.v	/^           `COLUMN_ADDRESS + `BANK_ADDRESS)-1):0] addr_out;$/;"	n
+addr_rst	ddr2_512M16_mig_addr_gen_0.v	/^   input                          addr_rst,$/;"	p
+addr_rst	ddr2_512M16_mig_cmd_fsm_0.v	/^   output           addr_rst,$/;"	p
+addr_rst	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         addr_rst;$/;"	n
+address_reg	ddr2_512M16_mig_controller_0.v	/^	  + `COLUMN_ADDRESS)-1):0] address_reg;$/;"	r
+app_data_m_w0	ddr2_512M16_mig_test_bench_0.v	/^   wire [((`DATA_MASK_WIDTH*2)-1):0]            app_data_m_w0;$/;"	n
+app_data_m_w1	ddr2_512M16_mig_test_bench_0.v	/^   reg [(`DATA_MASK_WIDTH*2)-1:0]               app_data_m_w1;$/;"	r
+app_data_m_w2	ddr2_512M16_mig_test_bench_0.v	/^   reg [(`DATA_MASK_WIDTH*2)-1:0]               app_data_m_w2;$/;"	r
+app_data_m_w3	ddr2_512M16_mig_test_bench_0.v	/^   reg [(`DATA_MASK_WIDTH*2)-1:0]               app_data_m_w3;$/;"	r
+app_data_m_w4	ddr2_512M16_mig_test_bench_0.v	/^   reg [(`DATA_MASK_WIDTH*2)-1:0]               app_data_m_w4;$/;"	r
+app_data_w0	ddr2_512M16_mig_test_bench_0.v	/^   wire [(2*`DATA_WIDTH)-1:0]                   app_data_w0;$/;"	n
+app_data_w1	ddr2_512M16_mig_test_bench_0.v	/^   reg [(2*`DATA_WIDTH)-1:0]                    app_data_w1;$/;"	r
+app_data_w2	ddr2_512M16_mig_test_bench_0.v	/^   reg [(2*`DATA_WIDTH)-1:0]                    app_data_w2;$/;"	r
+app_data_w3	ddr2_512M16_mig_test_bench_0.v	/^   reg [(2*`DATA_WIDTH)-1:0]                    app_data_w3;$/;"	r
+app_data_w4	ddr2_512M16_mig_test_bench_0.v	/^   reg [(2*`DATA_WIDTH)-1:0]                    app_data_w4;$/;"	r
+ar_done	ddr2_512M16_mig_top_0.v	/^   output                                        ar_done,$/;"	p
+ar_done_p	ddr2_512M16_mig_controller_0.v	/^   wire                          ar_done_p;$/;"	n
+ar_done_reg	ddr2_512M16_mig_controller_0.v	/^   reg                           ar_done_reg;$/;"	r
+ar_done_val1	ddr2_512M16_mig_main_0.v	/^   wire                                          ar_done_val1;$/;"	n
+auto_ref	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref;$/;"	r
+auto_ref1	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref1;$/;"	r
+auto_ref_detect1	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref_detect1;$/;"	r
+auto_ref_issued	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref_issued;$/;"	r
+auto_ref_issued_p	ddr2_512M16_mig_controller_0.v	/^   wire                          auto_ref_issued_p;$/;"	n
+auto_ref_req	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            auto_ref_req,$/;"	p
+auto_ref_req	ddr2_512M16_mig_main_0.v	/^   wire                                          auto_ref_req;$/;"	n
+auto_ref_wait	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref_wait;$/;"	r
+auto_ref_wait1	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref_wait1;$/;"	r
+auto_ref_wait2	ddr2_512M16_mig_controller_0.v	/^   reg                           auto_ref_wait2;$/;"	r
+autoref_count	ddr2_512M16_mig_controller_0.v	/^   reg [(`MAX_REF_WIDTH-1):0]    autoref_count;$/;"	r
+autoref_value	ddr2_512M16_mig_controller_0.v	/^   reg                           autoref_value;$/;"	r
+ba_address_reg1	ddr2_512M16_mig_controller_0.v	/^   reg [`BANK_ADDRESS-1:0]       ba_address_reg1;$/;"	r
+ba_address_reg2	ddr2_512M16_mig_controller_0.v	/^   reg [`BANK_ADDRESS-1:0]       ba_address_reg2;$/;"	r
+ba_count	ddr2_512M16_mig_addr_gen_0.v	/^   reg [`BANK_ADDRESS-1:0]  ba_count;$/;"	r
+bank_address	ddr2_512M16_mig_controller_0.v	/^   input [`BANK_ADDRESS-1:0]       bank_address,$/;"	p
+burst_cnt	ddr2_512M16_mig_addr_gen_0.v	/^   reg [2:0] 		    burst_cnt;$/;"	r
+burst_cnt_max	ddr2_512M16_mig_controller_0.v	/^   wire [2:0]                    burst_cnt_max;$/;"	n
+burst_done	ddr2_512M16_mig_addr_gen_0.v	/^   output                         burst_done,$/;"	p
+burst_done	ddr2_512M16_mig_controller_0.v	/^   input                           burst_done,$/;"	p
+burst_done	ddr2_512M16_mig_test_bench_0.v	/^   output                                         burst_done,$/;"	p
+burst_done	ddr2_512M16_mig_top_0.v	/^   input                                         burst_done,$/;"	p
+burst_done_r1	ddr2_512M16_mig_addr_gen_0.v	/^   reg                      burst_done_r1;$/;"	r
+burst_done_r2	ddr2_512M16_mig_addr_gen_0.v	/^   reg                      burst_done_r2;$/;"	r
+burst_done_r3	ddr2_512M16_mig_addr_gen_0.v	/^   reg                      burst_done_r3;$/;"	r
+burst_done_r4	ddr2_512M16_mig_addr_gen_0.v	/^   reg                      burst_done_r4;$/;"	r
+burst_done_r5	ddr2_512M16_mig_addr_gen_0.v	/^   reg                      burst_done_r5;$/;"	r
+burst_done_val1	ddr2_512M16_mig_main_0.v	/^   wire                                          burst_done_val1;$/;"	n
+burst_length	ddr2_512M16_mig_addr_gen_0.v	/^   wire [2:0] 		    burst_length;$/;"	n
+burst_length	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     burst_length;$/;"	r
+byte_err_fall	ddr2_512M16_mig_cmp_data_0.v	/^   reg [((`DATA_WIDTH\/8)-1):0] byte_err_fall\/* synthesis syn_preserve=1 *\/;$/;"	r
+byte_err_rise	ddr2_512M16_mig_cmp_data_0.v	/^   reg [((`DATA_WIDTH\/8)-1):0] byte_err_rise\/* synthesis syn_preserve=1 *\/;$/;"	r
+cas_count	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     cas_count;$/;"	r
+clk	ddr2_512M16_mig_addr_gen_0.v	/^   input                          clk,$/;"	p
+clk	ddr2_512M16_mig_cal_ctl.v	/^   input            clk,$/;"	p
+clk	ddr2_512M16_mig_clk_dcm.v	/^   output clk,$/;"	p
+clk	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            clk,$/;"	p
+clk	ddr2_512M16_mig_controller_0.v	/^   input                           clk\/* synthesis syn_keep=1 *\/,$/;"	p
+clk	ddr2_512M16_mig_data_path_0.v	/^   input                               clk,$/;"	p
+clk	ddr2_512M16_mig_data_path_iobs_0.v	/^   input                             clk,$/;"	p
+clk	ddr2_512M16_mig_data_read_controller_0.v	/^   input				clk,$/;"	p
+clk	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^   input     clk,$/;"	p
+clk	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   input  clk,$/;"	p
+clk	ddr2_512M16_mig_iobs_0.v	/^   input                              clk,$/;"	p
+clk	ddr2_512M16_mig_s3_dqs_iob.v	/^   input            clk,$/;"	p
+clk	ddr2_512M16_mig_tap_dly.v	/^   input         clk,$/;"	p
+clk	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         clk;$/;"	n
+clk	ddr2_512M16_mig_wr_gray_cntr.v	/^   input        clk,$/;"	p
+clk0	ddr2_512M16_mig_cal_top.v	/^    input        clk0,$/;"	p
+clk0	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      clk0,$/;"	p
+clk0	ddr2_512M16_mig_infrastructure_iobs_0.v	/^   input                     clk0,$/;"	p
+clk0_buf	ddr2_512M16_mig_clk_dcm.v	/^   wire   clk0_buf;$/;"	n
+clk0dcm	ddr2_512M16_mig_clk_dcm.v	/^   wire   clk0dcm;$/;"	n
+clk90	ddr2_512M16_mig_cmp_data_0.v	/^   input                         clk90,$/;"	p
+clk90	ddr2_512M16_mig_data_gen_0.v	/^   input                               clk90,$/;"	p
+clk90	ddr2_512M16_mig_data_read_0.v	/^   input                              clk90,$/;"	p
+clk90	ddr2_512M16_mig_data_write_0.v	/^   input                              clk90,$/;"	p
+clk90	ddr2_512M16_mig_rd_gray_cntr.v	/^   input        clk90,$/;"	p
+clk90	ddr2_512M16_mig_s3_dm_iob.v	/^   input   clk90,$/;"	p
+clk90_0	ddr2_512M16_mig.v	/^   wire       clk90_0;$/;"	n
+clk90_buf	ddr2_512M16_mig_clk_dcm.v	/^   wire   clk90_buf;$/;"	n
+clk90_int	ddr2_512M16_mig_infrastructure_top.v	/^   wire       clk90_int;$/;"	n
+clk90_int_val1	ddr2_512M16_mig_infrastructure_top.v	/^   wire       clk90_int_val1;$/;"	n
+clk90_int_val2	ddr2_512M16_mig_infrastructure_top.v	/^   wire       clk90_int_val2;$/;"	n
+clk90dcm	ddr2_512M16_mig_clk_dcm.v	/^   wire   clk90dcm;$/;"	n
+clk_0	ddr2_512M16_mig.v	/^   wire       clk_0;$/;"	n
+clk_in	ddr2_512M16_mig_dqs_delay.v	/^   input       clk_in,$/;"	p
+clk_int	ddr2_512M16_mig_infrastructure.v	/^   input        clk_int,$/;"	p
+clk_int	ddr2_512M16_mig_infrastructure_top.v	/^   wire       clk_int;$/;"	n
+clk_int	ddr2_512M16_mig_main_0.v	/^   input                            clk_int,$/;"	p
+clk_int	ddr2_512M16_mig_top_0.v	/^   input                                         clk_int,$/;"	p
+clk_int_val	ddr2_512M16_mig_infrastructure_top.v	/^   output       clk_int_val,$/;"	p
+clk_int_val1	ddr2_512M16_mig_infrastructure_top.v	/^   wire       clk_int_val1;$/;"	n
+clk_int_val2	ddr2_512M16_mig_infrastructure_top.v	/^   wire       clk_int_val2;$/;"	n
+clk_out	ddr2_512M16_mig_dqs_delay.v	/^   output      clk_out$/;"	p
+cmd_ack	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            cmd_ack,$/;"	p
+cmd_ack	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         cmd_ack;$/;"	n
+cmp_data_m_r	ddr2_512M16_mig_test_bench_0.v	/^   wire [((`DATA_MASK_WIDTH*2)-1):0]            cmp_data_m_r;$/;"	n
+cmp_data_r	ddr2_512M16_mig_test_bench_0.v	/^   wire [(2*`DATA_WIDTH)-1:0]                   cmp_data_r;$/;"	n
+cnt	ddr2_512M16_mig_addr_gen_0.v	/^   reg [1:0] 		    cnt;$/;"	r
+cnt	ddr2_512M16_mig_cal_ctl.v	/^   reg [5:0]  cnt\/* synthesis syn_preserve=1 *\/; $/;"	r
+cnt1	ddr2_512M16_mig_addr_gen_0.v	/^   reg [1:0] 		    cnt1;$/;"	r
+cnt1	ddr2_512M16_mig_cal_ctl.v	/^   reg [5:0]  cnt1\/* synthesis syn_preserve=1 *\/;$/;"	r
+cnt_en	ddr2_512M16_mig_rd_gray_cntr.v	/^   input        cnt_en,$/;"	p
+cnt_en	ddr2_512M16_mig_wr_gray_cntr.v	/^   input        cnt_en,$/;"	p
+cnt_roll	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         cnt_roll;$/;"	n
+cntrl0_data_valid_out	ddr2_512M16_mig.v	/^   output          cntrl0_data_valid_out,$/;"	p
+cntrl0_ddr2_ba	ddr2_512M16_mig.v	/^   output [1:0]    cntrl0_ddr2_ba,$/;"	p
+cntrl0_ddr2_cas_n	ddr2_512M16_mig.v	/^   output          cntrl0_ddr2_cas_n,$/;"	p
+cntrl0_ddr2_ck_n	ddr2_512M16_mig.v	/^   output [0:0]    cntrl0_ddr2_ck_n$/;"	p
+cntrl0_ddr2_cs_n	ddr2_512M16_mig.v	/^   output          cntrl0_ddr2_cs_n,$/;"	p
+cntrl0_ddr2_dq	ddr2_512M16_mig.v	/^   inout  [15:0]   cntrl0_ddr2_dq,$/;"	p
+cntrl0_ddr2_dqs_n	ddr2_512M16_mig.v	/^   inout  [1:0]    cntrl0_ddr2_dqs_n,$/;"	p
+cntrl0_ddr2_odt	ddr2_512M16_mig.v	/^   output          cntrl0_ddr2_odt,$/;"	p
+cntrl0_rst_dqs_div_in	ddr2_512M16_mig.v	/^   input           cntrl0_rst_dqs_div_in,$/;"	p
+col_incr	ddr2_512M16_mig_addr_gen_0.v	/^   wire [3:0] 		    col_incr;$/;"	n
+col_val	ddr2_512M16_mig_addr_gen_0.v	/^   wire [1:0] 		    col_val;$/;"	n
+column_address	ddr2_512M16_mig_controller_0.v	/^   wire [`ROW_ADDRESS-1:0]       column_address;$/;"	n
+column_address_reg	ddr2_512M16_mig_controller_0.v	/^   reg [`ROW_ADDRESS-1:0]        column_address_reg;$/;"	r
+column_address_reg1	ddr2_512M16_mig_controller_0.v	/^   reg [`ROW_ADDRESS-1:0]        column_address_reg1;$/;"	r
+column_counter	ddr2_512M16_mig_addr_gen_0.v	/^   reg [7:0] 		    column_counter;$/;"	r
+control0	ddr2_512M16_mig.v	/^   wire [35:0] control0;$/;"	n
+control1	ddr2_512M16_mig.v	/^   wire [35:0] control1;$/;"	n
+count6	ddr2_512M16_mig_controller_0.v	/^   reg [7:0]                     count6;$/;"	r
+counter200	ddr2_512M16_mig_infrastructure_top.v	/^   reg [15:0] counter200;$/;"	r
+current_state	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg [2:0]  current_state;$/;"	r
+current_state	ddr2_512M16_mig_controller_0.v	/^   reg [3:0]                     current_state;$/;"	r
+d_in	ddr2_512M16_mig_rd_gray_cntr.v	/^   reg [3:0]  d_in;$/;"	r
+d_in	ddr2_512M16_mig_wr_gray_cntr.v	/^   reg [3:0]    d_in;$/;"	r
+data1	ddr2_512M16_mig_s3_dqs_iob.v	/^   wire data1;$/;"	n
+data_ena_r	ddr2_512M16_mig_test_bench_0.v	/^   reg                                          data_ena_r;$/;"	r
+data_ena_w	ddr2_512M16_mig_test_bench_0.v	/^   reg                                          data_ena_w;$/;"	r
+data_mask_f	ddr2_512M16_mig_data_path_iobs_0.v	/^   input  [(`DATA_MASK_WIDTH-1):0]   data_mask_f,$/;"	p
+data_mask_f	ddr2_512M16_mig_data_write_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0]  data_mask_f,$/;"	p
+data_mask_f	ddr2_512M16_mig_top_0.v	/^   wire [((`DATA_MASK_WIDTH)-1):0]               data_mask_f;$/;"	n
+data_mask_r	ddr2_512M16_mig_data_path_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0]   data_mask_r,$/;"	p
+data_mask_r	ddr2_512M16_mig_iobs_0.v	/^   input [((`DATA_MASK_WIDTH)-1):0]   data_mask_r,$/;"	p
+data_mask_r	ddr2_512M16_mig_top_0.v	/^   wire [((`DATA_MASK_WIDTH)-1):0]               data_mask_r;$/;"	n
+data_out	ddr2_512M16_mig_data_gen_0.v	/^   output [((`DATA_WIDTH*2)-1):0]      data_out,$/;"	p
+data_rst	ddr2_512M16_mig_cmd_fsm_0.v	/^   output           data_rst$/;"	p
+data_rst	ddr2_512M16_mig_data_gen_0.v	/^   input                               data_rst,$/;"	p
+data_rst_180	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        data_rst_180;$/;"	r
+data_rst_90	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        data_rst_90;$/;"	r
+data_rst_p	ddr2_512M16_mig_cmd_fsm_0.v	/^   wire       data_rst_p;$/;"	n
+data_rst_r	ddr2_512M16_mig_test_bench_0.v	/^   reg                                          data_rst_r;$/;"	r
+data_rst_r1	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         data_rst_r1;$/;"	n
+data_rst_w	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         data_rst_w;$/;"	n
+data_valid	ddr2_512M16_mig_cmp_data_0.v	/^   input                         data_valid,$/;"	p
+data_valid	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         data_valid;$/;"	n
+data_valid_out	ddr2_512M16_mig_cmp_data_0.v	/^   output                        data_valid_out$/;"	p
+data_valid_out	ddr2_512M16_mig_test_bench_0.v	/^   output                                         data_valid_out$/;"	p
+dbg_cnt	ddr2_512M16_mig.v	/^   wire [5:0] dbg_cnt;$/;"	n
+dbg_data	ddr2_512M16_mig.v	/^   wire [19:0] dbg_data;$/;"	n
+dbg_delay_sel	ddr2_512M16_mig.v	/^   wire [4:0] dbg_delay_sel;$/;"	n
+dbg_delay_sel	ddr2_512M16_mig_infrastructure.v	/^   output [4:0] dbg_delay_sel, $/;"	p
+dbg_delay_sel	ddr2_512M16_mig_main_0.v	/^   output [4:0]                       dbg_delay_sel, $/;"	p
+dbg_delay_sel	ddr2_512M16_mig_top_0.v	/^   output [4:0]                                  dbg_delay_sel, $/;"	p
+dbg_enb_trans_two_dtct	ddr2_512M16_mig.v	/^   wire       dbg_enb_trans_two_dtct;$/;"	n
+dbg_enb_trans_two_dtct	ddr2_512M16_mig_cal_ctl.v	/^   output           dbg_enb_trans_two_dtct$/;"	p
+dbg_enb_trans_two_dtct	ddr2_512M16_mig_cal_top.v	/^    output       dbg_enb_trans_two_dtct$/;"	p
+dbg_enb_trans_two_dtct	ddr2_512M16_mig_infrastructure_top.v	/^   output       dbg_enb_trans_two_dtct$/;"	p
+dbg_phase_cnt	ddr2_512M16_mig.v	/^   wire [4:0] dbg_phase_cnt;$/;"	n
+dbg_phase_cnt	ddr2_512M16_mig_cal_ctl.v	/^   output [4:0]     dbg_phase_cnt,$/;"	p
+dbg_phase_cnt	ddr2_512M16_mig_cal_top.v	/^    output [4:0] dbg_phase_cnt,$/;"	p
+dbg_phase_cnt	ddr2_512M16_mig_infrastructure_top.v	/^   output [4:0] dbg_phase_cnt,$/;"	p
+dbg_rst_calib	ddr2_512M16_mig.v	/^   wire       dbg_rst_calib;$/;"	n
+dbg_trans_onedtct	ddr2_512M16_mig.v	/^   wire       dbg_trans_onedtct;$/;"	n
+dbg_trans_onedtct	ddr2_512M16_mig_cal_ctl.v	/^   output           dbg_trans_onedtct,$/;"	p
+dbg_trans_onedtct	ddr2_512M16_mig_cal_top.v	/^    output       dbg_trans_onedtct,$/;"	p
+dbg_trans_onedtct	ddr2_512M16_mig_infrastructure_top.v	/^   output       dbg_trans_onedtct,$/;"	p
+dbg_trans_twodtct	ddr2_512M16_mig.v	/^   wire       dbg_trans_twodtct;$/;"	n
+dbg_trig	ddr2_512M16_mig.v	/^   wire [3:0]  dbg_trig;$/;"	n
+dcm1_lock	ddr2_512M16_mig_clk_dcm.v	/^   wire   dcm1_lock;$/;"	n
+dcm_lock	ddr2_512M16_mig_clk_dcm.v	/^   output dcm_lock$/;"	p
+dcm_lock	ddr2_512M16_mig_infrastructure_top.v	/^   wire       dcm_lock;$/;"	n
+ddr2_512M16_mig	ddr2_512M16_mig.v	/^module ddr2_512M16_mig$/;"	m
+ddr2_512M16_mig_addr_gen_0	ddr2_512M16_mig_addr_gen_0.v	/^module ddr2_512M16_mig_addr_gen_0$/;"	m
+ddr2_512M16_mig_cal_ctl	ddr2_512M16_mig_cal_ctl.v	/^module ddr2_512M16_mig_cal_ctl$/;"	m
+ddr2_512M16_mig_cal_top	ddr2_512M16_mig_cal_top.v	/^ module ddr2_512M16_mig_cal_top$/;"	m
+ddr2_512M16_mig_clk_dcm	ddr2_512M16_mig_clk_dcm.v	/^module ddr2_512M16_mig_clk_dcm$/;"	m
+ddr2_512M16_mig_cmd_fsm_0	ddr2_512M16_mig_cmd_fsm_0.v	/^module ddr2_512M16_mig_cmd_fsm_0$/;"	m
+ddr2_512M16_mig_cmp_data_0	ddr2_512M16_mig_cmp_data_0.v	/^module  ddr2_512M16_mig_cmp_data_0$/;"	m
+ddr2_512M16_mig_controller_0	ddr2_512M16_mig_controller_0.v	/^module ddr2_512M16_mig_controller_0$/;"	m
+ddr2_512M16_mig_controller_iobs_0	ddr2_512M16_mig_controller_iobs_0.v	/^module ddr2_512M16_mig_controller_iobs_0$/;"	m
+ddr2_512M16_mig_data_gen_0	ddr2_512M16_mig_data_gen_0.v	/^module    ddr2_512M16_mig_data_gen_0$/;"	m
+ddr2_512M16_mig_data_path_0	ddr2_512M16_mig_data_path_0.v	/^module ddr2_512M16_mig_data_path_0$/;"	m
+ddr2_512M16_mig_data_path_iobs_0	ddr2_512M16_mig_data_path_iobs_0.v	/^module ddr2_512M16_mig_data_path_iobs_0$/;"	m
+ddr2_512M16_mig_data_read_0	ddr2_512M16_mig_data_read_0.v	/^module ddr2_512M16_mig_data_read_0$/;"	m
+ddr2_512M16_mig_data_read_controller_0	ddr2_512M16_mig_data_read_controller_0.v	/^module ddr2_512M16_mig_data_read_controller_0$/;"	m
+ddr2_512M16_mig_data_write_0	ddr2_512M16_mig_data_write_0.v	/^module  ddr2_512M16_mig_data_write_0$/;"	m
+ddr2_512M16_mig_dqs_delay	ddr2_512M16_mig_dqs_delay.v	/^module ddr2_512M16_mig_dqs_delay$/;"	m
+ddr2_512M16_mig_fifo_0_wr_en_0	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^module ddr2_512M16_mig_fifo_0_wr_en_0$/;"	m
+ddr2_512M16_mig_fifo_1_wr_en_0	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^module ddr2_512M16_mig_fifo_1_wr_en_0$/;"	m
+ddr2_512M16_mig_infrastructure	ddr2_512M16_mig_infrastructure.v	/^module ddr2_512M16_mig_infrastructure$/;"	m
+ddr2_512M16_mig_infrastructure_iobs_0	ddr2_512M16_mig_infrastructure_iobs_0.v	/^module ddr2_512M16_mig_infrastructure_iobs_0$/;"	m
+ddr2_512M16_mig_infrastructure_top	ddr2_512M16_mig_infrastructure_top.v	/^module ddr2_512M16_mig_infrastructure_top$/;"	m
+ddr2_512M16_mig_iobs_0	ddr2_512M16_mig_iobs_0.v	/^module ddr2_512M16_mig_iobs_0$/;"	m
+ddr2_512M16_mig_main_0	ddr2_512M16_mig_main_0.v	/^module    ddr2_512M16_mig_main_0$/;"	m
+ddr2_512M16_mig_ram8d_0	ddr2_512M16_mig_ram8d_0.v	/^module ddr2_512M16_mig_ram8d_0$/;"	m
+ddr2_512M16_mig_rd_gray_cntr	ddr2_512M16_mig_rd_gray_cntr.v	/^module ddr2_512M16_mig_rd_gray_cntr$/;"	m
+ddr2_512M16_mig_s3_dm_iob	ddr2_512M16_mig_s3_dm_iob.v	/^module ddr2_512M16_mig_s3_dm_iob$/;"	m
+ddr2_512M16_mig_s3_dq_iob	ddr2_512M16_mig_s3_dq_iob.v	/^module ddr2_512M16_mig_s3_dq_iob$/;"	m
+ddr2_512M16_mig_s3_dqs_iob	ddr2_512M16_mig_s3_dqs_iob.v	/^module ddr2_512M16_mig_s3_dqs_iob$/;"	m
+ddr2_512M16_mig_tap_dly	ddr2_512M16_mig_tap_dly.v	/^module ddr2_512M16_mig_tap_dly$/;"	m
+ddr2_512M16_mig_test_bench_0	ddr2_512M16_mig_test_bench_0.v	/^module    ddr2_512M16_mig_test_bench_0$/;"	m
+ddr2_512M16_mig_top_0	ddr2_512M16_mig_top_0.v	/^module  ddr2_512M16_mig_top_0$/;"	m
+ddr2_512M16_mig_wr_gray_cntr	ddr2_512M16_mig_wr_gray_cntr.v	/^module ddr2_512M16_mig_wr_gray_cntr$/;"	m
+ddr2_a	ddr2_512M16_mig_main_0.v	/^   output [`ROW_ADDRESS-1:0]        ddr2_a,$/;"	p
+ddr2_a	ddr2_512M16_mig_top_0.v	/^   output [`ROW_ADDRESS-1:0]                     ddr2_a,$/;"	p
+ddr2_cas_n	ddr2_512M16_mig_main_0.v	/^   output                           ddr2_cas_n,$/;"	p
+ddr2_cas_n	ddr2_512M16_mig_top_0.v	/^   output                                        ddr2_cas_n,$/;"	p
+ddr2_ck	ddr2_512M16_mig_main_0.v	/^   output [(`CLK_WIDTH-1):0]        ddr2_ck,$/;"	p
+ddr2_ck_n	ddr2_512M16_mig_infrastructure_iobs_0.v	/^   output [(`CLK_WIDTH-1):0] ddr2_ck_n$/;"	p
+ddr2_ck_n	ddr2_512M16_mig_iobs_0.v	/^   output [(`CLK_WIDTH-1):0]          ddr2_ck_n,$/;"	p
+ddr2_clk_q	ddr2_512M16_mig_infrastructure_iobs_0.v	/^   wire [`CLK_WIDTH-1 :0]  ddr2_clk_q;$/;"	n
+ddr2_cs_n	ddr2_512M16_mig_main_0.v	/^   output                           ddr2_cs_n,$/;"	p
+ddr2_cs_n	ddr2_512M16_mig_top_0.v	/^   output                                        ddr2_cs_n,$/;"	p
+ddr2_dq	ddr2_512M16_mig_main_0.v	/^   inout [(`DATA_WIDTH-1):0]        ddr2_dq,$/;"	p
+ddr2_dq	ddr2_512M16_mig_top_0.v	/^   inout [(`DATA_WIDTH-1):0]                     ddr2_dq,$/;"	p
+ddr2_dqs	ddr2_512M16_mig_main_0.v	/^   inout [(`DATA_STROBE_WIDTH-1):0] ddr2_dqs,$/;"	p
+ddr2_dqs_n	ddr2_512M16_mig_main_0.v	/^    inout  [(`DATA_STROBE_WIDTH-1):0] ddr2_dqs_n, $/;"	p
+ddr2_dqs_n	ddr2_512M16_mig_top_0.v	/^    inout  [(`DATA_STROBE_WIDTH-1):0] ddr2_dqs_n, $/;"	p
+ddr2_odt	ddr2_512M16_mig_top_0.v	/^   output                                        ddr2_odt,$/;"	p
+ddr2_we_n	ddr2_512M16_mig_main_0.v	/^   output                           ddr2_we_n,$/;"	p
+ddr_address	ddr2_512M16_mig_controller_iobs_0.v	/^   output [`ROW_ADDRESS-1:0]  ddr_address,$/;"	p
+ddr_address1	ddr2_512M16_mig_controller_0.v	/^   reg [`ROW_ADDRESS-1:0]        ddr_address1;$/;"	r
+ddr_address_cntrl	ddr2_512M16_mig_controller_0.v	/^   output [`ROW_ADDRESS-1:0]       ddr_address_cntrl,$/;"	p
+ddr_address_cntrl	ddr2_512M16_mig_iobs_0.v	/^   input [(`ROW_ADDRESS-1):0]         ddr_address_cntrl,$/;"	p
+ddr_address_cntrl	ddr2_512M16_mig_top_0.v	/^   wire [`ROW_ADDRESS-1:0]                       ddr_address_cntrl;$/;"	n
+ddr_address_iob_reg	ddr2_512M16_mig_controller_iobs_0.v	/^   wire [`ROW_ADDRESS-1:0]    ddr_address_iob_reg;$/;"	n
+ddr_ba	ddr2_512M16_mig_iobs_0.v	/^   output [(`BANK_ADDRESS-1):0]       ddr_ba,$/;"	p
+ddr_ba1	ddr2_512M16_mig_controller_0.v	/^   reg [`BANK_ADDRESS-1:0]       ddr_ba1;$/;"	r
+ddr_ba_cntrl	ddr2_512M16_mig_controller_iobs_0.v	/^   input [`BANK_ADDRESS-1:0]  ddr_ba_cntrl,$/;"	p
+ddr_ba_cntrl	ddr2_512M16_mig_top_0.v	/^   wire [`BANK_ADDRESS-1:0]                      ddr_ba_cntrl;$/;"	n
+ddr_ba_reg	ddr2_512M16_mig_controller_iobs_0.v	/^   wire [`BANK_ADDRESS-1:0]   ddr_ba_reg;$/;"	n
+ddr_casb	ddr2_512M16_mig_iobs_0.v	/^   output                             ddr_casb,$/;"	p
+ddr_casb1	ddr2_512M16_mig_controller_0.v	/^   wire                          ddr_casb1;$/;"	n
+ddr_casb2	ddr2_512M16_mig_controller_0.v	/^   reg                           ddr_casb2;$/;"	r
+ddr_casb_cntrl	ddr2_512M16_mig_controller_0.v	/^   output                          ddr_casb_cntrl,$/;"	p
+ddr_casb_cntrl	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      ddr_casb_cntrl,$/;"	p
+ddr_casb_cntrl	ddr2_512M16_mig_top_0.v	/^   wire                                          ddr_casb_cntrl;$/;"	n
+ddr_casb_q	ddr2_512M16_mig_controller_iobs_0.v	/^   wire                       ddr_casb_q;$/;"	n
+ddr_cke	ddr2_512M16_mig_iobs_0.v	/^   output                             ddr_cke,$/;"	p
+ddr_cke_cntrl	ddr2_512M16_mig_controller_0.v	/^   output                          ddr_cke_cntrl,$/;"	p
+ddr_cke_cntrl	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      ddr_cke_cntrl,$/;"	p
+ddr_cke_cntrl	ddr2_512M16_mig_top_0.v	/^   wire                                          ddr_cke_cntrl;$/;"	n
+ddr_cke_int	ddr2_512M16_mig_controller_iobs_0.v	/^   wire                       ddr_cke_int;$/;"	n
+ddr_cke_q	ddr2_512M16_mig_controller_iobs_0.v	/^   wire                       ddr_cke_q;$/;"	n
+ddr_csb	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     ddr_csb,$/;"	p
+ddr_csb_cntrl	ddr2_512M16_mig_iobs_0.v	/^   input                              ddr_csb_cntrl,$/;"	p
+ddr_csb_cntrl	ddr2_512M16_mig_top_0.v	/^   wire                                          ddr_csb_cntrl;$/;"	n
+ddr_dm	ddr2_512M16_mig_data_path_iobs_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0] ddr_dm,$/;"	p
+ddr_dq_in	ddr2_512M16_mig_data_path_iobs_0.v	/^   wire [(`DATA_WIDTH-1):0] 	     ddr_dq_in;$/;"	n
+ddr_dq_in	ddr2_512M16_mig_data_read_0.v	/^   input [(`DATA_WIDTH-1):0]          ddr_dq_in,$/;"	p
+ddr_dq_inout	ddr2_512M16_mig_s3_dq_iob.v	/^   inout  ddr_dq_inout,$/;"	p
+ddr_dq_q	ddr2_512M16_mig_s3_dq_iob.v	/^   wire ddr_dq_q;  $/;"	n
+ddr_dq_val	ddr2_512M16_mig_data_path_iobs_0.v	/^   output [(`DATA_WIDTH-1):0]        ddr_dq_val$/;"	p
+ddr_dqs	ddr2_512M16_mig_data_path_iobs_0.v	/^   inout  [(`DATA_STROBE_WIDTH-1):0] ddr_dqs,$/;"	p
+ddr_dqs_enable	ddr2_512M16_mig_s3_dqs_iob.v	/^   input            ddr_dqs_enable,$/;"	p
+ddr_dqs_enable1	ddr2_512M16_mig_s3_dqs_iob.v	/^   wire ddr_dqs_enable1;$/;"	n
+ddr_dqs_enable_b	ddr2_512M16_mig_s3_dqs_iob.v	/^   wire ddr_dqs_enable_b;$/;"	n
+ddr_dqs_n	ddr2_512M16_mig_data_path_iobs_0.v	/^   inout  [(`DATA_STROBE_WIDTH-1):0] ddr_dqs_n,$/;"	p
+ddr_dqs_n	ddr2_512M16_mig_iobs_0.v	/^   inout [(`DATA_STROBE_WIDTH-1):0]   ddr_dqs_n,$/;"	p
+ddr_dqs_n	ddr2_512M16_mig_s3_dqs_iob.v	/^   inout  ddr_dqs_n,$/;"	p
+ddr_en	ddr2_512M16_mig_s3_dq_iob.v	/^   wire ddr_en;    $/;"	n
+ddr_odt0	ddr2_512M16_mig_iobs_0.v	/^   output                             ddr_odt0,$/;"	p
+ddr_odt1	ddr2_512M16_mig_controller_0.v	/^   wire                          ddr_odt1;$/;"	n
+ddr_odt2	ddr2_512M16_mig_controller_0.v	/^   reg                           ddr_odt2;$/;"	r
+ddr_odt_cntrl	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      ddr_odt_cntrl,$/;"	p
+ddr_odt_cntrl	ddr2_512M16_mig_top_0.v	/^   wire                                          ddr_odt_cntrl;$/;"	n
+ddr_odt_reg	ddr2_512M16_mig_controller_iobs_0.v	/^   wire                       ddr_odt_reg;$/;"	n
+ddr_rasb	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     ddr_rasb,$/;"	p
+ddr_rasb1	ddr2_512M16_mig_controller_0.v	/^   wire                          ddr_rasb1;$/;"	n
+ddr_rasb2	ddr2_512M16_mig_controller_0.v	/^   reg                           ddr_rasb2;$/;"	r
+ddr_rasb_cntrl	ddr2_512M16_mig_iobs_0.v	/^   input                              ddr_rasb_cntrl,$/;"	p
+ddr_rasb_cntrl	ddr2_512M16_mig_top_0.v	/^   wire                                          ddr_rasb_cntrl;$/;"	n
+ddr_rasb_q	ddr2_512M16_mig_controller_iobs_0.v	/^   wire                       ddr_rasb_q;$/;"	n
+ddr_web	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     ddr_web,$/;"	p
+ddr_web1	ddr2_512M16_mig_controller_0.v	/^   wire                          ddr_web1;$/;"	n
+ddr_web2	ddr2_512M16_mig_controller_0.v	/^   reg                           ddr_web2;$/;"	r
+ddr_web_cntrl	ddr2_512M16_mig_iobs_0.v	/^   input                              ddr_web_cntrl,$/;"	p
+ddr_web_cntrl	ddr2_512M16_mig_top_0.v	/^   wire                                          ddr_web_cntrl;$/;"	n
+ddr_web_q	ddr2_512M16_mig_controller_iobs_0.v	/^   wire                       ddr_web_q;$/;"	n
+delay1	ddr2_512M16_mig_dqs_delay.v	/^   wire delay1;$/;"	n
+delay2	ddr2_512M16_mig_dqs_delay.v	/^   wire delay2;$/;"	n
+delay3	ddr2_512M16_mig_dqs_delay.v	/^   wire delay3;$/;"	n
+delay4	ddr2_512M16_mig_dqs_delay.v	/^   wire delay4;$/;"	n
+delay5	ddr2_512M16_mig_dqs_delay.v	/^   wire delay5;$/;"	n
+delay_sel	ddr2_512M16_mig_data_path_0.v	/^   input [4:0]                         delay_sel,$/;"	p
+delay_sel	ddr2_512M16_mig_top_0.v	/^   wire [4:0]                                    delay_sel;$/;"	n
+delay_sel_dqs	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [4:0]			     delay_sel_dqs;$/;"	n
+delay_sel_rst_dqs_div	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [4:0]                        delay_sel_rst_dqs_div;$/;"	n
+delay_sel_val	ddr2_512M16_mig.v	/^   wire [4:0] delay_sel_val;$/;"	n
+delay_sel_val	ddr2_512M16_mig_infrastructure.v	/^   input  [4:0] delay_sel_val,$/;"	p
+delay_sel_val	ddr2_512M16_mig_infrastructure_top.v	/^   wire [4:0] delay_sel_val;$/;"	n
+delay_sel_val	ddr2_512M16_mig_main_0.v	/^   input [4:0]                      delay_sel_val,$/;"	p
+delay_sel_val	ddr2_512M16_mig_top_0.v	/^   input [4:0]                                   delay_sel_val,$/;"	p
+delay_sel_val1	ddr2_512M16_mig_infrastructure.v	/^   reg [4:0] delay_sel_val1; $/;"	r
+delay_sel_val1_val	ddr2_512M16_mig_infrastructure_top.v	/^   output [4:0] delay_sel_val1_val,$/;"	p
+din	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^   input     din,$/;"	p
+din	ddr2_512M16_mig_ram8d_0.v	/^   input [(`DATABITSPERSTROBE -1):0]  din,$/;"	p
+din_delay	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^   wire      din_delay;$/;"	n
+din_delay	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   wire din_delay;$/;"	n
+dll_rst_count	ddr2_512M16_mig_controller_0.v	/^   reg [7:0]                     dll_rst_count;$/;"	r
+dout	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^   output    dout$/;"	p
+dout	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   output dout$/;"	p
+dout	ddr2_512M16_mig_ram8d_0.v	/^   output [(`DATABITSPERSTROBE -1):0] dout,$/;"	p
+dout0	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   wire dout0;$/;"	n
+dq	ddr2_512M16_mig_iobs_0.v	/^   output [((`DATA_WIDTH)-1):0]       dq$/;"	p
+dq	ddr2_512M16_mig_top_0.v	/^   wire [(`DATA_WIDTH-1):0]                      dq;$/;"	n
+dqs_delayed_col0	ddr2_512M16_mig_data_path_0.v	/^   wire  [(`DATA_STROBE_WIDTH-1):0]   dqs_delayed_col0;$/;"	n
+dqs_delayed_col0_n	ddr2_512M16_mig_data_read_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]    dqs_delayed_col0_n;$/;"	n
+dqs_delayed_col0_n	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]   dqs_delayed_col0_n;$/;"	n
+dqs_delayed_col1	ddr2_512M16_mig_data_path_0.v	/^   wire  [(`DATA_STROBE_WIDTH-1):0]   dqs_delayed_col1;$/;"	n
+dqs_delayed_col1	ddr2_512M16_mig_data_read_0.v	/^   input [(`DATA_STROBE_WIDTH-1):0]   dqs_delayed_col1,    $/;"	p
+dqs_delayed_col1_n	ddr2_512M16_mig_data_read_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]    dqs_delayed_col1_n;$/;"	n
+dqs_delayed_col1_n	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]   dqs_delayed_col1_n;$/;"	n
+dqs_delayed_col1_val	ddr2_512M16_mig_data_read_controller_0.v	/^   output [(`DATA_STROBE_WIDTH-1):0]	dqs_delayed_col1_val,$/;"	p
+dqs_div_cascount	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     dqs_div_cascount;$/;"	r
+dqs_div_rdburstcount	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     dqs_div_rdburstcount;$/;"	r
+dqs_div_rst	ddr2_512M16_mig_top_0.v	/^   wire                                          dqs_div_rst;$/;"	n
+dqs_enable	ddr2_512M16_mig_controller_0.v	/^   output                          dqs_enable,$/;"	p
+dqs_enable	ddr2_512M16_mig_iobs_0.v	/^   input                              dqs_enable,$/;"	p
+dqs_enable	ddr2_512M16_mig_top_0.v	/^   wire                                          dqs_enable;$/;"	n
+dqs_enable1	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_enable1;$/;"	r
+dqs_enable2	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_enable2;$/;"	r
+dqs_enable3	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_enable3;$/;"	r
+dqs_enable_int	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_enable_int;$/;"	r
+dqs_int_delay_in	ddr2_512M16_mig_data_path_0.v	/^   input [(`DATA_STROBE_WIDTH-1):0]    dqs_int_delay_in,$/;"	p
+dqs_int_delay_in	ddr2_512M16_mig_data_read_controller_0.v	/^   input  [(`DATA_STROBE_WIDTH-1):0]	dqs_int_delay_in,$/;"	p
+dqs_int_delay_in	ddr2_512M16_mig_iobs_0.v	/^   output [(`DATA_STROBE_WIDTH-1):0]  dqs_int_delay_in,$/;"	p
+dqs_int_delay_in	ddr2_512M16_mig_top_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]		 dqs_int_delay_in;$/;"	n
+dqs_q	ddr2_512M16_mig_s3_dqs_iob.v	/^   wire dqs_q;$/;"	n
+dqs_reset	ddr2_512M16_mig_data_path_iobs_0.v	/^   input                             dqs_reset,$/;"	p
+dqs_reset	ddr2_512M16_mig_top_0.v	/^   wire                                          dqs_reset;$/;"	n
+dqs_reset1_clk0	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_reset1_clk0;$/;"	r
+dqs_reset2_clk0	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_reset2_clk0;$/;"	r
+dqs_reset3_clk0	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_reset3_clk0;$/;"	r
+dqs_reset_int	ddr2_512M16_mig_controller_0.v	/^   reg                           dqs_reset_int;$/;"	r
+emr	ddr2_512M16_mig_controller_0.v	/^   wire [`ROW_ADDRESS - 1:0]     emr;$/;"	n
+enable_b	ddr2_512M16_mig_s3_dq_iob.v	/^   wire enable_b;$/;"	n
+enb_trans_two_dtct	ddr2_512M16_mig_cal_ctl.v	/^   reg        enb_trans_two_dtct;$/;"	r
+error	ddr2_512M16_mig_cmp_data_0.v	/^   wire 		       error\/* synthesis syn_keep=1 *\/;$/;"	n
+fall_data	ddr2_512M16_mig_data_gen_0.v	/^   reg [7:0] fall_data;$/;"	r
+fifo0_rd_addr	ddr2_512M16_mig_data_read_0.v	/^   wire [3:0] 			      fifo0_rd_addr;$/;"	n
+fifo0_rd_addr_r	ddr2_512M16_mig_data_read_0.v	/^   reg [(4*`DATA_STROBE_WIDTH)-1:0]   fifo0_rd_addr_r$/;"	r
+fifo1_rd_addr	ddr2_512M16_mig_data_read_0.v	/^   wire [3:0] 			      fifo1_rd_addr;$/;"	n
+fifo1_rd_addr_r	ddr2_512M16_mig_data_read_0.v	/^   reg [(4*`DATA_STROBE_WIDTH)-1:0]   fifo1_rd_addr_r$/;"	r
+fifo_0_data_out	ddr2_512M16_mig_data_read_0.v	/^   wire [`DATA_WIDTH-1:0] 	      fifo_0_data_out;$/;"	n
+fifo_0_data_out_r	ddr2_512M16_mig_data_read_0.v	/^   reg [`DATA_WIDTH-1:0] 	      fifo_0_data_out_r$/;"	r
+fifo_0_wr_addr	ddr2_512M16_mig_data_path_0.v	/^   wire  [(4*`DATA_STROBE_WIDTH)-1:0] fifo_0_wr_addr;           $/;"	n
+fifo_0_wr_addr	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(4*`DATA_STROBE_WIDTH)-1:0] fifo_0_wr_addr;$/;"	n
+fifo_0_wr_en	ddr2_512M16_mig_data_path_0.v	/^   wire  [(`DATA_STROBE_WIDTH-1):0]   fifo_0_wr_en\/* synthesis syn_keep=1 *\/;$/;"	n
+fifo_0_wr_en	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]   fifo_0_wr_en\/* synthesis syn_keep=1 *\/;$/;"	n
+fifo_1_data_out	ddr2_512M16_mig_data_read_0.v	/^   wire [`DATA_WIDTH-1:0] 	      fifo_1_data_out;$/;"	n
+fifo_1_data_out_r	ddr2_512M16_mig_data_read_0.v	/^   reg [`DATA_WIDTH-1:0] 	      fifo_1_data_out_r$/;"	r
+fifo_1_wr_addr	ddr2_512M16_mig_data_path_0.v	/^   wire  [(4*`DATA_STROBE_WIDTH)-1:0] fifo_1_wr_addr;   $/;"	n
+fifo_1_wr_addr	ddr2_512M16_mig_data_read_0.v	/^   input [(4*`DATA_STROBE_WIDTH)-1:0] fifo_1_wr_addr ,$/;"	p
+fifo_1_wr_addr	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(4*`DATA_STROBE_WIDTH)-1:0] fifo_1_wr_addr;$/;"	n
+fifo_1_wr_addr_val	ddr2_512M16_mig_data_read_controller_0.v	/^   output [(4*`DATA_STROBE_WIDTH)-1:0]	fifo_1_wr_addr_val,$/;"	p
+fifo_1_wr_en	ddr2_512M16_mig_data_path_0.v	/^   wire  [(`DATA_STROBE_WIDTH-1):0]   fifo_1_wr_en\/* synthesis syn_keep=1 *\/;$/;"	n
+fifo_1_wr_en	ddr2_512M16_mig_data_read_0.v	/^   input [(`DATA_STROBE_WIDTH-1):0]   fifo_1_wr_en,$/;"	p
+fifo_1_wr_en	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]   fifo_1_wr_en\/* synthesis syn_keep=1 *\/;$/;"	n
+fifo_1_wr_en_val	ddr2_512M16_mig_data_read_controller_0.v	/^   output [(`DATA_STROBE_WIDTH-1):0]	fifo_1_wr_en_val,	$/;"	p
+first_sdr_data	ddr2_512M16_mig_data_read_0.v	/^   reg [((`DATA_WIDTH*2)-1):0] 	      first_sdr_data;$/;"	r
+flop1	ddr2_512M16_mig_tap_dly.v	/^   wire [31:0]   flop1\/* synthesis syn_keep=1 *\/;$/;"	n
+flop2	ddr2_512M16_mig_cal_ctl.v	/^   input [31:0]     flop2,$/;"	p
+flop2_val	ddr2_512M16_mig_cal_top.v	/^   wire [31:0] 	 flop2_val;$/;"	n
+fpga_clk	ddr2_512M16_mig_test_bench_0.v	/^   input                                          fpga_clk,$/;"	p
+fpga_rst	ddr2_512M16_mig_cal_top.v	/^   wire 	 fpga_rst;$/;"	n
+fpga_rst180	ddr2_512M16_mig_test_bench_0.v	/^   input                                          fpga_rst180,$/;"	p
+gc_int	ddr2_512M16_mig_rd_gray_cntr.v	/^   wire [3:0] gc_int;$/;"	n
+gc_int	ddr2_512M16_mig_wr_gray_cntr.v	/^   wire [3:0]   gc_int;$/;"	n
+gnd	ddr2_512M16_mig_infrastructure_iobs_0.v	/^   wire gnd;$/;"	n
+gnd	ddr2_512M16_mig_s3_dm_iob.v	/^   wire gnd;$/;"	n
+go_to_active	ddr2_512M16_mig_controller_0.v	/^   reg                           go_to_active;$/;"	r
+go_to_active_value	ddr2_512M16_mig_controller_0.v	/^   wire                          go_to_active_value;$/;"	n
+high	ddr2_512M16_mig_tap_dly.v	/^   wire          high;$/;"	n
+init	ddr2_512M16_mig_controller_0.v	/^   output                          init,$/;"	p
+init_cmd_in	ddr2_512M16_mig_controller_0.v	/^   wire                          init_cmd_in;$/;"	n
+init_count	ddr2_512M16_mig_controller_0.v	/^   reg [3:0]                     init_count;$/;"	r
+init_current_state	ddr2_512M16_mig_controller_0.v	/^   reg [1:0]                     init_current_state;$/;"	r
+init_dly	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg [5:0]  init_dly;$/;"	r
+init_dly_p	ddr2_512M16_mig_cmd_fsm_0.v	/^   wire [5:0] init_dly_p;$/;"	n
+init_done	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        init_done;$/;"	r
+init_done	ddr2_512M16_mig_controller_0.v	/^   reg                           init_done;$/;"	r
+init_done	ddr2_512M16_mig_test_bench_0.v	/^   input                                          init_done,$/;"	p
+init_done_r1	ddr2_512M16_mig_controller_0.v	/^   reg                           init_done_r1;$/;"	r
+init_done_value	ddr2_512M16_mig_controller_0.v	/^   wire                          init_done_value;$/;"	n
+init_mem	ddr2_512M16_mig_controller_0.v	/^   reg                           init_mem;$/;"	r
+init_memory	ddr2_512M16_mig_controller_0.v	/^   reg                           init_memory;$/;"	r
+init_next_state	ddr2_512M16_mig_controller_0.v	/^   reg [1:0]                     init_next_state;$/;"	r
+init_pre_count	ddr2_512M16_mig_controller_0.v	/^   reg [6:0]                     init_pre_count;$/;"	r
+inout	ddr2_512M16_mig.v	/^   inout  [1:0]    cntrl0_ddr2_dqs,$/;"	p
+inout	ddr2_512M16_mig_data_path_iobs_0.v	/^   inout  [(`DATA_WIDTH-1):0]        ddr_dq,$/;"	p
+inout	ddr2_512M16_mig_iobs_0.v	/^   inout [((`DATA_STROBE_WIDTH)-1):0] ddr_dqs,$/;"	p
+inout	ddr2_512M16_mig_iobs_0.v	/^   inout [(`DATA_WIDTH-1):0]          ddr_dq,$/;"	p
+inout	ddr2_512M16_mig_s3_dqs_iob.v	/^   inout            ddr_dqs,$/;"	p
+inout	ddr2_512M16_mig_top_0.v	/^   inout [((`DATA_STROBE_WIDTH)-1):0]            ddr2_dqs,$/;"	p
+input	ddr2_512M16_mig_addr_gen_0.v	/^   input                          addr_inc,$/;"	p
+input	ddr2_512M16_mig_addr_gen_0.v	/^   input                          rst180,$/;"	p
+input	ddr2_512M16_mig_cal_ctl.v	/^   input            reset,$/;"	p
+input	ddr2_512M16_mig_cal_top.v	/^    input        clk0dcmlock,$/;"	p
+input	ddr2_512M16_mig_clk_dcm.v	/^   input  rst,$/;"	p
+input	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            clk90,$/;"	p
+input	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            cnt_roll,$/;"	p
+input	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            init_val,$/;"	p
+input	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            rst90,$/;"	p
+input	ddr2_512M16_mig_cmp_data_0.v	/^   input                         rst90,$/;"	p
+input	ddr2_512M16_mig_cmp_data_0.v	/^   input [((`DATA_WIDTH*2)-1):0] cmp_data,$/;"	p
+input	ddr2_512M16_mig_controller_0.v	/^   input                           rst0,$/;"	p
+input	ddr2_512M16_mig_controller_0.v	/^   input [((`ROW_ADDRESS $/;"	p
+input	ddr2_512M16_mig_controller_0.v	/^   input [2:0]                     command_register,$/;"	p
+input	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      ddr_csb_cntrl,$/;"	p
+input	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      ddr_rasb_cntrl,$/;"	p
+input	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      ddr_web_cntrl,$/;"	p
+input	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      rst_dqs_div_in,$/;"	p
+input	ddr2_512M16_mig_controller_iobs_0.v	/^   input                      rst_dqs_div_int,$/;"	p
+input	ddr2_512M16_mig_controller_iobs_0.v	/^   input [`ROW_ADDRESS-1:0]   ddr_address_cntrl,$/;"	p
+input	ddr2_512M16_mig_data_gen_0.v	/^   input                               data_ena,$/;"	p
+input	ddr2_512M16_mig_data_gen_0.v	/^   input                               rst90,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input                               clk90,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input                               read_fifo_rden, \/\/ Added new signal$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input                               reset90,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input                               rst_dqs_div_in,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input [((`DATA_MASK_WIDTH*2) -1):0] user_data_mask,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input [(`DATA_WIDTH-1):0]           dq,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input [4:0]				vio_out_dqs,$/;"	p
+input	ddr2_512M16_mig_data_path_0.v	/^   input [4:0]                          vio_out_rst_dqs_div,$/;"	p
+input	ddr2_512M16_mig_data_path_iobs_0.v	/^   input                             clk90,$/;"	p
+input	ddr2_512M16_mig_data_path_iobs_0.v	/^   input                             dqs_enable,$/;"	p
+input	ddr2_512M16_mig_data_path_iobs_0.v	/^   input                             write_en_val,$/;"	p
+input	ddr2_512M16_mig_data_path_iobs_0.v	/^   input  [(`DATA_MASK_WIDTH-1):0]   data_mask_r,$/;"	p
+input	ddr2_512M16_mig_data_path_iobs_0.v	/^   input  [(`DATA_WIDTH-1):0]        write_data_falling,$/;"	p
+input	ddr2_512M16_mig_data_read_0.v	/^   input                              read_fifo_rden, $/;"	p
+input	ddr2_512M16_mig_data_read_0.v	/^   input                              reset90,$/;"	p
+input	ddr2_512M16_mig_data_read_0.v	/^   input [(4*`DATA_STROBE_WIDTH)-1:0] fifo_0_wr_addr ,$/;"	p
+input	ddr2_512M16_mig_data_read_0.v	/^   input [(`DATA_STROBE_WIDTH-1):0]   dqs_delayed_col0,$/;"	p
+input	ddr2_512M16_mig_data_read_0.v	/^   input [(`DATA_STROBE_WIDTH-1):0]   fifo_0_wr_en,$/;"	p
+input	ddr2_512M16_mig_data_read_controller_0.v	/^   input				reset,$/;"	p
+input	ddr2_512M16_mig_data_read_controller_0.v	/^   input [4:0]				vio_out_dqs,$/;"	p
+input	ddr2_512M16_mig_data_read_controller_0.v	/^   input [4:0]                          vio_out_rst_dqs_div,$/;"	p
+input	ddr2_512M16_mig_data_read_controller_0.v	/^   input [4:0]                         delay_sel,$/;"	p
+input	ddr2_512M16_mig_data_write_0.v	/^   input                              write_enable,$/;"	p
+input	ddr2_512M16_mig_data_write_0.v	/^   input [((`DATA_MASK_WIDTH*2)-1):0] user_data_mask,$/;"	p
+input	ddr2_512M16_mig_dqs_delay.v	/^   input [4:0] sel_in,$/;"	p
+input	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^   input     reset,$/;"	p
+input	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   input  din,$/;"	p
+input	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   input  rst_dqs_delay_n,$/;"	p
+input	ddr2_512M16_mig_infrastructure.v	/^   input        rst_calib1,$/;"	p
+input	ddr2_512M16_mig_infrastructure_top.v	/^   input        reset_in_n,$/;"	p
+input	ddr2_512M16_mig_infrastructure_top.v	/^   input        sys_clkb,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input                              clk90,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input                              ddr_casb_cntrl,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input                              ddr_cke_cntrl,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input                              ddr_odt_cntrl,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input                              dqs_reset,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input [((`DATA_MASK_WIDTH)-1):0]   data_mask_f,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input [(`BANK_ADDRESS-1):0]        ddr_ba_cntrl,$/;"	p
+input	ddr2_512M16_mig_iobs_0.v	/^   input [(`DATA_WIDTH-1):0]          write_data_rising,$/;"	p
+input	ddr2_512M16_mig_main_0.v	/^   input                              vio_out_dqs_en,$/;"	p
+input	ddr2_512M16_mig_main_0.v	/^   input                              vio_out_rst_dqs_div_en$/;"	p
+input	ddr2_512M16_mig_main_0.v	/^   input                            clk90_int,$/;"	p
+input	ddr2_512M16_mig_main_0.v	/^   input                            sys_rst,$/;"	p
+input	ddr2_512M16_mig_main_0.v	/^   input                            sys_rst180,$/;"	p
+input	ddr2_512M16_mig_main_0.v	/^   input                            wait_200us,$/;"	p
+input	ddr2_512M16_mig_ram8d_0.v	/^   input                              wclk1,$/;"	p
+input	ddr2_512M16_mig_ram8d_0.v	/^   input [3:0]                        raddr,$/;"	p
+input	ddr2_512M16_mig_ram8d_0.v	/^   input [3:0]                        waddr,$/;"	p
+input	ddr2_512M16_mig_rd_gray_cntr.v	/^   input        reset90,$/;"	p
+input	ddr2_512M16_mig_s3_dm_iob.v	/^   input   mask_rising,$/;"	p
+input	ddr2_512M16_mig_s3_dq_iob.v	/^   input  clk90,$/;"	p
+input	ddr2_512M16_mig_s3_dq_iob.v	/^   input  write_data_falling,$/;"	p
+input	ddr2_512M16_mig_s3_dqs_iob.v	/^   input            ddr_dqs_reset,$/;"	p
+input	ddr2_512M16_mig_tap_dly.v	/^   input         reset,$/;"	p
+input	ddr2_512M16_mig_test_bench_0.v	/^   input                                          ar_done,$/;"	p
+input	ddr2_512M16_mig_test_bench_0.v	/^   input                                          auto_ref_req,$/;"	p
+input	ddr2_512M16_mig_test_bench_0.v	/^   input                                          clk90,$/;"	p
+input	ddr2_512M16_mig_test_bench_0.v	/^   input                                          fpga_rst90,$/;"	p
+input	ddr2_512M16_mig_test_bench_0.v	/^   input                                          u_data_val,$/;"	p
+input	ddr2_512M16_mig_top_0.v	/^   input 				         vio_out_dqs_en,$/;"	p
+input	ddr2_512M16_mig_top_0.v	/^   input                                         clk90_int,$/;"	p
+input	ddr2_512M16_mig_top_0.v	/^   input                                         sys_rst,$/;"	p
+input	ddr2_512M16_mig_top_0.v	/^   input                                         sys_rst180,$/;"	p
+input	ddr2_512M16_mig_top_0.v	/^   input                                         vio_out_rst_dqs_div_en$/;"	p
+input	ddr2_512M16_mig_top_0.v	/^   input [((`ROW_ADDRESS +$/;"	p
+input	ddr2_512M16_mig_wr_gray_cntr.v	/^   input        reset,$/;"	p
+input_clk	ddr2_512M16_mig_clk_dcm.v	/^   input  input_clk,$/;"	p
+led_error_output1	ddr2_512M16_mig_main_0.v	/^   output                           led_error_output1,$/;"	p
+led_state	ddr2_512M16_mig_cmp_data_0.v	/^   reg 			       led_state;$/;"	r
+lmr	ddr2_512M16_mig_addr_gen_0.v	/^   wire [`ROW_ADDRESS - 1:0] lmr;$/;"	n
+lmr	ddr2_512M16_mig_controller_0.v	/^   wire [`ROW_ADDRESS - 1:0]     lmr;$/;"	n
+lmr_dll_rst	ddr2_512M16_mig_controller_0.v	/^   wire [`ROW_ADDRESS - 1:0]     lmr_dll_rst;$/;"	n
+lmr_dll_set	ddr2_512M16_mig_controller_0.v	/^   wire [`ROW_ADDRESS - 1:0]     lmr_dll_set;$/;"	n
+mask_falling	ddr2_512M16_mig_s3_dm_iob.v	/^   input   mask_falling,$/;"	p
+mask_o	ddr2_512M16_mig_s3_dm_iob.v	/^   wire mask_o;  $/;"	n
+next_cmd	ddr2_512M16_mig_cmd_fsm_0.v	/^   wire       next_cmd;$/;"	n
+next_state	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg [2:0]  next_state;$/;"	r
+next_state	ddr2_512M16_mig_controller_0.v	/^   reg [3:0]                     next_state;$/;"	r
+odt_deassert	ddr2_512M16_mig_controller_0.v	/^   reg  			 odt_deassert;$/;"	r
+output	ddr2_512M16_mig.v	/^   output          cntrl0_ddr2_cke,$/;"	p
+output	ddr2_512M16_mig.v	/^   output          cntrl0_ddr2_ras_n,$/;"	p
+output	ddr2_512M16_mig.v	/^   output          cntrl0_ddr2_we_n,$/;"	p
+output	ddr2_512M16_mig.v	/^   output          cntrl0_init_done,$/;"	p
+output	ddr2_512M16_mig.v	/^   output          cntrl0_led_error_output1,$/;"	p
+output	ddr2_512M16_mig.v	/^   output          cntrl0_rst_dqs_div_out,$/;"	p
+output	ddr2_512M16_mig.v	/^   output [0:0]    cntrl0_ddr2_ck,$/;"	p
+output	ddr2_512M16_mig.v	/^   output [12:0]   cntrl0_ddr2_a,$/;"	p
+output	ddr2_512M16_mig.v	/^   output [1:0]    cntrl0_ddr2_dm,$/;"	p
+output	ddr2_512M16_mig_addr_gen_0.v	/^   output                         cnt_roll$/;"	p
+output	ddr2_512M16_mig_addr_gen_0.v	/^   output [((`ROW_ADDRESS +$/;"	p
+output	ddr2_512M16_mig_cal_ctl.v	/^   output           dbg_trans_twodtct,$/;"	p
+output	ddr2_512M16_mig_cal_ctl.v	/^   output [5:0]     dbg_cnt,$/;"	p
+output	ddr2_512M16_mig_cal_ctl.v	/^   output reg [4:0] tapfordqs\/* synthesis syn_keep=1 *\/,$/;"	p
+output	ddr2_512M16_mig_cal_top.v	/^    output       dbg_trans_twodtct,$/;"	p
+output	ddr2_512M16_mig_cal_top.v	/^    output [4:0] tapfordqs,$/;"	p
+output	ddr2_512M16_mig_cal_top.v	/^    output [5:0] dbg_cnt,$/;"	p
+output	ddr2_512M16_mig_clk_dcm.v	/^   output clk90,$/;"	p
+output	ddr2_512M16_mig_cmd_fsm_0.v	/^   output reg       r_w,$/;"	p
+output	ddr2_512M16_mig_cmd_fsm_0.v	/^   output reg [2:0] u_cmd,$/;"	p
+output	ddr2_512M16_mig_cmp_data_0.v	/^   output                        led_error_output,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output			   ddr_web_cntrl,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output                          auto_ref_req,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output                          cmd_ack,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output                          ddr_csb_cntrl,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output                          ddr_rasb_cntrl,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output                          dqs_reset \/* synthesis syn_keep=1 *\/,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output [`BANK_ADDRESS-1:0]      ddr_ba_cntrl,$/;"	p
+output	ddr2_512M16_mig_controller_0.v	/^   output reg                      write_enable,$/;"	p
+output	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     ddr_casb,$/;"	p
+output	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     ddr_cke,$/;"	p
+output	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     ddr_odt0,$/;"	p
+output	ddr2_512M16_mig_controller_iobs_0.v	/^   output [`BANK_ADDRESS-1:0] ddr_ba,$/;"	p
+output	ddr2_512M16_mig_data_gen_0.v	/^   output [((`DATA_MASK_WIDTH*2)-1):0] mask_data$/;"	p
+output	ddr2_512M16_mig_data_path_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0]   data_mask_f,$/;"	p
+output	ddr2_512M16_mig_data_path_0.v	/^   output [((`DATA_WIDTH*2)-1):0]      user_output_data,$/;"	p
+output	ddr2_512M16_mig_data_path_0.v	/^   output [(`DATA_WIDTH-1):0]          write_data_falling,$/;"	p
+output	ddr2_512M16_mig_data_path_iobs_0.v	/^   output [(`DATA_STROBE_WIDTH-1):0] dqs_int_delay_in,$/;"	p
+output	ddr2_512M16_mig_data_read_0.v	/^   output                             u_data_val$/;"	p
+output	ddr2_512M16_mig_data_read_controller_0.v	/^   output [(4*`DATA_STROBE_WIDTH)-1:0]	fifo_0_wr_addr_val,$/;"	p
+output	ddr2_512M16_mig_data_read_controller_0.v	/^   output [(`DATA_STROBE_WIDTH-1):0]	dqs_delayed_col0_val,$/;"	p
+output	ddr2_512M16_mig_data_read_controller_0.v	/^   output [(`DATA_STROBE_WIDTH-1):0]	fifo_0_wr_en_val,$/;"	p
+output	ddr2_512M16_mig_data_write_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0]  data_mask_r$/;"	p
+output	ddr2_512M16_mig_data_write_0.v	/^   output [((`DATA_WIDTH)-1):0]       write_data_rising,$/;"	p
+output	ddr2_512M16_mig_fifo_0_wr_en_0.v	/^   output    rst_dqs_delay_n,$/;"	p
+output	ddr2_512M16_mig_infrastructure.v	/^   output       dbg_rst_calib$/;"	p
+output	ddr2_512M16_mig_infrastructure.v	/^   output [4:0] delay_sel_val1_val,$/;"	p
+output	ddr2_512M16_mig_infrastructure_iobs_0.v	/^   output [(`CLK_WIDTH-1):0] ddr2_ck,$/;"	p
+output	ddr2_512M16_mig_infrastructure_top.v	/^   output       clk90_int_val,$/;"	p
+output	ddr2_512M16_mig_infrastructure_top.v	/^   output       dbg_trans_twodtct,$/;"	p
+output	ddr2_512M16_mig_infrastructure_top.v	/^   output       sys_rst180_val,$/;"	p
+output	ddr2_512M16_mig_infrastructure_top.v	/^   output       sys_rst_val,$/;"	p
+output	ddr2_512M16_mig_infrastructure_top.v	/^   output [5:0] dbg_cnt,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output                             ddr_csb,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output                             ddr_rasb,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output                             ddr_web,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output                             rst_dqs_div,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output                             rst_dqs_div_out,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0]  ddr_dm,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output [(`CLK_WIDTH-1):0]          ddr2_ck,$/;"	p
+output	ddr2_512M16_mig_iobs_0.v	/^   output [(`ROW_ADDRESS-1):0]        ddr_address,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                             dbg_rst_calib,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                           data_valid_out,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                           ddr2_cke,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                           ddr2_odt,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                           ddr2_ras_n,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                           init_done,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output                           rst_dqs_div_out,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output [(`CLK_WIDTH-1):0]        ddr2_ck_n,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output [`BANK_ADDRESS-1:0]       ddr2_ba,$/;"	p
+output	ddr2_512M16_mig_main_0.v	/^   output[((`DATA_MASK_WIDTH)-1):0]  ddr2_dm,$/;"	p
+output	ddr2_512M16_mig_rd_gray_cntr.v	/^   output [3:0] rgc_gcnt$/;"	p
+output	ddr2_512M16_mig_s3_dm_iob.v	/^   output  ddr_dm$/;"	p
+output	ddr2_512M16_mig_s3_dq_iob.v	/^   output read_data_in$/;"	p
+output	ddr2_512M16_mig_s3_dqs_iob.v	/^   output           dqs$/;"	p
+output	ddr2_512M16_mig_tap_dly.v	/^   output [31:0] flop2$/;"	p
+output	ddr2_512M16_mig_test_bench_0.v	/^   output                                         led_error_output,$/;"	p
+output	ddr2_512M16_mig_test_bench_0.v	/^   output [((`ROW_ADDRESS +$/;"	p
+output	ddr2_512M16_mig_test_bench_0.v	/^   output [(2*`DATA_WIDTH)-1:0]                   u_data_i,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        auto_ref_req,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        dbg_rst_calib,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        ddr2_cke,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        ddr2_ras_n,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        ddr2_we_n,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        init_done,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        rst_dqs_div_out,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output                                        user_cmd_ack,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output [((`DATA_MASK_WIDTH)-1):0]             ddr2_dm,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output [((`DATA_WIDTH*2)-1):0]                user_output_data,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output [(`CLK_WIDTH-1):0]                     ddr2_ck,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output [(`CLK_WIDTH-1):0]                     ddr2_ck_n,$/;"	p
+output	ddr2_512M16_mig_top_0.v	/^   output [`BANK_ADDRESS-1:0]                    ddr2_ba,$/;"	p
+output	ddr2_512M16_mig_wr_gray_cntr.v	/^   output [3:0] wgc_gcnt$/;"	p
+phase_cnt	ddr2_512M16_mig_cal_ctl.v	/^   reg [4:0]  phase_cnt\/* synthesis syn_preserve=1 *\/;$/;"	r
+r_w	ddr2_512M16_mig_addr_gen_0.v	/^   input                          r_w,$/;"	p
+r_w	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         r_w;$/;"	n
+ras_count	ddr2_512M16_mig_controller_0.v	/^   reg [4:0]                     ras_count; $/;"	r
+rcd_count	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     rcd_count;$/;"	r
+rdburst_end	ddr2_512M16_mig_controller_0.v	/^   wire                          rdburst_end;$/;"	n
+rdburst_end_1	ddr2_512M16_mig_controller_0.v	/^   reg                           rdburst_end_1;$/;"	r
+rdburst_end_2	ddr2_512M16_mig_controller_0.v	/^   reg                           rdburst_end_2;$/;"	r
+read_cmd1	ddr2_512M16_mig_controller_0.v	/^   reg                           read_cmd1;$/;"	r
+read_cmd2	ddr2_512M16_mig_controller_0.v	/^   reg                           read_cmd2;$/;"	r
+read_cmd3	ddr2_512M16_mig_controller_0.v	/^   reg                           read_cmd3;$/;"	r
+read_cmd_in	ddr2_512M16_mig_controller_0.v	/^   wire                          read_cmd_in;$/;"	n
+read_data	ddr2_512M16_mig_cmp_data_0.v	/^   input [((`DATA_WIDTH*2)-1):0] read_data,$/;"	p
+read_data_reg	ddr2_512M16_mig_cmp_data_0.v	/^   reg [((`DATA_WIDTH*2)-1):0] read_data_reg;$/;"	r
+read_fifo_rden_90r1	ddr2_512M16_mig_data_read_0.v	/^   reg                               read_fifo_rden_90r1; $/;"	r
+read_fifo_rden_90r2	ddr2_512M16_mig_data_read_0.v	/^   reg                               read_fifo_rden_90r2; $/;"	r
+read_fifo_rden_90r3	ddr2_512M16_mig_data_read_0.v	/^   reg                               read_fifo_rden_90r3; $/;"	r
+read_fifo_rden_90r4	ddr2_512M16_mig_data_read_0.v	/^   reg                               read_fifo_rden_90r4; $/;"	r
+read_fifo_rden_90r5	ddr2_512M16_mig_data_read_0.v	/^   reg                               read_fifo_rden_90r5; $/;"	r
+read_fifo_rden_90r6	ddr2_512M16_mig_data_read_0.v	/^   reg                               read_fifo_rden_90r6; $/;"	r
+ref_freq_cnt	ddr2_512M16_mig_controller_0.v	/^   reg [(`MAX_REF_WIDTH-1):0]    ref_freq_cnt;$/;"	r
+refresh_done	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            refresh_done,$/;"	p
+reg	ddr2_512M16_mig_cmd_fsm_0.v	/^   output reg       addr_inc,$/;"	p
+reg	ddr2_512M16_mig_controller_0.v	/^   output reg                      ar_done,$/;"	p
+reg	ddr2_512M16_mig_controller_0.v	/^   output reg                      ddr_odt_cntrl,$/;"	p
+reg	ddr2_512M16_mig_controller_0.v	/^   output reg                      read_fifo_rden \/\/ Read Enable signal for read fifo(to data_read module)$/;"	p
+reg	ddr2_512M16_mig_controller_0.v	/^   output reg                      rst_calib,$/;"	p
+reg	ddr2_512M16_mig_data_write_0.v	/^   output reg                         write_en_val,$/;"	p
+reg	ddr2_512M16_mig_infrastructure_top.v	/^   output reg   wait_200us_rout,$/;"	p
+reset	ddr2_512M16_mig_cal_top.v	/^    input        reset,$/;"	p
+reset	ddr2_512M16_mig_data_path_0.v	/^   input                               reset,$/;"	p
+reset	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   input  reset,$/;"	p
+reset90_r	ddr2_512M16_mig_data_read_0.v	/^   reg 				      reset90_r;$/;"	r
+reset90_r	ddr2_512M16_mig_rd_gray_cntr.v	/^   reg  reset90_r;$/;"	r
+reset_in_n	ddr2_512M16_mig.v	/^   input           reset_in_n,$/;"	p
+reset_r	ddr2_512M16_mig_cal_ctl.v	/^   reg	      reset_r\/* synthesis syn_preserve=1 *\/;$/;"	r
+reset_r	ddr2_512M16_mig_data_read_controller_0.v	/^   reg 	                             reset_r;$/;"	r
+reset_r	ddr2_512M16_mig_tap_dly.v	/^   reg		 reset_r;$/;"	r
+rfc_count	ddr2_512M16_mig_controller_0.v	/^   reg [7:0]                     rfc_count;$/;"	r
+rfc_count_reg	ddr2_512M16_mig_controller_0.v	/^   reg                           rfc_count_reg;$/;"	r
+rfc_counter_value	ddr2_512M16_mig_controller_0.v	/^   reg [7:0]                     rfc_counter_value;$/;"	r
+rise_data	ddr2_512M16_mig_data_gen_0.v	/^   reg [7:0] rise_data;$/;"	r
+rise_data1	ddr2_512M16_mig_data_gen_0.v	/^   wire [7:0]rise_data1;$/;"	n
+row_address	ddr2_512M16_mig_controller_0.v	/^   wire [`ROW_ADDRESS-1:0]       row_address;$/;"	n
+row_address1	ddr2_512M16_mig_addr_gen_0.v	/^   reg [(`ROW_ADDRESS-1):0] row_address1;$/;"	r
+row_address_reg	ddr2_512M16_mig_controller_0.v	/^   reg [`ROW_ADDRESS-1:0]        row_address_reg;$/;"	r
+rp_count	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     rp_count;$/;"	r
+rst0_r	ddr2_512M16_mig_controller_0.v	/^   reg                           rst0_r;$/;"	r
+rst180	ddr2_512M16_mig_cmd_fsm_0.v	/^   input            rst180,$/;"	p
+rst180	ddr2_512M16_mig_controller_0.v	/^   input                           rst180,$/;"	p
+rst180_r	ddr2_512M16_mig_addr_gen_0.v	/^   reg                      rst180_r;$/;"	r
+rst180_r	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        rst180_r;$/;"	r
+rst180_r	ddr2_512M16_mig_controller_0.v	/^   reg                           rst180_r;$/;"	r
+rst90_r	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        rst90_r;$/;"	r
+rst90_r	ddr2_512M16_mig_cmp_data_0.v	/^   reg 			       rst90_r;$/;"	r
+rst90_r	ddr2_512M16_mig_data_gen_0.v	/^   reg       rst90_r;$/;"	r
+rst90_r	ddr2_512M16_mig_test_bench_0.v	/^   reg                                          rst90_r;$/;"	r
+rst_calib	ddr2_512M16_mig_top_0.v	/^   wire                                          rst_calib;$/;"	n
+rst_calib1_r1	ddr2_512M16_mig_infrastructure.v	/^   reg       rst_calib1_r1;$/;"	r
+rst_calib1_r2	ddr2_512M16_mig_infrastructure.v	/^   reg       rst_calib1_r2;$/;"	r
+rst_dqs_delay	ddr2_512M16_mig_fifo_1_wr_en_0.v	/^   wire rst_dqs_delay;$/;"	n
+rst_dqs_delay_n	ddr2_512M16_mig_data_read_controller_0.v	/^   wire [(`DATA_STROBE_WIDTH-1):0]   rst_dqs_delay_n;$/;"	n
+rst_dqs_div	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     rst_dqs_div,$/;"	p
+rst_dqs_div	ddr2_512M16_mig_data_read_controller_0.v	/^   wire				     rst_dqs_div;$/;"	n
+rst_dqs_div_in	ddr2_512M16_mig_data_read_controller_0.v	/^   input                               rst_dqs_div_in,$/;"	p
+rst_dqs_div_in	ddr2_512M16_mig_iobs_0.v	/^   input                              rst_dqs_div_in,$/;"	p
+rst_dqs_div_in	ddr2_512M16_mig_main_0.v	/^   input                            rst_dqs_div_in,$/;"	p
+rst_dqs_div_in	ddr2_512M16_mig_top_0.v	/^   input                                         rst_dqs_div_in,$/;"	p
+rst_dqs_div_int	ddr2_512M16_mig_controller_0.v	/^   output                          rst_dqs_div_int,$/;"	p
+rst_dqs_div_int	ddr2_512M16_mig_iobs_0.v	/^   input                              rst_dqs_div_int,$/;"	p
+rst_dqs_div_int	ddr2_512M16_mig_top_0.v	/^   wire                                          rst_dqs_div_int;$/;"	n
+rst_dqs_div_int1	ddr2_512M16_mig_controller_0.v	/^   wire                          rst_dqs_div_int1;$/;"	n
+rst_dqs_div_out	ddr2_512M16_mig_controller_iobs_0.v	/^   output                     rst_dqs_div_out$/;"	p
+rst_dqs_div_r	ddr2_512M16_mig_controller_0.v	/^   reg                           rst_dqs_div_r;$/;"	r
+rst_dqs_div_r1	ddr2_512M16_mig_controller_0.v	/^   reg                           rst_dqs_div_r1; \/\/For Reg Dimm$/;"	r
+rst_flag	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        rst_flag;$/;"	r
+sys_clk	ddr2_512M16_mig.v	/^  wire sys_clk;$/;"	n
+sys_clk	ddr2_512M16_mig_infrastructure_top.v	/^   input        sys_clk,$/;"	p
+sys_clk_ibuf	ddr2_512M16_mig_infrastructure_top.v	/^   wire       sys_clk_ibuf;$/;"	n
+sys_clk_in	ddr2_512M16_mig.v	/^   input           sys_clk_in,$/;"	p
+sys_clk_in	ddr2_512M16_mig_infrastructure_top.v	/^   input        sys_clk_in,$/;"	p
+sys_clkb	ddr2_512M16_mig.v	/^  wire sys_clkb;$/;"	n
+sys_rst	ddr2_512M16_mig.v	/^   wire       sys_rst;$/;"	n
+sys_rst	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst;$/;"	r
+sys_rst180	ddr2_512M16_mig.v	/^   wire       sys_rst180;$/;"	n
+sys_rst180	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst180;$/;"	r
+sys_rst180_1	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst180_1;$/;"	r
+sys_rst180_o	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst180_o;$/;"	r
+sys_rst90	ddr2_512M16_mig.v	/^   wire       sys_rst90;$/;"	n
+sys_rst90	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst90;$/;"	r
+sys_rst90	ddr2_512M16_mig_main_0.v	/^   input                            sys_rst90,$/;"	p
+sys_rst90	ddr2_512M16_mig_top_0.v	/^   input                                         sys_rst90,$/;"	p
+sys_rst90_1	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst90_1;$/;"	r
+sys_rst90_o	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst90_o;$/;"	r
+sys_rst90_val	ddr2_512M16_mig_infrastructure_top.v	/^   output       sys_rst90_val,$/;"	p
+sys_rst_1	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst_1;$/;"	r
+sys_rst_o	ddr2_512M16_mig_infrastructure_top.v	/^   reg        sys_rst_o;$/;"	r
+tap	ddr2_512M16_mig_tap_dly.v	/^   wire [31:0]   tap\/* synthesis syn_keep=1 *\/;$/;"	n
+tap_dly_reg	ddr2_512M16_mig_cal_ctl.v	/^   reg [31:0] tap_dly_reg\/* synthesis syn_preserve=1 *\/;$/;"	r
+tapfordqs1	ddr2_512M16_mig_cal_ctl.v	/^   reg [4:0]  tapfordqs1\/* synthesis syn_preserve=1 *\/;$/;"	r
+tapin	ddr2_512M16_mig_tap_dly.v	/^   input         tapin,$/;"	p
+temp	ddr2_512M16_mig_cmd_fsm_0.v	/^   reg        temp;$/;"	r
+trans_onedtct	ddr2_512M16_mig_cal_ctl.v	/^   reg        trans_onedtct;$/;"	r
+trans_twodtct	ddr2_512M16_mig_cal_ctl.v	/^   reg        trans_twodtct;$/;"	r
+u1_address	ddr2_512M16_mig_main_0.v	/^           `COLUMN_ADDRESS  + `BANK_ADDRESS)-1):0] u1_address;$/;"	n
+u1_data_i	ddr2_512M16_mig_main_0.v	/^   wire [((`DATA_WIDTH*2)-1):0]                  u1_data_i;$/;"	n
+u1_data_m	ddr2_512M16_mig_main_0.v	/^   wire [((`DATA_MASK_WIDTH*2)-1):0]             u1_data_m;$/;"	n
+u_ack	ddr2_512M16_mig_test_bench_0.v	/^   input                                          u_ack,$/;"	p
+u_cmd	ddr2_512M16_mig_test_bench_0.v	/^   output [2:0]                                   u_cmd,$/;"	p
+u_cmd_p	ddr2_512M16_mig_cmd_fsm_0.v	/^   wire [2:0] u_cmd_p;$/;"	n
+u_dat_fl	ddr2_512M16_mig_test_bench_0.v	/^   wire                                         u_dat_fl;$/;"	n
+u_dat_flag	ddr2_512M16_mig_test_bench_0.v	/^   reg                                          u_dat_flag;$/;"	r
+u_data_m	ddr2_512M16_mig_test_bench_0.v	/^   output [((`DATA_MASK_WIDTH*2)-1):0]            u_data_m,$/;"	p
+u_data_o	ddr2_512M16_mig_test_bench_0.v	/^   input [(2*`DATA_WIDTH)-1:0]                    u_data_o,$/;"	p
+u_data_val	ddr2_512M16_mig_data_path_0.v	/^   output                              u_data_val,$/;"	p
+user_ack1	ddr2_512M16_mig_main_0.v	/^   wire                                          user_ack1;$/;"	n
+user_cal_rst	ddr2_512M16_mig_infrastructure_top.v	/^   wire       user_cal_rst;$/;"	n
+user_cmd1	ddr2_512M16_mig_main_0.v	/^   wire [2:0]                                    user_cmd1;$/;"	n
+user_command_register	ddr2_512M16_mig_top_0.v	/^   input [2:0]                                   user_command_register,$/;"	p
+user_data_mask	ddr2_512M16_mig_top_0.v	/^   input  [((`DATA_MASK_WIDTH*2)-1):0]           user_data_mask,$/;"	p
+user_data_val1	ddr2_512M16_mig_main_0.v	/^   wire                                          user_data_val1;$/;"	n
+user_data_valid	ddr2_512M16_mig_top_0.v	/^   output                                        user_data_valid,$/;"	p
+user_input_data	ddr2_512M16_mig_data_path_0.v	/^   input [((`DATA_WIDTH*2)-1):0]       user_input_data,$/;"	p
+user_input_data	ddr2_512M16_mig_data_write_0.v	/^   input     [((`DATA_WIDTH*2)-1):0]  user_input_data,$/;"	p
+user_input_data	ddr2_512M16_mig_top_0.v	/^   input [((`DATA_WIDTH*2)-1):0]                 user_input_data,$/;"	p
+user_output_data	ddr2_512M16_mig_data_read_0.v	/^   output [((`DATA_WIDTH*2)-1):0]     user_output_data,$/;"	p
+user_output_data	ddr2_512M16_mig_main_0.v	/^   wire [((`DATA_WIDTH*2)-1):0]                  user_output_data;$/;"	n
+user_rst	ddr2_512M16_mig_infrastructure_top.v	/^   wire       user_rst;$/;"	n
+val_reg	ddr2_512M16_mig_cmp_data_0.v	/^   reg 			       val_reg;$/;"	r
+valid	ddr2_512M16_mig_cmp_data_0.v	/^   reg 			       valid;$/;"	r
+vcc	ddr2_512M16_mig_infrastructure_iobs_0.v	/^   wire vcc;$/;"	n
+vcc	ddr2_512M16_mig_s3_dm_iob.v	/^   wire vcc;$/;"	n
+vio_out	ddr2_512M16_mig.v	/^   wire [11:0] vio_out;$/;"	n
+vio_out_dqs	ddr2_512M16_mig.v	/^   wire [4:0]  vio_out_dqs;$/;"	n
+vio_out_dqs	ddr2_512M16_mig_main_0.v	/^   input [4:0]                        vio_out_dqs,$/;"	p
+vio_out_dqs	ddr2_512M16_mig_top_0.v	/^   input [4:0]				         vio_out_dqs,$/;"	p
+vio_out_dqs_en	ddr2_512M16_mig.v	/^   wire        vio_out_dqs_en;$/;"	n
+vio_out_dqs_en	ddr2_512M16_mig_data_path_0.v	/^   input 				vio_out_dqs_en,$/;"	p
+vio_out_dqs_en	ddr2_512M16_mig_data_read_controller_0.v	/^   input 				vio_out_dqs_en,$/;"	p
+vio_out_rst_dqs_div	ddr2_512M16_mig.v	/^   wire [4:0]  vio_out_rst_dqs_div;$/;"	n
+vio_out_rst_dqs_div	ddr2_512M16_mig_main_0.v	/^   input [4:0]                        vio_out_rst_dqs_div,$/;"	p
+vio_out_rst_dqs_div	ddr2_512M16_mig_top_0.v	/^   input [4:0]                                   vio_out_rst_dqs_div,$/;"	p
+vio_out_rst_dqs_div_en	ddr2_512M16_mig.v	/^   wire        vio_out_rst_dqs_div_en;$/;"	n
+vio_out_rst_dqs_div_en	ddr2_512M16_mig_data_path_0.v	/^   input                                vio_out_rst_dqs_div_en$/;"	p
+vio_out_rst_dqs_div_en	ddr2_512M16_mig_data_read_controller_0.v	/^   input                                vio_out_rst_dqs_div_en$/;"	p
+wait_200us	ddr2_512M16_mig.v	/^   wire       wait_200us;$/;"	n
+wait_200us	ddr2_512M16_mig_controller_0.v	/^   input                           wait_200us,$/;"	p
+wait_200us	ddr2_512M16_mig_infrastructure_top.v	/^   reg        wait_200us;$/;"	r
+wait_200us	ddr2_512M16_mig_top_0.v	/^   input                                         wait_200us,$/;"	p
+wait_200us_r	ddr2_512M16_mig_infrastructure_top.v	/^   reg        wait_200us_r;$/;"	r
+wait_clk270	ddr2_512M16_mig_infrastructure_top.v	/^   reg        wait_clk270;$/;"	r
+wait_clk90	ddr2_512M16_mig_infrastructure_top.v	/^   reg        wait_clk90;$/;"	r
+wclk0	ddr2_512M16_mig_ram8d_0.v	/^   input                              wclk0,$/;"	p
+we	ddr2_512M16_mig_ram8d_0.v	/^   input                              we$/;"	p
+wr	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     wr;$/;"	r
+wr_count	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     wr_count;$/;"	r
+wrburst_end	ddr2_512M16_mig_controller_0.v	/^   wire                          wrburst_end;$/;"	n
+wrburst_end_1	ddr2_512M16_mig_controller_0.v	/^   reg                           wrburst_end_1;$/;"	r
+wrburst_end_2	ddr2_512M16_mig_controller_0.v	/^   reg                           wrburst_end_2;$/;"	r
+wrburst_end_3	ddr2_512M16_mig_controller_0.v	/^   reg                           wrburst_end_3;$/;"	r
+wrburst_end_cnt	ddr2_512M16_mig_controller_0.v	/^   reg [2:0]                     wrburst_end_cnt;$/;"	r
+write_cmd1	ddr2_512M16_mig_controller_0.v	/^   reg                           write_cmd1;$/;"	r
+write_cmd2	ddr2_512M16_mig_controller_0.v	/^   reg                           write_cmd2;$/;"	r
+write_cmd3	ddr2_512M16_mig_controller_0.v	/^   reg                           write_cmd3;$/;"	r
+write_cmd_in	ddr2_512M16_mig_controller_0.v	/^   wire                          write_cmd_in;$/;"	n
+write_data0	ddr2_512M16_mig_data_write_0.v	/^   wire [((`DATA_WIDTH*2)-1):0]       write_data0;$/;"	n
+write_data1	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_WIDTH*2)-1):0]        write_data1;$/;"	r
+write_data2	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_WIDTH*2)-1):0]        write_data2;$/;"	r
+write_data270	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_WIDTH-1):0]            write_data270;$/;"	r
+write_data270_1	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_WIDTH-1):0]            write_data270_1;$/;"	r
+write_data270_2	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_WIDTH-1):0]            write_data270_2;$/;"	r
+write_data3	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_WIDTH*2)-1):0]        write_data3;$/;"	r
+write_data4	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_WIDTH*2)-1):0]        write_data4$/;"	r
+write_data90	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_WIDTH-1):0]            write_data90;$/;"	r
+write_data90_1	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_WIDTH-1):0]            write_data90_1;$/;"	r
+write_data90_2	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_WIDTH-1):0]            write_data90_2;$/;"	r
+write_data_falling	ddr2_512M16_mig_data_write_0.v	/^   output [((`DATA_WIDTH)-1):0]       write_data_falling,$/;"	p
+write_data_falling	ddr2_512M16_mig_iobs_0.v	/^   input [(`DATA_WIDTH-1):0]          write_data_falling,$/;"	p
+write_data_falling	ddr2_512M16_mig_top_0.v	/^   wire [(`DATA_WIDTH-1):0]                      write_data_falling;$/;"	n
+write_data_falling1	ddr2_512M16_mig_s3_dq_iob.v	/^   wire write_data_falling1;$/;"	n
+write_data_m0	ddr2_512M16_mig_data_write_0.v	/^   wire [((`DATA_MASK_WIDTH*2)-1):0]  write_data_m0;$/;"	n
+write_data_m1	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH*2)-1):0]   write_data_m1;$/;"	r
+write_data_m2	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH*2)-1):0]   write_data_m2;$/;"	r
+write_data_m270	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH)-1):0]     write_data_m270;$/;"	r
+write_data_m270_1	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH)-1):0]     write_data_m270_1;$/;"	r
+write_data_m270_2	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH)-1):0]     write_data_m270_2;$/;"	r
+write_data_m3	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH*2)-1):0]   write_data_m3;$/;"	r
+write_data_m4	ddr2_512M16_mig_data_write_0.v	/^   reg [((`DATA_MASK_WIDTH*2)-1):0]   write_data_m4;$/;"	r
+write_data_m90	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_MASK_WIDTH-1):0]       write_data_m90;$/;"	r
+write_data_m90_1	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_MASK_WIDTH-1):0]       write_data_m90_1;$/;"	r
+write_data_m90_2	ddr2_512M16_mig_data_write_0.v	/^   reg [(`DATA_MASK_WIDTH-1):0]       write_data_m90_2;$/;"	r
+write_data_rising	ddr2_512M16_mig_data_path_0.v	/^   output [(`DATA_WIDTH-1):0]          write_data_rising,$/;"	p
+write_data_rising	ddr2_512M16_mig_data_path_iobs_0.v	/^   input  [(`DATA_WIDTH-1):0]        write_data_rising,$/;"	p
+write_data_rising	ddr2_512M16_mig_s3_dq_iob.v	/^   input  write_data_rising,$/;"	p
+write_data_rising	ddr2_512M16_mig_top_0.v	/^   wire [(`DATA_WIDTH-1):0]                      write_data_rising;$/;"	n
+write_data_rising1	ddr2_512M16_mig_s3_dq_iob.v	/^   wire write_data_rising1;$/;"	n
+write_en_P1	ddr2_512M16_mig_data_write_0.v	/^   reg                                write_en_P1;$/;"	r
+write_en_val	ddr2_512M16_mig_data_path_0.v	/^   output                              write_en_val,$/;"	p
+write_en_val	ddr2_512M16_mig_iobs_0.v	/^   input                              write_en_val,$/;"	p
+write_en_val	ddr2_512M16_mig_s3_dq_iob.v	/^   input  write_en_val,$/;"	p
+write_en_val	ddr2_512M16_mig_top_0.v	/^   wire                                          write_en_val;$/;"	n
+write_enable	ddr2_512M16_mig_data_path_0.v	/^   input                               write_enable,$/;"	p
+write_enable	ddr2_512M16_mig_top_0.v	/^   wire                                          write_enable;$/;"	n

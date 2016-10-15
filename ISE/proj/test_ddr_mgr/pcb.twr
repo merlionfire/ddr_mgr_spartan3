@@ -1,0 +1,155 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf
+
+Design file:              pcb.ncd
+Physical constraint file: pcb.pcf
+Device,package,speed:     xc3s700an,fgg484,-4 (PRODUCTION 1.42 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK_50M
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+BTN_SOUTH   |    3.511(R)|   -1.699(R)|clk_75m           |   0.000|
+SW<0>       |    3.021(R)|   -1.306(R)|clk_75m           |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK_AUX to Pad
+------------+------------+---------------------------+--------+
+            | clk (edge) |                           | Clock  |
+Destination |   to PAD   |Internal Clock(s)          | Phase  |
+------------+------------+---------------------------+--------+
+SD_A<0>     |    4.373(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<1>     |    4.355(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<2>     |    4.420(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<3>     |    4.355(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<4>     |    4.401(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<5>     |    4.388(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<6>     |    4.425(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<7>     |    4.355(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<8>     |    4.401(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<9>     |    4.373(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<10>    |    4.388(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<11>    |    4.378(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_A<12>    |    4.376(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_BA<0>    |    4.420(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_BA<1>    |    4.357(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_CAS      |    4.429(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_CKE      |    4.367(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_CK_N     |    3.275(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+            |    3.275(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_CK_P     |    3.275(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+            |    3.275(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_DQ<0>    |    4.444(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.444(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<1>    |    4.444(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.444(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<2>    |    4.430(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.430(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<3>    |    4.416(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.416(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<4>    |    4.418(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.418(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<5>    |    4.427(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.427(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<6>    |    4.423(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.423(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<7>    |    4.423(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.423(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<8>    |    4.423(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.423(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<9>    |    4.423(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.423(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<10>   |    4.429(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.429(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<11>   |    4.429(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.429(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<12>   |    4.430(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.430(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<13>   |    4.427(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.427(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<14>   |    4.435(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.435(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_DQ<15>   |    4.435(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.435(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_LDM      |    4.379(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.379(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_LDQS_N   |    3.261(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+            |    3.261(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_LDQS_P   |    3.261(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+            |    3.261(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_LOOP_OUT |    4.359(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_RAS      |    4.429(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_UDM      |    4.391(R)|ddr_mgr_main_inst/mig_clk90|   0.000|
+            |    4.391(F)|ddr_mgr_main_inst/mig_clk90|   0.000|
+SD_UDQS_N   |    3.280(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+            |    3.280(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_UDQS_P   |    3.280(R)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+            |    3.280(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+SD_WE       |    4.365(F)|ddr_mgr_main_inst/mig_clk0 |   0.000|
+------------+------------+---------------------------+--------+
+
+Clock to Setup on destination clock CLK_50M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_50M        |   10.964|         |         |         |
+CLK_AUX        |         |    8.637|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_AUX
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_50M        |    6.613|         |    6.820|         |
+CLK_AUX        |    5.667|    6.084|    2.832|    5.753|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Sep 20 08:48:25 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 396 MB
+
+
+

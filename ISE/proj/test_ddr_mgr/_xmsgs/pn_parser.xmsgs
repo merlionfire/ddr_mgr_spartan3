@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/rtl/ddr2_mgr.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/rtl/ddr2_mgr.v</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ddr2_512M16_mig_parameters_0.v&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/rtl/ddr2_mgr.v</arg>&quot; Line <arg fmt="%d" index="2">289</arg>. <arg fmt="%s" index="3">Macro &lt;BANK_ADDRESS&gt; is not defined.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/picocode/picocode.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">3</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ddr2_512M16_mig_parameters_0.v&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">18</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_WIDTH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_STROBE_WIDTH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_MASK_WIDTH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">22</arg>. <arg fmt="%s" index="3">Macro &lt;CLK_WIDTH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">24</arg>. <arg fmt="%s" index="3">Macro &lt;ROW_ADDRESS&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">25</arg>. <arg fmt="%s" index="3">Macro &lt;BANK_ADDRESS&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">67</arg>. <arg fmt="%s" index="3">Syntax error near &quot;*&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">69</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. <arg fmt="%s" index="3">Macro &lt;COLUMN_ADDRESS&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">70</arg>. <arg fmt="%s" index="3">Syntax error near &quot;+&quot;.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/pcb.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/src/pcb.v</arg>&quot; Line <arg fmt="%d" index="2">59</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ddr2_512M16_mig_parameters_0.v&quot;.</arg>
+</msg>
+
+</messages>
+

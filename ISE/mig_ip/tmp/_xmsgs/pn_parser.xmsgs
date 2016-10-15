@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_ctl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_clk_dcm.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v&quot; line 62
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v&quot; line 55
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v&quot; line 57
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v&quot; line 56
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v</arg>&quot; Line <arg fmt="%d" index="2">58</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v&quot; line 58
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v&quot; line 56
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v&quot; line 56
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_dqs_delay.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_fifo_0_wr_en_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_fifo_1_wr_en_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v&quot; line 54
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v&quot; line 56
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v&quot; line 55
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v&quot; line 57
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_rd_gray_cntr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dm_iob.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dq_iob.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dqs_iob.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_tap_dly.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v&quot; line 56
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/fractal-fpga/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_wr_gray_cntr.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

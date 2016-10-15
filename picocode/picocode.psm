@@ -272,14 +272,13 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                     CALL     wait_mem_write_done           
                     CALL     compare_col_addr 
                     JUMP     NZ, col_loop ; contiue  
-                    CALL   
-                  
+                    CALL     clr_col_addr
                     CALL     inc_row_addr 
-
-
+                    CALL     compare_row_addr 
+                    JUMP     NZ, col_loop ; continue 
          finish:    CALL     delay_20ms
+                    LOAD     s0, 02
                     OUTPUT   s0, pt_disp_cs  
-                    LOAD     s0, set_auto_inc 
          end_loop:  JUMP    end_loop                    ; 
 
 ;;============================================================================
@@ -376,16 +375,54 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                   ;| py1, py0   |   px1,  px0           | 
                   ;--------------------------------------
                   ;23         10 9                     1
+
+                  ; addr[23:16] =  {   r1[4:0], r0[7:5]  }
+                  ; addr[15:8]   = {   r0[4:0], c1[2:0] } 
+                  ; addr[7:0]    =     c0[7:0]
    set_addr_reg:
+                  OUTPUT   c0,   reg_ddr2_addr_7_0
+                  ; C1[2:0]  => S0
+                  LOAD     s0,   c1 
+                  AND      s0,   07
+                  ; RO << 3 = { R0[4:0], 3'b000 } 
+                  LOAD     s1,   r0
+                  SL0      s1
+                  SL0      s1
+                  SL0      s1
+                  ; { R0[4:0],C1[2:0] } => S0
+                  OR       s0,   s1
+                  OUTPUT   s0,   reg_ddr2_addr_15_8
+                  ;  R0[7:5]  => S0
+                  LOAD     s0,   r0
+                  AND      s0,   07
+                  LOAD     s1,   r1
+                  SL0      s1
+                  SL0      s1
+                  SL0      s1
+                  OR       s0,   s1
+                  OUTPUT   s0,   reg_ddr2_addr_23_16
+                  RETURN
+
+
    execute_mem_write:
                   LOAD     s0,  active_ddr2_write
                   OUTPUT   s0,  reg_ddr2_status_ctrl 
                   RETURN
+
    wait_mem_write_done:
                   INPUT    s0,  reg_ddr2_status_ctrl
                   TEST     s0,  BIT_DDR2_BUSY 
                   JUMP     NZ,  wait_mem_write_done
                   RETURN
-   compare_col_addr:
 
-                    CALL     COMPARE_COL_ADDR_WITH_CHECK_MAX
+   compare_col_addr:
+                  COMPARE  c0,  CHECK_MAX_COL_0  
+                  RETURN   NZ 
+                  COMPARE  c1,  CHECK_MAX_COL_1  
+                  RETURN 
+
+   compare_row_addr:
+                  COMPARE  r0,  CHECK_MAX_ROW_0  
+                  RETURN   NZ 
+                  COMPARE  r1,  CHECK_MAX_ROW_1  
+                  RETURN 

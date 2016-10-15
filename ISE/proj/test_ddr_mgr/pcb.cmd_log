@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
