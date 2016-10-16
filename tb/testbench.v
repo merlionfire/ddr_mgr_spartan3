@@ -119,8 +119,9 @@ module testbench () ;
      rst   =  1'b1; clk   =  1'b0;  
      mem_clk_s = 1'b0 ;  mem_rst_s_n = 1'b0 ; 
      
-     //reset dut 
+     //unfroze dut from reset state 
      repeat (8) @(posedge clk ) ; 
+     rst   =  1'b0 ; 
      #10 mem_rst_s_n =  1'b1 ; 
      
      $display("[SIM_INFO] DDR2_mgr and MIG have been unfrozen by testbench, be waiting for memory init done......" ) ;   
@@ -144,7 +145,7 @@ module testbench () ;
         $display("[SIM_INFO] frame = %1d", `DUT.screen_cnt );  
         @( `DUT.screen_cnt )  ; 
         if ( `DUT.screen_cnt == 100 )  begin 
-           $sdisplay("[SIM_INFO] The number of frame has reach the upper-limition.Sim will finish as expected" );  
+           $display("[SIM_INFO] The number of frame has reach the upper-limition. Sim will finish as expected" );  
            $finish ; 
         end
 
@@ -159,9 +160,11 @@ module testbench () ;
   //*******************************************************************//
 
   initial begin
+      wait( ( `DUT.mig_user_input_addr >= 24'h0F_FF00 )  )  ; 
+      $display("[SIM_INFO] @%t:Start to dump waveform", $time) ;  
       $fsdbDumpfile("cosim_verdi.fsdb");
-      $fsdbDumpvars();
-      #1ms $finish ; 
+      $fsdbDumpvars(0, "testbench.ddr_mgr_main_inst");
+      #10ms $finish ; 
   end
 
 `ifdef SVA 

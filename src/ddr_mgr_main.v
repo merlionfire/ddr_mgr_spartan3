@@ -283,6 +283,7 @@ module ddr_mgr_main
 
    assign rd_xfr_en  =  req_st_r[1] ; 
 
+   assign   rd_mem_req  =  rd_req_r ; 
    assign   rd_mem_addr =  { addr_row, addr_col, addr_bank }  ; 
 
    synchro synchro_rd_data_valid (.async(rd_data_valid ),.sync( rd_data_valid_sync ),.clk( ~mem_clk0 ) ) ;
@@ -372,7 +373,7 @@ module ddr_mgr_main
    assign   pi_rd_en    =  read_strobe ; 
    assign   pi_wr_data  =  out_port ; 
    //assign   in_port     =  pi_ddr2_mgr_rd_data | pi_disp_rd_data | pi_unit_rd_data | pi_mouse_rd_data ;  
-   assign   in_port     =  pi_ddr2_mgr_rd_data | pi_disp_rd_data ;  
+   assign   in_port     =  pi_ddr2_mgr_rd_data  ;  
    assign   pi_addr     =  port_id[3:0] ; 
 
    assign   mem_clk0   =  mig_clk0 ; 
@@ -381,5 +382,20 @@ module ddr_mgr_main
    assign   mem_rst90  =  mig_rst90;
    assign   mem_rst180 =  mig_rst180 ; 
    assign   mem_rst    =  mem_rst180 ; 
+
+   // ---------------------------------------------------------
+   //    SVA for key signals   
+   // ---------------------------------------------------------
+/*
+   property DATA_FAULT_CHECKER ; 
+      @( posedge mem_clk90 ) disable iff ( rst == 1'b1 ) data_fault  == 1'b0 ;   endproperty 
+
+
+   assert property ( DATA_FAULT_CHECKER )    
+      else $fatal("[ASSERT ERR] Dismatch between data is found !!" ) ; 
+
+   cover property ( DATA_FAULT_CHECKER ) ;    
+*/
+
 
 endmodule

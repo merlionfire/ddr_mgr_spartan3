@@ -239,7 +239,8 @@ CONSTANT PRE_MAX_COL_1    ,  08 ;
 
 ;; 768 = 0x3_0_0  ; << 1 = 0x6_0_0 
 CONSTANT CHECK_MAX_ROW_0  ,  00 ;  
-CONSTANT CHECK_MAX_ROW_1  ,  06 ; 
+;CONSTANT CHECK_MAX_ROW_1  ,  03 ; 
+CONSTANT CHECK_MAX_ROW_1  ,  01 ; 
 
 
 ;; Extra 8 words are preload following testing data. It will check if more data than expected are read from DDR due to FW or ddr_mgr bug.  
@@ -256,7 +257,7 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
 ;; * sF is reserved for the control state variable.
 ;;============================================================================
 
-      cold_start:   LOAD     s0, 0 
+      cold_start:   CALL     wait_mem_write_done
 ;;============================================================================
 ;; Main program loop; for the most part, this continuously updates the LCD.
 ;; Everything else is done in the interrupt service routine.
@@ -276,7 +277,7 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                     CALL     inc_row_addr 
                     CALL     compare_row_addr 
                     JUMP     NZ, col_loop ; continue 
-         finish:    CALL     delay_20ms
+         finish:    CALL     delay_1us
                     LOAD     s0, 02
                     OUTPUT   s0, pt_disp_cs  
          end_loop:  JUMP    end_loop                    ; 
@@ -396,7 +397,11 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                   OUTPUT   s0,   reg_ddr2_addr_15_8
                   ;  R0[7:5]  => S0
                   LOAD     s0,   r0
-                  AND      s0,   07
+                  SR0      s0
+                  SR0      s0
+                  SR0      s0
+                  SR0      s0
+                  SR0      s0
                   LOAD     s1,   r1
                   SL0      s1
                   SL0      s1
