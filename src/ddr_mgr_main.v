@@ -236,7 +236,7 @@ module ddr_mgr_main
    /// ----- Below is from frame_buf.v
    reg   [ `COLUMN_ADDRESS-1:0 ]  addr_col ,addr_col_nxt  ; 
    reg   [ `ROW_ADDRESS-1:0 ]     addr_row , addr_row_nxt ;  
-   reg   [ `BANK_ADDRESS-1:0 ]    addr_bank   = 'h0 ; 
+   reg   [ `BANK_ADDRESS-1:0 ]    addr_bank   = {`BANK_ADDRESS{1'b0} } ;  ; 
 
 
    parameter   MAX_ROW_NUM    =  13'h02FF ; 

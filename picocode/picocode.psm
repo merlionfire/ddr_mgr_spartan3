@@ -145,9 +145,12 @@ CONSTANT reg_ddr2_data1_7_0    , 15    ; port
 CONSTANT reg_ddr2_data1_15_8   , 16    ; port 
 CONSTANT reg_ddr2_data1_23_16  , 17    ; port 
 CONSTANT reg_ddr2_data1_31_24  , 18    ; port 
-CONSTANT reg_ddr2_addr_7_0     , 19    ; port 
-CONSTANT reg_ddr2_addr_15_8    , 1a    ; port 
-CONSTANT reg_ddr2_addr_23_16   , 1b    ; port 
+
+CONSTANT reg_ddr2_bank_addr    , 19    ; port 
+CONSTANT reg_ddr2_col_0_addr   , 1A    ; port 
+CONSTANT reg_ddr2_col_1_addr   , 1B    ; port 
+CONSTANT reg_ddr2_row_0_addr   , 1C    ; port 
+CONSTANT reg_ddr2_row_1_addr   , 1D    ; port 
 
 CONSTANT active_ddr2_write     , 01    ; 
 CONSTANT BIT_DDR2_BUSY         , 01    ;
@@ -374,40 +377,13 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                   ADDCY    r1,   00
                   RETURN
 
-                  ;-------------------------------------- 
-                  ;| py1, py0   |   px1,  px0           | 
-                  ;--------------------------------------
-                  ;23         10 9                     1
 
-                  ; addr[23:16] =  {   r1[4:0], r0[7:5]  }
-                  ; addr[15:8]   = {   r0[4:0], c1[2:0] } 
-                  ; addr[7:0]    =     c0[7:0]
    set_addr_reg:
-                  OUTPUT   c0,   reg_ddr2_addr_7_0
-                  ; C1[2:0]  => S0
-                  LOAD     s0,   c1 
-                  AND      s0,   07
-                  ; RO << 3 = { R0[4:0], 3'b000 } 
-                  LOAD     s1,   r0
-                  SL0      s1
-                  SL0      s1
-                  SL0      s1
-                  ; { R0[4:0],C1[2:0] } => S0
-                  OR       s0,   s1
-                  OUTPUT   s0,   reg_ddr2_addr_15_8
-                  ;  R0[7:5]  => S0
-                  LOAD     s0,   r0
-                  SR0      s0
-                  SR0      s0
-                  SR0      s0
-                  SR0      s0
-                  SR0      s0
-                  LOAD     s1,   r1
-                  SL0      s1
-                  SL0      s1
-                  SL0      s1
-                  OR       s0,   s1
-                  OUTPUT   s0,   reg_ddr2_addr_23_16
+                  
+                  OUTPUT   c0,  reg_ddr2_col_0_addr 
+                  OUTPUT   c1,  reg_ddr2_col_1_addr 
+                  OUTPUT   r0,  reg_ddr2_row_0_addr
+                  OUTPUT   r1,  reg_ddr2_row_1_addr
                   RETURN
 
 

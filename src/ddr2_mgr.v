@@ -78,28 +78,29 @@ module ddr2_mgr(
    // ---------------------------------------------------------
    //    Variables declaration   
    // ---------------------------------------------------------
-   reg   [31:0]   write_data_0, write_data_1 ; 
-   reg   [23:0]   ddr_addr_reg; 
-   reg   wr_mem_req ;
-   wire  wr_mem_req_sync ; 
-   wire  [22:0]   wr_16bit_addr ;  
-   wire  reg_wr_stobe;
-   wire  refresh_locked; 
-   reg   refresh_active;
-   reg   wr_cmd_active ;
-   reg   [3:0]  state_r, state_nxt;
-   reg   [2:0]  cmd_r, cmd_nxt;
-   reg   [9:0]  xfr_len_r, xfr_len_nxt ;  
-   reg   [9:0]  xfr_cnt_r, xfr_cnt_nxt ;  
-   reg   [24:0] addr_r, addr_nxt ; 
-   wire  [24:0] wr_mem_addr  ;
-   reg   burst_done_r, burst_done_nxt ; 
-   reg   rd_grant_r, rd_grant_nxt, wr_grant_r, wr_grant_nxt  ; 
-   wire  last_req_xfr ; 
-   wire  addr_inc;
-   
-   reg   [31:0] data_output_r ; 
-   wire  ddr2_busy ;  
+   reg  [31:0]   write_data_0, write_data_1 ; 
+   reg  [7:0]    ddr_bank_reg ; 
+   reg  [15:0]   ddr_col_reg ; 
+   reg  [15:0]   ddr_row_reg ; 
+   reg           wr_mem_req ;
+   wire          wr_mem_req_sync ; 
+   wire [22:0]   wr_16bit_addr ;  
+   wire          reg_wr_stobe;
+   wire          refresh_locked; 
+   reg           refresh_active;
+   reg           wr_cmd_active ;
+   reg  [3:0]    state_r, state_nxt;
+   reg  [2:0]    cmd_r, cmd_nxt;
+   reg  [9:0]    xfr_len_r, xfr_len_nxt ;  
+   reg  [9:0]    xfr_cnt_r, xfr_cnt_nxt ;  
+   reg  [24:0]   addr_r, addr_nxt ; 
+   wire [24:0]   wr_mem_addr  ;
+   reg           burst_done_r, burst_done_nxt ; 
+   reg           rd_grant_r, rd_grant_nxt, wr_grant_r, wr_grant_nxt  ; 
+   wire          last_req_xfr ; 
+   wire          addr_inc;
+   reg  [31:0]   data_output_r ; 
+   wire          ddr2_busy ;  
 
 
 
@@ -109,9 +110,11 @@ module ddr2_mgr(
    
    always @( posedge pi_clk ) begin    
       if ( pi_rst ) begin 
-         write_data_0  <= 32'h0 ; 
-         write_data_1  <= 32'h0 ; 
-         ddr_addr_reg  <= 24'h0 ;  
+         write_data_0   <= 32'h0 ; 
+         write_data_1   <= 32'h0 ; 
+         ddr_bank_reg   <= 8'h00 ; 
+         ddr_col_reg    <= 16'h000; 
+         ddr_row_reg    <= 16'h0000 ; 
       end else begin 
          if ( reg_wr_strobe ) begin 
             case ( pi_addr ) 
@@ -123,9 +126,11 @@ module ddr2_mgr(
                4'h6  : write_data_1[15:8]  <= pi_wr_data ; 
                4'h7  : write_data_1[23:16] <= pi_wr_data ; 
                4'h8  : write_data_1[31:24] <= pi_wr_data ; 
-               4'h9  : ddr_addr_reg[7:0]   <= pi_wr_data ;  
-               4'ha  : ddr_addr_reg[15:8]  <= pi_wr_data ;  
-               4'hb  : ddr_addr_reg[23:16] <= pi_wr_data ;  
+               4'h9  : ddr_bank_reg[7:0]   <= pi_wr_data ;
+               4'ha  : ddr_col_reg [7:0]   <= pi_wr_data ;  
+               4'hb  : ddr_col_reg [15:8]  <= pi_wr_data ;  
+               4'hc  : ddr_row_reg [7:0]   <= pi_wr_data ;  
+               4'hd  : ddr_row_reg [15:8]  <= pi_wr_data ;  
             endcase
          end
       end
@@ -185,8 +190,35 @@ module ddr2_mgr(
               ST_RD_CMD    = 4'h8,
               ST_RD_DATA   = 4'h9;
 
-   assign   wr_mem_addr  = { ddr_addr_reg[23:1], BANK_0 }  ; 
 
+
+   // DDR2 Mircon 512Mb 
+   // ______________________________________________
+   // | 24            12  | 11            2 | 1  0 |
+   // |___________________|_________________|______|
+   //       ROW - 13bit       COL - 10bit    Bank - 2bit
+   // 
+   // Capacity :
+   //    2^13 ( row )  X  2^10 ( col )  X  2^2 ( Bank ) --- word( 16bit ) 
+   //  = 8K X 1K X 4 words
+   //  = 32M words
+   //  = 32M X 16bit
+   //  = 512Mb 
+
+   //assign   wr_mem_addr  = { ddr_addr_reg[23:1], BANK_0 }  ; 
+
+   // Note for genetal purpose, column register is based on byte rather than word. 
+   // Since micron ddr2 is 16bit data width that is store unit is based on word, 
+   // address for this ddr2 is also based on word. 
+   //
+   // In other words, address is based on data transfer width. 
+   // So to assemble address based on word, range of column register value is choosed to be [10:1]  
+   assign   wr_mem_addr  = {  ddr_row_reg[`ROW_ADDRESS   -1 :  0],
+                              ddr_col_reg[`COLUMN_ADDRESS   :  1],
+                              ddr_bank_reg[`BANK_ADDRESS -1 :  0]
+                           }  ; 
+
+   
    assign   addr_inc   =  xfr_cnt_r[0]  ; 
 
    // Roof number of words that are required to 32bit-align 
