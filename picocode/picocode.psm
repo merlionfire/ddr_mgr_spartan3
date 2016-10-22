@@ -239,8 +239,8 @@ CONSTANT PRE_MAX_COL_1    ,  08 ;
 
 ;; 768 = 0x3_0_0  ; << 1 = 0x6_0_0 
 CONSTANT CHECK_MAX_ROW_0  ,  00 ;  
-;CONSTANT CHECK_MAX_ROW_1  ,  03 ; 
-CONSTANT CHECK_MAX_ROW_1  ,  01 ; 
+CONSTANT CHECK_MAX_ROW_1  ,  03 ; 
+;CONSTANT CHECK_MAX_ROW_1  ,  01 ; 
 
 
 ;; Extra 8 words are preload following testing data. It will check if more data than expected are read from DDR due to FW or ddr_mgr bug.  

@@ -113,11 +113,15 @@ module ddr2_512M16_mig_infrastructure_top
         );
    end else if(`CLK_TYPE == "SINGLE_ENDED") begin : SINGLE_ENDED_CLKS_INST
 
+   /*
      IBUFG  SYS_CLK_INST
        (
         .I  (sys_clk_in),
         .O  (sys_clk_ibuf)
         );
+   */
+   assign   sys_clk_ibuf   =  sys_clk_in ; 
+
    end
    endgenerate
 

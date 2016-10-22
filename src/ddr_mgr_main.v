@@ -206,6 +206,7 @@ module ddr_mgr_main
    reg   rd_go, buffer_init_done_1d ; 
    reg   rd_xfr_done, rd_xfr_done_nxt ; 
    wire  buffer_init_done, buffer_init_done_pulse ;  
+   // synthesis attribute keep of buffer_init_done is "true"
    reg [12:0] req_addr_row ; 
    reg [15:0]  screen_cnt   ;  
    reg   screen_cnt_overrun ; 
@@ -243,7 +244,6 @@ module ddr_mgr_main
    always @( negedge mem_clk0 ) begin    
       if ( mem_rst ) begin 
          req_addr_row   <= 'h0 ;  
-         rd_go          <= 1'b0 ;
          screen_cnt     <= 'h0 ; 
          screen_cnt_overrun   <= 1'b0 ; 
       end else begin 
@@ -271,7 +271,7 @@ module ddr_mgr_main
    reg   [1:0] req_st_nxt, req_st_r ; 
    reg   rd_req_nxt, rd_req_r ; 
    reg   [9:0] rd_xfr_len_nxt ;
-   wire  rd_xfr_en, rd_xfr_en_sync, rd_data_valid_sync, rd_go_sync  ;
+   wire  rd_xfr_en, rd_xfr_en_sync, rd_data_valid_sync  ;
 
 
    parameter  XFR_LEN_PER_LINE  = 10'h200 ; 
@@ -350,18 +350,24 @@ module ddr_mgr_main
    // Verify the data read from memory through ddr2_mgr with preloaded data
    //           16'b1001_0110_1100_0011
    reg   data_fault ; 
+   // synthesis attribute keep of data_fault is "true"
+
    parameter   BYTE_0   =  8'h10 ; 
    parameter   BYTE_1   =  8'h86 ; 
    parameter   BYTE_2   =  8'hCB ; 
    parameter   BYTE_3   =  8'hFD ; 
 
    always @( posedge mem_clk90 ) begin
-      if ( rd_data_valid & rd_xfr_en_sync  ) begin 
-         if ( rd_data != { BYTE_3, BYTE_2, BYTE_1, BYTE_0 } ) begin 
-            data_fault  <= 1'b1 ; 
+      if ( mem_rst90 ) begin 
+         data_fault  <= 1'b0 ; 
+      end else begin
+
+         if ( rd_data_valid & rd_xfr_en_sync  ) begin 
+            if ( rd_data != { BYTE_3, BYTE_2, BYTE_1, BYTE_0 } ) begin 
+               data_fault  <= 1'b1 ; 
+            end 
          end 
       end 
-      
    end 
 
 
