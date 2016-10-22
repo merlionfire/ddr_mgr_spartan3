@@ -113,6 +113,16 @@ module ddr2_512M16_mig_infrastructure_top
         );
    end else if(`CLK_TYPE == "SINGLE_ENDED") begin : SINGLE_ENDED_CLKS_INST
 
+   // Important remark:
+
+   //   Original design assumes that mem clock from clock pin pad directly, such as
+   //   CLK_50M or CLK_AUX ( 133mhz ). Morever, clock generation of user design instantiate 
+   //   DCM lib cell directly rather than using core generator. So, assert a IBUFG for clock
+   //   pin pad and then go to DCM like below. 
+   //
+   //
+   //   But if source clok from other DCM output, have to replace "IBUFG" by "BUFG"
+
    /*
      IBUFG  SYS_CLK_INST
        (
