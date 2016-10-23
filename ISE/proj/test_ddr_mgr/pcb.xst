@@ -10,7 +10,7 @@ run
 -opt_mode Speed
 -opt_level 1
 -iuc NO
--keep_hierarchy No
+-keep_hierarchy Soft
 -netlist_hierarchy As_Optimized
 -rtlview Yes
 -glob_opt AllClockNets
@@ -42,7 +42,7 @@ run
 -async_to_sync NO
 -mult_style Auto
 -iobuf YES
--max_fanout 500
+-max_fanout 100000
 -bufg 24
 -register_duplication YES
 -register_balancing No

@@ -9,49 +9,54 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Tue Sep 20 08:47:46 2016
+Mapped Date    : Sun Oct 23 09:08:51 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   17
+Number of warnings:   70
 Logic Utilization:
-  Number of Slice Flip Flops:           514 out of  11,776    4%
-  Number of 4 input LUTs:               536 out of  11,776    4%
+  Total Number Slice Registers:       1,217 out of  11,776   10%
+    Number used as Flip Flops:        1,216
+    Number used as Latches:               1
+  Number of 4 input LUTs:             1,168 out of  11,776    9%
 Logic Distribution:
-  Number of occupied Slices:            422 out of   5,888    7%
-    Number of Slices containing only related logic:     422 out of     422 100%
-    Number of Slices containing unrelated logic:          0 out of     422   0%
+  Number of occupied Slices:          1,065 out of   5,888   18%
+    Number of Slices containing only related logic:   1,065 out of   1,065 100%
+    Number of Slices containing unrelated logic:          0 out of   1,065   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         605 out of  11,776    5%
-    Number used as logic:               397
-    Number used as a route-thru:         69
-    Number used for Dual Port RAMs:      16
+  Total Number of 4 input LUTs:       1,337 out of  11,776   11%
+    Number used as logic:               831
+    Number used as a route-thru:        169
+    Number used for Dual Port RAMs:      80
       (Two LUTs used per Dual Port RAM)
     Number used for 32x1 RAMs:           52
       (Two LUTs used per 32x1 RAM)
-    Number used as Shift registers:      71
+    Number used as Shift registers:     205
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 50 out of     372   13%
+  Number of bonded IOBs:                 54 out of     372   14%
     IOB Flip Flops:                      20
     IOB Master Pads:                      3
     IOB Slave Pads:                       3
-  Number of ODDR2s used:                 21
-    Number of DDR_ALIGNMENT = NONE       21
+  Number of ODDR2s used:                 24
+    Number of DDR_ALIGNMENT = NONE       24
     Number of DDR_ALIGNMENT = C0          0
     Number of DDR_ALIGNMENT = C1          0
-  Number of BUFGMUXs:                     4 out of      24   16%
+  Number of BUFGMUXs:                     6 out of      24   25%
   Number of DCMs:                         2 out of       8   25%
-  Number of RAMB16BWEs:                   1 out of      20    5%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of BSCAN_SPARTAN3As:             1 out of       1  100%
+  Number of RAMB16BWEs:                  12 out of      20   60%
 
-Average Fanout of Non-Clock Nets:                3.26
+  Number of RPM macros:           13
+Average Fanout of Non-Clock Nets:                3.13
 
-Peak Memory Usage:  667 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   3 secs 
+Peak Memory Usage:  681 MB
+Total REAL time to MAP completion:  6 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 
@@ -92,8 +97,173 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:MapLib:701 - Signal SD_LOOP_IN connected to top level port SD_LOOP_IN
-   has been removed.
+WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
+   symbol
+   "physical_group_ddr_mgr_main_inst/mig_clk0/ddr_mgr_main_inst/u_mem_controller
+   /infrastructure_top0/clk_dcm0/BUFG_CLK0" (output
+   signal=ddr_mgr_main_inst/mig_clk0) has a mix of clock and non-clock loads.
+   The non-clock loads are:
+   Pin I0 of
+   ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l0
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<1> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net icon_control0<13> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <SW<1>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW<2>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <SW<3>_IBUF> is incomplete. The signal
+   does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <CLK_AUX_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[8].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[7].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[6].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[5].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[4].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[3].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[2].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[0].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DIA0> on
    block:<ddr_mgr_main_inst/picoblaze_inst/picocode_inst/ram_1024_x_18>:<RAMB16B
    WE_RAMB16BWE>.
@@ -145,19 +315,20 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network SW<3> has no load.
-INFO:LIT:395 - The above info message is repeated 66 more times for the
+INFO:LIT:243 - Logical network N18 has no load.
+INFO:LIT:395 - The above info message is repeated 86 more times for the
    following (max. 5 shown):
-   SW<2>,
-   SW<1>,
-   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0]
-   .strobe/fifo_bit0/SPO,
-   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0]
-   .strobe/fifo_bit0/DPO,
-   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0]
-   .strobe/fifo_bit1/SPO
+   N19,
+   N20,
+   N21,
+   N22,
+   N23
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
+INFO:MapLib:159 - Net Timing constraints on signal CLK_50M are pushed forward
+   through input buffer.
+INFO:MapLib:159 - Net Timing constraints on signal CLK_AUX are pushed forward
+   through input buffer.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -167,9 +338,9 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 448 block(s) removed
-  81 block(s) optimized away
- 418 signal(s) removed
+  51 block(s) removed
+ 209 block(s) optimized away
+  66 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -184,2564 +355,252 @@ To quickly locate the original cause for the removal of a chain of logic, look
 above the place where that logic is listed in the trimming report, then locate
 the lines that are least indented (begin at the leftmost edge).
 
-Loadless block "clock_gen_inst/CLKDV_BUFG_INST" (CKBUF) removed.
- The signal "clock_gen_inst/CLKDV_BUF" is loadless and has been removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit0" (RAM16X1D) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<0>" is
-loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/bit0" (FF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0>" is
-loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/one" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1<4>" is
-loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1_4"
-(FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/rst_calib1_r2_inv" is
-loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/rst_calib1_r2_inv1_IN
-V_0" (BUF) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/rst_calib1_r2" is
-loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/rst_calib1_r2" (FF)
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[10].U_LUT" (ROM)
 removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/rst_calib1_r1" is
-loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/rst_calib1_r1" (FF)
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[11].U_LUT" (ROM)
 removed.
-             The signal "ddr_mgr_main_inst/u_mem_controller/top_00/controller0/rst_calib" is
-loadless and has been removed.
-              Loadless block "ddr_mgr_main_inst/u_mem_controller/top_00/controller0/rst_calib"
-(SFF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/rst_calib_or0000_inv" is
-loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/rst_calib_or0000_inv1"
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[1].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[2].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[4].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[5].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[8].U_LUT" (ROM)
+removed.
+Loadless block "U_icon_pro/U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[9].U_LUT" (ROM)
+removed.
+Loadless block "U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/U_DSR" (ROM) removed.
+Loadless block "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_B"
 (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs<4>" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs_4" (FF) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1<4>" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_4" (SFF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_and0000" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_and00001" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1<4
->" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_4
-" (SFF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<4>2" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<4>11" (ROM) removed.
-                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1<3
->" is loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_3
-" (SFF) removed.
-                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<3>2" is loadless and has been removed.
-                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<3>12" (ROM) removed.
-                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1<0
->" is loadless and has been removed.
-                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_0
-" (SFF) removed.
-                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<0>2" is loadless and has been removed.
-                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<0>11_INV_0" (BUF) removed.
-                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_o
-r0000" is loadless and has been removed.
-                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_o
-r00001" (ROM) removed.
-                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/reset_
-r" is loadless and has been removed.
-                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/reset_
-r" (FF) removed.
-                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1<5
->" is loadless and has been removed.
-                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_5
-" (SFF) removed.
-                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<5>1" is loadless and has been removed.
-                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<5>11" (ROM) removed.
-                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/N6" is
-loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<3>111" (ROM) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1<1
->" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_1
-" (SFF) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<1>2" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<1>11" (ROM) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1<2
->" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_2
-" (SFF) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<2>2" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt1_xor<2>11" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<0>" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<0>1" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt<2>" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_2" (SFF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_and0000" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_and00001" (ROM) removed.
-                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct" is loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct" (SFF) removed.
-                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct_not0001" is loadless and has been removed.
-                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct_not00011" (ROM) removed.
-                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-onedtct" is loadless and has been removed.
-                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-onedtct" (SFF) removed.
-                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-onedtct_not0001" is loadless and has been removed.
-                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-onedtct_not00011" (ROM) removed.
-                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/_varin
-dex0000" is loadless and has been removed.
-                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_2_f8" (MUX) removed.
-                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_4_f7" is loadless and has been removed.
-                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_4_f7" (MUX) removed.
-                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f6" is loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f6" (MUX) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_8_f5" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_8_f5" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_10" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_10" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<0>
-" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_0"
-(SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<0>1" is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<0>11_INV_0" (BUF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_or
-0000" is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_or
-00001" (ROM) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<5>
-" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_5"
-(SFF) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<5>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<5>11" (ROM) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/N8" is
-loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<3>111" (ROM) removed.
-                                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<1>
-" is loadless and has been removed.
-                                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_1"
-(SFF) removed.
-                                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<1>1" is loadless and has been removed.
-                                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<1>11" (ROM) removed.
-                                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<2>
-" is loadless and has been removed.
-                                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_2"
-(SFF) removed.
-                                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<2>1" is loadless and has been removed.
-                                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<2>11" (ROM) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<4>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_4"
-(SFF) removed.
-                                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<4>1" is loadless and has been removed.
-                                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<4>11" (ROM) removed.
-                                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<3>
-" is loadless and has been removed.
-                                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_3"
-(SFF) removed.
-                                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<3>1" is loadless and has been removed.
-*Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_cnt_xor<3>12" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<0>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_0" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<0>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[0].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[0]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[0]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-1>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[1].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<1>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l1"
-(ROM) removed.
-                                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<0>
-" is loadless and has been removed.
-                                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l0"
-(ROM) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/reset_
-r" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/reset_
-r" (FF) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-0>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[0].r" (SFF) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<1>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_1" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<1>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[1].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[1]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[1]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-2>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[2].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<2>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l2"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_93" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_93" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<2>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_2" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<2>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[2].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[2]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[2]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-3>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[3].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<3>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l3"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<3>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_3" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<3>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[3].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[3]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[3]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-4>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[4].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<4>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l4"
-(ROM) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7_f52" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7_f5_1" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_92" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_92" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<4>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_4" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<4>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[4].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[4]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[4]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-5>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[5].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<5>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l5"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<5>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_5" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<5>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[5].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[5]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[5]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-6>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[6].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<6>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l6"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_85" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_85" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<6>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_6" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<6>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[6].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[6]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[6]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-7>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[7].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<7>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l7"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<7>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_7" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<7>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[7].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[7]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[7]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-8>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[8].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<8>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l8"
-(ROM) removed.
-                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_5_f61" is loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_5_f6_0" (MUX) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7_f51" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7_f5_0" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_91" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_91" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<8>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_8" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<8>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[8].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[8]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[8]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-9>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[9].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<9>
-" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l9"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<9>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_9" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<9>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[9].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[9]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[9]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-10>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[10].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<10
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l10"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_84" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_84" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<10>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_10" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<10>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[10].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[10]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[10]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-11>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[11].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<11
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l11"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<11>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_11" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<11>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[11].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[11]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[11]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-12>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[12].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<12
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l12"
-(ROM) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f52" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f5_1" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_83" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_83" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<12>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_12" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<12>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[12].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[12]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[12]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-13>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[13].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<13
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l13"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<13>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_13" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<13>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[13].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[13]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[13]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-14>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[14].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<14
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l14"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_73" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_73" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<14>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_14" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<14>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[14].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[14]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[14]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-15>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[15].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<15
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l15"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<15>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_15" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<15>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[15].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[15]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[15]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-16>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[16].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<16
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l16"
-(ROM) removed.
-                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_3_f7" is loadless and has been removed.
-                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_3_f7" (MUX) removed.
-                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_5_f6" is loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_5_f6" (MUX) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7_f5" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7_f5" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_9" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_9" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<16>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_16" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<16>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[16].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[16]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[16]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-17>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[17].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<17
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l17"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<17>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_17" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<17>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[17].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[17]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[17]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-18>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[18].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<18
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l18"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_82" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_82" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<18>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_18" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<18>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[18].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[18]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[18]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-19>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[19].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<19
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l19"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<19>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_19" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<19>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[19].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[19]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[19]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-20>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[20].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<20
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l20"
-(ROM) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f51" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f5_0" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_81" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_81" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<20>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_20" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<20>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[20].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[20]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[20]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-21>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[21].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<21
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l21"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<21>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_21" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<21>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[21].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[21]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[21]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-22>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[22].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<22
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l22"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_72" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_72" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<22>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_22" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<22>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[22].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[22]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[22]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-23>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[23].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<23
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l23"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<23>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_23" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<23>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[23].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[23]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[23]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-24>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[24].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<24
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l24"
-(ROM) removed.
-                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_4_f6" is loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_4_f6" (MUX) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f5" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6_f5" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_8" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_8" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<24>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_24" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<24>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[24].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[24]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[24]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-25>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[25].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<25
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l25"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<25>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_25" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<25>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[25].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[25]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[25]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-26>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[26].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<26
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l26"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_71" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_71" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<26>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_26" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<26>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[26].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[26]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[26]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-27>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[27].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<27
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l27"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<27>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_27" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<27>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[27].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[27]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[27]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-28>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[28].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<28
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l28"
-(ROM) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_5_f5" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_5_f5" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_7" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<28>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_28" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<28>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[28].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[28]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[28]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-29>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[29].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<29
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l29"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<29>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_29" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<29>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[29].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[29]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[29]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-30>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[30].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<30
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l30"
-(ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__
-varindex0000_6" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<30>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_30" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<30>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[30].u" (SFF) removed.
-                                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[30]_u_not0000" is loadless and has been removed.
-                                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p2[30]_u_not00001" (ROM) removed.
-                                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/flop1<
-31>" is loadless and has been removed.
-                                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/gen_ta
-p1[31].r" (SFF) removed.
-                                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<31
->" is loadless and has been removed.
-                                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l31"
-(ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg<31>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dl
-y_reg_31" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<31>"
-is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/u31"
-(SFF) removed.
-                         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_tr
-ans_two_dtct" is loadless and has been removed.
-                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_tr
-ans_two_dtct" (SFF) removed.
-                           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_tr
-ans_two_dtct_or0000" is loadless and has been removed.
-                            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_tr
-ans_two_dtct_or0000" (ROM) removed.
-                             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt<4>" is loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_4" (SFF) removed.
-                               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<4>" is loadless and has been removed.
-                                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<4>11_f5" (MUX) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<4>111" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<4>112" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt<0>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_0" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<0>" is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<0>11_INV_0" (BUF) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt<1>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_1" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<1>" is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<1>11" (ROM) removed.
-                                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt<3>" is loadless and has been removed.
-                                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_
-cnt_3" (SFF) removed.
-                                     The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<3>" is loadless and has been removed.
-                                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<3>12" (ROM) removed.
-                                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<4>11" is loadless and has been removed.
-                                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<4>111" (ROM) removed.
-                             The signal "N16" is loadless and has been removed.
-                              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_tr
-ans_two_dtct_or0000_SW0" (ROM) removed.
-                       The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-onedtct_and0000" is loadless and has been removed.
-                        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct_or00001" (ROM) removed.
-                         The signal "N23" is loadless and has been removed.
-                          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct_or00001_SW0" (ROM) removed.
-                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct_or0000" is loadless and has been removed.
-                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_
-twodtct_or00002" (ROM) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Result
-<2>" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mcount
-_phase_cnt_xor<2>11" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/N7" is
-loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<3>11" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/N14"
-is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<1>11" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/delay5" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/five" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1<3>" is
-loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1_3"
-(FF) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs<3>" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs_3" (FF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1<3>" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_3" (SFF) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<1>" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<1>1" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/delay4" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/two" (ROM) removed.
-         The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>" is
-loadless and has been removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1<2>" is
-loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1_2"
-(FF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs<2>" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs_2" (FF) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1<2>" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_2" (SFF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<2>" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<2>1" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/delay3" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/six" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1<1>" is
-loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/delay_sel_val1_1"
-(FF) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs<1>" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs_1" (FF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1<1>" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_1" (SFF) removed.
-                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<3>" is loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<3>" (ROM) removed.
-                   The signal "N2" is loadless and has been removed.
-                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfor
-dqs1_mux0000<3>_SW0" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/delay2" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/three" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/delay1" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col1/four" (ROM) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_en<0>" is
-loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_0_wr_en_inst/dout1" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/one" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/delay5" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/five" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/delay4" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/two" (ROM) removed.
-           The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dqs_div_rst" is loadless
+The signal "icon_control0<10>" is sourceless and has been removed.
+The signal "icon_control0<11>" is sourceless and has been removed.
+The signal "icon_control0<15>" is sourceless and has been removed.
+The signal "icon_control0<21>" is sourceless and has been removed.
+The signal "icon_control0<16>" is sourceless and has been removed.
+The signal "icon_control0<22>" is sourceless and has been removed.
+The signal "icon_control0<17>" is sourceless and has been removed.
+The signal "icon_control0<23>" is sourceless and has been removed.
+The signal "icon_control0<18>" is sourceless and has been removed.
+The signal "icon_control0<24>" is sourceless and has been removed.
+The signal "icon_control0<30>" is sourceless and has been removed.
+The signal "icon_control0<25>" is sourceless and has been removed.
+The signal "icon_control0<31>" is sourceless and has been removed.
+The signal "icon_control0<26>" is sourceless and has been removed.
+The signal "icon_control0<32>" is sourceless and has been removed.
+The signal "icon_control0<7>" is sourceless and has been removed.
+The signal "icon_control0<27>" is sourceless and has been removed.
+The signal "icon_control0<33>" is sourceless and has been removed.
+The signal "icon_control0<28>" is sourceless and has been removed.
+The signal "icon_control0<34>" is sourceless and has been removed.
+The signal "icon_control0<29>" is sourceless and has been removed.
+The signal "icon_control0<35>" is sourceless and has been removed.
+The signal "clock_gen_inst/CLKDV_BUF" is sourceless and has been removed.
+ Sourceless block "clock_gen_inst/CLKDV_BUFG_INST" (CKBUF) removed.
+  The signal "clock_gen_inst/CLKDV_OUT" is sourceless and has been removed.
+The signal "synchro_reset/N0" is sourceless and has been removed.
+The signal "top_btn_filter_inst/io_sync_db[1].io_btn_sync_inst/N0" is sourceless
 and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/controller_iobs0/rst_iob_inbuf"
-(BUF) removed.
-             The signal "SD_LOOP_IN" is loadless and has been removed.
-              Loadless block "SD_LOOP_IN" (PAD) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/delay3" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/six" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/delay2" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/three" (ROM) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/delay1" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_
-dqs_div_delayed/four" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_0_wr_en_inst/din_delay" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_0_wr_en_inst/delay_ff" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/dqs_delayed_col
-1_n<0>" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/dqs_
-delayed_col1_n<0>1_INV_0" (BUF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in12" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<1>" is
-loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/bit1" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in111" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<2>" is
-loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/bit2" (FF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in21" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<3>" is
-loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/bit3" (FF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_0_wr_addr_inst/Mrom_d_in31" (ROM) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<0>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<0>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_0" (FF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr<0
->" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/bit0" (SFF) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_
-90r3" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_
-90r3" (SFF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_
-90r2" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_
-90r2" (SFF) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_
-90r1" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_
-90r1" (SFF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/read_fifo_rden" is
-loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/read_fifo_rden" (FF)
-removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/Mshreg_read_fifo_rden" is
-loadless and has been removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/reset90_r" is
-loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/reset90_r" (FF)
-removed.
-             The signal "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90" is
-loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90" (SFF)
-removed.
-               The signal "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_1"
-is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_1" (SFF)
-removed.
-                 The signal "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_o"
-is loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_o" (SFF)
-removed.
-                   The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_o_not0001" is
-loadless and has been removed.
-                    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_o_not00011"
-(ROM) removed.
-                     The signal "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/wait_clk90"
-is loadless and has been removed.
-                      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/wait_clk90" (FF)
-removed.
-                 The signal
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_1_or0000" is
-loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_1_or00001"
-(ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in12" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr<1
->" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/bit1" (SFF) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in1" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in111" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr<2
->" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/bit2" (SFF) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in2" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in21" (ROM) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr<3
->" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/bit3" (SFF) removed.
-                 The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in3" is loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_i
-nst/Mrom_d_in31" (ROM) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<1>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_1" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<2>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_2" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<3>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_3" (FF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit1" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<1>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0>" is
-loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/one" (ROM) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/delay5" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/five" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/delay4" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/two" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/delay3" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/six" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/delay2" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/three" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/delay1" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[0].dqs_delay_col0/four" (ROM) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit2" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<2>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit3" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<3>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit4" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<4>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit5" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<5>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit6" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<6>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe/fifo_bit7" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<7>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit0" (RAM16X1D) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<0>" is
-loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/bit0" (FF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/dqs_delayed_col
-0_n<0>" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/dqs_
-delayed_col0_n<0>1_INV_0" (BUF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_en<0>" is
-loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_1_wr_en_inst/dout1" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_1_wr_en_inst/din_delay" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_1_wr_en_inst/delay_ff_1" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_1_wr_en_inst/dout0" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[0].fifo_1_wr_en_inst/dout01" (ROM) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in12" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<1>" is
-loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/bit1" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in111" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<2>" is
-loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/bit2" (FF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in21" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<3>" is
-loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/bit3" (FF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[0].fifo_1_wr_addr_inst/Mrom_d_in31" (ROM) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<0>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_0" (FF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr<0
->" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/bit0" (SFF) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in12" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr<1
->" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/bit1" (SFF) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in1" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in111" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr<2
->" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/bit2" (SFF) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in2" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in21" (ROM) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr<3
->" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/bit3" (SFF) removed.
-                 The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in3" is loadless and has been removed.
-                  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_i
-nst/Mrom_d_in31" (ROM) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<1>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_1" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<2>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_2" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<3>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_3" (FF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit1" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit2" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit3" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit4" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit5" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit6" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].s
-trobe_n/fifo_bit7" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit0" (RAM16X1D) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<4>" is
-loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/bit0" (FF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<1>" is
-loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/one" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/delay5" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/five" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/delay4" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/two" (ROM) removed.
-         The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<1>" is
-loadless and has been removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/delay3" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/six" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/delay2" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/three" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/delay1" is loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col1/four" (ROM) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_en<1>" is
-loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_0_wr_en_inst/dout1" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_0_wr_en_inst/din_delay" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_0_wr_en_inst/delay_ff" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/dqs_delayed_col
-1_n<1>" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/dqs_
-delayed_col1_n<1>1_INV_0" (BUF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in12" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<5>" is
-loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/bit1" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in111" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<6>" is
-loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/bit2" (FF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in21" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_0_wr_addr<7>" is
-loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/bit3" (FF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_0_wr_addr_inst/Mrom_d_in31" (ROM) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<8>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<4>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_4" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<5>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_5" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<6>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_6" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-<7>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r
-_7" (FF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit1" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<9>" is loadless and has
-been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_
-iob_inst/DQ_IBUF" (BUF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1>" is
-loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/one" (ROM) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/delay5" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/five" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/delay4" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/two" (ROM) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/delay3" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/six" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/delay2" is loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/three" (ROM) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/delay1" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-delay[1].dqs_delay_col0/four" (ROM) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit2" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<10>" is loadless and
-has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq
-_iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit3" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<11>" is loadless and
-has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq
-_iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit4" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<12>" is loadless and
-has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq
-_iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit5" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<13>" is loadless and
-has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq
-_iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit6" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<14>" is loadless and
-has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq
-_iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe/fifo_bit7" (RAM16X1D) removed.
- The signal "ddr_mgr_main_inst/u_mem_controller/top_00/dq<15>" is loadless and
-has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq
-_iob_inst/DQ_IBUF" (BUF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit0" (RAM16X1D) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<4>" is
-loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/bit0" (FF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/dqs_delayed_col
-0_n<1>" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/dqs_
-delayed_col0_n<1>1_INV_0" (BUF) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_en<1>" is
-loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_1_wr_en_inst/dout1" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_1_wr_en_inst/din_delay" is loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_1_wr_en_inst/delay_ff_1" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_1_wr_en_inst/dout0" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_en[1].fifo_1_wr_en_inst/dout01" (ROM) removed.
-   The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in" is loadless and has been removed.
-    Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in12" (ROM) removed.
-     The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<5>" is
-loadless and has been removed.
-      Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/bit1" (FF) removed.
-       The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in1" is loadless and has been removed.
-        Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in111" (ROM) removed.
-         The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<6>" is
-loadless and has been removed.
-          Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/bit2" (FF) removed.
-           The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in2" is loadless and has been removed.
-            Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in21" (ROM) removed.
-             The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/fifo_1_wr_addr<7>" is
-loadless and has been removed.
-              Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/bit3" (FF) removed.
-               The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in3" is loadless and has been removed.
-                Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
-wr_addr[1].fifo_1_wr_addr_inst/Mrom_d_in31" (ROM) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<4>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_4" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<5>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_5" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<6>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_6" (FF) removed.
- The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-<7>" is loadless and has been removed.
-  Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r
-_7" (FF) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit1" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit2" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit3" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit4" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit5" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit6" (RAM16X1D) removed.
-Loadless block
-"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].s
-trobe_n/fifo_bit7" (RAM16X1D) removed.
-The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/Mshreg_read_fifo_rden/CE"
-is sourceless and has been removed.
-The signal
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/Mshreg_read_fifo_rden/CLK
-NOT" is sourceless and has been removed.
-
-The trimmed logic reported below is either:
-   1. part of a cycle
-   2. part of disabled logic
-   3. a side-effect of other trimmed logic
-
-The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_enable" is unused
+The signal "top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/N0" is sourceless
 and has been removed.
- Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_enable_flop"
-(SFF) removed.
-  The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_update_enable" is
-unused and has been removed.
-   Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_update_lut" (ROM)
+The signal "ddr_mgr_main_inst/synchro_rd_xfr_en/N0" is sourceless and has been
 removed.
+The signal "ddr_mgr_main_inst/synchro_rd_data_valid/N0" is sourceless and has
+been removed.
+The signal "ddr_mgr_main_inst/picoblaze_inst/interrupt_ack" is sourceless and
+has been removed.
+ Sourceless block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_value_lut"
+(ROM) removed.
   The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_enable_value" is
-unused and has been removed.
-   Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_value_lut" (ROM)
-removed.
-    The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/interrupt_ack_internal"
-is unused and has been removed.
-     Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/ack_flop" (FF)
-removed.
-The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_pulse" is unused
-and has been removed.
+sourceless and has been removed.
+   Sourceless block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_enable_flop"
+(SFF) removed.
+    The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_enable" is
+sourceless and has been removed.
+The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_pulse" is
+sourceless and has been removed.
+The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_update_enable" is
+sourceless and has been removed.
 The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/not_active_interrupt"
-is unused and has been removed.
+is sourceless and has been removed.
 The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/sel_shadow_carry" is
-unused and has been removed.
- Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/sel_shadow_carry_lut"
+sourceless and has been removed.
+The signal "ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/N0" is sourceless and
+has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
+wr_en[1].fifo_0_wr_en_inst/N1" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
+wr_en[0].fifo_0_wr_en_inst/N1" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
+wr_en[1].fifo_1_wr_en_inst/N1" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_
+wr_en[0].fifo_1_wr_en_inst/N1" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm
+[1].s3_dm_iob_inst/gnd" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm
+[0].s3_dm_iob_inst/gnd" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq
+_iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq
+_iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq
+_iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq
+_iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq
+_iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq
+_iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_
+iob_inst/N0" is sourceless and has been removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<3>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_LCE" (ROM)
+removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<6>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_HCE" (ROM)
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[6].U_LCE" (ROM)
+removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<7>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_HCE" (ROM)
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[7].U_LCE" (ROM)
+removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<11>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_HCE"
 (ROM) removed.
-Unused block
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/Mshreg_read_fifo_rden/CLK
-NOT" (BUF) removed.
-Unused block
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/Mshreg_read_fifo_rden/SRL
-16E" (SRLC16E) removed.
-Unused block
-"ddr_mgr_main_inst/u_mem_controller/top_00/controller0/Mshreg_read_fifo_rden/VCC
-" (ONE) removed.
-Unused block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_dq
-s_iob_inst/U4" (IBUFDS) removed.
-Unused block
-"ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_dq
-s_iob_inst/U4" (IBUFDS) removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[11].U_LCE"
+(ROM) removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<12>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_HCE"
+(ROM) removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[12].U_LCE"
+(ROM) removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<13>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_HCE"
+(ROM) removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[13].U_LCE"
+(ROM) removed.
+The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<14>" is sourceless and has been
+removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_HCE"
+(ROM) removed.
+ Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE"
+(ROM) removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[13].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[14].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[3].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[6].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[7].U_LUT" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[15].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[1].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[4].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[5].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
+removed.
+Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
+removed.
+Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/ack_flop" (FF)
+removed.
+Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_update_lut" (ROM)
+removed.
+Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/sel_shadow_carry_lut"
+(ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
-GND 		XST_GND
-VCC 		XST_VCC
+GND 		U_icon_pro/XST_GND
+VCC 		U_icon_pro/XST_VCC
+LUT4 		U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
+   optimized to 0
+GND 		U_ila_pro_0/XST_GND
+VCC 		U_ila_pro_0/XST_VCC
+GND 		clock_gen_inst/XST_GND
+GND 		ddr_mgr_main_inst/XST_GND
+VCC 		ddr_mgr_main_inst/XST_VCC
+GND 		ddr_mgr_main_inst/ddr2_mgr_inst/XST_GND
+VCC 		ddr_mgr_main_inst/ddr2_mgr_inst/XST_VCC
+GND 		ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/XST_GND
+GND 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/XST_GND
+VCC 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/XST_VCC
 FDR 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_capture_flop
    optimized to 0
 FDR 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_flop
@@ -2753,8 +612,184 @@ FDE 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/shadow_carry_flop
 FDE 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/shadow_zero_flop
    optimized to 0
 INV 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/stack_count_inv
+GND 		ddr_mgr_main_inst/picoblaze_inst/picocode_inst/XST_GND
+VCC 		ddr_mgr_main_inst/picoblaze_inst/picocode_inst/XST_VCC
+GND 		ddr_mgr_main_inst/synchro_rd_data_valid/XST_GND
+GND 		ddr_mgr_main_inst/synchro_rd_xfr_en/XST_GND
+GND 		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/XST_GND
+VCC 		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/XST_V
+CC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/XST_V
+CC
+GND 		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/clk_dcm0/XST_GND
+GND 		ddr_mgr_main_inst/u_mem_controller/top_00/controller0/XST_GND
+VCC 		ddr_mgr_main_inst/u_mem_controller/top_00/controller0/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_delay[0].dqs_delay_col0/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_delay[0].dqs_delay_col1/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_delay[1].dqs_delay_col0/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_delay[1].dqs_delay_col1/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_wr_en[0].fifo_0_wr_en_inst/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_wr_en[0].fifo_1_wr_en_inst/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_wr_en[1].fifo_0_wr_en_inst/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen
+_wr_en[1].fifo_1_wr_en_inst/XST_VCC
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst
+_dqs_div_delayed/XST_VCC
+GND 		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/XST_GND
+VCC 		ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/XST_VCC
+VCC 		ddr_mgr_main_inst/u_mem_controller/top_00/infrastructure0/XST_VCC
 FD 		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/controller_iobs0/iob_odt
    optimized to 0
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_d
+m[0].s3_dm_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_d
+m[0].s3_dm_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_d
+m[1].s3_dm_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_d
+m[1].s3_dm_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_d
+q_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_d
+q_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_d
+q_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_d
+q_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_d
+q_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_d
+q_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_d
+q_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_d
+q_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_d
+q_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_d
+q_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_d
+q_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_d
+q_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq
+_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq
+_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_d
+qs_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dqs[0].s3_d
+qs_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_d
+qs_iob_inst/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dqs[1].s3_d
+qs_iob_inst/XST_VCC
+GND
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/infrastructure_iobs0/XST_GND
+VCC
+		ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/infrastructure_iobs0/XST_VCC
+GND 		synchro_reset/XST_GND
+GND 		top_btn_filter_inst/io_sync_db[0].btn_db_inst/XST_GND
+VCC 		top_btn_filter_inst/io_sync_db[0].btn_db_inst/XST_VCC
+GND 		top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/XST_GND
+GND 		top_btn_filter_inst/io_sync_db[1].btn_db_inst/XST_GND
+VCC 		top_btn_filter_inst/io_sync_db[1].btn_db_inst/XST_VCC
+GND 		top_btn_filter_inst/io_sync_db[1].io_btn_sync_inst/XST_GND
 MUXCY 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/sel_shadow_muxcy
 
 To enable printing of redundant blocks removed and signals merged, set the
@@ -2767,78 +802,101 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew    | Reg (s)      | Resistor | IBUF/IFD | SUSPEND          |
 |                                    |                  |           |                      | Term  | Strength | Rate    |              |          | Delay    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| BTN_SOUTH                          | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
-| CLK_50M                            | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
-| CLK_AUX                            | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
-| SD_A<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<7>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<8>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<9>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<10>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<11>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_A<12>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_BA<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_BA<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_CAS                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_CKE                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_CK_N                            | DIFFSTB          | OUTPUT    | LVDS_25              |       |          |         |              |          | 0 / 0    | 3STATE           |
-| SD_CK_P                            | DIFFMTB          | OUTPUT    | LVDS_25              |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
-| SD_CS                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| SD_DQ<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| BTN_SOUTH                          | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
+| CLK_50M                            | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| CLK_AUX                            | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| SD_A<0>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<1>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<2>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<3>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<4>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<5>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<6>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<7>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<8>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<9>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<10>                           | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<11>                           | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_A<12>                           | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_BA<0>                           | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_BA<1>                           | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_CAS                             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_CKE                             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_CK_N                            | DIFFS            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_CK_P                            | DIFFM            | OUTPUT    | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_CS                              | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| SD_DQ<0>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<1>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<2>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<3>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<3>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<4>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<4>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<5>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<5>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<6>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<6>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<7>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<7>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<8>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<8>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<9>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<9>                           | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<10>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<10>                          | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<11>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<11>                          | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<12>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<12>                          | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<13>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<13>                          | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<14>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<14>                          | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_DQ<15>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_DQ<15>                          | IOB              | BIDIR     | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_LDM                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
-| SD_LDQS_N                          | DIFFSTB          | OUTPUT    | LVDS_25              |       |          |         |              |          | 0 / 0    | 3STATE           |
-| SD_LDQS_P                          | DIFFMTB          | OUTPUT    | LVDS_25              |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_LDM                             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_LDQS_N                          | DIFFS            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_LOOP_OUT                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_ODT                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
-| SD_RAS                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SD_UDM                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | ODDR2        |          | 0 / 0    | 3STATE           |
-| SD_UDQS_N                          | DIFFSTB          | OUTPUT    | LVDS_25              |       |          |         |              |          | 0 / 0    | 3STATE           |
-| SD_UDQS_P                          | DIFFMTB          | OUTPUT    | LVDS_25              |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_LDQS_P                          | DIFFM            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
 |                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
-| SD_WE                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
-| SW<0>                              | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| SD_LOOP_IN                         | IBUF             | INPUT     | SSTL18_I             |       |          |         |              |          | 0 / 0    |                  |
+| SD_LOOP_OUT                        | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_ODT                             | IOB              | OUTPUT    | SSTL18_I             |       |          |         |              |          | 0 / 0    | 3STATE           |
+| SD_RAS                             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SD_UDM                             | IOB              | OUTPUT    | SSTL18_I             |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+| SD_UDQS_N                          | DIFFS            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| SD_UDQS_P                          | DIFFM            | BIDIR     | DIFF_SSTL18_I        |       |          |         | ODDR2        |          | 0 / 0    | 3STATE           |
+|                                    |                  |           |                      |       |          |         | TFF1         |          |          |                  |
+| SD_WE                              | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
+| SW<0>                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| SW<1>                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| SW<2>                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| SW<3>                              | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs
 ----------------
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CDONE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_CMPRESET_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS0_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_NS1_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCMPCE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_SCRST_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_WHCMPCE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_I_SRLT_NE_1.U_WLCMPCE_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_SCNT_CMP_I_SRL16.U
+_GAND_SRL16_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_HCMP_I_SRL16.
+U_GAND_SRL16_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_LCMP_I_SRL16.
+U_GAND_SRL16_MSET
+U_ila_pro_0/U0_I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
+SRL16.U_GANDX_SRL16_MSET
+delay_calibration_chain                 
 
 Section 8 - Guide Report
 ------------------------
@@ -2857,9 +915,17 @@ Partition Implementation Status
 Area Group Information
 ----------------------
 
-  No area groups were found in this design.
+Area Group "cal_ctl"
+  No COMPRESSION specified for Area Group "cal_ctl"
+  RANGE: SLICE_X26Y8:SLICE_X37Y21
+  Area Group Logic Utilization:
+  Number of Slice Flip Flops:               94 out of    336   27%
+  Logic Distribution:
+    Number of occupied Slices:              66 out of    168   39%
+      Number of Slices containing only related logic:     66 out of     66 100%
+  Total Number of 4 input LUTs:             82 out of    336   24%
+    Number used as logic:                   82
 
-----------------------
 
 Section 10 - Timing Report
 --------------------------

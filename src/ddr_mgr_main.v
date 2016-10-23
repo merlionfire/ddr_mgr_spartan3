@@ -236,7 +236,8 @@ module ddr_mgr_main
    /// ----- Below is from frame_buf.v
    reg   [ `COLUMN_ADDRESS-1:0 ]  addr_col ,addr_col_nxt  ; 
    reg   [ `ROW_ADDRESS-1:0 ]     addr_row , addr_row_nxt ;  
-   reg   [ `BANK_ADDRESS-1:0 ]    addr_bank   = {`BANK_ADDRESS{1'b0} } ;  ; 
+   reg   [ `BANK_ADDRESS-1:0 ]    addr_bank, addr_bank_nxt ; 
+   
 
 
    parameter   MAX_ROW_NUM    =  13'h02FF ; 
@@ -292,12 +293,14 @@ module ddr_mgr_main
       if ( mem_rst ) begin 
          req_st_r    <= ST_IDLE ; 
          rd_req_r    <= 1'b0 ;  
+         addr_bank   <= {`BANK_ADDRESS {1'b0} } ; 
          addr_row    <= 'h0  ; 
          addr_col    <= 'h0  ; 
          rd_xfr_len  <= 10'h0 ; 
       end else begin 
          req_st_r    <= req_st_nxt ;
          rd_req_r    <= rd_req_nxt ;  
+         addr_bank   <= addr_bank_nxt  ; 
          addr_row    <= addr_row_nxt  ; 
          addr_col    <= addr_col_nxt  ; 
          rd_xfr_len  <= rd_xfr_len_nxt ; 
@@ -309,6 +312,7 @@ module ddr_mgr_main
    always @( * ) begin    
       req_st_nxt     =  req_st_r ; 
       rd_req_nxt     =  1'b0 ; 
+      addr_bank_nxt  =  addr_bank; 
       addr_row_nxt   =  addr_row; 
       addr_col_nxt   =  addr_col; 
       rd_xfr_len_nxt =  rd_xfr_len ; 

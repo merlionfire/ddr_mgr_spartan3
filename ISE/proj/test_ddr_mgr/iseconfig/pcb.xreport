@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-09-20T07:12:04</DateModified>
+  <DateModified>2016-10-23T08:54:29</DateModified>
   <ModuleName>pcb</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr/iseconfig/pcb.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_ddr_mgr</ImplementationReportsDirectory>
+  <SavedFilePath>/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/iseconfig/pcb.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/</ImplementationReportsDirectory>
   <DateInitialized>2016-09-20T07:12:04</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

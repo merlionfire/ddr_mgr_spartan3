@@ -45,7 +45,7 @@ comp :
 run : 
 	$(RUN)  
 verdi : 
-	verdi -2001 $(SIM_OPT)  -lib work.verdi  -ssf cosim_verdi.fsdb -top testbench -nologo &
+	verdi -2001 $(SIM_OPT)  -lib work.verdi  -ssf cosim_verdi.fsdb -top testbench -L xilinx_XilinxCoreLib  -L xilinx_unisims -L xilinx_simprims -nologo &
 nlint : 
 	 nLint  -gui
 cover_report_txt  : 

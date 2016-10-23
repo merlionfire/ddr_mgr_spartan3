@@ -2,19 +2,96 @@ Release 14.7 ngdbuild P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd
+ise -dd _ngo -nt timestamp -uc
+/home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4
+pcb_cs.ngc pcb.ngd
 
 Reading NGO file
-"/home/cct/FPGA_Project/fractal-fpga/verification/check_ddr_mgr/ISE/proj/test_dd
-r_mgr/pcb.ngc" ...
+"/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb_cs.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
+Annotating constraints to design from ucf file
+"/home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J_CLK = PERIOD "J_CLK"
+   30000.000000000 pS HIGH 50.000000000 %;>: Unable to find an active 'TNM' or
+   'TimeGrp' constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_U_TO_J = FROM "U_CLK" TO
+   "J_CLK" 15000.000000000 pS;>: Unable to find an active 'TimeGrp' or 'TNM' or
+   'TPSync' constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_J_TO_D = FROM "J_CLK" TO
+   "D_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'J_CLK'.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_D_TO_J = FROM "D_CLK" TO
+   "J_CLK" TIG;>: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync'
+   constraint named 'J_CLK'.
+
+INFO:ConstraintSystem - The Period constraint <PERIOD = 20.000 ;>
+   [/home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf(4)], is specified using
+   the Net Period method which is not recommended. Please use the Timespec
+   PERIOD method.
+
+INFO:ConstraintSystem - The Period constraint <PERIOD = 7.5187ns HIGH 50 % ;>
+   [/home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf(7)], is specified using
+   the Net Period method which is not recommended. Please use the Timespec
+   PERIOD method.
+
 Done...
 
 Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N18' has no driver
+WARNING:NgdBuild:452 - logical net 'N19' has no driver
+WARNING:NgdBuild:452 - logical net 'N20' has no driver
+WARNING:NgdBuild:452 - logical net 'N21' has no driver
+WARNING:NgdBuild:452 - logical net 'N22' has no driver
+WARNING:NgdBuild:452 - logical net 'N23' has no driver
+WARNING:NgdBuild:452 - logical net 'N24' has no driver
+WARNING:NgdBuild:452 - logical net 'N25' has no driver
+WARNING:NgdBuild:452 - logical net 'N26' has no driver
+WARNING:NgdBuild:452 - logical net 'N27' has no driver
+WARNING:NgdBuild:452 - logical net 'N28' has no driver
+WARNING:NgdBuild:452 - logical net 'N29' has no driver
+WARNING:NgdBuild:452 - logical net 'N30' has no driver
+WARNING:NgdBuild:452 - logical net 'N31' has no driver
+WARNING:NgdBuild:452 - logical net 'N32' has no driver
+WARNING:NgdBuild:452 - logical net 'N33' has no driver
+WARNING:NgdBuild:478 - clock net clock_gen_inst/CLKDV_OUT with clock driver
+   clock_gen_inst/CLKDV_BUFG_INST drives no clock pins
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_dqs<0>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_dqs<1>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_dqs<2>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_dqs<3>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_dqs<4>' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_dqs_en' has no driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_rst_dqs_div<0>' has no
+   driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_rst_dqs_div<1>' has no
+   driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_rst_dqs_div<2>' has no
+   driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_rst_dqs_div<3>' has no
+   driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_rst_dqs_div<4>' has no
+   driver
+WARNING:NgdBuild:452 - logical net
+   'ddr_mgr_main_inst/u_mem_controller/top_00/vio_out_rst_dqs_div_en' has no
+   driver
 
 Partition Implementation Status
 -------------------------------
@@ -25,12 +102,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   0
+  Number of warnings:  33
 
-Total memory usage is 414152 kilobytes
+Total memory usage is 469080 kilobytes
 
 Writing NGD file "pcb.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   4 sec
 
 Writing NGDBUILD log file "pcb.bld"...
