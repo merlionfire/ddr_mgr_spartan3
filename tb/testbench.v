@@ -132,7 +132,18 @@ module testbench () ;
      repeat (8) @(posedge clk ) ; 
      $display("[SIM_INFO] Picoblaze start to preload ddr2 ............") ;  
 
-     wait ( ddr_mgr_main_inst.buffer_init_done ) ; 
+     // Since loading memeny takes a long time, start read operation ahead of expected by 
+     // forcing "buffer_init_done" 
+
+     #500us ; 
+   
+     repeat (1) @(posedge clk ) ; 
+     ddr_mgr_main_inst.rd_go  =  1'b1 ; 
+     repeat (1) @(posedge clk ) ; 
+     ddr_mgr_main_inst.rd_go  =  1'b0 ; 
+
+     //wait ( ddr_mgr_main_inst.buffer_init_done ) ; 
+
      $display("[SIM_INFO] Picoblaze preloading ddr2 has been done !!") ;  
 
 
@@ -164,7 +175,7 @@ module testbench () ;
       $display("[SIM_INFO] @%t:Start to dump waveform", $time) ;  
       $fsdbDumpfile("cosim_verdi.fsdb");
       $fsdbDumpvars(0, "testbench.ddr_mgr_main_inst");
-      #10ms $finish ; 
+      #1ms $finish ; 
   end
 
 `ifdef SVA 

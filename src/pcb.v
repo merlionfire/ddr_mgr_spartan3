@@ -110,9 +110,9 @@ module pcb(
    assign   global_rst        = btn_south_io_filter ; 
 
    // Memory clock and reset signals
-   //assign   mem_clk_s         = CLK_AUX  ; 
+   assign   mem_clk_s         = CLK_AUX  ; 
    //assign   mem_clk_s         = clk_100m  ; 
-   BUFG    mem_clk_ibuf ( .I(clk_100m), .O(mem_clk_s ) ) ;  
+   //BUFG    mem_clk_ibuf ( .I(clk_100m), .O(mem_clk_s ) ) ;  
    assign   mem_rst_s_n       = dcm_locked & ( ~ global_rst ) ; 
 	
 

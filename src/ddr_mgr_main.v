@@ -205,7 +205,7 @@ module ddr_mgr_main
 
    reg   rd_go, buffer_init_done_1d ; 
    reg   rd_xfr_done, rd_xfr_done_nxt ; 
-   wire  buffer_init_done, buffer_init_done_pulse ;  
+   wire  buffer_init_done ,  buffer_init_done_pulse ;  
    // synthesis attribute keep of buffer_init_done is "true"
    reg [12:0] req_addr_row ; 
    reg [15:0]  screen_cnt   ;  
@@ -215,7 +215,8 @@ module ddr_mgr_main
    // rd_go is asserted :
    //    *) once register CW_CS[1] indicating memory init is done 
    //    *) after every data read finishes 
-   assign buffer_init_done =  cw_cs[1] ;   
+   synchro synchro_buffer_init_done (.async(cw_cs[1] ),.sync( buffer_init_done),.clk( ~mem_clk0 ) ) ;
+   //assign buffer_init_done =  cw_cs[1] ;   
 
    assign buffer_init_done_pulse  =  buffer_init_done & ~buffer_init_done_1d ;    
    always @( negedge mem_clk0 ) begin    
@@ -351,10 +352,26 @@ module ddr_mgr_main
    synchro synchro_rd_xfr_en (.async(rd_xfr_en),.sync( rd_xfr_en_sync ),.clk( mem_clk90 ) ) ;
 
 
+   //*************************************************************//
    // Verify the data read from memory through ddr2_mgr with preloaded data
+   //*************************************************************//
+
    //           16'b1001_0110_1100_0011
-   reg   data_fault ; 
+   reg         data_fault, data_fault_1d ; 
+   
+
+   wire        dumo_fifo_wr ;  
+   reg         dumo_fifo_rd ;  
+   wire        dumo_fifo_rd_valid ; 
+   wire        dumo_fifo_full;
+   wire        dumo_fifo_empty;
+   wire  [9:0] dumo_fifo_data_count; 
+   wire        dumo_fifo_rd_start ; 
+   wire  [9:0] addr_row_err ; 
+   reg         dumo_fifo_rd_en; 
    // synthesis attribute keep of data_fault is "true"
+   // synthesis attribute keep of dumo_fifo_rd_valid is "true"
+   // synthesis attribute keep of addr_row_err is "true"
 
    parameter   BYTE_0   =  8'h10 ; 
    parameter   BYTE_1   =  8'h86 ; 
@@ -365,13 +382,60 @@ module ddr_mgr_main
       if ( mem_rst90 ) begin 
          data_fault  <= 1'b0 ; 
       end else begin
-
-         if ( rd_data_valid & rd_xfr_en_sync  ) begin 
+         if ( rd_req_r ) begin           // clear fault for noncoming new row. Itgaurentee that there exits only one data_fualt pulse and then record row numberin FIFO at one time.  
+               data_fault  <= 1'b0 ; 
+         end else if ( rd_data_valid & rd_xfr_en_sync  ) begin 
             if ( rd_data != { BYTE_3, BYTE_2, BYTE_1, BYTE_0 } ) begin 
                data_fault  <= 1'b1 ; 
             end 
          end 
       end 
+   end 
+
+   // FIFO write logic 
+   always @( posedge mem_clk90 ) begin 
+      if ( mem_rst90 ) begin 
+         data_fault_1d  <= 1'b0 ; 
+      end else begin
+         data_fault_1d  <= data_fault ; 
+      end
+   end 
+
+   assign   dumo_fifo_wr   =  data_fault & ~ data_fault_1d ; 
+
+   // FIFO instance 
+   dumo_fifo dumo_fifo_inst (
+     .clk      (  mem_clk90          ), // input clk
+     .srst     (  mem_rst90          ), // input srst
+     .wr_en    (  dumo_fifo_wr       ), // input wr_en
+     .din      (  addr_row[9:0]      ), // input [9 : 0] din
+     .rd_en    (  dumo_fifo_rd       ), // input rd_en
+     .valid    (  dumo_fifo_rd_valid ), // output valid
+     .dout     (  addr_row_err       ), // output [9 : 0] dout
+     .full     (  dumo_fifo_full     ), // output full
+     .empty    (  dumo_fifo_empty    ), // output empty
+     .data_count( dumo_fifo_data_count) // output [9 : 0] data_count
+   );
+
+   // FIFO read logic 
+
+   assign  dumo_fifo_rd_start =  ( dumo_fifo_data_count  == 10'd100 );  
+
+   always @( posedge mem_clk90 ) begin 
+      if ( mem_rst90 ) begin 
+         dumo_fifo_rd      <= 1'b0 ;  
+         dumo_fifo_rd_en   <= 1'b0 ; 
+      end else begin
+         if ( ( ~ dumo_fifo_empty ) & dumo_fifo_rd_en ) begin 
+            dumo_fifo_rd   <= 1'b1 ; 
+         end else begin 
+            dumo_fifo_rd   <= 1'b0 ; 
+         end
+         
+         if ( dumo_fifo_rd_start ) begin 
+            dumo_fifo_rd_en   <= 1'b1 ; 
+         end
+      end
    end 
 
 

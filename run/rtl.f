@@ -6,7 +6,6 @@
 ../picocode/picocode.v
 
 // MIG files 
-../ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v
 ../ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig.v
 ../ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_ctl.v
 ../ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_top.v
@@ -41,4 +40,4 @@
 
 ../../lib/synchro.v 
 
-
+../ISE/fifo_ip/dumo_fifo.v
