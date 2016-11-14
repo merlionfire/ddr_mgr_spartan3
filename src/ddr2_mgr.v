@@ -102,7 +102,8 @@ module ddr2_mgr(
    reg  [31:0]   data_output_r ; 
    wire          ddr2_busy ;  
 
-
+   reg           wr_data_0_en, wr_data_0_en_nxt ; 
+   reg           wr_data_1_en, wr_data_1_en_nxt ; 
 
    assign reg_wr_strobe = pi_wr_en && pi_blk_sel ; 
 
@@ -146,8 +147,9 @@ module ddr2_mgr(
          wr_mem_req   <= 1'b1; 
    end
 
-   synchro #(.INITIALIZE("LOGIC1")) synchro_wr_req (
-      .clk     (  clk0            ),
+   synchro #(.INITIALIZE("LOGIC0")) synchro_wr_req (
+      //.clk     (  clk0            ),
+      .clk     (  ~clk0            ),
       .async   (  wr_mem_req      ),
       .sync    (  wr_mem_req_sync )
    ) ; 
@@ -160,13 +162,23 @@ module ddr2_mgr(
    end
 
 
+   /*
    always @( negedge  clk0 ) begin    
      if ( rst180 )                refresh_active  <= 1'b0 ; 
      else if ( mig_auto_ref_req ) refresh_active  <= 1'b1 ; 
      else if ( mig_ar_done )      refresh_active  <= 1'b0 ; 
    end
 
-   assign refresh_locked =  mig_auto_ref_req | refresh_active ; 
+   assign refresh_locked =  ~( mig_auto_ref_req | refresh_active ); 
+   */
+
+
+   always @( negedge  clk0 ) begin    
+     if ( rst180 )                refresh_active  <= 1'b1 ; 
+     else if ( mig_auto_ref_req ) refresh_active  <= 1'b0 ; 
+     else if ( mig_ar_done )      refresh_active  <= 1'b1 ; 
+   end
+   assign refresh_locked =  refresh_active ; 
 
 
    // ---------------------------------------------------------
@@ -240,6 +252,8 @@ module ddr2_mgr(
          wr_grant_r     <= 1'b0 ; 
          xfr_len_r      <= 'h0  ;  
          state_r        <= ST_IDLE ; 
+         wr_data_0_en   <= 1'b0; 
+         wr_data_1_en   <= 1'b0; 
       end else begin 
          cmd_r          <= cmd_nxt ; 
          addr_r         <= addr_nxt ;
@@ -249,6 +263,8 @@ module ddr2_mgr(
          wr_grant_r     <= wr_grant_nxt ; 
          xfr_len_r      <= xfr_len_nxt ;  
          state_r        <= state_nxt  ;
+         wr_data_0_en   <= wr_data_0_en_nxt ; 
+         wr_data_1_en   <= wr_data_1_en_nxt ; 
       end
    end
 
@@ -261,6 +277,8 @@ module ddr2_mgr(
       wr_grant_nxt      =  1'b0 ; 
       xfr_len_nxt       =  xfr_len_r ;  
       state_nxt         =  state_r ; 
+      wr_data_0_en_nxt  =  1'b0 ; 
+      wr_data_1_en_nxt  =  1'b0 ; 
       case ( state_r ) 
          ST_IDLE : begin 
             state_nxt   =  ST_INIT ; 
@@ -270,7 +288,7 @@ module ddr2_mgr(
             if ( mig_init_done ) state_nxt   =  ST_READY ; 
          end
          ST_READY : begin 
-            if ( ~ refresh_locked ) begin 
+            if (  refresh_locked ) begin 
                if ( rd_mem_req  ) begin 
                   cmd_nxt  =  CMD_READ ; 
                   addr_nxt =  rd_mem_addr ; 
@@ -285,9 +303,12 @@ module ddr2_mgr(
          end
          ST_WR_CMD : begin 
             cmd_nxt  =  CMD_WRITE ; 
+            wr_data_0_en_nxt  =  1'b1 ; 
             if ( mig_user_cmd_ack ) begin 
                wr_grant_nxt  = 1'b1 ; 
                state_nxt =  ST_WR_DATA_0 ;  
+               wr_data_1_en_nxt  =  1'b1 ; 
+               wr_data_0_en_nxt  =  1'b0 ; 
             end
          end
          ST_WR_DATA_0 : begin 
@@ -330,12 +351,18 @@ module ddr2_mgr(
    end
 
 
-
+/*
    always @( posedge clk90 ) begin    
-      if ( mig_user_cmd_ack && ( state_r == ST_WR_CMD ) ) data_output_r   <= write_data_0 ; 
+      if ( state_r == ST_WR_CMD ) ) data_output_r   <= write_data_0 ; 
       if ( state_r   ==  ST_WR_DATA_0 )    data_output_r   <= write_data_1 ; 
    end
-
+*/
+   
+   always @( posedge clk90 ) begin    
+      data_output_r  <= 'h0 ; 
+      if ( wr_data_0_en )    data_output_r   <= write_data_0 ; 
+      if ( wr_data_1_en )    data_output_r   <= write_data_1 ; 
+   end
    //---------------------------------------
    //   Output interface signals  
    //---------------------------------------

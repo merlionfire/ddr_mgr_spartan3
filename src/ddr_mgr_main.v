@@ -14,6 +14,10 @@ module ddr_mgr_main
    input  wire        rst,
    input  wire        mem_rst_s_n,
 
+   // --- memory_init_done
+
+   output wire        memory_init_done, 
+
    // --- MIG and ddr2 device interface
    inout  wire [`DATA_WIDTH-1:0]         ddr2_dq_fpga,
    inout  wire [`DATA_STROBE_WIDTH-1:0]  ddr2_dqs_fpga,
@@ -211,12 +215,12 @@ module ddr_mgr_main
    reg [15:0]  screen_cnt   ;  
    reg   screen_cnt_overrun ; 
 
+   assign memory_init_done =  cw_cs[1] ;   
    // Create rd_go signal, which initiates state machine to issue read request to ddr2_mgr ;  
    // rd_go is asserted :
    //    *) once register CW_CS[1] indicating memory init is done 
    //    *) after every data read finishes 
    synchro synchro_buffer_init_done (.async(cw_cs[1] ),.sync( buffer_init_done),.clk( ~mem_clk0 ) ) ;
-   //assign buffer_init_done =  cw_cs[1] ;   
 
    assign buffer_init_done_pulse  =  buffer_init_done & ~buffer_init_done_1d ;    
    always @( negedge mem_clk0 ) begin    
