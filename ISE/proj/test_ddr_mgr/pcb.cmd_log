@@ -101,3 +101,636 @@ map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_m
 par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
 bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/fractal.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+netgen -intstyle ise -s 4  -pcf pcb.pcf -sdf_anno true -sdf_path "netgen/par" -insert_glbl true -insert_pp_buffers true -w -dir netgen/par -ofmt verilog -sim pcb.ncd pcb_timesim.v 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc /home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm /home/cct/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 

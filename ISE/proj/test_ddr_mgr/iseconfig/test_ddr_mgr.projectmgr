@@ -12,21 +12,21 @@
          <ClosedNode>/pcb |home|cct|FPGA_Project|fractal-fpga|verification|check_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/u_mem_controller - ddr2_512M16_mig/top_00 - ddr2_512M16_mig_top_0/data_path0 - ddr2_512M16_mig_data_path_0/data_read0 - ddr2_512M16_mig_data_read_0</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|fractal-fpga|verification|check_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/u_mem_controller - ddr2_512M16_mig/top_00 - ddr2_512M16_mig_top_0/data_path0 - ddr2_512M16_mig_data_path_0/data_read_controller0 - ddr2_512M16_mig_data_read_controller_0</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|fractal-fpga|verification|check_ddr_mgr|src|pcb.v/top_btn_filter_inst - btn_filter</ClosedNode>
-         <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/ddr2_mgr_inst - ddr2_mgr</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/picoblaze_inst - picoblaze</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/u_mem_controller - ddr2_512M16_mig/infrastructure_top0 - ddr2_512M16_mig_infrastructure_top/cal_top0 - ddr2_512M16_mig_cal_top</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/u_mem_controller - ddr2_512M16_mig/top_00 - ddr2_512M16_mig_top_0/data_path0 - ddr2_512M16_mig_data_path_0</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/u_mem_controller - ddr2_512M16_mig/top_00 - ddr2_512M16_mig_top_0/iobs0 - ddr2_512M16_mig_iobs_0</ClosedNode>
+         <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/ddr_mgr_main_inst - ddr_mgr_main/u_mem_controller - ddr2_512M16_mig/top_00 - ddr2_512M16_mig_top_0/iobs0 - ddr2_512M16_mig_iobs_0/datapath_iobs0 - ddr2_512M16_mig_data_path_iobs_0</ClosedNode>
          <ClosedNode>/pcb |home|cct|FPGA_Project|test_ddr_mgr|src|pcb.v/top_btn_filter_inst - btn_filter</ClosedNode>
          <ClosedNode>/sync_pulse |home|cct|FPGA_Project|lib|synchro.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>pcb (/home/cct/FPGA_Project/test_ddr_mgr/src/pcb.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >9</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000032e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000032e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000004c9000000020000000000000000000000000200000064ffffffff000000810000000300000002000004c90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>pcb (/home/cct/FPGA_Project/test_ddr_mgr/src/pcb.v)</CurrentItem>
    </ItemView>
@@ -40,7 +40,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c7000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002ec000000010000000100000000000000000000000064ffffffff000000810000000000000001000002ec0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem/>
    </ItemView>
@@ -49,7 +49,7 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems/>
-      <ScrollbarPosition orientation="vertical" >20</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >25</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002ec000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004800000001000000000000002200000001000000000000006700000001000000000000021b0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
@@ -73,36 +73,38 @@
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
          <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
          <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>Analyze Design Using ChipScope</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000002e60000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d9000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Analyze Design Using ChipScope</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff000000000000000200000105000000ae01000000060100000002</SourceProcessView>
+   <SourceProcessView>000000ff000000000000000200000106000000dd01000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XAW" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>View HDL Source</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000285000000010000000100000000000000000000000064ffffffff000000810000000000000001000002850000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000241000000010000000100000000000000000000000064ffffffff000000810000000000000001000002410000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>View HDL Source</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_CDC" guiview="Process" >
       <ClosedNodes>
@@ -113,7 +115,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002f6000000010000000100000000000000000000000064ffffffff000000810000000000000001000002f60000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d9000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -122,12 +124,39 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Edit Constraints (Text)</SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000017c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000017c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000241000000010000000100000000000000000000000064ffffffff000000810000000000000001000002410000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Edit Constraints (Text)</CurrentItem>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002ec000000010000000100000000000000000000000064ffffffff000000810000000000000001000002ec0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c8000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
    </ItemView>
 </Project>

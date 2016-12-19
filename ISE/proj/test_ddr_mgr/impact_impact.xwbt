@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/impact.xsl
+OUTFILE=/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr
+LICENSE=iMPACT
+USER_INFO=iMPACT

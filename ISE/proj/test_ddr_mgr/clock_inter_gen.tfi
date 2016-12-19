@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+clock_inter_gen instance_name (
+    .CLKIN_IN(CLKIN_IN), 
+    .CLKFX_OUT(CLKFX_OUT), 
+    .CLK0_OUT(CLK0_OUT), 
+    .LOCKED_OUT(LOCKED_OUT)
+    );
+
+

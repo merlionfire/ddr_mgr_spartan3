@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-merlionfire::  Sun Oct 23 09:09:00 2016
+merlionfire::  Sun Dec 04 00:38:40 2016
 
 par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
 
@@ -19,7 +19,7 @@ Device speed data version:  "PRODUCTION 1.42 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          54 out of 372    14%
+ Number of External IOBs                          62 out of 372    16%
 
    Number of External Input IOBs                  8
 
@@ -27,7 +27,7 @@ Design Summary Report:
         Number of LOCed External Input IBUFs      8 out of 8     100%
 
 
-   Number of External Output IOBs                26
+   Number of External Output IOBs                34
 
       Number of External Output DIFFMs            1
         Number of LOCed External Output DIFFMs    1 out of 1     100%
@@ -35,8 +35,8 @@ Design Summary Report:
       Number of External Output DIFFSs            1
         Number of LOCed External Output DIFFSs    1 out of 1     100%
 
-      Number of External Output IOBs             24
-        Number of LOCed External Output IOBs     24 out of 24    100%
+      Number of External Output IOBs             32
+        Number of LOCed External Output IOBs     32 out of 32    100%
 
 
    Number of External Bidir IOBs                 20
@@ -56,12 +56,12 @@ Design Summary Report:
    Number of DCMs                            2 out of 8      25%
       Number of LOCed DCMs                   2 out of 2     100%
 
-   Number of RAMB16BWEs                     12 out of 20     60%
-   Number of Slices                       1065 out of 5888   18%
-      Number of SLICEMs                    198 out of 2944    6%
+   Number of RAMB16BWEs                     13 out of 20     65%
+   Number of Slices                       1109 out of 5888   18%
+      Number of SLICEMs                    199 out of 2944    6%
 
-   Number of LOCed Slices                   65 out of 1065    6%
-      Number of LOCed SLICEMs               43 out of 198    21%
+   Number of LOCed Slices                   65 out of 1109    5%
+      Number of LOCed SLICEMs               43 out of 199    21%
 
 
 
@@ -76,52 +76,55 @@ Finished initial Timing Analysis.  REAL time: 3 secs
 WARNING:Par:288 - The signal SW<1>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<2>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<3>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal CLK_AUX_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/tmp_ram_rd_en has no
+   load.  PAR will not attempt to route this signal.
 
 Starting Placer
 Total REAL time at the beginning of Placer: 3 secs 
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:e262e720) REAL time: 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:ee0242d9) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:e262e720) REAL time: 4 secs 
+Phase 2.7  Design Feasibility Check (Checksum:ee0242d9) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:e52599b0) REAL time: 4 secs 
+Phase 3.31  Local Placement Optimization (Checksum:8ad76919) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:391345b0) REAL time: 6 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:85e4cd58) REAL time: 6 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:391345b0) REAL time: 6 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:85e4cd58) REAL time: 6 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:391345b0) REAL time: 6 secs 
+Phase 6.36  Local Placement Optimization (Checksum:85e4cd58) REAL time: 6 secs 
 
 Phase 7.8  Global Placement
-....................
-......
-...............................
-..........
+...............
+................
+.......
+...................................................
+...................
+.............................
 ........
-.................
-...........
-Phase 7.8  Global Placement (Checksum:d14ddf79) REAL time: 7 secs 
+.....
+Phase 7.8  Global Placement (Checksum:b389ed86) REAL time: 9 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:d14ddf79) REAL time: 7 secs 
+Phase 8.5  Local Placement Optimization (Checksum:b389ed86) REAL time: 9 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:5934ca7d) REAL time: 9 secs 
+Phase 9.18  Placement Optimization (Checksum:70479dc2) REAL time: 10 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:5934ca7d) REAL time: 9 secs 
+Phase 10.5  Local Placement Optimization (Checksum:70479dc2) REAL time: 10 secs 
 
-Total REAL time to Placer completion: 9 secs 
-Total CPU  time to Placer completion: 8 secs 
+Total REAL time to Placer completion: 11 secs 
+Total CPU  time to Placer completion: 10 secs 
 Writing design to file pcb.ncd
 
 
@@ -129,36 +132,34 @@ Writing design to file pcb.ncd
 Starting Router
 
 
-Phase  1  : 7631 unrouted;      REAL time: 13 secs 
+Phase  1  : 7859 unrouted;      REAL time: 14 secs 
 
-Phase  2  : 5992 unrouted;      REAL time: 13 secs 
+Phase  2  : 6176 unrouted;      REAL time: 15 secs 
 
-Phase  3  : 1393 unrouted;      REAL time: 14 secs 
+Phase  3  : 1297 unrouted;      REAL time: 16 secs 
 
-Phase  4  : 1462 unrouted; (Setup:93562, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
+Phase  4  : 1407 unrouted; (Setup:51913, Hold:0, Component Switching Limit:0)     REAL time: 23 secs 
 
-Phase  5  : 0 unrouted; (Setup:95004, Hold:0, Component Switching Limit:0)     REAL time: 15 secs 
-
-Updating file: pcb.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Setup:95004, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
-
-Phase  7  : 0 unrouted; (Setup:86122, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  5  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 29 secs 
 
 Updating file: pcb.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Setup:86122, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  6  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
 
-Phase  9  : 0 unrouted; (Setup:86122, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  7  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 48 secs 
 
-Phase 10  : 0 unrouted; (Setup:86122, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
+Phase  8  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+
+Phase  9  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+
+Phase 10  : 0 unrouted; (Setup:51117, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
 WARNING:Route:455 - CLK Net:ddr_mgr_main_inst/mig_clk0 may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:icon_control0<13> may have excessive skew because 
       1 CLK pins and 3 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 22 secs 
-Total CPU time to Router completion: 21 secs 
+Total REAL time to Router completion: 1 mins 18 secs 
+Total CPU time to Router completion: 1 mins 17 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -176,14 +177,22 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|            ila0_clk |  BUFGMUX_X1Y0| No   |  320 |  0.161     |  1.137      |
+|            ila0_clk |  BUFGMUX_X1Y0| No   |  187 |  0.225     |  1.199      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/mi |              |      |      |            |             |
-|              g_clk0 |  BUFGMUX_X2Y1| No   |  315 |  0.262     |  1.237      |
+|              g_clk0 |  BUFGMUX_X1Y1| No   |  317 |  0.235     |  1.220      |
 +---------------------+--------------+------+------+------------+-------------+
-|             clk_75m | BUFGMUX_X2Y11| No   |  146 |  0.108     |  1.082      |
+|             clk_75m | BUFGMUX_X1Y10| No   |  131 |  0.114     |  1.090      |
 +---------------------+--------------+------+------+------------+-------------+
-|    icon_control0<0> |  BUFGMUX_X1Y1| No   |  112 |  0.072     |  1.054      |
+|    icon_control0<0> | BUFGMUX_X1Y11| No   |  113 |  0.140     |  1.114      |
++---------------------+--------------+------+------+------------+-------------+
+|ddr_mgr_main_inst/mi |              |      |      |            |             |
+|             g_clk90 |  BUFGMUX_X2Y1| No   |  171 |  0.162     |  1.137      |
++---------------------+--------------+------+------+------------+-------------+
+|   icon_control0<13> |         Local|      |    4 |  0.000     |  0.929      |
++---------------------+--------------+------+------+------------+-------------+
+|U_icon_pro/U0/iUPDAT |              |      |      |            |             |
+|               E_OUT |         Local|      |    1 |  0.000     |  2.330      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/u_ |              |      |      |            |             |
 |mem_controller/top_0 |              |      |      |            |             |
@@ -205,11 +214,6 @@ Generating Clock Report
 |0/data_path0/dqs_del |              |      |      |            |             |
 |        ayed_col0<1> |         Local|      |   11 |  0.123     |  1.697      |
 +---------------------+--------------+------+------+------------+-------------+
-|   icon_control0<13> |         Local|      |    4 |  0.000     |  1.856      |
-+---------------------+--------------+------+------+------------+-------------+
-|U_icon_pro/U0/iUPDAT |              |      |      |            |             |
-|               E_OUT |         Local|      |    1 |  0.000     |  2.268      |
-+---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
 only delays for the net. Note this is different from Clock Skew which
@@ -219,7 +223,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 86122 (Setup: 86122, Hold: 0, Component Switching Limit: 0)
+Timing Score: 51117 (Setup: 51117, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -238,7 +242,7 @@ WARNING:Par:468 - Your design did not meet timing.  The following are some sugge
    TechXclusives->Timing Closure" for tips and suggestions for meeting timing
    in your design.
 
-Number of Timing Constraints that were not applied: 5
+Number of Timing Constraints that were not applied: 4
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -247,24 +251,10 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* PERIOD analysis for net "clock_gen_inst/C | SETUP       |    -4.613ns|    50.250ns|       4|       11819
-  LKFX_BUF" derived from  NET "clock_gen_in | HOLD        |     0.676ns|            |       0|           0
-  st/CLKIN_IBUFG_OUT" PERIOD = 20 ns HIGH 5 |             |            |            |        |            
-  0%                                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |    -4.098ns|    59.136ns|       6|       11256
-  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.560ns|            |       0|           0
-  k_dcm0/clk90dcm" derived from  PERIOD ana |             |            |            |        |            
-  lysis for net "clk_100m" derived from NET |             |            |            |        |            
-   "clock_gen_inst/CLKIN_IBUFG_OUT" PERIOD  |             |            |            |        |            
-  = 20 ns HIGH 50%                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-* PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |    -3.168ns|    29.004ns|      52|       63047
-  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.855ns|            |       0|           0
-  k_dcm0/clk0dcm" derived from  PERIOD anal |             |            |            |        |            
-  ysis for net "clk_100m" derived from NET  |             |            |            |        |            
-  "clock_gen_inst/CLKIN_IBUFG_OUT" PERIOD = |             |            |            |        |            
-   20 ns HIGH 50%                           |             |            |            |        |            
+* PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |    -1.408ns|     5.167ns|     123|       51117
+  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.684ns|            |       0|           0
+  k_dcm0/clk2x" derived from  NET "mem_clk_ |             |            |            |        |            
+  s" PERIOD = 7.5187 ns HIGH 50%            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.002ns|     0.398ns|       0|           0
   roller/infrastructure_top0/cal_top0/tap_d |             |            |            |        |            
@@ -278,26 +268,35 @@ Asterisk (*) preceding a constraint indicates it was not met.
   roller/infrastructure_top0/cal_top0/tap_d |             |            |            |        |            
   ly0/tap<23>"         MAXDELAY = 0.4 ns    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PERIOD analysis for net "clk_100m" derive | MINLOWPULSE |     5.200ns|     4.800ns|       0|           0
-  d from  NET "clock_gen_inst/CLKIN_IBUFG_O |             |            |            |        |            
-  UT" PERIOD = 20 ns HIGH 50%               |             |            |            |        |            
+  PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |     0.088ns|     7.430ns|       0|           0
+  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.784ns|            |       0|           0
+  k_dcm0/clk0dcm" derived from  NET "mem_cl |             |            |            |        |            
+  k_s" PERIOD = 7.5187 ns HIGH 50%          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.085ns|     1.915ns|       0|           0
-   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     1.421ns|            |       0|           0
+  PERIOD analysis for net "clock_gen_inst/C | SETUP       |     0.132ns|    13.201ns|       0|           0
+  LKFX_BUF" derived from  NET "clk_50m_in"  | HOLD        |     0.718ns|            |       0|           0
+  PERIOD = 20 ns HIGH 50%                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "clock_gen_inst/CLKIN_IBUFG_OUT" PERI | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
-  OD = 20 ns HIGH 50%                       |             |            |            |        |            
+  PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |     0.294ns|     7.224ns|       0|           0
+  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.647ns|            |       0|           0
+  k_dcm0/clk90dcm" derived from  NET "mem_c |             |            |            |        |            
+  lk_s" PERIOD = 7.5187 ns HIGH 50%         |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  NET "CLK_AUX_IBUF" PERIOD = 7.5187 ns HIG | N/A         |         N/A|         N/A|     N/A|         N/A
-  H 50%                                     |             |            |            |        |            
+  NET "mem_clk_s" PERIOD = 7.5187 ns HIGH 5 | MINLOWPULSE |     2.718ns|     4.800ns|       0|           0
+  0%                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_D2_TO_T2_ila_pro_0_path" TIG     | SETUP       |         N/A|     4.773ns|     N/A|           0
+  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.128ns|     1.872ns|       0|           0
+   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     1.362ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "clk_50m_in" PERIOD = 20 ns HIGH 50%  | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_D2_TO_T2_ila_pro_0_path" TIG     | SETUP       |         N/A|     5.891ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_J2_TO_D2_ila_pro_0_path" TIG     | N/A         |         N/A|         N/A|     N/A|         N/A
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_J3_TO_D2_ila_pro_0_path" TIG     | N/A         |         N/A|         N/A|     N/A|         N/A
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_J4_TO_D2_ila_pro_0_path" TIG     | MAXDELAY    |         N/A|     6.524ns|     N/A|           0
+  PATH "TS_J4_TO_D2_ila_pro_0_path" TIG     | MAXDELAY    |         N/A|     6.064ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -305,24 +304,35 @@ Derived Constraint Report
 Review Timing Report for more details on the following derived constraints.
 To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
 or "Run Timing Analysis" from Timing Analyzer (timingan).
-Derived Constraints for clock_gen_inst/CLKIN_IBUFG_OUT
+Derived Constraints for clk_50m_in
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 |                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|clock_gen_inst/CLKIN_IBUFG_OUT |     20.000ns|      6.000ns|    118.272ns|            0|           62|            0|        18959|
-| clock_gen_inst/CLKFX_BUF      |     13.333ns|     50.250ns|          N/A|            4|            0|        13023|            0|
-| clk_100m                      |     10.000ns|      4.800ns|     59.136ns|            0|           58|            0|         5936|
-|  ddr_mgr_main_inst/u_mem_contr|     10.000ns|     29.004ns|          N/A|           52|            0|         3793|            0|
-|  oller/infrastructure_top0/clk|             |             |             |             |             |             |             |
-|  _dcm0/clk0dcm                |             |             |             |             |             |             |             |
-|  ddr_mgr_main_inst/u_mem_contr|     10.000ns|     59.136ns|          N/A|            6|            0|         2143|            0|
-|  oller/infrastructure_top0/clk|             |             |             |             |             |             |             |
-|  _dcm0/clk90dcm               |             |             |             |             |             |             |             |
+|clk_50m_in                     |     20.000ns|      6.000ns|     19.802ns|            0|            0|            0|        11177|
+| clock_gen_inst/CLKFX_BUF      |     13.333ns|     13.201ns|          N/A|            0|            0|        11177|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-3 constraints not met.
+Derived Constraints for mem_clk_s
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|mem_clk_s                      |      7.519ns|      4.800ns|     10.334ns|            0|          123|            0|         6427|
+| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      7.430ns|          N/A|            0|            0|         3687|            0|
+| ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
+| cm0/clk0dcm                   |             |             |             |             |             |             |             |
+| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      7.224ns|          N/A|            0|            0|         1207|            0|
+| ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
+| cm0/clk90dcm                  |             |             |             |             |             |             |             |
+| ddr_mgr_main_inst/u_mem_contro|      3.759ns|      5.167ns|          N/A|          123|            0|         1533|            0|
+| ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
+| cm0/clk2x                     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -336,14 +346,14 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 4 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 23 secs 
-Total CPU time to PAR completion: 22 secs 
+Total REAL time to PAR completion: 1 mins 19 secs 
+Total CPU time to PAR completion: 1 mins 18 secs 
 
-Peak Memory Usage:  679 MB
+Peak Memory Usage:  684 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - 62 errors found.
+Timing: Completed - 123 errors found.
 
 Number of error messages: 0
 Number of warning messages: 9

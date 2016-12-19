@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun Nov 27 04:05:47 2016
+# Process ID: 12337
+# Log file: /home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/planAhead_run_1/planAhead.log
+# Journal file: /home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pa.fromNetlist.tcl
+# create_project -name test_ddr_mgr -dir "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/planAhead_run_1" -part xc3s700anfgg484-4
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr} {../../fifo_ip} }
+# add_files [list {../../fifo_ip/dumo_fifo.ncf}] -fileset [get_property constrset [current_run]]
+# set_property target_constrs_file "/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf" [current_fileset -constrset]
+Adding file '/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf' to fileset 'constrs_1'
+# add_files [list {/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s700anfgg484-4
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design pcb.ngc ...
+WARNING:NetListWriters:298 - No output is written to pcb.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus ddr_address1_mux0000<12 : 0> on block
+   ddr2_512M16_mig_controller_0 is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Mcompar_counter200_cmp_lt0000_lut<4 : 0>
+   on block ddr2_512M16_mig_infrastructure_top is not reconstructed, because
+   there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file pcb.edif ...
+ngc2edif: Total memory usage is 108696 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/test_ddr_mgr.data/cache/pcb_ngc_9c1bbb85.edif]
+Finished Parsing EDIF File [./planAhead_run_1/test_ddr_mgr.data/cache/pcb_ngc_9c1bbb85.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design dumo_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to dumo_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file dumo_fifo.edif ...
+ngc2edif: Total memory usage is 104096 kilobytes
+
+Reading core file '/home/cct/FPGA_Project/test_ddr_mgr/ISE/fifo_ip/dumo_fifo.ngc' for (cell view 'dumo_fifo', library 'pcb_lib', file 'pcb.ngc')
+Parsing EDIF File [./planAhead_run_1/test_ddr_mgr.data/cache/dumo_fifo_ngc_23066ecf.edif]
+Finished Parsing EDIF File [./planAhead_run_1/test_ddr_mgr.data/cache/dumo_fifo_ngc_23066ecf.edif]
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3a/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3a/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3a/hd_int_macros.edn]
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3a/spartan3a/xc3s700an/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3a/spartan3a/xc3s700an/ClockBuffers.xml
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3a/spartan3a/xc3s700an/fgg484/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3a/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3a/spartan3a/xc3s700an/fgg484/SSORules.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3a/drc.xml
+INFO: [Timing 38-77] Reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3a/spartan3a/spartan3a-4.lib.
+INFO: [Timing 38-34] Done reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3a/spartan3a/spartan3a-4.lib.
+Parsing UCF File [/home/cct/FPGA_Project/test_ddr_mgr/ISE/fifo_ip/dumo_fifo.ncf]
+Finished Parsing UCF File [/home/cct/FPGA_Project/test_ddr_mgr/ISE/fifo_ip/dumo_fifo.ncf]
+Parsing UCF File [/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf]
+WARNING: [Constraints 18-4] Cannot LOC hierarchical instance ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst. This constraint is ignored by planAhead but preserved for the implementation tools [/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf:483]
+WARNING: [Constraints 18-4] Cannot LOC hierarchical instance ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst. This constraint is ignored by planAhead but preserved for the implementation tools [/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf:484]
+WARNING: [Constraints 18-4] Cannot LOC hierarchical instance ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst. This constraint is ignored by planAhead but preserved for the implementation tools [/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf:588]
+WARNING: [Constraints 18-4] Cannot LOC hierarchical instance ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst. This constraint is ignored by planAhead but preserved for the implementation tools [/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf:589]
+Finished Parsing UCF File [/home/cct/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf]
+CRITICAL WARNING: [Constraints 18-432] Could not process RLOC_ORIGIN X28Y16 for cell cal_ctl/tap_dly0/l0. Failed to get a shape for cell ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l0 
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: f148c409
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2811.805 ; gain = 107.074
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See /home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/planAhead_pid12337.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sun Nov 27 07:43:06 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

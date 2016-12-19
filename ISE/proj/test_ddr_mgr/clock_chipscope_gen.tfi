@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+clock_chipscope_gen instance_name (
+    .CLKIN_IN(CLKIN_IN), 
+    .CLK0_OUT(CLK0_OUT), 
+    .CLK2X_OUT(CLK2X_OUT), 
+    .LOCKED_OUT(LOCKED_OUT)
+    );
+
+

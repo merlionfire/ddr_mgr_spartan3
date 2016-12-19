@@ -1,0 +1,2 @@
+# Output products list for <clock_chipscope_gen>
+clock_chipscope_gen_flist.txt

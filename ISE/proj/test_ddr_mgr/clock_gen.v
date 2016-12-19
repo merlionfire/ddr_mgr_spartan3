@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : xaw2verilog
 //  /   /         Filename : clock_gen.v
-// /___/   /\     Timestamp : 10/17/2016 09:31:35
+// /___/   /\     Timestamp : 11/07/2016 07:24:04
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -25,7 +25,6 @@
 module clock_gen(CLKIN_IN, 
                  CLKDV_OUT, 
                  CLKFX_OUT, 
-                 CLKIN_IBUFG_OUT, 
                  CLK0_OUT, 
                  CLK2X_OUT, 
                  LOCKED_OUT);
@@ -33,7 +32,6 @@ module clock_gen(CLKIN_IN,
     input CLKIN_IN;
    output CLKDV_OUT;
    output CLKFX_OUT;
-   output CLKIN_IBUFG_OUT;
    output CLK0_OUT;
    output CLK2X_OUT;
    output LOCKED_OUT;
@@ -41,19 +39,15 @@ module clock_gen(CLKIN_IN,
    wire CLKDV_BUF;
    wire CLKFB_IN;
    wire CLKFX_BUF;
-   wire CLKIN_IBUFG;
    wire CLK0_BUF;
    wire GND_BIT;
    
    assign GND_BIT = 0;
-   assign CLKIN_IBUFG_OUT = CLKIN_IBUFG;
    assign CLK0_OUT = CLKFB_IN;
    BUFG  CLKDV_BUFG_INST (.I(CLKDV_BUF), 
                          .O(CLKDV_OUT));
    BUFG  CLKFX_BUFG_INST (.I(CLKFX_BUF), 
                          .O(CLKFX_OUT));
-   IBUFG  CLKIN_IBUFG_INST (.I(CLKIN_IN), 
-                           .O(CLKIN_IBUFG));
    BUFG  CLK0_BUFG_INST (.I(CLK0_BUF), 
                         .O(CLKFB_IN));
    DCM_SP #( .CLK_FEEDBACK("1X"), .CLKDV_DIVIDE(2.0), .CLKFX_DIVIDE(2), 
@@ -63,7 +57,7 @@ module clock_gen(CLKIN_IN,
          .DLL_FREQUENCY_MODE("LOW"), .DUTY_CYCLE_CORRECTION("TRUE"), 
          .FACTORY_JF(16'hC080), .PHASE_SHIFT(0), .STARTUP_WAIT("FALSE") ) 
          DCM_SP_INST (.CLKFB(CLKFB_IN), 
-                       .CLKIN(CLKIN_IBUFG), 
+                       .CLKIN(CLKIN_IN), 
                        .DSSEN(GND_BIT), 
                        .PSCLK(GND_BIT), 
                        .PSEN(GND_BIT), 

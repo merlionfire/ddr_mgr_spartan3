@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
@@ -101,6 +101,9 @@ Verilog 2001                       : YES
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"../../fifo_ip"  }
+
 =========================================================================
 
 
@@ -182,8 +185,10 @@ Module <picoblaze> compiled
 Compiling verilog include file "../../../src/ddr2_512M16_mig_parameters_0.v"
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig.v" in library work
 Module <ddr2_mgr> compiled
-Compiling verilog file "../../../../lib/debounce.v" in library work
+Compiling verilog file "../../fifo_ip/dumo_fifo.v" in library work
 Module <ddr2_512M16_mig> compiled
+Compiling verilog file "../../../../lib/debounce.v" in library work
+Module <dumo_fifo> compiled
 Compiling verilog file "../../../src/ddr_mgr_main.v" in library work
 Compiling verilog include file "../../../src/ddr2_512M16_mig_parameters_0.v"
 Module <debounce> compiled
@@ -276,7 +281,7 @@ Analyzing hierarchy for module <kcpsm3> in library <work>.
 Analyzing hierarchy for module <picocode> in library <work>.
 
 Analyzing hierarchy for module <synchro> in library <work> with parameters.
-	INITIALIZE = "LOGIC1"
+	INITIALIZE = "LOGIC0"
 
 Analyzing hierarchy for module <ddr2_512M16_mig_top_0> in library <work>.
 
@@ -588,14 +593,18 @@ WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance
 Analyzing top module <pcb>.
 Module <pcb> is correct for synthesis.
  
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <clk_50m_inst> in unit <pcb>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <clk_50m_inst> in unit <pcb>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <clk_50m_inst> in unit <pcb>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <clk_50m_inst> in unit <pcb>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <SYS_CLK_INST> in unit <pcb>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <SYS_CLK_INST> in unit <pcb>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <SYS_CLK_INST> in unit <pcb>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <SYS_CLK_INST> in unit <pcb>.
     Set user-defined property "KEEP =  true" for signal <fractal_rst_mask>.
 Analyzing module <clock_gen> in library <work>.
 Module <clock_gen> is correct for synthesis.
  
-    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <clock_gen>.
-    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <clock_gen>.
-    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <clock_gen>.
-    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <clock_gen>.
     Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <clock_gen>.
     Set user-defined property "CLKFX_DIVIDE =  2" for instance <DCM_SP_INST> in unit <clock_gen>.
     Set user-defined property "CLKFX_MULTIPLY =  3" for instance <DCM_SP_INST> in unit <clock_gen>.
@@ -615,8 +624,12 @@ Analyzing module <synchro.1> in library <work>.
 	INITIALIZE = "LOGIC1"
 Module <synchro.1> is correct for synthesis.
  
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <use_fdp.fda> in unit <synchro.1>.
     Set user-defined property "INIT =  1" for instance <use_fdp.fda> in unit <synchro.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <use_fdp.fda> in unit <synchro.1>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <use_fdp.fdb> in unit <synchro.1>.
     Set user-defined property "INIT =  1" for instance <use_fdp.fdb> in unit <synchro.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <use_fdp.fdb> in unit <synchro.1>.
 Analyzing module <btn_filter> in library <work>.
 	PIN_NUM = 32'sb00000000000000000000000000000010
 Module <btn_filter> is correct for synthesis.
@@ -625,8 +638,12 @@ Analyzing module <synchro.2> in library <work>.
 	INITIALIZE = "LOGIC0"
 Module <synchro.2> is correct for synthesis.
  
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <use_fdc.fda> in unit <synchro.2>.
     Set user-defined property "INIT =  0" for instance <use_fdc.fda> in unit <synchro.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <use_fdc.fda> in unit <synchro.2>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <use_fdc.fdb> in unit <synchro.2>.
     Set user-defined property "INIT =  0" for instance <use_fdc.fdb> in unit <synchro.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <use_fdc.fdb> in unit <synchro.2>.
 Analyzing module <debounce> in library <work>.
 	NBITS = 32'sb00000000000000000000000000010100
 	NDELAY = 32'sb00000000000010011110101100010000
@@ -654,9 +671,12 @@ Analyzing module <ddr_mgr_main> in library <work>.
 	ST_PRE_XFR = 2'b10
 	ST_WAIT_GRANT = 2'b01
 	XFR_LEN_PER_LINE = 10'b1000000000
+WARNING:Xst:2211 - "../../fifo_ip/dumo_fifo.v" line 447: Instantiating black box module <dumo_fifo>.
 Module <ddr_mgr_main> is correct for synthesis.
  
     Set user-defined property "KEEP =  true" for signal <buffer_init_done>.
+    Set user-defined property "KEEP =  true" for signal <addr_row_err>.
+    Set user-defined property "KEEP =  true" for signal <dumo_fifo_rd_valid>.
     Set user-defined property "KEEP =  true" for signal <data_fault>.
 Analyzing module <picoblaze> in library <work>.
 Module <picoblaze> is correct for synthesis.
@@ -1014,24 +1034,24 @@ Analyzing module <picocode> in library <work>.
 Module <picocode> is correct for synthesis.
  
     Set user-defined property "INIT =  000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INITP_00 =  000000000000000026666D28AAA582582A28A28A8A28A2DCB72DCB4E3FFFFFFF" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INITP_00 =  A960960A8A28A2A28A28BFFBFFFFFFFFFFFFFFFFEDCB72DCB4F8E348FFFFFFFF" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INITP_01 =  00000000000000000000000000000000000000000000000000000009999B4A2A" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_00 =  000200125404005B0048003F54040057005300420050004B0045003F00250053" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_01 =  A000541CC20100160219A0005417C10100120128A0005413C00100104011C000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_02 =  C01400FDC017C01300CBC016C0120086C015C0110010A0005421C301001B0314" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_03 =  0800A000C018C0140002C017C0130036C016C012007CC015C01100EFA000C018" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_04 =  A000CB1DCA1CC91BC81AA000AB008A01A0000B000A00A000A9008808A0000900" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_05 =  0000A0004B03B4004A00A0004908B4004800A000545320014010A000C0100001" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_08 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_00 =  001C5404008E007B00725404008A00860075001C0083007E0078007200580086" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_01 =  A000541DC00100104015002FC0000002002FC0000003541220014000C0000002" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_02 =  002AA000542BC30100250314A0005426C20100200219A0005421C101001C0128" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_03 =  002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_04 =  002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_05 =  C01300CBC016C0120086C015C0110010A000002F002F002F002F002FA000002A" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_06 =  C0140002C017C0130036C016C012007CC015C01100EFA000C018C01400FDC017" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_07 =  C91BC81AA000AB008A01A0000B000A00A000A9008808A00009000800A000C018" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_08 =  B4004A00A0004908B4004800A000548620014010A000C0100001A000CB1DCA1C" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_09 =  00000000000000000000000000000000000000000000000000000000A0004B03" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
@@ -1488,8 +1508,8 @@ Module <ddr2_512M16_mig_clk_dcm> is correct for synthesis.
     Set user-defined property "CLKFX_DIVIDE =  1" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "CLKFX_MULTIPLY =  4" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
-    Set user-defined property "CLKIN_PERIOD =  10.000000" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
-    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
+    Set user-defined property "CLKIN_PERIOD =  7.519000" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  FIXED" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
@@ -1500,6 +1520,7 @@ Module <ddr2_512M16_mig_clk_dcm> is correct for synthesis.
     Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "SIM_MODE =  SAFE" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
     Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_INST1> in unit <ddr2_512M16_mig_clk_dcm>.
+    Set user-defined property "KEEP =  true" for signal <chipscope_clk>.
 Analyzing module <ddr2_512M16_mig_cal_top> in library <work>.
 Module <ddr2_512M16_mig_cal_top> is correct for synthesis.
  
@@ -1624,8 +1645,12 @@ Analyzing module <synchro.3> in library <work>.
 	INITIALIZE = "LOGIC0"
 Module <synchro.3> is correct for synthesis.
  
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <use_fdc.fda> in unit <synchro.3>.
     Set user-defined property "INIT =  0" for instance <use_fdc.fda> in unit <synchro.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <use_fdc.fda> in unit <synchro.3>.
+    Set user-defined property "ASYNC_REG =  TRUE" for instance <use_fdc.fdb> in unit <synchro.3>.
     Set user-defined property "INIT =  0" for instance <use_fdc.fdb> in unit <synchro.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <use_fdc.fdb> in unit <synchro.3>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -1938,6 +1963,7 @@ Unit <ddr2_512M16_mig_s3_dq_iob> synthesized.
 
 Synthesizing Unit <ddr2_512M16_mig_clk_dcm>.
     Related source file is "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_clk_dcm.v".
+WARNING:Xst:1580 - Signal <chipscope_clk> with a "KEEP" property is assigned but never used. Related logic will not be removed.
 Unit <ddr2_512M16_mig_clk_dcm> synthesized.
 
 
@@ -1994,6 +2020,10 @@ Synthesizing Unit <ddr2_mgr>.
     Related source file is "../../../src/ddr2_mgr.v".
 WARNING:Xst:647 - Input <rst0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst90> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <write_data_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <wr_mem_req_sync_0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wr_data_1_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wr_data_0_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <wr_16bit_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <reg_wr_stobe> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <ddr_row_reg<15:13>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -2013,7 +2043,7 @@ WARNING:Xst:646 - Signal <ddr_bank_reg<7:2>> is assigned but never used. This un
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 25-bit adder for signal <addr_nxt$addsub0000> created at line 321.
+    Found 25-bit adder for signal <addr_nxt$addsub0000> created at line 353.
     Found 25-bit register for signal <addr_r>.
     Found 1-bit register for signal <burst_done_r>.
     Found 3-bit register for signal <cmd_r>.
@@ -2021,20 +2051,19 @@ WARNING:Xst:646 - Signal <ddr_bank_reg<7:2>> is assigned but never used. This un
     Found 8-bit register for signal <ddr_bank_reg>.
     Found 10-bit register for signal <ddr_col_reg<10:1>>.
     Found 13-bit register for signal <ddr_row_reg<12:0>>.
-    Found 10-bit comparator equal for signal <last_req_xfr$cmp_eq0000> created at line 229.
+    Found 10-bit comparator equal for signal <last_req_xfr$cmp_eq0000> created at line 249.
     Found 1-bit register for signal <rd_grant_r>.
     Found 1-bit register for signal <refresh_active>.
     Found 1-bit register for signal <wr_cmd_active>.
     Found 1-bit register for signal <wr_grant_r>.
     Found 1-bit register for signal <wr_mem_req>.
     Found 32-bit register for signal <write_data_0>.
-    Found 32-bit register for signal <write_data_1>.
-    Found 10-bit adder for signal <xfr_cnt_nxt$addsub0000> created at line 319.
+    Found 10-bit adder for signal <xfr_cnt_nxt$addsub0000> created at line 351.
     Found 10-bit register for signal <xfr_cnt_r>.
     Found 10-bit register for signal <xfr_len_r>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred 181 D-type flip-flop(s).
+	inferred 149 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 Unit <ddr2_mgr> synthesized.
@@ -2087,7 +2116,7 @@ WARNING:Xst:647 - Input <sys_clkb> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <sys_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Register <wait_200us_rout> equivalent to <wait_200us_r> has been removed
     Found 16-bit up counter for signal <counter200>.
-    Found 16-bit comparator less for signal <counter200$cmp_lt0000> created at line 162.
+    Found 16-bit comparator less for signal <counter200$cmp_lt0000> created at line 168.
     Found 1-bit register for signal <sys_rst>.
     Found 1-bit register for signal <sys_rst180>.
     Found 1-bit register for signal <sys_rst180_1>.
@@ -2148,15 +2177,18 @@ Synthesizing Unit <ddr_mgr_main>.
     Related source file is "../../../src/ddr_mgr_main.v".
 WARNING:Xst:646 - Signal <screen_cnt_overrun> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <rst_dqs_div_loop> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <rd_xfr_en_sync> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <pi_unit_rd_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <pi_mouse_rd_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <pi_disp_rd_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <pi_blk_sel<15:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <interrupt_ack> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:653 - Signal <interrupt> is used but never assigned. This sourceless signal will be automatically connected to value 0.
-WARNING:Xst:1580 - Signal <data_fault> with a "KEEP" property is assigned but never used. Related logic will not be removed.
+WARNING:Xst:1580 - Signal <dumo_fifo_rd_valid> with a "KEEP" property is assigned but never used. Related logic will not be removed.
+WARNING:Xst:646 - Signal <dumo_fifo_full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <dumo_fifo_data_count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <cw_cs<7:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <cw_cs<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1580 - Signal <addr_row_err> with a "KEEP" property is assigned but never used. Related logic will not be removed.
     Found finite state machine <FSM_3> for signal <req_st_r>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -2174,8 +2206,15 @@ WARNING:Xst:646 - Signal <cw_cs<0>> is assigned but never used. This unconnected
     Found 10-bit register for signal <addr_col>.
     Found 13-bit register for signal <addr_row>.
     Found 1-bit register for signal <buffer_init_done_1d>.
+    Found 1-bit register for signal <byte_0_fault>.
+    Found 1-bit register for signal <byte_1_fault>.
+    Found 1-bit register for signal <byte_2_fault>.
+    Found 1-bit register for signal <byte_3_fault>.
     Found 8-bit register for signal <cw_cs>.
     Found 1-bit register for signal <data_fault>.
+    Found 1-bit register for signal <data_fault_1d>.
+    Found 1-bit register for signal <dumo_fifo_rd>.
+    Found 1-bit register for signal <dumo_fifo_rd_en>.
     Found 1-bit register for signal <rd_go>.
     Found 1-bit register for signal <rd_req_r>.
     Found 1-bit register for signal <rd_xfr_done>.
@@ -2185,17 +2224,23 @@ WARNING:Xst:646 - Signal <cw_cs<0>> is assigned but never used. This unconnected
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   2 Counter(s).
-	inferred  48 D-type flip-flop(s).
+	inferred  55 D-type flip-flop(s).
 Unit <ddr_mgr_main> synthesized.
 
 
 Synthesizing Unit <pcb>.
     Related source file is "../../../src/pcb.v".
-WARNING:Xst:647 - Input <CLK_AUX> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <SW<3:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <memory_init_done> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_init_done> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <dcm_inter_locked> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clk_50m_o> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <clk_50m_i> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clk_50m_i> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <clk_25m> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clk_133m_pre> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clk_133m> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clk_120m> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <clk_100m> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <pcb> synthesized.
 
 
@@ -2221,8 +2266,8 @@ Macro Statistics
  6-bit up counter                                      : 2
  7-bit down counter                                    : 1
  8-bit down counter                                    : 3
-# Registers                                            : 239
- 1-bit register                                        : 191
+# Registers                                            : 214
+ 1-bit register                                        : 166
  10-bit register                                       : 4
  13-bit register                                       : 5
  16-bit register                                       : 8
@@ -2304,6 +2349,8 @@ Optimizing FSM <ddr_mgr_main_inst/u_mem_controller/top_00/controller0/init_curre
  10    | 10
  11    | 11
 -------------------
+Reading core <../../fifo_ip/dumo_fifo.ngc>.
+Loading core <dumo_fifo> for timing and area information for instance <dumo_fifo_inst>.
 INFO:Xst:2261 - The FF/Latch <burst_length_0> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <burst_length_2> <ddr_odt2> 
 INFO:Xst:2261 - The FF/Latch <column_address_reg_10> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <column_address_reg_11> <column_address_reg_12> 
 INFO:Xst:2261 - The FF/Latch <column_address_reg1_10> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <column_address_reg1_11> <column_address_reg1_12> 
@@ -2311,15 +2358,6 @@ WARNING:Xst:1710 - FF/Latch <delay_sel_val1_0> (without init value) has a consta
 WARNING:Xst:1710 - FF/Latch <tapfordqs1_0> (without init value) has a constant value of 1 in block <cal_ctl0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_bank_0> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_bank_1> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_0> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_1> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_2> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_3> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_4> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_5> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_6> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_7> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <rd_xfr_len_8> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_col_0> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_col_1> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_col_2> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -2330,6 +2368,16 @@ WARNING:Xst:1710 - FF/Latch <addr_col_6> (without init value) has a constant val
 WARNING:Xst:1710 - FF/Latch <addr_col_7> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_col_8> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_col_9> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_0> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_1> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_2> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_3> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_4> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_5> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_6> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_7> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <rd_xfr_len_8> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dumo_fifo_rd_en> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
@@ -2351,12 +2399,12 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ddr_odt_cntrl> (wit
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tapfordqs_0> (without init value) has a constant value of 1 in block <cal_ctl0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tapfordqs_0> (without init value) has a constant value of 1 in block <cal_ctl0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
@@ -2370,16 +2418,15 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_1>
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <ddr_bank_reg_2> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_3> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_4> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_5> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_6> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_7> of sequential type is unconnected in block <ddr2_mgr_inst>.
-WARNING:Xst:2677 - Node <cw_cs_0> of sequential type is unconnected in block <ddr_mgr_main_inst>.
 WARNING:Xst:2677 - Node <cw_cs_2> of sequential type is unconnected in block <ddr_mgr_main_inst>.
 WARNING:Xst:2677 - Node <cw_cs_3> of sequential type is unconnected in block <ddr_mgr_main_inst>.
 WARNING:Xst:2677 - Node <cw_cs_4> of sequential type is unconnected in block <ddr_mgr_main_inst>.
@@ -2396,7 +2443,6 @@ WARNING:Xst:2677 - Node <ddr_bank_reg_4> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <ddr_bank_reg_5> of sequential type is unconnected in block <ddr2_mgr>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_6> of sequential type is unconnected in block <ddr2_mgr>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_7> of sequential type is unconnected in block <ddr2_mgr>.
-WARNING:Xst:2677 - Node <cw_cs_0> of sequential type is unconnected in block <ddr_mgr_main>.
 WARNING:Xst:2677 - Node <cw_cs_2> of sequential type is unconnected in block <ddr_mgr_main>.
 WARNING:Xst:2677 - Node <cw_cs_3> of sequential type is unconnected in block <ddr_mgr_main>.
 WARNING:Xst:2677 - Node <cw_cs_4> of sequential type is unconnected in block <ddr_mgr_main>.
@@ -2427,8 +2473,8 @@ Macro Statistics
  6-bit up counter                                      : 2
  7-bit down counter                                    : 1
  8-bit down counter                                    : 3
-# Registers                                            : 973
- Flip-Flops                                            : 973
+# Registers                                            : 955
+ Flip-Flops                                            : 955
 # Comparators                                          : 7
  10-bit comparator equal                               : 1
  16-bit comparator less                                : 1
@@ -2450,6 +2496,7 @@ WARNING:Xst:1710 - FF/Latch <ddr_odt2> (without init value) has a constant value
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <burst_length_0> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ddr_odt_cntrl> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cmd_r_0> (without init value) has a constant value of 0 in block <ddr2_mgr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <dumo_fifo_rd_en> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_8> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_7> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_6> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
@@ -2602,7 +2649,11 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_2_1
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block pcb, actual ratio is 14.
+Found area constraint ratio of 100 (+ 5) on block pcb, actual ratio is 15.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <dumo_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <dumo_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i> in Unit <dumo_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> in Unit <dumo_fifo_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> 
 
 Final Macro Processing ...
 
@@ -2690,8 +2741,8 @@ Unit <data_write0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 800
- Flip-Flops                                            : 800
+# Registers                                            : 781
+ Flip-Flops                                            : 781
 # Shift Registers                                      : 74
  2-bit shift register                                  : 16
  3-bit shift register                                  : 26
@@ -2722,59 +2773,62 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : Soft
 
 Design Statistics
-# IOs                              : 54
+# IOs                              : 62
 
 Cell Usage :
-# BELS                             : 1335
-#      GND                         : 38
-#      INV                         : 105
-#      LUT1                        : 109
-#      LUT2                        : 107
-#      LUT3                        : 227
-#      LUT4                        : 320
-#      LUT4_L                      : 1
-#      MUXCY                       : 184
-#      MUXF5                       : 24
+# BELS                             : 1454
+#      GND                         : 43
+#      INV                         : 109
+#      LUT1                        : 127
+#      LUT2                        : 117
+#      LUT3                        : 224
+#      LUT3_D                      : 2
+#      LUT4                        : 322
+#      LUT4_D                      : 2
+#      LUT4_L                      : 4
+#      MUXCY                       : 231
+#      MUXF5                       : 22
 #      MUXF6                       : 4
 #      MUXF7                       : 2
 #      MUXF8                       : 1
-#      VCC                         : 42
-#      XORCY                       : 171
-# FlipFlops/Latches                : 895
-#      FD                          : 160
+#      VCC                         : 43
+#      XORCY                       : 201
+# FlipFlops/Latches                : 931
+#      FD                          : 196
 #      FD_1                        : 45
-#      FDC                         : 8
+#      FDC                         : 16
 #      FDCE                        : 20
 #      FDDRRSE                     : 21
-#      FDE                         : 42
+#      FDE                         : 10
 #      FDE_1                       : 3
-#      FDP                         : 4
-#      FDR                         : 139
+#      FDP                         : 2
+#      FDR                         : 146
 #      FDR_1                       : 79
-#      FDRE                        : 282
+#      FDRE                        : 298
 #      FDRE_1                      : 2
-#      FDRS                        : 3
+#      FDRS                        : 4
 #      FDRS_1                      : 39
 #      FDRSE                       : 20
-#      FDRSE_1                     : 8
+#      FDRSE_1                     : 7
 #      FDS                         : 9
 #      FDS_1                       : 8
-#      FDSE                        : 3
-# RAMS                             : 59
+#      FDSE                        : 5
+#      FDSE_1                      : 1
+# RAMS                             : 60
 #      RAM16X1D                    : 40
 #      RAM32X1S                    : 10
 #      RAM64X1S                    : 8
-#      RAMB16BWE                   : 1
+#      RAMB16BWE                   : 2
 # Shift Registers                  : 74
 #      SRL16                       : 32
 #      SRL16_1                     : 42
 # Clock Buffers                    : 6
 #      BUFG                        : 6
-# IO Buffers                       : 65
+# IO Buffers                       : 74
 #      IBUF                        : 19
 #      IBUFDS                      : 2
-#      IBUFG                       : 1
-#      OBUF                        : 24
+#      IBUFG                       : 2
+#      OBUF                        : 32
 #      OBUFDS                      : 1
 #      OBUFT                       : 16
 #      OBUFTDS                     : 2
@@ -2788,15 +2842,15 @@ Device utilization summary:
 
 Selected Device : 3s700anfgg484-4 
 
- Number of Slices:                      725  out of   5888    12%  
- Number of Slice Flip Flops:            895  out of  11776     7%  
- Number of 4 input LUTs:               1075  out of  11776     9%  
-    Number used as logic:               869
+ Number of Slices:                      758  out of   5888    12%  
+ Number of Slice Flip Flops:            931  out of  11776     7%  
+ Number of 4 input LUTs:               1113  out of  11776     9%  
+    Number used as logic:               907
     Number used as Shift registers:      74
     Number used as RAMs:                132
- Number of IOs:                          54
- Number of bonded IOBs:                  48  out of    372    12%  
- Number of BRAMs:                         1  out of     20     5%  
+ Number of IOs:                          62
+ Number of bonded IOBs:                  58  out of    372    15%  
+ Number of BRAMs:                         2  out of     20    10%  
  Number of GCLKs:                         6  out of     24    25%  
  Number of DCMs:                          2  out of      8    25%  
 
@@ -2821,9 +2875,9 @@ Clock Information:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                                                                                                                                                                                                                | Clock buffer(FF name)                                                                                    | Load  |
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
-CLK_50M                                                                                                                                                                                                                     | DCM_SP_INST:CLKFX                                                                                        | 244   |
-CLK_50M                                                                                                                                                                                                                     | DCM_SP_INST:CLK2X+DCM_INST1:CLK0                                                                         | 466   |
-CLK_50M                                                                                                                                                                                                                     | DCM_SP_INST:CLK2X+DCM_INST1:CLK90                                                                        | 287   |
+CLK_50M                                                                                                                                                                                                                     | DCM_SP_INST:CLKFX                                                                                        | 215   |
+CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK90                                                                                          | 351   |
+CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK0                                                                                           | 468   |
 ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit0)| 13    |
 ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1)| 13    |
 ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit0)| 13    |
@@ -2840,8 +2894,11 @@ Asynchronous Control Signals Information:
 Control Signal                                                                                                                                                          | Buffer(FF name)                                                                                                         | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------+
 ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/reset_r(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/reset_r:Q)| NONE(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_addr[0].fifo_0_wr_addr_inst/bit0)| 20    |
-ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/N0(ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/XST_GND:G)                                                             | NONE(ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/use_fdp.fda)                                                        | 2     |
-ddr_mgr_main_inst/synchro_rd_data_valid/N0(ddr_mgr_main_inst/synchro_rd_data_valid/XST_GND:G)                                                                           | NONE(ddr_mgr_main_inst/synchro_rd_data_valid/use_fdc.fda)                                                               | 2     |
+ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_cmd_active/N0(ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_cmd_active/XST_GND:G)                                               | NONE(ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_cmd_active/use_fdc.fda)                                                 | 2     |
+ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/N0(ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/XST_GND:G)                                                             | NONE(ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/use_fdc.fda)                                                        | 2     |
+ddr_mgr_main_inst/synchro_buffer_init_done/N0(ddr_mgr_main_inst/synchro_buffer_init_done/XST_GND:G)                                                                     | NONE(ddr_mgr_main_inst/synchro_buffer_init_done/use_fdc.fda)                                                            | 2     |
+ddr_mgr_main_inst/synchro_rd_data_valid_clk0_neg/N0(ddr_mgr_main_inst/synchro_rd_data_valid_clk0_neg/XST_GND:G)                                                         | NONE(ddr_mgr_main_inst/synchro_rd_data_valid_clk0_neg/use_fdc.fda)                                                      | 2     |
+ddr_mgr_main_inst/synchro_rd_data_valid_clk90_neg/N0(ddr_mgr_main_inst/synchro_rd_data_valid_clk90_neg/XST_GND:G)                                                       | NONE(ddr_mgr_main_inst/synchro_rd_data_valid_clk90_neg/use_fdc.fda)                                                     | 2     |
 ddr_mgr_main_inst/synchro_rd_xfr_en/N0(ddr_mgr_main_inst/synchro_rd_xfr_en/XST_GND:G)                                                                                   | NONE(ddr_mgr_main_inst/synchro_rd_xfr_en/use_fdc.fda)                                                                   | 2     |
 synchro_reset/N0(synchro_reset/XST_GND:G)                                                                                                                               | NONE(synchro_reset/use_fdp.fda)                                                                                         | 2     |
 top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/N0(top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/XST_GND:G)                                                     | NONE(top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/use_fdc.fda)                                                    | 2     |
@@ -2852,7 +2909,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 126.864ns (Maximum Frequency: 7.882MHz)
+   Minimum period: 20.640ns (Maximum Frequency: 48.450MHz)
    Minimum input arrival time before clock: 10.649ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 0.000ns
@@ -2863,31 +2920,78 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50M'
-  Clock period: 126.864ns (frequency: 7.882MHz)
-  Total number of paths / destination ports: 15704 / 2145
+  Clock period: 20.640ns (frequency: 48.450MHz)
+  Total number of paths / destination ports: 9300 / 689
 -------------------------------------------------------------------------
-Delay:               5.286ns (Levels of Logic = 5)
-  Source:            top_btn_filter_inst/io_sync_db[1].btn_db_inst/DataClean (FF)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/wait_clk270 (FF)
+Delay:               13.760ns (Levels of Logic = 16)
+  Source:            ddr_mgr_main_inst/picoblaze_inst/picocode_inst/ram_1024_x_18 (RAM)
+  Destination:       ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/zero_flag_flop (FF)
   Source Clock:      CLK_50M rising 1.5X
-  Destination Clock: CLK_50M falling 2.0X +90
+  Destination Clock: CLK_50M rising 1.5X
 
-  Data Path: top_btn_filter_inst/io_sync_db[1].btn_db_inst/DataClean to ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/wait_clk270
+  Data Path: ddr_mgr_main_inst/picoblaze_inst/picocode_inst/ram_1024_x_18 to ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/zero_flag_flop
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              2   0.591   0.527  DataClean (DataClean)
-     end scope: 'io_sync_db[1].btn_db_inst'
-     end scope: 'top_btn_filter_inst'
-     LUT2:I1->O           10   0.643   0.962  mem_rst_s_n1 (mem_rst_s_n)
-     begin scope: 'ddr_mgr_main_inst'
-     begin scope: 'u_mem_controller'
-     begin scope: 'infrastructure_top0'
-     LUT2:I1->O           17   0.643   1.051  counter200_or00001 (counter200_or0000)
-     FDS_1:S                   0.869          wait_clk270
+     RAMB16BWE:CLKA->DOA5   10   2.498   0.882  ram_1024_x_18 (instruction<5>)
+     end scope: 'picocode_inst'
+     begin scope: 'kcpsm3_inst'
+     RAM16X1D:DPRA1->DPO    1   0.648   0.452  reg_loop_register_bit_4 (sy<4>)
+     LUT3:I2->O           21   0.648   1.131  operand_select_mux_4 (port_id<4>)
+     end scope: 'kcpsm3_inst'
+     end scope: 'picoblaze_inst'
+     LUT4:I3->O            4   0.648   0.619  pi_blk_sel_1_cmp_eq00001 (pi_blk_sel<1>)
+     begin scope: 'ddr2_mgr_inst'
+     LUT4:I2->O            1   0.648   0.423  pi_rd_data<0> (pi_rd_data<0>)
+     end scope: 'ddr2_mgr_inst'
+     LUT4:I3->O            1   0.648   0.500  in_port<0> (in_port<0>)
+     begin scope: 'picoblaze_inst'
+     begin scope: 'kcpsm3_inst'
+     LUT3:I1->O            1   0.643   0.000  mux_lut_0 (input_group<0>)
+     MUXF5:I1->O           2   0.276   0.590  shift_in_muxf5_0 (alu_result<0>)
+     LUT4:I0->O            1   0.648   0.000  low_zero_lut (low_zero)
+     MUXCY:S->O            1   0.632   0.000  low_zero_muxcy (low_zero_carry)
+     MUXCY:CI->O           1   0.065   0.000  high_zero_cymux (high_zero_carry)
+     MUXCY:CI->O           0   0.065   0.000  zero_cymux (zero_carry)
+     XORCY:CI->O           1   0.844   0.000  zero_xor (zero_fast_route)
+     FDRE:D                    0.252          zero_flag_flop
     ----------------------------------------
-    Total                      5.286ns (2.746ns logic, 2.540ns route)
-                                       (51.9% logic, 48.1% route)
+    Total                     13.760ns (9.163ns logic, 4.597ns route)
+                                       (66.6% logic, 33.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_AUX'
+  Clock period: 8.020ns (frequency: 124.688MHz)
+  Total number of paths / destination ports: 5063 / 1483
+-------------------------------------------------------------------------
+Delay:               8.020ns (Levels of Logic = 13)
+  Source:            ddr_mgr_main_inst/ddr2_mgr_inst/xfr_cnt_r_0 (FF)
+  Destination:       ddr_mgr_main_inst/ddr2_mgr_inst/state_r_FSM_FFd3 (FF)
+  Source Clock:      CLK_AUX falling
+  Destination Clock: CLK_AUX falling
+
+  Data Path: ddr_mgr_main_inst/ddr2_mgr_inst/xfr_cnt_r_0 to ddr_mgr_main_inst/ddr2_mgr_inst/state_r_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR_1:C->Q           23   0.591   1.202  xfr_cnt_r_0 (xfr_cnt_r_0)
+     INV:I->O              1   0.648   0.000  Madd_xfr_cnt_nxt_addsub0000_lut<0>_INV_0 (Madd_xfr_cnt_nxt_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<0> (Madd_xfr_cnt_nxt_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<1> (Madd_xfr_cnt_nxt_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<2> (Madd_xfr_cnt_nxt_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<3> (Madd_xfr_cnt_nxt_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<4> (Madd_xfr_cnt_nxt_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<5> (Madd_xfr_cnt_nxt_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Madd_xfr_cnt_nxt_addsub0000_cy<6> (Madd_xfr_cnt_nxt_addsub0000_cy<6>)
+     XORCY:CI->O           2   0.844   0.590  Madd_xfr_cnt_nxt_addsub0000_xor<7> (xfr_cnt_nxt_addsub0000<7>)
+     LUT3:I0->O            1   0.648   0.000  Mcompar_last_req_xfr_cmp_eq0000_lut<3> (Mcompar_last_req_xfr_cmp_eq0000_lut<3>)
+     MUXCY:S->O            1   0.632   0.000  Mcompar_last_req_xfr_cmp_eq0000_cy<3> (Mcompar_last_req_xfr_cmp_eq0000_cy<3>)
+     MUXCY:CI->O           3   0.269   0.674  Mcompar_last_req_xfr_cmp_eq0000_cy<4> (Mcompar_last_req_xfr_cmp_eq0000_cy<4>)
+     LUT2:I0->O            1   0.648   0.000  state_r_FSM_FFd3-In11 (state_r_FSM_FFd3-In1)
+     FDRS_1:D                  0.252          state_r_FSM_FFd3
+    ----------------------------------------
+    Total                      8.020ns (5.554ns logic, 2.466ns route)
+                                       (69.3% logic, 30.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
@@ -3183,13 +3287,13 @@ Offset:              10.649ns (Levels of Logic = 16)
                                        (56.1% logic, 43.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50M'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_AUX'
   Total number of paths / destination ports: 61 / 45
 -------------------------------------------------------------------------
 Offset:              5.531ns (Levels of Logic = 4)
   Source:            ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/controller_iobs0/iob_odt (FF)
   Destination:       SD_ODT (PAD)
-  Source Clock:      CLK_50M falling 2.0X
+  Source Clock:      CLK_AUX falling
 
   Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/controller_iobs0/iob_odt to SD_ODT
                                 Gate     Net
@@ -3202,6 +3306,26 @@ Offset:              5.531ns (Levels of Logic = 4)
      end scope: 'top_00'
      end scope: 'u_mem_controller'
      end scope: 'ddr_mgr_main_inst'
+    ----------------------------------------
+    Total                      5.531ns (5.111ns logic, 0.420ns route)
+                                       (92.4% logic, 7.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_50M'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.531ns (Levels of Logic = 2)
+  Source:            ddr_mgr_main_inst/cw_cs_0 (FF)
+  Destination:       LED<0> (PAD)
+  Source Clock:      CLK_50M rising 1.5X
+
+  Data Path: ddr_mgr_main_inst/cw_cs_0 to LED<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.591   0.420  cw_cs_0 (cw_cs_0)
+     end scope: 'ddr_mgr_main_inst'
+     OBUF:I->O                 4.520          LED_0_OBUF (LED<0>)
     ----------------------------------------
     Total                      5.531ns (5.111ns logic, 0.420ns route)
                                        (92.4% logic, 7.6% route)
@@ -3405,15 +3529,15 @@ WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to DQ_T.
 WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to DQ_T.
 
 
-Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 15.12 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 16.41 secs
  
 --> 
 
 
-Total memory usage is 582596 kilobytes
+Total memory usage is 584088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  603 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :  618 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

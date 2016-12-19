@@ -9,35 +9,35 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -4
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Sun Oct 23 09:08:51 2016
+Mapped Date    : Sun Dec  4 00:38:32 2016
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   70
+Number of warnings:   74
 Logic Utilization:
-  Total Number Slice Registers:       1,217 out of  11,776   10%
-    Number used as Flip Flops:        1,216
+  Total Number Slice Registers:       1,258 out of  11,776   10%
+    Number used as Flip Flops:        1,257
     Number used as Latches:               1
-  Number of 4 input LUTs:             1,168 out of  11,776    9%
+  Number of 4 input LUTs:             1,183 out of  11,776   10%
 Logic Distribution:
-  Number of occupied Slices:          1,065 out of   5,888   18%
-    Number of Slices containing only related logic:   1,065 out of   1,065 100%
-    Number of Slices containing unrelated logic:          0 out of   1,065   0%
+  Number of occupied Slices:          1,109 out of   5,888   18%
+    Number of Slices containing only related logic:   1,109 out of   1,109 100%
+    Number of Slices containing unrelated logic:          0 out of   1,109   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,337 out of  11,776   11%
-    Number used as logic:               831
-    Number used as a route-thru:        169
+  Total Number of 4 input LUTs:       1,370 out of  11,776   11%
+    Number used as logic:               844
+    Number used as a route-thru:        187
     Number used for Dual Port RAMs:      80
       (Two LUTs used per Dual Port RAM)
     Number used for 32x1 RAMs:           52
       (Two LUTs used per 32x1 RAM)
-    Number used as Shift registers:     205
+    Number used as Shift registers:     207
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 54 out of     372   14%
+  Number of bonded IOBs:                 62 out of     372   16%
     IOB Flip Flops:                      20
     IOB Master Pads:                      3
     IOB Slave Pads:                       3
@@ -49,10 +49,10 @@ Logic Distribution:
   Number of DCMs:                         2 out of       8   25%
   Number of BSCANs:                       1 out of       1  100%
   Number of BSCAN_SPARTAN3As:             1 out of       1  100%
-  Number of RAMB16BWEs:                  12 out of      20   60%
+  Number of RAMB16BWEs:                  13 out of      20   65%
 
-  Number of RPM macros:           13
-Average Fanout of Non-Clock Nets:                3.13
+  Number of RPM macros:           21
+Average Fanout of Non-Clock Nets:                3.09
 
 Peak Memory Usage:  681 MB
 Total REAL time to MAP completion:  6 secs 
@@ -105,6 +105,9 @@ WARNING:LIT:176 - Clock buffer is designated to drive clock loads. BUFGMUX
    The non-clock loads are:
    Pin I0 of
    ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/l0
+WARNING:PhysDesignRules:372 - Gated clock. Clock net icon_control0<13> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
@@ -121,17 +124,16 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net icon_control0<13> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal <SW<1>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <SW<2>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <SW<3>_IBUF> is incomplete. The signal
    does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <CLK_AUX_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/g
+   ntv_or_sync_fifo.mem/tmp_ram_rd_en> is incomplete. The signal does not drive
+   any load pins in the design.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
    block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
    AM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
@@ -240,6 +242,18 @@ WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
 WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
    block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
    AM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
    block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
    AM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
@@ -315,14 +329,14 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network N18 has no load.
-INFO:LIT:395 - The above info message is repeated 86 more times for the
+INFO:LIT:243 - Logical network N17 has no load.
+INFO:LIT:395 - The above info message is repeated 98 more times for the
    following (max. 5 shown):
+   N18,
    N19,
    N20,
    N21,
-   N22,
-   N23
+   N22
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:MapLib:159 - Net Timing constraints on signal CLK_50M are pushed forward
@@ -338,9 +352,9 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  51 block(s) removed
- 209 block(s) optimized away
-  66 signal(s) removed
+  57 block(s) removed
+ 216 block(s) optimized away
+  84 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -408,6 +422,7 @@ The signal "icon_control0<28>" is sourceless and has been removed.
 The signal "icon_control0<34>" is sourceless and has been removed.
 The signal "icon_control0<29>" is sourceless and has been removed.
 The signal "icon_control0<35>" is sourceless and has been removed.
+The signal "clock_gen_inst/CLK2X_OUT" is sourceless and has been removed.
 The signal "clock_gen_inst/CLKDV_BUF" is sourceless and has been removed.
  Sourceless block "clock_gen_inst/CLKDV_BUFG_INST" (CKBUF) removed.
   The signal "clock_gen_inst/CLKDV_OUT" is sourceless and has been removed.
@@ -416,9 +431,39 @@ The signal "top_btn_filter_inst/io_sync_db[1].io_btn_sync_inst/N0" is sourceless
 and has been removed.
 The signal "top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/N0" is sourceless
 and has been removed.
+The signal "ddr_mgr_main_inst/addr_row_err<0>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<1>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<2>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<3>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<4>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<5>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<6>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<7>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<8>" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/addr_row_err<9>" is sourceless and has been
+removed.
 The signal "ddr_mgr_main_inst/synchro_rd_xfr_en/N0" is sourceless and has been
 removed.
-The signal "ddr_mgr_main_inst/synchro_rd_data_valid/N0" is sourceless and has
+ Sourceless block "ddr_mgr_main_inst/synchro_rd_xfr_en/use_fdc.fda" (FF) removed.
+  The signal "ddr_mgr_main_inst/synchro_rd_xfr_en/temp" is sourceless and has been
+removed.
+   Sourceless block "ddr_mgr_main_inst/synchro_rd_xfr_en/use_fdc.fdb" (FF) removed.
+    The signal "ddr_mgr_main_inst/synchro_rd_xfr_en/sync" is sourceless and has been
+removed.
+The signal "ddr_mgr_main_inst/synchro_rd_data_valid_clk0_neg/N0" is sourceless
+and has been removed.
+The signal "ddr_mgr_main_inst/synchro_rd_data_valid_clk90_neg/N0" is sourceless
+and has been removed.
+The signal "ddr_mgr_main_inst/synchro_buffer_init_done/N0" is sourceless and has
 been removed.
 The signal "ddr_mgr_main_inst/picoblaze_inst/interrupt_ack" is sourceless and
 has been removed.
@@ -437,6 +482,8 @@ sourceless and has been removed.
 The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/not_active_interrupt"
 is sourceless and has been removed.
 The signal "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/sel_shadow_carry" is
+sourceless and has been removed.
+The signal "ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_cmd_active/N0" is
 sourceless and has been removed.
 The signal "ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/N0" is sourceless and
 has been removed.
@@ -506,6 +553,12 @@ iob_inst/N0" is sourceless and has been removed.
 The signal
 "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_
 iob_inst/N0" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv
+_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_
+wr_en" is sourceless and has been removed.
 The signal "U_icon_pro/U0/U_ICON/iCOMMAND_SEL<3>" is sourceless and has been
 removed.
  Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[3].U_HCE" (ROM)
@@ -548,6 +601,10 @@ removed.
 (ROM) removed.
  Sourceless block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[14].U_LCE"
 (ROM) removed.
+Unused block
+"ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv
+_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.c
+str/ramloop[0].ram.r/s3_noinit.ram/dpram.dp18x18.ram" (RAMB16BWE) removed.
 Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[11].U_LUT" (ROM)
 removed.
 Unused block "U_icon_pro/U0/U_ICON/U_CMD/U_COMMAND_SEL/I4.FI[12].U_LUT" (ROM)
@@ -578,12 +635,19 @@ Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[8].U_HCE" (ROM)
 removed.
 Unused block "U_icon_pro/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_HCE" (ROM)
 removed.
+Unused block
+"ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv
+_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i" (FF) removed.
+Unused block
+"ddr_mgr_main_inst/dumo_fifo_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv
+_or_sync_fifo.gl0.wr/ram_wr_en_i1" (ROM) removed.
 Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/ack_flop" (FF)
 removed.
 Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_update_lut" (ROM)
 removed.
 Unused block "ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/sel_shadow_carry_lut"
 (ROM) removed.
+Unused block "ddr_mgr_main_inst/synchro_rd_xfr_en/XST_GND" (ZERO) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
@@ -593,12 +657,16 @@ LUT4 		U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/F_SSTAT[6].I_STAT.U_STAT
    optimized to 0
 GND 		U_ila_pro_0/XST_GND
 VCC 		U_ila_pro_0/XST_VCC
+GND 		XST_GND
 GND 		clock_gen_inst/XST_GND
 GND 		ddr_mgr_main_inst/XST_GND
 VCC 		ddr_mgr_main_inst/XST_VCC
 GND 		ddr_mgr_main_inst/ddr2_mgr_inst/XST_GND
 VCC 		ddr_mgr_main_inst/ddr2_mgr_inst/XST_VCC
+GND 		ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_cmd_active/XST_GND
 GND 		ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/XST_GND
+GND 		ddr_mgr_main_inst/dumo_fifo_inst/XST_GND
+VCC 		ddr_mgr_main_inst/dumo_fifo_inst/XST_VCC
 GND 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/XST_GND
 VCC 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/XST_VCC
 FDR 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/int_capture_flop
@@ -614,8 +682,9 @@ FDE 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/shadow_zero_flop
 INV 		ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/stack_count_inv
 GND 		ddr_mgr_main_inst/picoblaze_inst/picocode_inst/XST_GND
 VCC 		ddr_mgr_main_inst/picoblaze_inst/picocode_inst/XST_VCC
-GND 		ddr_mgr_main_inst/synchro_rd_data_valid/XST_GND
-GND 		ddr_mgr_main_inst/synchro_rd_xfr_en/XST_GND
+GND 		ddr_mgr_main_inst/synchro_buffer_init_done/XST_GND
+GND 		ddr_mgr_main_inst/synchro_rd_data_valid_clk0_neg/XST_GND
+GND 		ddr_mgr_main_inst/synchro_rd_data_valid_clk90_neg/XST_GND
 GND 		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/XST_GND
 VCC 		ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/XST_VCC
 VCC
@@ -805,6 +874,14 @@ Section 6 - IOB Properties
 | BTN_SOUTH                          | IBUF             | INPUT     | LVCMOS33             |       |          |         |              | PULLDOWN | 0 / 0    |                  |
 | CLK_50M                            | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
 | CLK_AUX                            | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
+| LED<0>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<1>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<2>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
+| LED<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    |              |          | 0 / 0    | 3STATE           |
 | SD_A<0>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
 | SD_A<1>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
 | SD_A<2>                            | IOB              | OUTPUT    | SSTL18_I             |       |          |         | OFF1         |          | 0 / 0    | 3STATE           |
@@ -896,7 +973,15 @@ U_ila_pro_0/U0_I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL_U_CAP_ADDRGEN_U_WCNT_LCMP_I_SRL16.
 U_GAND_SRL16_MSET
 U_ila_pro_0/U0_I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_
 SRL16.U_GANDX_SRL16_MSET
+ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_cmd_active/hset
+ddr_mgr_main_inst/ddr2_mgr_inst/synchro_wr_req/hset
+ddr_mgr_main_inst/synchro_buffer_init_done/hset
+ddr_mgr_main_inst/synchro_rd_data_valid_clk0_neg/hset
+ddr_mgr_main_inst/synchro_rd_data_valid_clk90_neg/hset
 delay_calibration_chain                 
+synchro_reset/hset                      
+top_btn_filter_inst/io_sync_db[0].io_btn_sync_inst/hset
+top_btn_filter_inst/io_sync_db[1].io_btn_sync_inst/hset
 
 Section 8 - Guide Report
 ------------------------

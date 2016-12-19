@@ -1,8 +1,32 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Oct 23 09:08:56 2016
+// Written by: Map P.20131013 on Sun Dec 04 00:38:37 2016
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3"
+        LOCATE = SITE "SLICE_X1Y67" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4"
+        LOCATE = SITE "SLICE_X0Y66" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3"
+        LOCATE = SITE "SLICE_X3Y74" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3"
+        LOCATE = SITE "SLICE_X1Y74" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3"
+        LOCATE = SITE "SLICE_X3Y54" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3"
+        LOCATE = SITE "SLICE_X1Y54" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5"
+        LOCATE = SITE "SLICE_X3Y55" LEVEL 1;
+COMP
+        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5"
+        LOCATE = SITE "SLICE_X1Y55" LEVEL 1;
 COMP
         "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out<0>"
         LOCATE = SITE "SLICE_X2Y62" LEVEL 1;
@@ -165,6 +189,14 @@ COMP "SW<3>" LOCATE = SITE "T9" LEVEL 1;
 COMP "SD_CS" LOCATE = SITE "M5" LEVEL 1;
 COMP "SD_WE" LOCATE = SITE "N4" LEVEL 1;
 COMP "SD_LOOP_OUT" LOCATE = SITE "H3" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "R20" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "T19" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "U20" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "U19" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "V19" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "V20" LEVEL 1;
+COMP "LED<6>" LOCATE = SITE "Y22" LEVEL 1;
+COMP "LED<7>" LOCATE = SITE "W21" LEVEL 1;
 COMP "SD_CAS" LOCATE = SITE "M4" LEVEL 1;
 COMP "SD_CKE" LOCATE = SITE "N3" LEVEL 1;
 COMP "SD_LDM" LOCATE = SITE "J3" LEVEL 1;
@@ -223,126 +255,14 @@ COMP
 COMP
         "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay5"
         LOCATE = SITE "SLICE_X1Y75" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay3"
-        LOCATE = SITE "SLICE_X1Y67" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/rst_dqs_div_delayed/delay4"
-        LOCATE = SITE "SLICE_X0Y66" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3"
-        LOCATE = SITE "SLICE_X3Y74" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3"
-        LOCATE = SITE "SLICE_X1Y74" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3"
-        LOCATE = SITE "SLICE_X3Y54" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3"
-        LOCATE = SITE "SLICE_X1Y54" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5"
-        LOCATE = SITE "SLICE_X3Y55" LEVEL 1;
-COMP
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5"
-        LOCATE = SITE "SLICE_X1Y55" LEVEL 1;
 COMPGRP cal_ctl.SLICE = COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_trans_onedtct"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct_or0000"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_trans_twodtct"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<1>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<3>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<5>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<7>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<9>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct_not0001"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<0>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<4>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_trans_two_dtct_or0000"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<1>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_phase_cnt<0>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_5_f5"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f5"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f52"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_7_f51"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f51"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/_varindex0000"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_7_f52"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_8_f5"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_phase_cnt<4>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<3>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<5>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<1>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<3>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<5>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<7>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<9>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<3>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<5>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs1<4>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<11>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<21>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<13>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<31>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<23>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<15>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<25>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<17>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<27>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<19>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<29>"
-        COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_phase_cnt<3>"
-        COMP
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<4>"
         COMP
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs1<1>"
         COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt1_or0000"
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt_or0000"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<5>"
         COMP
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/reset_r"
         COMP
@@ -373,191 +293,100 @@ COMPGRP cal_ctl.SLICE = COMP
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_enb_trans_two_dtct"
         COMP
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs1<2>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_phase_cnt<1>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<0>"
         COMP "ddr_mgr_main_inst/u_mem_controller/delay_sel_val<2>" COMP
         "ddr_mgr_main_inst/u_mem_controller/delay_sel_val<4>" COMP
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/phase_cnt_and0000";
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_onedtct_not0001"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_trans_onedtct"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct_or0000"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_trans_twodtct"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<1>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<3>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<5>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<7>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tap_dly_reg<9>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<0>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<4>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_phase_cnt<4>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/enb_trans_two_dtct_or0000"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/trans_twodtct_not0001"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_5_f5"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f5"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f52"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_7_f51"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_6_f51"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/_varindex0000"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_7_f52"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/Mmux__varindex0000_8_f5"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<3>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/cnt<5>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<1>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<3>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<5>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<7>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<9>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_cnt<3>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/cal_ctl0/tapfordqs1<4>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<11>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<21>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<13>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<31>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<23>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<15>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<25>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<17>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<27>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<19>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/flop2_val<29>"
+        COMP
+        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/dbg_phase_cnt<3>";
 COMPGRP "cal_ctl.SLICE" LOCATE = SITE "SLICE_X26Y8:SLICE_X37Y21" LEVEL 4;
 MACRO "delay_calibration_chain" LOCATE = SITE "SLICE_X28Y16" LEVEL 1;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0"
-        PINNAME CK;
-PIN
-        ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>
-        = BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1"
-        PINNAME CK;
+TIMEGRP U_CLK = BEL "U_icon_pro/U0/U_ICON/U_iDATA_CMD";
 PIN
         U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>
         = BEL
@@ -567,6 +396,11 @@ PIN
         U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>
         = BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i"
+        PINNAME CLKB;
+PIN
+        U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>
+        = BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i"
         PINNAME CLKB;
 PIN
         U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>
@@ -613,544 +447,8 @@ PIN
         = BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i"
         PINNAME CLKB;
-TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
-        "ddr_mgr_main_inst/synchro_rd_xfr_en/use_fdc.fda" BEL
-        "ddr_mgr_main_inst/synchro_rd_xfr_en/use_fdc.fdb" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_0" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_1" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_2" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_3" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_4" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_5" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_6" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_7" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_8" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_9" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_10" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_11" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_12" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_13" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_14" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_15" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_16" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_17" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_18" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_19" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_20" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_21" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_22" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_23" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_24" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_25" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_26" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_27" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_28" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_29" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_30" BEL
-        "ddr_mgr_main_inst/ddr2_mgr_inst/data_output_r_31" BEL
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_o"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/wait_clk270"
-        BEL "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/sys_rst90"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/wait_clk90"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_en_P1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_en_val"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_18/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_18"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_16/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_16"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_17/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_17"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_21/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_21"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_19/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_19"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_20/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_20"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_24/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_24"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_22/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_22"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_23/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_23"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_27/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_27"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_25/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_25"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_26/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_26"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_30/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_30"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_28/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_28"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_29/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_29"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_1/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data4_31/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data4_31"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_0/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_4/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_2/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_3/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_7/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_5/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_6/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_10/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_10"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_8/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_8"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_9/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_9"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_13/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_13"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_11/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_11"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_12/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_12"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_14/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_14"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data90_2_15/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data90_2_15"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_0/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_3/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_1/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_2/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_6/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_4/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_5/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_9/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_9"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_7/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_8/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_8"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_12/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_12"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_10/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_10"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_11/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_11"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_15/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_15"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_13/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_13"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/Mshreg_write_data270_2_14/SRL16E"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_write0/write_data270_2_14"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/reset90_r"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_90r1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_90r2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_90r3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_90r4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_90r5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_r_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_r_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/read_fifo_rden_90r6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_8"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_9"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_10"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_11"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_12"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_13"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_14"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_0_data_out_r_15"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_8"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_9"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_10"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_11"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_12"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_13"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_14"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo_1_data_out_r_15"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_4"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_5"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_6"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_7"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_8"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_9"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_10"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_11"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_12"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_13"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_14"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_15"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_16"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_17"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_18"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_19"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_20"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_21"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_22"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_23"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_24"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_25"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_26"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_27"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_28"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_29"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_30"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/first_sdr_data_31"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_inst/reset90_r"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_inst/bit0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_inst/bit1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_inst/bit2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo1_rd_addr_inst/bit3"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_inst/reset90_r"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit0"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit1"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit2"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/fifo0_rd_addr_inst/bit3"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[1].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF1_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/MASK_INST.gen_dm[0].s3_dm_iob_inst/DDR2_DM0_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[15].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[14].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[13].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[12].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[11].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[10].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[9].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[8].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[7].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[6].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[5].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[4].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[3].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[2].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[1].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DQ_T"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF0_pins<1>"
-        PIN
-        "ddr_mgr_main_inst/u_mem_controller/top_00/iobs0/datapath_iobs0/gen_dq[0].s3_dq_iob_inst/DDR_OUT/ODDR2/FF1_pins<1>"
-        BEL "U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_HCMP_Q" BEL
+TIMEGRP D_CLK = BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_HCMP_Q" BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_LCMP_Q" BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_SCNT_CMP_Q" BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE0"
@@ -1427,6 +725,10 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[41].U_IREG"
         BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[42].U_IREG"
+        BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/I_YES_IREG.F_TW[43].U_IREG"
+        BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG"
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[1].U_TREG"
@@ -1511,7 +813,11 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[41].U_TREG"
         BEL
-        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/I_TWMOD4_NE0.I_YES_RPM.I_OREG.U_OREG"
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[42].U_TREG"
+        BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[43].U_TREG"
+        BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/I_TW_GTE4.F_TW[10].I_YES_RPM.I_OREG.U_OREG"
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.FF"
         BEL
@@ -1597,6 +903,10 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[41].I_SRLT_NE_0.FF"
         BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[42].I_SRLT_NE_0.FF"
+        BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[43].I_SRLT_NE_0.FF"
+        BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.DLY9/SRL16E"
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E"
@@ -1681,6 +991,10 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[41].I_SRLT_NE_0.DLY9/SRL16E"
         BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[42].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[43].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/I_MC_NO.U_NO_MC_REG"
@@ -1694,6 +1008,8 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
         BEL "U_ila_pro_0/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR" BEL
+        "U_ila_pro_0/U0/I_TQ0.G_TW[43].U_TQ" BEL
+        "U_ila_pro_0/U0/I_TQ0.G_TW[42].U_TQ" BEL
         "U_ila_pro_0/U0/I_TQ0.G_TW[41].U_TQ" BEL
         "U_ila_pro_0/U0/I_TQ0.G_TW[40].U_TQ" BEL
         "U_ila_pro_0/U0/I_TQ0.G_TW[39].U_TQ" BEL
@@ -1740,6 +1056,8 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         PIN
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[10].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>"
         PIN
+        "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>"
+        PIN
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>"
         PIN
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[2].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>"
@@ -1757,9 +1075,9 @@ TIMEGRP D_CLK = BEL "ddr_mgr_main_inst/data_fault" BEL
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[8].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>"
         PIN
         "U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[9].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i_pins<27>";
-TIMEGRP U_CLK = BEL "U_icon_pro/U0/U_ICON/U_iDATA_CMD";
 TIMEGRP D2_CLK = BEL "U_ila_pro_0/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC";
-NET "clock_gen_inst/CLKIN_IBUFG_OUT" PERIOD = 20 ns HIGH 50%;
+NET "clk_50m_in" PERIOD = 20 ns HIGH 50%;
+NET "mem_clk_s" PERIOD = 7.5187 ns HIGH 50%;
 NET
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<7>"
         MAXDELAY = 0.4 ns;
@@ -1769,7 +1087,6 @@ NET
 NET
         "ddr_mgr_main_inst/u_mem_controller/infrastructure_top0/cal_top0/tap_dly0/tap<23>"
         MAXDELAY = 0.4 ns;
-NET "CLK_AUX_IBUF" PERIOD = 7.5187 ns HIGH 50%;
 TIMEGRP "FFS" = FFS(*);
 PATH TS_D2_TO_T2_ila_pro_0_path = FROM TIMEGRP "D2_CLK" TO TIMEGRP "FFS";
 PATH "TS_D2_TO_T2_ila_pro_0_path" TIG;
