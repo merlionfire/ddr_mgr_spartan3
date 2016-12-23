@@ -52,6 +52,9 @@
 //*****************************************************************************
 
 `timescale 1ns/100ps
+
+`define CHIPSCOPE 
+
 module ddr2_512M16_mig_clk_dcm
   (
    input  input_clk,
@@ -72,6 +75,61 @@ module ddr2_512M16_mig_clk_dcm
    assign clk      = clk0_buf;
    assign clk90	   = clk90_buf;
    assign dcm_lock = dcm1_lock;
+
+`ifdef CHIPSCOPE
+
+   wire  clk2x, clk2x_buf, chipscope_clk ; 
+
+   //synthesis attribute keep of chipscope_clk is "true"
+
+
+   DCM # 
+     (  
+         .CLK_FEEDBACK("1X"),
+         .CLKDV_DIVIDE(2.0),
+         .CLKFX_DIVIDE(1), 
+         .CLKFX_MULTIPLY(4),
+         .CLKIN_DIVIDE_BY_2("FALSE"),
+         .CLKIN_PERIOD(7.519), 
+         .CLKOUT_PHASE_SHIFT("FIXED"),
+         .DESKEW_ADJUST("SYSTEM_SYNCHRONOUS"), 
+         .DFS_FREQUENCY_MODE("LOW"),
+         .FACTORY_JF(16'hC080), 
+         .PHASE_SHIFT(0),
+         .STARTUP_WAIT("FALSE"), 
+         .DLL_FREQUENCY_MODE    ("LOW"),
+         .DUTY_CYCLE_CORRECTION ("TRUE")
+      )
+     DCM_INST1
+     (
+         .CLKIN    (input_clk),
+         .CLKFB    (clk0_buf),
+         .DSSEN    (GND),
+         .PSINCDEC (GND),
+         .PSEN     (GND),
+         .PSCLK    (GND),
+         .RST      (rst),
+         .CLK0     (clk0dcm),
+         .CLK90    (clk90dcm),
+         .CLK180   (),
+         .CLK270   (),
+         .CLK2X    (clk2x),
+         .CLK2X180 (),
+         .CLKDV    (),
+         .CLKFX    (),
+         .CLKFX180 (),
+         .LOCKED   (dcm1_lock),
+         .PSDONE   (),
+         .STATUS   ()
+      );
+
+   BUFG  CLK2X_BUFG_INST (.I(clk2x), 
+                         .O(clk2x_buf));
+
+   assign   chipscope_clk  =  clk2x_buf ; 
+
+`else 
+
 
    DCM # 
      (
@@ -101,6 +159,8 @@ module ddr2_512M16_mig_clk_dcm
       .STATUS   ()
       );
 
+
+`endif
 
    BUFG BUFG_CLK0
      (

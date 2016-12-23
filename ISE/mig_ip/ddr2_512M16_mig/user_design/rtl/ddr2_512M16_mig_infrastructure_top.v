@@ -97,7 +97,7 @@ module ddr2_512M16_mig_infrastructure_top
    reg        sys_rst180_1;
    reg        sys_rst180;
    reg [15:0] counter200;
-   reg        wait_200us;
+   reg        wait_200us  ;
    reg        wait_clk90;
    reg        wait_clk270;
    reg        wait_200us_r;
@@ -123,7 +123,7 @@ module ddr2_512M16_mig_infrastructure_top
    //
    //   But if source clok from other DCM output, have to replace "IBUFG" by "BUFG"
 
-   /*
+   /* 
      IBUFG  SYS_CLK_INST
        (
         .I  (sys_clk_in),
@@ -149,6 +149,12 @@ module ddr2_512M16_mig_infrastructure_top
 				~reset_in_n :  reset_in_n;
    assign user_cal_rst       = `RESET_ACTIVE_LOW  == 1'b1 ?
 				reset_in_n : ~reset_in_n;
+
+   initial begin
+      wait_200us = 1'b1  ;
+      wait_200us_r = 1'b1;
+      wait_200us_rout = 1'b1;
+   end 
 
    always @(posedge clk_int_val2) begin
       if(user_rst == 1'b1 || dcm_lock == 1'b0) begin

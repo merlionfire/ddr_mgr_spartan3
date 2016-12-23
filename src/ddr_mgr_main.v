@@ -17,6 +17,7 @@ module ddr_mgr_main
    // --- memory_init_done
 
    output wire        memory_init_done, 
+   output wire        led_0_io, 
 
    // --- MIG and ddr2 device interface
    inout  wire [`DATA_WIDTH-1:0]         ddr2_dq_fpga,
@@ -52,7 +53,7 @@ module ddr_mgr_main
    reg  [15:0] pi_blk_sel ; 
    wire [3:0]  pi_addr;
    wire        pi_wr_en, pi_rd_en ; 
-   wire [7:0]  pi_wr_data, pi_disp_rd_data, pi_ddr2_mgr_rd_data, pi_unit_rd_data, pi_mouse_rd_data  ; 
+   wire [7:0]  pi_wr_data, pi_disp_rd_data, pi_ddr2_mgr_rd_data, pi_unit_rd_data, pi_mouse_rd_data, pi_rd_data  ; 
 
    //Signals between ddr2_mgr and MIG  
 
@@ -81,6 +82,30 @@ module ddr_mgr_main
    wire [24:0] rd_mem_addr; 
    reg  [9:0]  rd_xfr_len; 
    wire [31:0] rd_data;
+
+   reg         data_fault, data_fault_1d ; 
+   
+
+   wire        dumo_fifo_wr ;  
+   reg         dumo_fifo_rd ;  
+   wire        dumo_fifo_rd_valid ; 
+   wire        dumo_fifo_full;
+   wire        dumo_fifo_empty;
+   wire  [9:0] dumo_fifo_data_count; 
+   wire        dumo_fifo_rd_start ; 
+   wire  [9:0] addr_row_err ; 
+   reg         dumo_fifo_rd_en; 
+
+   // synthesis attribute keep of data_fault is "true"
+   // synthesis attribute keep of dumo_fifo_rd_valid is "true"
+   // synthesis attribute keep of addr_row_err is "true"
+
+   parameter   BYTE_0   =  8'h10 ; 
+   parameter   BYTE_1   =  8'h86 ; 
+   parameter   BYTE_2   =  8'hCB ; 
+   parameter   BYTE_3   =  8'hFD ; 
+
+   reg   byte_0_fault, byte_1_fault, byte_2_fault, byte_3_fault ; 
 
    picoblaze  picoblaze_inst (
       .clk           ( clk           ), //i
@@ -203,6 +228,7 @@ module ddr_mgr_main
       end
    end
 
+   assign pi_rd_data = (  pi_rd_en && pi_blk_sel[DISP_BLK_SEL_BIT] &&  ( pi_addr == REG_CW_CS_ADDR ) ) ? { 7'b0000000, dumo_fifo_empty } : 8'h00 ; 
 
 
    // verification logic 
@@ -216,6 +242,8 @@ module ddr_mgr_main
    reg   screen_cnt_overrun ; 
 
    assign memory_init_done =  cw_cs[1] ;   
+   assign led_0_io         =  cw_cs[0] ;
+
    // Create rd_go signal, which initiates state machine to issue read request to ddr2_mgr ;  
    // rd_go is asserted :
    //    *) once register CW_CS[1] indicating memory init is done 
@@ -277,7 +305,7 @@ module ddr_mgr_main
    reg   [1:0] req_st_nxt, req_st_r ; 
    reg   rd_req_nxt, rd_req_r ; 
    reg   [9:0] rd_xfr_len_nxt ;
-   wire  rd_xfr_en, rd_xfr_en_sync, rd_data_valid_sync  ;
+   wire  rd_xfr_en, rd_xfr_en_sync, rd_data_valid_sync_temp,  rd_data_valid_sync  ;
 
 
    parameter  XFR_LEN_PER_LINE  = 10'h200 ; 
@@ -292,7 +320,8 @@ module ddr_mgr_main
    assign   rd_mem_req  =  rd_req_r ; 
    assign   rd_mem_addr =  { addr_row, addr_col, addr_bank }  ; 
 
-   synchro synchro_rd_data_valid (.async(rd_data_valid ),.sync( rd_data_valid_sync ),.clk( ~mem_clk0 ) ) ;
+   synchro synchro_rd_data_valid_clk90_neg (.async(rd_data_valid ),.sync( rd_data_valid_sync_temp ),.clk( ~mem_clk90 ) ) ;
+   synchro synchro_rd_data_valid_clk0_neg (.async(rd_data_valid_sync_temp ),.sync( rd_data_valid_sync ),.clk( ~mem_clk0 ) ) ;
 
    always @( negedge mem_clk0 ) begin    
       if ( mem_rst ) begin 
@@ -360,27 +389,30 @@ module ddr_mgr_main
    // Verify the data read from memory through ddr2_mgr with preloaded data
    //*************************************************************//
 
+   //reg         rd_data_valid_1d ; 
+   //reg [31:0]  rd_data_1d ; 
+
    //           16'b1001_0110_1100_0011
-   reg         data_fault, data_fault_1d ; 
-   
-
-   wire        dumo_fifo_wr ;  
-   reg         dumo_fifo_rd ;  
-   wire        dumo_fifo_rd_valid ; 
-   wire        dumo_fifo_full;
-   wire        dumo_fifo_empty;
-   wire  [9:0] dumo_fifo_data_count; 
-   wire        dumo_fifo_rd_start ; 
-   wire  [9:0] addr_row_err ; 
-   reg         dumo_fifo_rd_en; 
-   // synthesis attribute keep of data_fault is "true"
-   // synthesis attribute keep of dumo_fifo_rd_valid is "true"
-   // synthesis attribute keep of addr_row_err is "true"
-
-   parameter   BYTE_0   =  8'h10 ; 
-   parameter   BYTE_1   =  8'h86 ; 
-   parameter   BYTE_2   =  8'hCB ; 
-   parameter   BYTE_3   =  8'hFD ; 
+   always @( posedge mem_clk90 ) begin
+      if ( mem_rst90 ) begin 
+         byte_0_fault <= 1'b0; 
+         byte_1_fault <= 1'b0; 
+         byte_2_fault <= 1'b0; 
+         byte_3_fault <= 1'b0; 
+      end else begin 
+         if ( rd_data_valid == 1'b1 ) begin  
+            byte_0_fault <= ( rd_data[7:0]    == BYTE_0 )  ? 1'b0 : 1'b1 ; 
+            byte_1_fault <= ( rd_data[15:8]   == BYTE_1 )  ? 1'b0 : 1'b1 ; 
+            byte_2_fault <= ( rd_data[23:16]  == BYTE_2 )  ? 1'b0 : 1'b1 ;
+            byte_3_fault <= ( rd_data[31:24]  == BYTE_3 )  ? 1'b0 : 1'b1 ; 
+         end else begin 
+            byte_0_fault <= 1'b0; 
+            byte_1_fault <= 1'b0; 
+            byte_2_fault <= 1'b0; 
+            byte_3_fault <= 1'b0; 
+         end
+      end
+   end
 
    always @( posedge mem_clk90 ) begin
       if ( mem_rst90 ) begin 
@@ -388,13 +420,17 @@ module ddr_mgr_main
       end else begin
          if ( rd_req_r ) begin           // clear fault for noncoming new row. Itgaurentee that there exits only one data_fualt pulse and then record row numberin FIFO at one time.  
                data_fault  <= 1'b0 ; 
-         end else if ( rd_data_valid & rd_xfr_en_sync  ) begin 
-            if ( rd_data != { BYTE_3, BYTE_2, BYTE_1, BYTE_0 } ) begin 
-               data_fault  <= 1'b1 ; 
-            end 
+         end else begin 
+               data_fault  <= byte_0_fault || byte_1_fault || byte_2_fault || byte_3_fault  ; 
          end 
       end 
    end 
+/*
+   always @( posedge mem_clk90 ) begin
+      rd_data_valid_1d  <= rd_data_valid ; 
+      rd_data_1d        <= rd_data ; 
+   end
+*/
 
    // FIFO write logic 
    always @( posedge mem_clk90 ) begin 
@@ -424,6 +460,7 @@ module ddr_mgr_main
    // FIFO read logic 
 
    assign  dumo_fifo_rd_start =  ( dumo_fifo_data_count  == 10'd100 );  
+   //assign   dumo_fifo_rd_start = 1'b0 ;  
 
    always @( posedge mem_clk90 ) begin 
       if ( mem_rst90 ) begin 
@@ -451,7 +488,7 @@ module ddr_mgr_main
    assign   pi_rd_en    =  read_strobe ; 
    assign   pi_wr_data  =  out_port ; 
    //assign   in_port     =  pi_ddr2_mgr_rd_data | pi_disp_rd_data | pi_unit_rd_data | pi_mouse_rd_data ;  
-   assign   in_port     =  pi_ddr2_mgr_rd_data  ;  
+   assign   in_port     =  pi_ddr2_mgr_rd_data | pi_rd_data  ;  
    assign   pi_addr     =  port_id[3:0] ; 
 
    assign   mem_clk0   =  mig_clk0 ; 

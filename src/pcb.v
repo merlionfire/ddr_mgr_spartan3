@@ -24,7 +24,7 @@ module pcb(
 
     input              BTN_SOUTH , 
     input [3:0]        SW,
-
+    output wire [7:0]  LED, 
     output wire [12:0] SD_A,
     output wire  [1:0] SD_BA,
     output wire        SD_CAS,
@@ -46,6 +46,7 @@ module pcb(
     input  wire        SD_LOOP_IN
 );
     
+//`define  CLK_MUL_SRC 
 
    wire clk_50m_i, clk_50m_o, clk_100m, clk_75m, clk_25m,  dcm_locked, rst, global_rst ; 
    wire clk_120m, dcm_inter_locked ; 
@@ -80,16 +81,28 @@ module pcb(
        .LOCKED_OUT      (  dcm_locked )
    );
 
-   /*
-
+`ifdef CLK_MUL_SRC 
    clock_inter_gen clock_inter_gen_inst (
        .CLKIN_IN        (  clk_50m_in  ), 
        .CLKFX_OUT       (  clk_120M ), 
        .CLK0_OUT        (  ), 
        .LOCKED_OUT      (  dcm_inter_locked)
    );
-   */
+`endif
 
+
+`ifdef 0 
+   wire     chipscope_clk_half, chipscope_clk ; 
+
+   //synthesis attribute keep of chipscope_clk is "true"
+   clock_chipscope_gen clock_chipscope_gen_inst (
+       .CLKIN_IN        ( mem_clk_s           ), 
+       .CLK0_OUT        ( chipscope_clk_half  ), 
+       .CLK2X_OUT       ( chipscope_clk       ), 
+       .LOCKED_OUT      (  )
+   );
+
+`endif
 
    synchro #(.INITIALIZE("LOGIC1"))
    synchro_reset (.async(!dcm_locked),.sync(rst),.clk(clk_75m));
@@ -107,6 +120,7 @@ module pcb(
       .rst               ( fractal_rst       ), //i
       .mem_rst_s_n       ( mem_rst_s_n       ), //i
       .memory_init_done  ( mem_init_done     ), //o 
+      .led_0_io          ( LED[0]            ), //o 
       .ddr2_dq_fpga      ( SD_DQ             ), //o
       .ddr2_dqs_fpga     ( {SD_UDQS_P,SD_LDQS_P}), //o
       .ddr2_dqs_n_fpga   ( {SD_UDQS_N,SD_LDQS_N}), //o
@@ -152,13 +166,14 @@ module pcb(
    ) ; 
 */
    
+`ifdef CLK_MUL_SRC 
    // Remark:
    // *) Maximum clock frequency for MIG write is tested to be 110Mhz
    //    115Mhz dose NOT work on MIG write. 
    // *) After fix the issue of data write from clk180 to clk90, 120Mhz works fine. 
    //    130Mhz dose NIT work on MIG write.
    //    
-   /*
+   
    BUFGMUX  mem_clk_mux (
          .O    (  mem_clk_s ),
          //.I0   (  clk_100m  ),  
@@ -168,18 +183,19 @@ module pcb(
          //.S    (  1'b1 )
    ) ; 
 
-   */
+`else    
    
    IBUFG  SYS_CLK_INST
    (
      .I  (  CLK_AUX),
      .O  (  mem_clk_s )
    );
-   
+  
+`endif   
 
    assign   mem_rst_s_n       = dcm_locked & ( ~ global_rst ) ; 
    //assign   mem_rst_s_n       = dcm_inter_locked & ( ~ global_rst ) ; 
 	
-
+  assign    LED[7:1]          =  6'h00 ; 
 
 endmodule

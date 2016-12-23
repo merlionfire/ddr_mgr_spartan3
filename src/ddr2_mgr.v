@@ -84,11 +84,13 @@ module ddr2_mgr(
    reg  [15:0]   ddr_row_reg ; 
    reg           wr_mem_req ;
    wire          wr_mem_req_sync ; 
+   wire          wr_mem_req_sync_0 ; 
    wire [22:0]   wr_16bit_addr ;  
    wire          reg_wr_stobe;
    wire          refresh_locked; 
    reg           refresh_active;
    reg           wr_cmd_active ;
+   wire          wr_cmd_active_sync ;
    reg  [3:0]    state_r, state_nxt;
    reg  [2:0]    cmd_r, cmd_nxt;
    reg  [9:0]    xfr_len_r, xfr_len_nxt ;  
@@ -141,8 +143,8 @@ module ddr2_mgr(
 
 
    always @( posedge pi_clk ) begin    
-      if ( pi_rst             ) wr_mem_req   <= 1'b0; 
-      else if ( wr_cmd_active ) wr_mem_req   <= 1'b0; 
+      if ( pi_rst             )                    wr_mem_req   <= 1'b0; 
+      else if ( wr_cmd_active_sync )               wr_mem_req   <= 1'b0; 
       else if ( reg_wr_strobe && ( pi_addr == 4'h0 ) && pi_wr_data[0] ) 
          wr_mem_req   <= 1'b1; 
    end
@@ -150,8 +152,8 @@ module ddr2_mgr(
    synchro #(.INITIALIZE("LOGIC0")) synchro_wr_req (
       //.clk     (  clk0            ),
       .clk     (  ~clk0            ),
-      .async   (  wr_mem_req      ),
-      .sync    (  wr_mem_req_sync )
+      .async   (  wr_mem_req       ),
+      .sync    (  wr_mem_req_sync  )
    ) ; 
 
 
@@ -161,6 +163,12 @@ module ddr2_mgr(
      else if ( wr_grant_r )       wr_cmd_active   <= 1'b0 ; 
    end
 
+   synchro #(.INITIALIZE("LOGIC0")) synchro_wr_cmd_active (
+      //.clk     (  clk0            ),
+      .clk     (  pi_clk             ),
+      .async   (  wr_cmd_active      ),
+      .sync    (  wr_cmd_active_sync )
+   ) ; 
 
    /*
    always @( negedge  clk0 ) begin    
@@ -298,7 +306,10 @@ module ddr2_mgr(
                   cmd_nxt  =  CMD_WRITE ; 
                   addr_nxt =  wr_mem_addr ; 
                   state_nxt =  ST_WR_CMD ;  
+               end else begin
+                  state_nxt =  ST_READY ;  
                end
+
             end
          end
          ST_WR_CMD : begin 
@@ -357,11 +368,16 @@ module ddr2_mgr(
       if ( state_r   ==  ST_WR_DATA_0 )    data_output_r   <= write_data_1 ; 
    end
 */
-   
+  /* 
    always @( posedge clk90 ) begin    
       data_output_r  <= 'h0 ; 
       if ( wr_data_0_en )    data_output_r   <= write_data_0 ; 
       if ( wr_data_1_en )    data_output_r   <= write_data_1 ; 
+   end
+  */
+
+   always @( posedge clk90 ) begin    
+      data_output_r   <= write_data_0 ; 
    end
    //---------------------------------------
    //   Output interface signals  

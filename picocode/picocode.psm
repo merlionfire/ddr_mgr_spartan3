@@ -272,6 +272,7 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
           col_loop:
                     CALL     set_addr_reg 
                     CALL     execute_mem_write 
+                    CALL     delay_1us
                     CALL     inc_col_addr ; moving it ahead of checking busy  status is to make sure that state machine has been initiated to execute command  
                     CALL     wait_mem_write_done           
                     CALL     compare_col_addr 
@@ -283,7 +284,16 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
          finish:    CALL     delay_1us
                     LOAD     s0, 02
                     OUTPUT   s0, pt_disp_cs  
-         end_loop:  JUMP    end_loop                    ; 
+    check_fault:    INPUT    s0, pt_disp_cs
+                    TEST     s0, 01
+                    JUMP     NZ, check_fault
+      flash_led:    LOAD     s0, 03    
+                    OUTPUT   s0, pt_disp_cs  
+                    CALL     delay_500ms  
+                    LOAD     s0, 02
+                    OUTPUT   s0, pt_disp_cs  
+                    CALL     delay_500ms  
+                    JUMP     flash_led 
 
 ;;============================================================================
 ;; Delay routines.  These use s0 through s3 to implement a counter.  The
@@ -308,6 +318,48 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
        wait_20ms: CALL delay_1ms
                   SUB s3, ONE
                   JUMP NZ, wait_20ms
+                  RETURN
+     delay_500ms: CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  CALL delay_20ms
+                  RETURN 
+
+     delay_1s:    CALL delay_500ms
+                  CALL delay_500ms
+                  CALL delay_500ms
+                  CALL delay_500ms
+                  CALL delay_500ms
                   RETURN
 
       set_test_data_reg:
