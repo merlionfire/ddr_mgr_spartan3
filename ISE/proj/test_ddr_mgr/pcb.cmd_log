@@ -734,3 +734,147 @@ map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_m
 par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
 bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr b -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+xst -intstyle ise -ifn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.xst" -ofn "C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 
+ngdbuild -intstyle ise -dd _ngo -sd ../../fifo_ip -nt timestamp -uc C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/test_ddr_mgr.ucf -bm C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/sync_ip/sync.bmm -p xc3s700an-fgg484-4 pcb_cs.ngc pcb.ngd  
+map -intstyle ise -p xc3s700an-fgg484-4 -cm area -ir off -pr off -c 100 -o pcb_map.ncd pcb.ngd pcb.pcf 
+par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pcb.twx pcb.ncd -o pcb.twr pcb.pcf 
+bitgen -intstyle ise -f pcb.ut pcb.ncd 

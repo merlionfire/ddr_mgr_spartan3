@@ -1,0 +1,92 @@
+#:C9     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Users\Merlionfire\Documents\FPGA_Project\test_ddr_mgr\ISE\proj\test_ddr_mgr
+#Date/Time:
+#:T   Wed Jan 11 19:05:12 2017
+#------------------------------
+	#Reading pcb.ncd...
+	#Loading device for application Rf_Device from file '3s700a.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "pcb" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -4
+	#Design creation date: 2017.01.11.10.43.17
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>'
+	#3
+delay
+	#Building the delay mediator...
+	#Hint: to automatically load delays when design is loaded, setattr main auto_load_delays true
+	#Net "ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>":
+	#     driver - comp.pin "SD_LDQS_P.I", site.pin "K3.I"
+	#    0.498ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3.G1", site.pin "SLICE_X3Y54.G2"
+	#    0.498ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3.G1", site.pin "SLICE_X1Y54.G3"
+	#    0.555ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5.G3", site.pin "SLICE_X3Y55.G1"
+	#    0.498ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5.G3", site.pin "SLICE_X1Y55.G3"
+	#    0.425ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1.F1", site.pin "SLICE_X0Y54.F3"
+	#    0.484ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1.G1", site.pin "SLICE_X0Y54.G3"
+	#    0.425ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0>.F3", site.pin "SLICE_X0Y55.F3"
+	#    0.484ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0>.G1", site.pin "SLICE_X0Y55.G3"
+	#    0.429ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay1.F1", site.pin "SLICE_X2Y54.F4"
+	#    0.437ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay1.G1", site.pin "SLICE_X2Y54.G3"
+	#    0.429ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0>.F3", site.pin "SLICE_X2Y55.F4"
+	#    0.437ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0>.G1", site.pin "SLICE_X2Y55.G3"
+	#4
+unselect net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>'
+	#5
+select -k net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<1>'
+	#6
+delay
+	#Net "ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<1>":
+	#     driver - comp.pin "SD_UDQS_P.I", site.pin "K6.I"
+	#    0.541ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay5.G3", site.pin "SLICE_X3Y75.G1"
+	#    0.472ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay5.G3", site.pin "SLICE_X1Y75.G3"
+	#    0.485ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay3.G1", site.pin "SLICE_X3Y74.G2"
+	#    0.472ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay3.G1", site.pin "SLICE_X1Y74.G3"
+	#    0.412ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay1.F1", site.pin "SLICE_X0Y74.F3"
+	#    0.413ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/delay1.G1", site.pin "SLICE_X0Y74.G3"
+	#    0.412ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<1>.F3", site.pin "SLICE_X0Y75.F3"
+	#    0.451ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<1>.G1", site.pin "SLICE_X0Y75.G4"
+	#    0.415ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay1.F1", site.pin "SLICE_X2Y74.F4"
+	#    0.424ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/delay1.G1", site.pin "SLICE_X2Y74.G3"
+	#    0.415ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1>.F3", site.pin "SLICE_X2Y75.F4"
+	#    0.424ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1>.G1", site.pin "SLICE_X2Y75.G3"
+	#7
+unselect net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<1>'
+	#8
+select -k net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>'
+	#9
+delay
+	#Net "ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>":
+	#     driver - comp.pin "SD_LDQS_P.I", site.pin "K3.I"
+	#    0.498ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay3.G1", site.pin "SLICE_X3Y54.G2"
+	#    0.498ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay3.G1", site.pin "SLICE_X1Y54.G3"
+	#    0.555ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay5.G3", site.pin "SLICE_X3Y55.G1"
+	#    0.498ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay5.G3", site.pin "SLICE_X1Y55.G3"
+	#    0.425ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1.F1", site.pin "SLICE_X0Y54.F3"
+	#    0.484ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/delay1.G1", site.pin "SLICE_X0Y54.G3"
+	#    0.425ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0>.F3", site.pin "SLICE_X0Y55.F3"
+	#    0.484ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0>.G1", site.pin "SLICE_X0Y55.G3"
+	#    0.429ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay1.F1", site.pin "SLICE_X2Y54.F4"
+	#    0.437ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/delay1.G1", site.pin "SLICE_X2Y54.G3"
+	#    0.429ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0>.F3", site.pin "SLICE_X2Y55.F4"
+	#    0.437ns - comp.pin "ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0>.G1", site.pin "SLICE_X2Y55.G3"
+	#10
+unselect -all
+	#11
+select -k net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<1>'
+	#12
+unselect net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<1>'
+	#13
+select -k net 'ddr_mgr_main_inst/u_mem_controller/top_00/dqs_int_delay_in<0>'
+	#14
+unselect -all
+	#15
+unselect -all
+	#16
+select site 'K3'
+	#site "K3",  bonded type = DIFFMLR,  pad name = PAD352,  pin name = K3  (RPM grid X3Y56)

@@ -60,6 +60,7 @@ module  ddr2_512M16_mig_top_0
    input                                         rst_dqs_div_in,
    output                                        rst_dqs_div_out,
    input                                         clk_int,
+   input                                         clk180_int,
    input                                         clk90_int,
    input [4:0]                                   delay_sel_val,
    input                                         sys_rst,
@@ -211,6 +212,7 @@ module  ddr2_512M16_mig_top_0
    ddr2_512M16_mig_iobs_0       iobs0
      (
       .clk               (clk_int),
+      .clk180            (clk180_int),
       .clk90             (clk90_int),
       .ddr_rasb_cntrl    (ddr_rasb_cntrl),
       .ddr_casb_cntrl    (ddr_casb_cntrl),

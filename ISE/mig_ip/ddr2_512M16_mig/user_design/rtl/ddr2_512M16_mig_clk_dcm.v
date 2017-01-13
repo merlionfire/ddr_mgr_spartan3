@@ -60,6 +60,7 @@ module ddr2_512M16_mig_clk_dcm
    input  input_clk,
    input  rst,
    output clk,
+   output clk180,
    output clk90,
    output dcm_lock
    );
@@ -67,12 +68,15 @@ module ddr2_512M16_mig_clk_dcm
    localparam GND = 1'b0;
 
    wire   clk0dcm;
+   wire   clk180dcm;
    wire   clk90dcm;
    wire   clk0_buf;
+   wire   clk180_buf;
    wire   clk90_buf;
    wire   dcm1_lock;
    
    assign clk      = clk0_buf;
+   assign clk180   = clk180_buf;
    assign clk90	   = clk90_buf;
    assign dcm_lock = dcm1_lock;
 
@@ -111,7 +115,7 @@ module ddr2_512M16_mig_clk_dcm
          .RST      (rst),
          .CLK0     (clk0dcm),
          .CLK90    (clk90dcm),
-         .CLK180   (),
+         .CLK180   (clk180dcm),
          .CLK270   (),
          .CLK2X    (clk2x),
          .CLK2X180 (),
@@ -147,7 +151,7 @@ module ddr2_512M16_mig_clk_dcm
       .RST      (rst),
       .CLK0     (clk0dcm),
       .CLK90    (clk90dcm),
-      .CLK180   (),
+      .CLK180   (clk180dcm),
       .CLK270   (),
       .CLK2X    (),
       .CLK2X180 (),
@@ -166,6 +170,11 @@ module ddr2_512M16_mig_clk_dcm
      (
       .O  (clk0_buf),
       .I  (clk0dcm)
+      );
+   BUFG BUFG_CLK180
+     (
+      .O  (clk180_buf),
+      .I  (clk180dcm)
       );
    BUFG BUFG_CLK90
      (

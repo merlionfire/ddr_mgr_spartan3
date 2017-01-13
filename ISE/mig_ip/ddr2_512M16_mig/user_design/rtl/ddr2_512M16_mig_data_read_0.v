@@ -170,7 +170,7 @@ module ddr2_512M16_mig_data_read_0
        );
 
 
-
+/*
    genvar strobe_i;
    generate for(strobe_i = 0; strobe_i < `DATA_STROBE_WIDTH;  strobe_i = strobe_i + 1) 
      begin: gen_strobe
@@ -197,5 +197,55 @@ module ddr2_512M16_mig_data_read_0
 	  );
    end 
    endgenerate
+*/
+
+   // Capatured dq[7:0] at postive edge of dqs_delayed
+   ddr2_512M16_mig_ram8d_0_changed strobe_0   
+   ( 
+       .dout  (fifo_0_data_out[7:0]    ), 
+       .waddr (fifo_0_wr_addr[3:0]     ),
+       .din   (ddr_dq_in[7:0]          ), 
+       .raddr (fifo0_rd_addr_r[3:0]    ), 
+       .wclk0 (dqs_delayed_col0[0]     ), 
+       .wclk1 (dqs_delayed_col1[0]     ),
+       .we    (fifo_0_wr_en[0]         ) 
+   );
+   
+   // Capatured dq[7:0] at negative edge of dqs_delayed
+   ddr2_512M16_mig_ram8d_0_changed strobe_0_n 
+   ( 
+       .dout  (fifo_1_data_out[7:0]   ), 
+       .waddr (fifo_1_wr_addr[3:0]    ), 
+       .din   (ddr_dq_in[7:0]         ), 
+       .raddr (fifo1_rd_addr_r[3:0]   ), 
+       .wclk0 (dqs_delayed_col0_n[0]  ),
+       .wclk1 (dqs_delayed_col1_n[0]  ),
+       .we    (fifo_1_wr_en[0]        )
+   );
+
+
+   // Capatured dq[15:8] at postive edge of dqs_delayed
+   ddr2_512M16_mig_ram8d_1_changed strobe_1   
+   ( 
+       .dout  (fifo_0_data_out[15:8]  ), 
+       .waddr (fifo_0_wr_addr[7:4]    ),
+       .din   (ddr_dq_in[15:8]        ), 
+       .raddr (fifo0_rd_addr_r[7:4]   ), 
+       .wclk0 (dqs_delayed_col0[1]    ), 
+       .wclk1 (dqs_delayed_col1[1]    ),
+       .we    (fifo_0_wr_en[1]        ) 
+   );
+   
+   // Capatured dq[15:8] at negative edge of dqs_delayed
+   ddr2_512M16_mig_ram8d_1_changed strobe_1_n 
+   ( 
+       .dout  (fifo_1_data_out[15:8]  ), 
+       .waddr (fifo_1_wr_addr[7:4]    ), 
+       .din   (ddr_dq_in[15:8]        ), 
+       .raddr (fifo1_rd_addr_r[7:4]   ), 
+       .wclk0 (dqs_delayed_col0_n[1]  ),
+       .wclk1 (dqs_delayed_col1_n[1]  ),
+       .we    (fifo_1_wr_en[1]        )
+   );
 
 endmodule

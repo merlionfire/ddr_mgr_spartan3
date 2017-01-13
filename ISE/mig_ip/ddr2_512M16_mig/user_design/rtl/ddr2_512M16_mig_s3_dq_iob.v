@@ -84,7 +84,7 @@ module ddr2_512M16_mig_s3_dq_iob
    assign #1 write_data_falling1 = write_data_falling;
 
 //Transmission data path
-
+`ifdef 1 
    FDDRRSE DDR_OUT
      (
       .Q  (ddr_dq_q),
@@ -96,6 +96,37 @@ module ddr2_512M16_mig_s3_dq_iob
       .R  (GND),
       .S  (GND)
       );
+`else 
+   wire  clk90_buf_0, clk90_buf_1, clk90_buf_2 ; 
+   BUFCF b1 (
+     .I ( clk90 ),
+     .O  (clk90_buf_0 ) 
+   ); 
+
+   BUFCF b2 (
+     .I ( clk90_buf_0 ),
+     .O  (clk90_buf_1 ) 
+   ); 
+
+   BUFCF b3 (
+     .I ( clk90_buf_1 ),
+     .O  (clk90_buf_2 ) 
+   ); 
+	
+   FDDRRSE DDR_OUT
+     (
+      .Q  (ddr_dq_q),
+      .C0 (~clk90),
+      .C1 (clk90_buf_2),
+      .CE (CLOCK_EN),
+      .D0 (write_data_rising1),
+      .D1 (write_data_falling1),
+      .R  (GND),
+      .S  (GND)
+      );
+
+`endif
+
 
   (* IOB = "FORCE" *) FD DQ_T
      (

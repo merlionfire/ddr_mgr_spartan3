@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.31 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.32 secs
  
---> 
-Reading design: pcb.prj
+--> Reading design: pcb.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -79,7 +76,7 @@ Optimize Instantiated Primitives   : NO
 Use Clock Enable                   : Yes
 Use Synchronous Set                : Yes
 Use Synchronous Reset              : Yes
-Pack IO Registers into IOBs        : Auto
+Pack IO Registers into IOBs        : True
 Equivalent register Removal        : YES
 
 ---- General Options
@@ -110,6 +107,7 @@ Cores Search Directories           : {"../../fifo_ip"  }
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v" in library work
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_wr_gray_cntr.v" in library work
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dq_iob.v" in library work
 Module <ddr2_512M16_mig_wr_gray_cntr> compiled
@@ -119,11 +117,14 @@ Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16
 Module <ddr2_512M16_mig_s3_dqs_iob> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_rd_gray_cntr.v" in library work
 Module <ddr2_512M16_mig_s3_dm_iob> compiled
-Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v" in library work
+Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_1_changed.v" in library work
 Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v"
 Module <ddr2_512M16_mig_rd_gray_cntr> compiled
+Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0_changed.v" in library work
+Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v"
+Module <ddr2_512M16_mig_ram8d_1_changed> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_fifo_1_wr_en_0.v" in library work
-Module <ddr2_512M16_mig_ram8d_0> compiled
+Module <ddr2_512M16_mig_ram8d_0_changed> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_fifo_0_wr_en_0.v" in library work
 Module <ddr2_512M16_mig_fifo_1_wr_en_0> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_dqs_delay.v" in library work
@@ -165,24 +166,24 @@ Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16
 Module <ddr2_512M16_mig_controller_0> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_top.v" in library work
 Module <ddr2_512M16_mig_clk_dcm> compiled
-Compiling verilog file "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" in library work
-Module <ddr2_512M16_mig_cal_top> compiled
 Compiling verilog file "../../../picocode/picocode.v" in library work
-Module <kcpsm3> compiled
+Module <ddr2_512M16_mig_cal_top> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v" in library work
 Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v"
 Module <picocode> compiled
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v" in library work
 Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v"
 Module <ddr2_512M16_mig_top_0> compiled
-Compiling verilog file "../../../../lib/synchro.v" in library work
+Compiling verilog file "../../../../Picoblaze_verilog/kcpsm3.v" in library work
 Module <ddr2_512M16_mig_infrastructure_top> compiled
+Compiling verilog file "../../../../lib/synchro.v" in library work
+Module <kcpsm3> compiled
 Module <synchro> compiled
 Compiling verilog file "../../../src/picoblaze.v" in library work
 Module <sync_pulse> compiled
 Compiling verilog file "../../../src/ddr2_mgr.v" in library work
 Module <picoblaze> compiled
-Compiling verilog include file "../../../src/ddr2_512M16_mig_parameters_0.v"
+Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v"
 Compiling verilog file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig.v" in library work
 Module <ddr2_mgr> compiled
 Compiling verilog file "../../fifo_ip/dumo_fifo.v" in library work
@@ -190,7 +191,7 @@ Module <ddr2_512M16_mig> compiled
 Compiling verilog file "../../../../lib/debounce.v" in library work
 Module <dumo_fifo> compiled
 Compiling verilog file "../../../src/ddr_mgr_main.v" in library work
-Compiling verilog include file "../../../src/ddr2_512M16_mig_parameters_0.v"
+Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v"
 Module <debounce> compiled
 Compiling verilog file "clock_gen.v" in library work
 Module <ddr_mgr_main> compiled
@@ -198,7 +199,7 @@ Compiling verilog file "../../../../lib/btn_filter.v" in library work
 Module <clock_gen> compiled
 Compiling verilog file "../../../src/pcb.v" in library work
 Module <btn_filter> compiled
-Compiling verilog include file "../../../src/ddr2_512M16_mig_parameters_0.v"
+Compiling verilog include file "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v"
 Module <pcb> compiled
 No errors in compilation
 Analysis of file <"pcb.prj"> succeeded.
@@ -222,6 +223,10 @@ Analyzing hierarchy for module <ddr_mgr_main> in library <work> with parameters.
 	BYTE_1 = "10000110"
 	BYTE_2 = "11001011"
 	BYTE_3 = "11111101"
+	BYTE_4 = "01110010"
+	BYTE_5 = "11100101"
+	BYTE_6 = "01101100"
+	BYTE_7 = "10010011"
 	DDR2_MGR_SEL_BIT = "0001"
 	DISP_BLK_SEL_BIT = "0000"
 	FONT_HEIGH_N_BITS = "00000000000000000000000000000100"
@@ -344,7 +349,9 @@ Analyzing hierarchy for module <ddr2_512M16_mig_tap_dly> in library <work>.
 
 Analyzing hierarchy for module <ddr2_512M16_mig_rd_gray_cntr> in library <work>.
 
-Analyzing hierarchy for module <ddr2_512M16_mig_ram8d_0> in library <work>.
+Analyzing hierarchy for module <ddr2_512M16_mig_ram8d_0_changed> in library <work>.
+
+Analyzing hierarchy for module <ddr2_512M16_mig_ram8d_1_changed> in library <work>.
 
 Analyzing hierarchy for module <ddr2_512M16_mig_dqs_delay> in library <work> with parameters.
 	HIGH = "1"
@@ -379,213 +386,141 @@ Analyzing hierarchy for module <ddr2_512M16_mig_s3_dq_iob> in library <work> wit
 	CLOCK_EN = "1"
 	GND = "0"
 
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 402: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2268: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 564: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 595: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 718: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 726: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1285: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 493: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 535: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 637: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 709: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 785: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 794: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 833: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 842: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 881: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 890: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 929: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 938: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 977: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 986: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1025: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1034: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1073: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1082: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1121: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1130: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1169: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1178: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1217: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1226: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1313: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1340: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1367: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1394: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1421: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1448: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1475: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1502: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1877: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1886: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1903: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1919: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1934: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1949: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1964: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1979: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1994: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2009: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2024: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2049: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2060: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2086: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2112: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2138: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2164: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2190: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2216: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2242: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2280: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2324: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2333: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2348: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2357: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2372: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2381: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2396: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2405: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2420: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2429: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2444: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2453: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2468: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2477: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2492: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2501: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 444: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 483: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 515: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 525: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 544: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 554: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 580: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 605: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 615: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 666: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 676: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 699: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1270: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1525: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1540: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1722: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1734: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1750: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1766: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1782: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1798: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1814: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1830: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1846: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2307: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2522: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2532: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2548: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2779: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2807: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2835: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2863: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2891: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1295: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1322: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1349: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1376: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1403: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1430: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1457: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1484: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2581: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2600: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2619: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2638: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2657: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2676: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2695: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2714: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2733: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 2752: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1552: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1572: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1592: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1612: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1632: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1652: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1672: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v" line 1692: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_00> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_01> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_02> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_03> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_04> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_05> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_06> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INITP_07> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_00> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_01> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_02> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_03> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_04> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_05> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_06> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_07> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_08> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_09> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_0A> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_0B> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_0C> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_0D> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_0E> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_0F> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_10> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_11> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_12> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_13> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_14> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_15> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_16> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_17> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_18> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_19> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_1A> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_1B> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_1C> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_1D> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_1E> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_1F> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_20> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_21> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_22> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_23> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_24> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_25> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_26> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_27> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_28> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_29> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_2A> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_2B> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_2C> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_2D> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_2E> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_2F> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_30> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_31> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_32> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_33> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_34> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_35> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_36> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_37> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_38> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_39> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_3A> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_3B> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_3C> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_3D> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_3E> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
-WARNING:Xst:2591 - "../../../picocode/picocode.v" line 36: attribute on instance <INIT_3F> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 402: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2268: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 564: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 595: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 718: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 726: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1285: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 493: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 535: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 637: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 709: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 785: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 794: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 833: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 842: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 881: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 890: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 929: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 938: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 977: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 986: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1025: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1034: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1073: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1082: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1121: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1130: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1169: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1178: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1217: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1226: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1313: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1340: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1367: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1394: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1421: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1448: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1475: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1502: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1877: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1886: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1903: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1919: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1934: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1949: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1964: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1979: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1994: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2009: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2024: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2049: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2060: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2086: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2112: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2138: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2164: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2190: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2216: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2242: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2280: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2324: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2333: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2348: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2357: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2372: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2381: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2396: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2405: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2420: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2429: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2444: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2453: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2468: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2477: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2492: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2501: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 444: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 483: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 515: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 525: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 544: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 554: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 580: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 605: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 615: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 666: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 676: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 699: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1270: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1525: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1540: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1722: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1734: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1750: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1766: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1782: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1798: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1814: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1830: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1846: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2307: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2522: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2532: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2548: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2779: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2807: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2835: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2863: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2891: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1295: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1322: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1349: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1376: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1403: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1430: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1457: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1484: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2581: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2600: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2619: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2638: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2657: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2676: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2695: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2714: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2733: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 2752: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1552: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1572: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1592: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1612: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1632: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1652: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1672: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "../../../../Picoblaze_verilog/kcpsm3.v" line 1692: attribute on instance <INIT> overrides generic/parameter on entity. It is possible that simulator will not take this attribute into account.
 
 =========================================================================
 *                            HDL Analysis                               *
@@ -654,6 +589,10 @@ Analyzing module <ddr_mgr_main> in library <work>.
 	BYTE_1 = 8'b10000110
 	BYTE_2 = 8'b11001011
 	BYTE_3 = 8'b11111101
+	BYTE_4 = 8'b01110010
+	BYTE_5 = 8'b11100101
+	BYTE_6 = 8'b01101100
+	BYTE_7 = 8'b10010011
 	DDR2_MGR_SEL_BIT = 4'b0001
 	DISP_BLK_SEL_BIT = 4'b0000
 	FONT_HEIGH_N_BITS = 32'sb00000000000000000000000000000100
@@ -671,9 +610,9 @@ Analyzing module <ddr_mgr_main> in library <work>.
 	ST_PRE_XFR = 2'b10
 	ST_WAIT_GRANT = 2'b01
 	XFR_LEN_PER_LINE = 10'b1000000000
-WARNING:Xst:2211 - "../../fifo_ip/dumo_fifo.v" line 447: Instantiating black box module <dumo_fifo>.
 Module <ddr_mgr_main> is correct for synthesis.
  
+WARNING:Xst:38 - Value "black box" of property "BOX_TYPE" not applicable.
     Set user-defined property "KEEP =  true" for signal <buffer_init_done>.
     Set user-defined property "KEEP =  true" for signal <addr_row_err>.
     Set user-defined property "KEEP =  true" for signal <dumo_fifo_rd_valid>.
@@ -1034,24 +973,24 @@ Analyzing module <picocode> in library <work>.
 Module <picocode> is correct for synthesis.
  
     Set user-defined property "INIT =  000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INITP_00 =  A960960A8A28A2A28A28BFFBFFFFFFFFFFFFFFFFEDCB72DCB4F8E348FFFFFFFF" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INITP_01 =  00000000000000000000000000000000000000000000000000000009999B4A2A" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INITP_00 =  60960A8A28A288888888BFFBFFFFFFFFFFFFFFFFEDCB72DCB4F8E348FFFFFFFF" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INITP_01 =  000000000000000000000000000000000000000000000000000009999B4A2AA9" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_00 =  001C5404008E007B00725404008A00860075001C0083007E0078007200580086" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_00 =  001C54040092007F00765404008E008A0079001C00870082007C00760058008A" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_01 =  A000541DC00100104015002FC0000002002FC0000003541220014000C0000002" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_02 =  002AA000542BC30100250314A0005426C20100200219A0005421C101001C0128" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_03 =  002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_04 =  002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A002A" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_05 =  C01300CBC016C0120086C015C0110010A000002F002F002F002F002FA000002A" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_06 =  C0140002C017C0130036C016C012007CC015C01100EFA000C018C01400FDC017" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_07 =  C91BC81AA000AB008A01A0000B000A00A000A9008808A00009000800A000C018" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_08 =  B4004A00A0004908B4004800A000548620014010A000C0100001A000CB1DCA1C" for instance <ram_1024_x_18> in unit <picocode>.
-    Set user-defined property "INIT_09 =  00000000000000000000000000000000000000000000000000000000A0004B03" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_05 =  C01400FDC01300CBC0120086C0110010A000002F002F002F002F002FA000002A" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_06 =  0036C016C012007CC015C01100EFA000C0180093C017006CC01600E5C0150072" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_07 =  8A01A0000B000A00A000A9008808A00009000800A000C018C0140002C017C013" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_08 =  B4004800A000548A20014010A000C0100001A000CB1DCA1CC91BC81AA000AB00" for instance <ram_1024_x_18> in unit <picocode>.
+    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000A0004B03B4004A00A0004908" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
     Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <picocode>.
@@ -1183,17 +1122,28 @@ Module <ddr2_512M16_mig_rd_gray_cntr> is correct for synthesis.
     Set user-defined property "INIT =  0" for instance <bit1> in unit <ddr2_512M16_mig_rd_gray_cntr>.
     Set user-defined property "INIT =  0" for instance <bit2> in unit <ddr2_512M16_mig_rd_gray_cntr>.
     Set user-defined property "INIT =  0" for instance <bit3> in unit <ddr2_512M16_mig_rd_gray_cntr>.
-Analyzing module <ddr2_512M16_mig_ram8d_0> in library <work>.
-Module <ddr2_512M16_mig_ram8d_0> is correct for synthesis.
+Analyzing module <ddr2_512M16_mig_ram8d_0_changed> in library <work>.
+Module <ddr2_512M16_mig_ram8d_0_changed> is correct for synthesis.
  
-    Set user-defined property "INIT =  0000" for instance <fifo_bit0> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit1> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit2> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit3> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit4> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit5> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit6> in unit <ddr2_512M16_mig_ram8d_0>.
-    Set user-defined property "INIT =  0000" for instance <fifo_bit7> in unit <ddr2_512M16_mig_ram8d_0>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit0> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit1> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit2> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit3> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit4> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit5> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit6> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit7> in unit <ddr2_512M16_mig_ram8d_0_changed>.
+Analyzing module <ddr2_512M16_mig_ram8d_1_changed> in library <work>.
+Module <ddr2_512M16_mig_ram8d_1_changed> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0000" for instance <fifo_bit0> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit1> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit2> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit3> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit4> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit5> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit6> in unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Set user-defined property "INIT =  0000" for instance <fifo_bit7> in unit <ddr2_512M16_mig_ram8d_1_changed>.
 Analyzing module <ddr2_512M16_mig_data_read_controller_0> in library <work>.
 Module <ddr2_512M16_mig_data_read_controller_0> is correct for synthesis.
  
@@ -1756,7 +1706,7 @@ Unit <synchro_3> synthesized.
 
 
 Synthesizing Unit <kcpsm3>.
-    Related source file is "../../../../../Xilinx/PicoBlaze/Verilog/kcpsm3.v".
+    Related source file is "../../../../Picoblaze_verilog/kcpsm3.v".
 Unit <kcpsm3> synthesized.
 
 
@@ -1771,9 +1721,6 @@ WARNING:Xst:646 - Signal <odt_deassert> is assigned but never used. This unconne
 WARNING:Xst:646 - Signal <init_done_r1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dqs_reset3_clk0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <dqs_enable3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Register <wr> equivalent to <burst_length> has been removed
-    Register <wrburst_end_1> equivalent to <rdburst_end_1> has been removed
-    Register <wrburst_end_2> equivalent to <rdburst_end_2> has been removed
 INFO:Xst:2117 - HDL ADVISOR - Mux Selector <init_current_state> of Case statement line 786 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
    	- add an 'INIT' attribute on signal <init_current_state> (optimization is then done without any risk)
    	- use the attribute 'signal_encoding user' to avoid onehot optimization
@@ -1804,6 +1751,7 @@ INFO:Xst:2117 - HDL ADVISOR - Mux Selector <init_current_state> of Case statemen
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
+    Using one-hot encoding for signal <burst_length>.
     Found 1-bit register for signal <ddr_odt_cntrl>.
     Found 1-bit register for signal <ar_done>.
     Found 1-bit register for signal <rst_calib>.
@@ -1866,14 +1814,17 @@ INFO:Xst:2117 - HDL ADVISOR - Mux Selector <init_current_state> of Case statemen
     Found 1-bit register for signal <rst180_r>.
     Found 1-bit register for signal <rst_dqs_div_r>.
     Found 1-bit register for signal <rst_dqs_div_r1>.
+    Found 3-bit register for signal <wr>.
     Found 3-bit down counter for signal <wr_count>.
+    Found 1-bit register for signal <wrburst_end_1>.
+    Found 1-bit register for signal <wrburst_end_2>.
     Found 1-bit register for signal <wrburst_end_3>.
     Found 3-bit down counter for signal <wrburst_end_cnt>.
     Found 1-bit register for signal <write_cmd1>.
     Summary:
 	inferred   2 Finite State Machine(s).
 	inferred  13 Counter(s).
-	inferred 128 D-type flip-flop(s).
+	inferred 133 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 Unit <ddr2_512M16_mig_controller_0> synthesized.
 
@@ -1888,9 +1839,14 @@ Synthesizing Unit <ddr2_512M16_mig_rd_gray_cntr>.
 Unit <ddr2_512M16_mig_rd_gray_cntr> synthesized.
 
 
-Synthesizing Unit <ddr2_512M16_mig_ram8d_0>.
-    Related source file is "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v".
-Unit <ddr2_512M16_mig_ram8d_0> synthesized.
+Synthesizing Unit <ddr2_512M16_mig_ram8d_0_changed>.
+    Related source file is "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0_changed.v".
+Unit <ddr2_512M16_mig_ram8d_0_changed> synthesized.
+
+
+Synthesizing Unit <ddr2_512M16_mig_ram8d_1_changed>.
+    Related source file is "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_1_changed.v".
+Unit <ddr2_512M16_mig_ram8d_1_changed> synthesized.
 
 
 Synthesizing Unit <ddr2_512M16_mig_dqs_delay_1>.
@@ -1953,6 +1909,7 @@ Unit <ddr2_512M16_mig_s3_dm_iob> synthesized.
 
 Synthesizing Unit <ddr2_512M16_mig_s3_dqs_iob>.
     Related source file is "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dqs_iob.v".
+WARNING:Xst:1780 - Signal <clk_buf> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <ddr2_512M16_mig_s3_dqs_iob> synthesized.
 
 
@@ -2020,9 +1977,7 @@ Synthesizing Unit <ddr2_mgr>.
     Related source file is "../../../src/ddr2_mgr.v".
 WARNING:Xst:647 - Input <rst0> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst90> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:646 - Signal <write_data_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <wr_mem_req_sync_0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <wr_data_1_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <wr_data_0_en> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <wr_16bit_addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <reg_wr_stobe> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -2055,15 +2010,17 @@ WARNING:Xst:646 - Signal <ddr_bank_reg<7:2>> is assigned but never used. This un
     Found 1-bit register for signal <rd_grant_r>.
     Found 1-bit register for signal <refresh_active>.
     Found 1-bit register for signal <wr_cmd_active>.
+    Found 1-bit register for signal <wr_data_1_en>.
     Found 1-bit register for signal <wr_grant_r>.
     Found 1-bit register for signal <wr_mem_req>.
     Found 32-bit register for signal <write_data_0>.
+    Found 32-bit register for signal <write_data_1>.
     Found 10-bit adder for signal <xfr_cnt_nxt$addsub0000> created at line 351.
     Found 10-bit register for signal <xfr_cnt_r>.
     Found 10-bit register for signal <xfr_len_r>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred 149 D-type flip-flop(s).
+	inferred 182 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
 Unit <ddr2_mgr> synthesized.
@@ -2114,9 +2071,9 @@ Synthesizing Unit <ddr2_512M16_mig_infrastructure_top>.
     Related source file is "../../mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v".
 WARNING:Xst:647 - Input <sys_clkb> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <sys_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Register <wait_200us_rout> equivalent to <wait_200us_r> has been removed
+    Found 1-bit register for signal <wait_200us_rout>.
     Found 16-bit up counter for signal <counter200>.
-    Found 16-bit comparator less for signal <counter200$cmp_lt0000> created at line 168.
+    Found 16-bit comparator less for signal <counter200$cmp_lt0000> created at line 171.
     Found 1-bit register for signal <sys_rst>.
     Found 1-bit register for signal <sys_rst180>.
     Found 1-bit register for signal <sys_rst180_1>.
@@ -2132,7 +2089,7 @@ WARNING:Xst:647 - Input <sys_clk> is never used. This port will be preserved and
     Found 1-bit register for signal <wait_clk90>.
     Summary:
 	inferred   1 Counter(s).
-	inferred  13 D-type flip-flop(s).
+	inferred  14 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <ddr2_512M16_mig_infrastructure_top> synthesized.
 
@@ -2186,7 +2143,6 @@ WARNING:Xst:646 - Signal <interrupt_ack> is assigned but never used. This unconn
 WARNING:Xst:653 - Signal <interrupt> is used but never assigned. This sourceless signal will be automatically connected to value 0.
 WARNING:Xst:1580 - Signal <dumo_fifo_rd_valid> with a "KEEP" property is assigned but never used. Related logic will not be removed.
 WARNING:Xst:646 - Signal <dumo_fifo_full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <dumo_fifo_data_count> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <cw_cs<7:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1580 - Signal <addr_row_err> with a "KEEP" property is assigned but never used. Related logic will not be removed.
     Found finite state machine <FSM_3> for signal <req_st_r>.
@@ -2266,15 +2222,15 @@ Macro Statistics
  6-bit up counter                                      : 2
  7-bit down counter                                    : 1
  8-bit down counter                                    : 3
-# Registers                                            : 214
- 1-bit register                                        : 166
+# Registers                                            : 251
+ 1-bit register                                        : 202
  10-bit register                                       : 4
  13-bit register                                       : 5
  16-bit register                                       : 8
  2-bit register                                        : 10
  23-bit register                                       : 1
  25-bit register                                       : 1
- 3-bit register                                        : 3
+ 3-bit register                                        : 4
  32-bit register                                       : 7
  4-bit register                                        : 4
  5-bit register                                        : 3
@@ -2351,9 +2307,13 @@ Optimizing FSM <ddr_mgr_main_inst/u_mem_controller/top_00/controller0/init_curre
 -------------------
 Reading core <../../fifo_ip/dumo_fifo.ngc>.
 Loading core <dumo_fifo> for timing and area information for instance <dumo_fifo_inst>.
-INFO:Xst:2261 - The FF/Latch <burst_length_0> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <burst_length_2> <ddr_odt2> 
+INFO:Xst:2261 - The FF/Latch <wr_grant_r> in Unit <ddr2_mgr_inst> is equivalent to the following FF/Latch, which will be removed : <wr_data_1_en> 
+INFO:Xst:2261 - The FF/Latch <rdburst_end_1> in Unit <controller0> is equivalent to the following FF/Latch, which will be removed : <wrburst_end_1> 
+INFO:Xst:2261 - The FF/Latch <wr_0> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <wr_2> <ddr_odt2> 
 INFO:Xst:2261 - The FF/Latch <column_address_reg_10> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <column_address_reg_11> <column_address_reg_12> 
+INFO:Xst:2261 - The FF/Latch <rdburst_end_2> in Unit <controller0> is equivalent to the following FF/Latch, which will be removed : <wrburst_end_2> 
 INFO:Xst:2261 - The FF/Latch <column_address_reg1_10> in Unit <controller0> is equivalent to the following 2 FFs/Latches, which will be removed : <column_address_reg1_11> <column_address_reg1_12> 
+INFO:Xst:2261 - The FF/Latch <wait_200us_r> in Unit <infrastructure_top0> is equivalent to the following FF/Latch, which will be removed : <wait_200us_rout> 
 WARNING:Xst:1710 - FF/Latch <delay_sel_val1_0> (without init value) has a constant value of 1 in block <infrastructure0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <tapfordqs1_0> (without init value) has a constant value of 1 in block <cal_ctl0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_bank_0> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -2377,12 +2337,12 @@ WARNING:Xst:1710 - FF/Latch <rd_xfr_len_5> (without init value) has a constant v
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_6> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_7> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_8> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <dumo_fifo_rd_en> (without init value) has a constant value of 0 in block <ddr_mgr_main_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data_m1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <burst_length_0> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wr_0> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <burst_length_2> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <column_address_reg_10> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <xfr_len_r_8> (without init value) has a constant value of 0 in block <ddr2_mgr_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <xfr_len_r_7> (without init value) has a constant value of 0 in block <ddr2_mgr_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -2398,25 +2358,25 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <column_address_reg1
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ddr_odt_cntrl> (without init value) has a constant value of 0 in block <controller0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tapfordqs_0> (without init value) has a constant value of 1 in block <cal_ctl0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m2_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tapfordqs_0> (without init value) has a constant value of 1 in block <cal_ctl0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m3_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_3> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_2> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m4_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_11> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_1_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m90_2_1> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <write_data_m270_2_0> (without init value) has a constant value of 0 in block <data_write0>. This FF/Latch will be trimmed during the optimization process.
@@ -2427,6 +2387,7 @@ WARNING:Xst:2677 - Node <ddr_bank_reg_4> of sequential type is unconnected in bl
 WARNING:Xst:2677 - Node <ddr_bank_reg_5> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_6> of sequential type is unconnected in block <ddr2_mgr_inst>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_7> of sequential type is unconnected in block <ddr2_mgr_inst>.
+WARNING:Xst:2677 - Node <burst_length_0> of sequential type is unconnected in block <controller0>.
 WARNING:Xst:2677 - Node <cw_cs_2> of sequential type is unconnected in block <ddr_mgr_main_inst>.
 WARNING:Xst:2677 - Node <cw_cs_3> of sequential type is unconnected in block <ddr_mgr_main_inst>.
 WARNING:Xst:2677 - Node <cw_cs_4> of sequential type is unconnected in block <ddr_mgr_main_inst>.
@@ -2435,8 +2396,9 @@ WARNING:Xst:2677 - Node <cw_cs_6> of sequential type is unconnected in block <dd
 WARNING:Xst:2677 - Node <cw_cs_7> of sequential type is unconnected in block <ddr_mgr_main_inst>.
 WARNING:Xst:2677 - Node <tapfordqs1_0> of sequential type is unconnected in block <cal_ctl0>.
 WARNING:Xst:2404 -  FFs/Latches <column_address_reg<12:10>> (without init value) have a constant value of 0 in block <ddr2_512M16_mig_controller_0>.
-WARNING:Xst:2404 -  FFs/Latches <burst_length<2:2>> (without init value) have a constant value of 0 in block <ddr2_512M16_mig_controller_0>.
+WARNING:Xst:2404 -  FFs/Latches <wr<2:2>> (without init value) have a constant value of 0 in block <ddr2_512M16_mig_controller_0>.
 WARNING:Xst:2404 -  FFs/Latches <column_address_reg1<12:10>> (without init value) have a constant value of 0 in block <ddr2_512M16_mig_controller_0>.
+WARNING:Xst:2677 - Node <burst_length_0> of sequential type is unconnected in block <ddr2_512M16_mig_controller_0>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_2> of sequential type is unconnected in block <ddr2_mgr>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_3> of sequential type is unconnected in block <ddr2_mgr>.
 WARNING:Xst:2677 - Node <ddr_bank_reg_4> of sequential type is unconnected in block <ddr2_mgr>.
@@ -2473,8 +2435,8 @@ Macro Statistics
  6-bit up counter                                      : 2
  7-bit down counter                                    : 1
  8-bit down counter                                    : 3
-# Registers                                            : 955
- Flip-Flops                                            : 955
+# Registers                                            : 993
+ Flip-Flops                                            : 993
 # Comparators                                          : 7
  10-bit comparator equal                               : 1
  16-bit comparator less                                : 1
@@ -2492,11 +2454,11 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <tapfordqs1_0> (without init value) has a constant value of 1 in block <ddr2_512M16_mig_cal_ctl>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tapfordqs_0> (without init value) has a constant value of 1 in block <ddr2_512M16_mig_cal_ctl>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ddr_odt2> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <burst_length_0> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <burst_length_2> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ddr_odt2> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wr_0> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ddr_odt_cntrl> (without init value) has a constant value of 0 in block <ddr2_512M16_mig_controller_0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <cmd_r_0> (without init value) has a constant value of 0 in block <ddr2_mgr>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <dumo_fifo_rd_en> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_8> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_7> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rd_xfr_len_6> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
@@ -2518,6 +2480,10 @@ WARNING:Xst:1710 - FF/Latch <addr_col_1> (without init value) has a constant val
 WARNING:Xst:1710 - FF/Latch <addr_col_0> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_bank_1> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <addr_bank_0> (without init value) has a constant value of 0 in block <ddr_mgr_main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <rdburst_end_1> in Unit <ddr2_512M16_mig_controller_0> is equivalent to the following FF/Latch, which will be removed : <wrburst_end_1> 
+INFO:Xst:2261 - The FF/Latch <rdburst_end_2> in Unit <ddr2_512M16_mig_controller_0> is equivalent to the following FF/Latch, which will be removed : <wrburst_end_2> 
+INFO:Xst:2261 - The FF/Latch <wr_grant_r> in Unit <ddr2_mgr> is equivalent to the following FF/Latch, which will be removed : <wr_data_1_en> 
+INFO:Xst:2261 - The FF/Latch <wait_200us_r> in Unit <ddr2_512M16_mig_infrastructure_top> is equivalent to the following FF/Latch, which will be removed : <wait_200us_rout> 
 INFO:Xst:1901 - Instance ram_1024_x_18 in unit picocode of type RAMB16_S18 has been replaced by RAMB16BWE
 INFO:Xst:2261 - The FF/Latch <wr_grant_r> in Unit <ddr2_mgr> is equivalent to the following FF/Latch, which will be removed : <state_r_FSM_FFd5> 
 
@@ -2551,7 +2517,9 @@ WARNING:Xst:1710 - FF/Latch <dqs_div_rdburstcount_2> (without init value) has a 
 
 Optimizing unit <ddr2_512M16_mig_rd_gray_cntr> ...
 
-Optimizing unit <ddr2_512M16_mig_ram8d_0> ...
+Optimizing unit <ddr2_512M16_mig_ram8d_0_changed> ...
+
+Optimizing unit <ddr2_512M16_mig_ram8d_1_changed> ...
 
 Optimizing unit <ddr2_512M16_mig_dqs_delay_1> ...
 
@@ -2741,8 +2709,8 @@ Unit <data_write0> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 781
- Flip-Flops                                            : 781
+# Registers                                            : 815
+ Flip-Flops                                            : 815
 # Shift Registers                                      : 74
  2-bit shift register                                  : 16
  3-bit shift register                                  : 26
@@ -2776,26 +2744,27 @@ Design Statistics
 # IOs                              : 62
 
 Cell Usage :
-# BELS                             : 1454
+# BELS                             : 1503
 #      GND                         : 43
-#      INV                         : 109
+#      INV                         : 107
 #      LUT1                        : 127
-#      LUT2                        : 117
-#      LUT3                        : 224
-#      LUT3_D                      : 2
-#      LUT4                        : 322
-#      LUT4_D                      : 2
-#      LUT4_L                      : 4
+#      LUT2                        : 123
+#      LUT3                        : 263
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 323
+#      LUT4_D                      : 5
+#      LUT4_L                      : 2
 #      MUXCY                       : 231
-#      MUXF5                       : 22
+#      MUXF5                       : 24
 #      MUXF6                       : 4
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 43
 #      XORCY                       : 201
-# FlipFlops/Latches                : 931
+# FlipFlops/Latches                : 965
 #      FD                          : 196
-#      FD_1                        : 45
+#      FD_1                        : 46
 #      FDC                         : 16
 #      FDCE                        : 20
 #      FDDRRSE                     : 21
@@ -2804,7 +2773,7 @@ Cell Usage :
 #      FDP                         : 2
 #      FDR                         : 146
 #      FDR_1                       : 79
-#      FDRE                        : 298
+#      FDRE                        : 331
 #      FDRE_1                      : 2
 #      FDRS                        : 4
 #      FDRS_1                      : 39
@@ -2822,8 +2791,8 @@ Cell Usage :
 # Shift Registers                  : 74
 #      SRL16                       : 32
 #      SRL16_1                     : 42
-# Clock Buffers                    : 6
-#      BUFG                        : 6
+# Clock Buffers                    : 7
+#      BUFG                        : 7
 # IO Buffers                       : 74
 #      IBUF                        : 19
 #      IBUFDS                      : 2
@@ -2835,6 +2804,8 @@ Cell Usage :
 # DCMs                             : 2
 #      DCM                         : 1
 #      DCM_SP                      : 1
+# Logical                          : 48
+#      BUFCF                       : 48
 =========================================================================
 
 Device utilization summary:
@@ -2842,16 +2813,16 @@ Device utilization summary:
 
 Selected Device : 3s700anfgg484-4 
 
- Number of Slices:                      758  out of   5888    12%  
- Number of Slice Flip Flops:            931  out of  11776     7%  
- Number of 4 input LUTs:               1113  out of  11776     9%  
-    Number used as logic:               907
+ Number of Slices:                      783  out of   5888    13%  
+ Number of Slice Flip Flops:            965  out of  11776     8%  
+ Number of 4 input LUTs:               1160  out of  11776     9%  
+    Number used as logic:               954
     Number used as Shift registers:      74
     Number used as RAMs:                132
  Number of IOs:                          62
  Number of bonded IOBs:                  58  out of    372    15%  
  Number of BRAMs:                         2  out of     20    10%  
- Number of GCLKs:                         6  out of     24    25%  
+ Number of GCLKs:                         7  out of     24    29%  
  Number of DCMs:                          2  out of      8    25%  
 
 ---------------------------
@@ -2872,17 +2843,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
-Clock Signal                                                                                                                                                                                                                | Clock buffer(FF name)                                                                                    | Load  |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
-CLK_50M                                                                                                                                                                                                                     | DCM_SP_INST:CLKFX                                                                                        | 215   |
-CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK90                                                                                          | 351   |
-CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK0                                                                                           | 468   |
-ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit0)| 13    |
-ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1)| 13    |
-ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit0)| 13    |
-ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit1)| 13    |
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                                                                                                                                                                                | Clock buffer(FF name)                                                                        | Load  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+
+CLK_50M                                                                                                                                                                                                                     | DCM_SP_INST:CLKFX                                                                            | 247   |
+CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK90                                                                              | 352   |
+CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK0                                                                               | 467   |
+ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0_n/fifo_bit0)| 13    |
+ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0_n/fifo_bit3)| 13    |
+ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1_n/fifo_bit0)| 13    |
+ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/one:O)| NONE(*)(ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1_n/fifo_bit1)| 13    |
+CLK_AUX                                                                                                                                                                                                                     | DCM_INST1:CLK180                                                                             | 2     |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------+
 (*) These 4 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -2909,7 +2881,7 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 20.640ns (Maximum Frequency: 48.450MHz)
+   Minimum period: 20.851ns (Maximum Frequency: 47.958MHz)
    Minimum input arrival time before clock: 10.649ns
    Maximum output required time after clock: 5.531ns
    Maximum combinational path delay: 0.000ns
@@ -2920,10 +2892,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_50M'
-  Clock period: 20.640ns (frequency: 48.450MHz)
-  Total number of paths / destination ports: 9300 / 689
+  Clock period: 20.851ns (frequency: 47.958MHz)
+  Total number of paths / destination ports: 11380 / 785
 -------------------------------------------------------------------------
-Delay:               13.760ns (Levels of Logic = 16)
+Delay:               13.901ns (Levels of Logic = 16)
   Source:            ddr_mgr_main_inst/picoblaze_inst/picocode_inst/ram_1024_x_18 (RAM)
   Destination:       ddr_mgr_main_inst/picoblaze_inst/kcpsm3_inst/zero_flag_flop (FF)
   Source Clock:      CLK_50M rising 1.5X
@@ -2933,16 +2905,16 @@ Delay:               13.760ns (Levels of Logic = 16)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWE:CLKA->DOA5   10   2.498   0.882  ram_1024_x_18 (instruction<5>)
+     RAMB16BWE:CLKA->DOA6   10   2.498   0.882  ram_1024_x_18 (instruction<6>)
      end scope: 'picocode_inst'
      begin scope: 'kcpsm3_inst'
-     RAM16X1D:DPRA1->DPO    1   0.648   0.452  reg_loop_register_bit_4 (sy<4>)
+     RAM16X1D:DPRA2->DPO    1   0.648   0.452  reg_loop_register_bit_4 (sy<4>)
      LUT3:I2->O           21   0.648   1.131  operand_select_mux_4 (port_id<4>)
      end scope: 'kcpsm3_inst'
      end scope: 'picoblaze_inst'
-     LUT4:I3->O            4   0.648   0.619  pi_blk_sel_1_cmp_eq00001 (pi_blk_sel<1>)
+     LUT4:I3->O            8   0.648   0.760  pi_blk_sel_1_cmp_eq00001 (pi_blk_sel<1>)
      begin scope: 'ddr2_mgr_inst'
-     LUT4:I2->O            1   0.648   0.423  pi_rd_data<0> (pi_rd_data<0>)
+     LUT4:I3->O            1   0.648   0.423  pi_rd_data<0>1 (pi_rd_data<0>)
      end scope: 'ddr2_mgr_inst'
      LUT4:I3->O            1   0.648   0.500  in_port<0> (in_port<0>)
      begin scope: 'picoblaze_inst'
@@ -2956,13 +2928,13 @@ Delay:               13.760ns (Levels of Logic = 16)
      XORCY:CI->O           1   0.844   0.000  zero_xor (zero_fast_route)
      FDRE:D                    0.252          zero_flag_flop
     ----------------------------------------
-    Total                     13.760ns (9.163ns logic, 4.597ns route)
-                                       (66.6% logic, 33.4% route)
+    Total                     13.901ns (9.163ns logic, 4.738ns route)
+                                       (65.9% logic, 34.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK_AUX'
   Clock period: 8.020ns (frequency: 124.688MHz)
-  Total number of paths / destination ports: 5063 / 1483
+  Total number of paths / destination ports: 5120 / 1519
 -------------------------------------------------------------------------
 Delay:               8.020ns (Levels of Logic = 13)
   Source:            ddr_mgr_main_inst/ddr2_mgr_inst/xfr_cnt_r_0 (FF)
@@ -2994,53 +2966,27 @@ Delay:               8.020ns (Levels of Logic = 13)
                                        (69.3% logic, 30.7% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
-  Clock period: 6.620ns (frequency: 151.057MHz)
-  Total number of paths / destination ports: 43 / 32
--------------------------------------------------------------------------
-Delay:               3.310ns (Levels of Logic = 3)
-  Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff (FF)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0 (RAM)
-  Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out falling
-  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out rising
-
-  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCE:C->Q             2   0.591   0.527  delay_ff (din_delay)
-     LUT2:I1->O           12   0.643   0.961  dout1 (dout)
-     end scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
-     end scope: 'data_read_controller0'
-     begin scope: 'data_read0'
-     begin scope: 'gen_strobe[1].strobe'
-     RAM16X1D:WE               0.588          fifo_bit0
-    ----------------------------------------
-    Total                      3.310ns (1.822ns logic, 1.488ns route)
-                                       (55.0% logic, 45.0% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out'
+Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out'
   Clock period: 6.566ns (frequency: 152.300MHz)
   Total number of paths / destination ports: 39 / 28
 -------------------------------------------------------------------------
 Delay:               3.283ns (Levels of Logic = 3)
-  Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 (FF)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1 (RAM)
-  Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out rising
-  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out falling
+  Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 (FF)
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0_n/fifo_bit0 (RAM)
+  Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out rising
+  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out falling
 
-  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe_n/fifo_bit1
+  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0_n/fifo_bit0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.591   0.500  delay_ff_1 (din_delay)
      LUT2:I1->O           12   0.643   0.961  dout1 (dout)
-     end scope: 'gen_wr_en[1].fifo_1_wr_en_inst'
+     end scope: 'gen_wr_en[0].fifo_1_wr_en_inst'
      end scope: 'data_read_controller0'
      begin scope: 'data_read0'
-     begin scope: 'gen_strobe[1].strobe_n'
-     RAM16X1D:WE               0.588          fifo_bit1
+     begin scope: 'strobe_0_n'
+     RAM16X1D:WE               0.588          fifo_bit0
     ----------------------------------------
     Total                      3.283ns (1.822ns logic, 1.461ns route)
                                        (55.5% logic, 44.5% route)
@@ -3052,11 +2998,11 @@ Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_co
 -------------------------------------------------------------------------
 Delay:               3.310ns (Levels of Logic = 3)
   Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/delay_ff (FF)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0 (RAM)
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0/fifo_bit3 (RAM)
   Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out falling
   Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out rising
 
-  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/delay_ff to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0
+  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_0_wr_en_inst/delay_ff to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0/fifo_bit3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -3065,37 +3011,63 @@ Delay:               3.310ns (Levels of Logic = 3)
      end scope: 'gen_wr_en[0].fifo_0_wr_en_inst'
      end scope: 'data_read_controller0'
      begin scope: 'data_read0'
-     begin scope: 'gen_strobe[0].strobe'
-     RAM16X1D:WE               0.588          fifo_bit0
+     begin scope: 'strobe_0'
+     RAM16X1D:WE               0.588          fifo_bit3
     ----------------------------------------
     Total                      3.310ns (1.822ns logic, 1.488ns route)
                                        (55.0% logic, 45.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out'
+Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out'
   Clock period: 6.566ns (frequency: 152.300MHz)
   Total number of paths / destination ports: 39 / 28
 -------------------------------------------------------------------------
 Delay:               3.283ns (Levels of Logic = 3)
-  Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 (FF)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit1 (RAM)
-  Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out rising
-  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out falling
+  Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 (FF)
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1_n/fifo_bit0 (RAM)
+  Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out rising
+  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out falling
 
-  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[0].fifo_1_wr_en_inst/delay_ff_1 to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe_n/fifo_bit1
+  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_1_wr_en_inst/delay_ff_1 to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1_n/fifo_bit0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q             1   0.591   0.500  delay_ff_1 (din_delay)
      LUT2:I1->O           12   0.643   0.961  dout1 (dout)
-     end scope: 'gen_wr_en[0].fifo_1_wr_en_inst'
+     end scope: 'gen_wr_en[1].fifo_1_wr_en_inst'
      end scope: 'data_read_controller0'
      begin scope: 'data_read0'
-     begin scope: 'gen_strobe[0].strobe_n'
-     RAM16X1D:WE               0.588          fifo_bit1
+     begin scope: 'strobe_1_n'
+     RAM16X1D:WE               0.588          fifo_bit0
     ----------------------------------------
     Total                      3.283ns (1.822ns logic, 1.461ns route)
                                        (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
+  Clock period: 6.620ns (frequency: 151.057MHz)
+  Total number of paths / destination ports: 43 / 32
+-------------------------------------------------------------------------
+Delay:               3.310ns (Levels of Logic = 3)
+  Source:            ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff (FF)
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1/fifo_bit1 (RAM)
+  Source Clock:      ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out falling
+  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out rising
+
+  Data Path: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_wr_en[1].fifo_0_wr_en_inst/delay_ff to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1/fifo_bit1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.527  delay_ff (din_delay)
+     LUT2:I1->O           12   0.643   0.961  dout1 (dout)
+     end scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
+     end scope: 'data_read_controller0'
+     begin scope: 'data_read0'
+     begin scope: 'strobe_1'
+     RAM16X1D:WE               0.588          fifo_bit1
+    ----------------------------------------
+    Total                      3.310ns (1.822ns logic, 1.488ns route)
+                                       (55.0% logic, 45.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_50M'
@@ -3119,57 +3091,15 @@ Offset:              1.521ns (Levels of Logic = 2)
                                        (72.4% logic, 27.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
-  Total number of paths / destination ports: 54 / 9
--------------------------------------------------------------------------
-Offset:              10.649ns (Levels of Logic = 16)
-  Source:            SD_LOOP_IN (PAD)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0 (RAM)
-  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out rising
-
-  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     begin scope: 'ddr_mgr_main_inst'
-     begin scope: 'u_mem_controller'
-     begin scope: 'top_00'
-     begin scope: 'iobs0'
-     begin scope: 'controller_iobs0'
-     IBUF:I->O             6   0.849   0.672  rst_iob_inbuf (rst_dqs_div)
-     end scope: 'controller_iobs0'
-     end scope: 'iobs0'
-     begin scope: 'data_path0'
-     begin scope: 'data_read_controller0'
-     begin scope: 'rst_dqs_div_delayed'
-     LUT4:I3->O            1   0.648   0.452  four (delay1)
-     LUT4:I2->O            1   0.648   0.452  three (delay2)
-     LUT4:I2->O            1   0.648   0.423  six (delay3)
-     LUT4:I3->O            1   0.648   0.452  two (delay4)
-     LUT4:I2->O            1   0.648   0.452  five (delay5)
-     LUT4:I2->O            6   0.648   0.812  one (clk_out)
-     end scope: 'rst_dqs_div_delayed'
-     begin scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
-     LUT2:I0->O           12   0.648   0.961  dout1 (dout)
-     end scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
-     end scope: 'data_read_controller0'
-     begin scope: 'data_read0'
-     begin scope: 'gen_strobe[1].strobe'
-     RAM16X1D:WE               0.588          fifo_bit0
-    ----------------------------------------
-    Total                     10.649ns (5.973ns logic, 4.676ns route)
-                                       (56.1% logic, 43.9% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out'
   Total number of paths / destination ports: 30 / 5
 -------------------------------------------------------------------------
 Offset:              10.649ns (Levels of Logic = 16)
   Source:            SD_LOOP_IN (PAD)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1 (RAM)
-  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out rising
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0/fifo_bit0 (RAM)
+  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out rising
 
-  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[1].strobe/fifo_bit1
+  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0/fifo_bit0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -3191,13 +3121,13 @@ Offset:              10.649ns (Levels of Logic = 16)
      LUT4:I2->O            1   0.648   0.452  five (delay5)
      LUT4:I2->O            6   0.648   0.812  one (clk_out)
      end scope: 'rst_dqs_div_delayed'
-     begin scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
+     begin scope: 'gen_wr_en[0].fifo_0_wr_en_inst'
      LUT2:I0->O           12   0.648   0.961  dout1 (dout)
-     end scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
+     end scope: 'gen_wr_en[0].fifo_0_wr_en_inst'
      end scope: 'data_read_controller0'
      begin scope: 'data_read0'
-     begin scope: 'gen_strobe[1].strobe'
-     RAM16X1D:WE               0.588          fifo_bit1
+     begin scope: 'strobe_0'
+     RAM16X1D:WE               0.588          fifo_bit0
     ----------------------------------------
     Total                     10.649ns (5.973ns logic, 4.676ns route)
                                        (56.1% logic, 43.9% route)
@@ -3208,10 +3138,10 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_c
 -------------------------------------------------------------------------
 Offset:              10.649ns (Levels of Logic = 16)
   Source:            SD_LOOP_IN (PAD)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0 (RAM)
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0/fifo_bit3 (RAM)
   Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col1/clk_out rising
 
-  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit0
+  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_0/fifo_bit3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -3238,22 +3168,64 @@ Offset:              10.649ns (Levels of Logic = 16)
      end scope: 'gen_wr_en[0].fifo_0_wr_en_inst'
      end scope: 'data_read_controller0'
      begin scope: 'data_read0'
-     begin scope: 'gen_strobe[0].strobe'
+     begin scope: 'strobe_0'
+     RAM16X1D:WE               0.588          fifo_bit3
+    ----------------------------------------
+    Total                     10.649ns (5.973ns logic, 4.676ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out'
+  Total number of paths / destination ports: 30 / 5
+-------------------------------------------------------------------------
+Offset:              10.649ns (Levels of Logic = 16)
+  Source:            SD_LOOP_IN (PAD)
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1/fifo_bit0 (RAM)
+  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col0/clk_out rising
+
+  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1/fifo_bit0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     begin scope: 'ddr_mgr_main_inst'
+     begin scope: 'u_mem_controller'
+     begin scope: 'top_00'
+     begin scope: 'iobs0'
+     begin scope: 'controller_iobs0'
+     IBUF:I->O             6   0.849   0.672  rst_iob_inbuf (rst_dqs_div)
+     end scope: 'controller_iobs0'
+     end scope: 'iobs0'
+     begin scope: 'data_path0'
+     begin scope: 'data_read_controller0'
+     begin scope: 'rst_dqs_div_delayed'
+     LUT4:I3->O            1   0.648   0.452  four (delay1)
+     LUT4:I2->O            1   0.648   0.452  three (delay2)
+     LUT4:I2->O            1   0.648   0.423  six (delay3)
+     LUT4:I3->O            1   0.648   0.452  two (delay4)
+     LUT4:I2->O            1   0.648   0.452  five (delay5)
+     LUT4:I2->O            6   0.648   0.812  one (clk_out)
+     end scope: 'rst_dqs_div_delayed'
+     begin scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
+     LUT2:I0->O           12   0.648   0.961  dout1 (dout)
+     end scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
+     end scope: 'data_read_controller0'
+     begin scope: 'data_read0'
+     begin scope: 'strobe_1'
      RAM16X1D:WE               0.588          fifo_bit0
     ----------------------------------------
     Total                     10.649ns (5.973ns logic, 4.676ns route)
                                        (56.1% logic, 43.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out'
-  Total number of paths / destination ports: 30 / 5
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out'
+  Total number of paths / destination ports: 54 / 9
 -------------------------------------------------------------------------
 Offset:              10.649ns (Levels of Logic = 16)
   Source:            SD_LOOP_IN (PAD)
-  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1 (RAM)
-  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[0].dqs_delay_col0/clk_out rising
+  Destination:       ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1/fifo_bit1 (RAM)
+  Destination Clock: ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read_controller0/gen_delay[1].dqs_delay_col1/clk_out rising
 
-  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/gen_strobe[0].strobe/fifo_bit1
+  Data Path: SD_LOOP_IN to ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/data_read0/strobe_1/fifo_bit1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -3275,12 +3247,12 @@ Offset:              10.649ns (Levels of Logic = 16)
      LUT4:I2->O            1   0.648   0.452  five (delay5)
      LUT4:I2->O            6   0.648   0.812  one (clk_out)
      end scope: 'rst_dqs_div_delayed'
-     begin scope: 'gen_wr_en[0].fifo_0_wr_en_inst'
+     begin scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
      LUT2:I0->O           12   0.648   0.961  dout1 (dout)
-     end scope: 'gen_wr_en[0].fifo_0_wr_en_inst'
+     end scope: 'gen_wr_en[1].fifo_0_wr_en_inst'
      end scope: 'data_read_controller0'
      begin scope: 'data_read0'
-     begin scope: 'gen_strobe[0].strobe'
+     begin scope: 'strobe_1'
      RAM16X1D:WE               0.588          fifo_bit1
     ----------------------------------------
     Total                     10.649ns (5.973ns logic, 4.676ns route)
@@ -3529,15 +3501,14 @@ WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to DQ_T.
 WARNING:Xst:616 - Invalid property "SYN_USEIOFF 1": Did not attach to DQ_T.
 
 
-Total REAL time to Xst completion: 18.00 secs
-Total CPU time to Xst completion: 16.41 secs
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.59 secs
  
 --> 
 
-
-Total memory usage is 584088 kilobytes
+Total memory usage is 331852 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  618 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :  546 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
 

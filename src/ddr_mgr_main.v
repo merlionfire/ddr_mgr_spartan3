@@ -105,6 +105,10 @@ module ddr_mgr_main
    parameter   BYTE_2   =  8'hCB ; 
    parameter   BYTE_3   =  8'hFD ; 
 
+   parameter   BYTE_4   =  8'h72 ;
+   parameter   BYTE_5   =  8'he5 ;
+   parameter   BYTE_6   =  8'h6c ;
+   parameter   BYTE_7   =  8'h93 ;
    reg   byte_0_fault, byte_1_fault, byte_2_fault, byte_3_fault ; 
 
    picoblaze  picoblaze_inst (
@@ -401,10 +405,10 @@ module ddr_mgr_main
          byte_3_fault <= 1'b0; 
       end else begin 
          if ( rd_data_valid == 1'b1 ) begin  
-            byte_0_fault <= ( rd_data[7:0]    == BYTE_0 )  ? 1'b0 : 1'b1 ; 
-            byte_1_fault <= ( rd_data[15:8]   == BYTE_1 )  ? 1'b0 : 1'b1 ; 
-            byte_2_fault <= ( rd_data[23:16]  == BYTE_2 )  ? 1'b0 : 1'b1 ;
-            byte_3_fault <= ( rd_data[31:24]  == BYTE_3 )  ? 1'b0 : 1'b1 ; 
+            byte_0_fault <= ( ( rd_data[7:0]    == BYTE_0 ) || ( rd_data[7:0]    == BYTE_4 ) ) ? 1'b0 : 1'b1 ; 
+            byte_1_fault <= ( ( rd_data[15:8]   == BYTE_1 ) || ( rd_data[15:8]   == BYTE_5 ) ) ? 1'b0 : 1'b1 ; 
+            byte_2_fault <= ( ( rd_data[23:16]  == BYTE_2 ) || ( rd_data[23:16]  == BYTE_6 ) ) ? 1'b0 : 1'b1 ;
+            byte_3_fault <= ( ( rd_data[31:24]  == BYTE_3 ) || ( rd_data[31:24]  == BYTE_7 ) ) ? 1'b0 : 1'b1 ; 
          end else begin 
             byte_0_fault <= 1'b0; 
             byte_1_fault <= 1'b0; 
@@ -444,6 +448,8 @@ module ddr_mgr_main
    assign   dumo_fifo_wr   =  data_fault & ~ data_fault_1d ; 
 
    // FIFO instance 
+	// Add below the line to avoid "black box" warning messages in synthesis. 
+   //synthesis attribute box_type dumo_fifo_inst "black box" 
    dumo_fifo dumo_fifo_inst (
      .clk      (  mem_clk90          ), // input clk
      .srst     (  mem_rst90          ), // input srst

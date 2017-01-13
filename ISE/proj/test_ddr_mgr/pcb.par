@@ -1,13 +1,13 @@
-Release 14.7 par P.20131013 (lin64)
+Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-merlionfire::  Sun Dec 04 00:38:40 2016
+THINKPAD-PC::  Thu Jan 12 19:02:20 2017
 
 par -w -intstyle ise -ol high -t 1 pcb_map.ncd pcb.ncd pcb.pcf 
 
 
 Constraints file: pcb.pcf.
-Loading device for application Rf_Device from file '3s700a.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '3s700a.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "pcb" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -4
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -52,16 +52,16 @@ Design Summary Report:
 
 
    Number of BSCANs                          1 out of 1     100%
-   Number of BUFGMUXs                        6 out of 24     25%
+   Number of BUFGMUXs                        7 out of 24     29%
    Number of DCMs                            2 out of 8      25%
       Number of LOCed DCMs                   2 out of 2     100%
 
-   Number of RAMB16BWEs                     13 out of 20     65%
-   Number of Slices                       1109 out of 5888   18%
-      Number of SLICEMs                    199 out of 2944    6%
+   Number of RAMB16BWEs                     18 out of 20     90%
+   Number of Slices                       1181 out of 5888   20%
+      Number of SLICEMs                    215 out of 2944    7%
 
-   Number of LOCed Slices                   65 out of 1109    5%
-      Number of LOCed SLICEMs               43 out of 199    21%
+   Number of LOCed Slices                   65 out of 1181    5%
+      Number of LOCed SLICEMs               43 out of 215    20%
 
 
 
@@ -70,8 +70,8 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 5 secs 
+Finished initial Timing Analysis.  REAL time: 5 secs 
 
 WARNING:Par:288 - The signal SW<1>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal SW<2>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -81,50 +81,50 @@ WARNING:Par:288 - The signal
    load.  PAR will not attempt to route this signal.
 
 Starting Placer
-Total REAL time at the beginning of Placer: 3 secs 
-Total CPU  time at the beginning of Placer: 2 secs 
+Total REAL time at the beginning of Placer: 5 secs 
+Total CPU  time at the beginning of Placer: 5 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:ee0242d9) REAL time: 4 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:7948d59) REAL time: 7 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:ee0242d9) REAL time: 4 secs 
+Phase 2.7  Design Feasibility Check (Checksum:7948d59) REAL time: 7 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:8ad76919) REAL time: 4 secs 
+Phase 3.31  Local Placement Optimization (Checksum:53cf39d9) REAL time: 7 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:85e4cd58) REAL time: 6 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:2e99b9b9) REAL time: 10 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:85e4cd58) REAL time: 6 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:2e99b9b9) REAL time: 10 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:85e4cd58) REAL time: 6 secs 
+Phase 6.36  Local Placement Optimization (Checksum:2e99b9b9) REAL time: 10 secs 
 
 Phase 7.8  Global Placement
+...........
 ...............
-................
-.......
-...................................................
-...................
-.............................
-........
+...............................
+...........................
+.........
+..............
+.........
 .....
-Phase 7.8  Global Placement (Checksum:b389ed86) REAL time: 9 secs 
+Phase 7.8  Global Placement (Checksum:9010b536) REAL time: 16 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:b389ed86) REAL time: 9 secs 
+Phase 8.5  Local Placement Optimization (Checksum:9010b536) REAL time: 16 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:70479dc2) REAL time: 10 secs 
+Phase 9.18  Placement Optimization (Checksum:212a6da0) REAL time: 22 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:70479dc2) REAL time: 10 secs 
+Phase 10.5  Local Placement Optimization (Checksum:212a6da0) REAL time: 22 secs 
 
-Total REAL time to Placer completion: 11 secs 
-Total CPU  time to Placer completion: 10 secs 
+Total REAL time to Placer completion: 22 secs 
+Total CPU  time to Placer completion: 20 secs 
 Writing design to file pcb.ncd
 
 
@@ -132,34 +132,36 @@ Writing design to file pcb.ncd
 Starting Router
 
 
-Phase  1  : 7859 unrouted;      REAL time: 14 secs 
+Phase  1  : 8624 unrouted;      REAL time: 28 secs 
 
-Phase  2  : 6176 unrouted;      REAL time: 15 secs 
+Phase  2  : 6727 unrouted;      REAL time: 28 secs 
 
-Phase  3  : 1297 unrouted;      REAL time: 16 secs 
+Phase  3  : 1311 unrouted;      REAL time: 29 secs 
 
-Phase  4  : 1407 unrouted; (Setup:51913, Hold:0, Component Switching Limit:0)     REAL time: 23 secs 
+Phase  4  : 1512 unrouted; (Setup:91489, Hold:0, Component Switching Limit:0)     REAL time: 45 secs 
 
-Phase  5  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 29 secs 
+Phase  5  : 0 unrouted; (Setup:92245, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
 
 Updating file: pcb.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  6  : 0 unrouted; (Setup:92245, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
 
-Phase  7  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 48 secs 
+Phase  7  : 0 unrouted; (Setup:92030, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 5 secs 
 
-Phase  8  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Updating file: pcb.ncd with current fully routed design.
 
-Phase  9  : 0 unrouted; (Setup:57980, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Phase  8  : 0 unrouted; (Setup:92030, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 
 
-Phase 10  : 0 unrouted; (Setup:51117, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 18 secs 
+Phase  9  : 0 unrouted; (Setup:92030, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 
+
+Phase 10  : 0 unrouted; (Setup:78719, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 1 secs 
 WARNING:Route:455 - CLK Net:ddr_mgr_main_inst/mig_clk0 may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:icon_control0<13> may have excessive skew because 
       1 CLK pins and 3 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 1 mins 18 secs 
-Total CPU time to Router completion: 1 mins 17 secs 
+Total REAL time to Router completion: 2 mins 1 secs 
+Total CPU time to Router completion: 1 mins 58 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -177,42 +179,46 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|            ila0_clk |  BUFGMUX_X1Y0| No   |  187 |  0.225     |  1.199      |
+|    icon_control0<0> | BUFGMUX_X1Y11| No   |  126 |  0.118     |  1.109      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/mi |              |      |      |            |             |
-|              g_clk0 |  BUFGMUX_X1Y1| No   |  317 |  0.235     |  1.220      |
+|              g_clk0 |  BUFGMUX_X2Y0| No   |  310 |  0.240     |  1.216      |
 +---------------------+--------------+------+------+------------+-------------+
-|             clk_75m | BUFGMUX_X1Y10| No   |  131 |  0.114     |  1.090      |
-+---------------------+--------------+------+------+------------+-------------+
-|    icon_control0<0> | BUFGMUX_X1Y11| No   |  113 |  0.140     |  1.114      |
+|             clk_75m | BUFGMUX_X1Y10| No   |  147 |  0.105     |  1.096      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/mi |              |      |      |            |             |
-|             g_clk90 |  BUFGMUX_X2Y1| No   |  171 |  0.162     |  1.137      |
+|             g_clk90 |  BUFGMUX_X1Y1| No   |  173 |  0.163     |  1.137      |
 +---------------------+--------------+------+------+------------+-------------+
-|   icon_control0<13> |         Local|      |    4 |  0.000     |  0.929      |
+|            ila0_clk |  BUFGMUX_X1Y0| No   |  236 |  0.163     |  1.139      |
++---------------------+--------------+------+------+------------+-------------+
+|ddr_mgr_main_inst/u_ |              |      |      |            |             |
+|mem_controller/clk_1 |              |      |      |            |             |
+|                  80 |  BUFGMUX_X2Y1| No   |    4 |  0.013     |  1.059      |
 +---------------------+--------------+------+------+------------+-------------+
 |U_icon_pro/U0/iUPDAT |              |      |      |            |             |
-|               E_OUT |         Local|      |    1 |  0.000     |  2.330      |
+|               E_OUT |         Local|      |    1 |  0.000     |  2.268      |
++---------------------+--------------+------+------+------------+-------------+
+|   icon_control0<13> |         Local|      |    4 |  0.000     |  1.293      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/u_ |              |      |      |            |             |
 |mem_controller/top_0 |              |      |      |            |             |
 |0/data_path0/dqs_del |              |      |      |            |             |
-|        ayed_col1<0> |         Local|      |   11 |  0.105     |  2.088      |
+|        ayed_col0<1> |         Local|      |   11 |  0.066     |  0.490      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/u_ |              |      |      |            |             |
 |mem_controller/top_0 |              |      |      |            |             |
 |0/data_path0/dqs_del |              |      |      |            |             |
-|        ayed_col0<0> |         Local|      |   11 |  0.066     |  1.712      |
+|        ayed_col1<1> |         Local|      |   11 |  0.066     |  0.490      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/u_ |              |      |      |            |             |
 |mem_controller/top_0 |              |      |      |            |             |
 |0/data_path0/dqs_del |              |      |      |            |             |
-|        ayed_col1<1> |         Local|      |   11 |  0.112     |  2.065      |
+|        ayed_col0<0> |         Local|      |   11 |  0.037     |  0.483      |
 +---------------------+--------------+------+------+------------+-------------+
 |ddr_mgr_main_inst/u_ |              |      |      |            |             |
 |mem_controller/top_0 |              |      |      |            |             |
 |0/data_path0/dqs_del |              |      |      |            |             |
-|        ayed_col0<1> |         Local|      |   11 |  0.123     |  1.697      |
+|        ayed_col1<0> |         Local|      |   11 |  0.037     |  0.483      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -223,7 +229,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 51117 (Setup: 51117, Hold: 0, Component Switching Limit: 0)
+Timing Score: 78719 (Setup: 78719, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
    your design.
@@ -242,7 +248,7 @@ WARNING:Par:468 - Your design did not meet timing.  The following are some sugge
    TechXclusives->Timing Closure" for tips and suggestions for meeting timing
    in your design.
 
-Number of Timing Constraints that were not applied: 4
+Number of Timing Constraints that were not applied: 5
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -251,10 +257,38 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |    -1.408ns|     5.167ns|     123|       51117
-  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.684ns|            |       0|           0
+* PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |    -2.111ns|     5.870ns|     207|       78479
+  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.664ns|            |       0|           0
   k_dcm0/clk2x" derived from  NET "mem_clk_ |             |            |            |        |            
   s" PERIOD = 7.5187 ns HIGH 50%            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* NET "ddr_mgr_main_inst/u_mem_controller/t | MAXDELAY    |    -0.095ns|     0.555ns|       1|          95
+  op_00/dqs_int_delay_in<0>" MAXDELAY =     |             |            |            |        |            
+       0.46 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* NET "ddr_mgr_main_inst/u_mem_controller/t | MAXDELAY    |    -0.081ns|     0.541ns|       1|          81
+  op_00/dqs_int_delay_in<1>" MAXDELAY =     |             |            |            |        |            
+       0.46 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |    -0.016ns|     0.186ns|       1|          16
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col1/delay2" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |    -0.016ns|     0.186ns|       1|          16
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col0/delay2" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |    -0.016ns|     0.186ns|       1|          16
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col1/delay2" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+* NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |    -0.016ns|     0.186ns|       1|          16
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col0/delay2" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.002ns|     0.398ns|       0|           0
   roller/infrastructure_top0/cal_top0/tap_d |             |            |            |        |            
@@ -268,35 +302,120 @@ Asterisk (*) preceding a constraint indicates it was not met.
   roller/infrastructure_top0/cal_top0/tap_d |             |            |            |        |            
   ly0/tap<23>"         MAXDELAY = 0.4 ns    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |     0.088ns|     7.430ns|       0|           0
-  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.784ns|            |       0|           0
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.005ns|     0.165ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col1/delay1" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.005ns|     0.165ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col0/delay1" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.005ns|     0.165ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col1/delay1" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.005ns|     0.165ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col0/delay1" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.015ns|     0.155ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col1/delay5" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.015ns|     0.155ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col0/delay5" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.015ns|     0.155ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col1/delay5" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.015ns|     0.155ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col0/delay5" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.049ns|     0.121ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col1/delay3" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.049ns|     0.121ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col0/delay3" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.049ns|     0.121ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col0/delay3" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.049ns|     0.121ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col1/delay3" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.065ns|     0.105ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col1/delay4" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.065ns|     0.105ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[0].dqs_delay_col0/delay4" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.065ns|     0.105ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col0/delay4" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "ddr_mgr_main_inst/u_mem_cont | MAXDELAY    |     0.065ns|     0.105ns|       0|           0
+  roller/top_00/data_path0/data_read_contro |             |            |            |        |            
+  ller0/gen_delay[1].dqs_delay_col1/delay4" |             |            |            |        |            
+           MAXDELAY = 0.17 ns               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |     0.085ns|     7.433ns|       0|           0
+  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.850ns|            |       0|           0
   k_dcm0/clk0dcm" derived from  NET "mem_cl |             |            |            |        |            
   k_s" PERIOD = 7.5187 ns HIGH 50%          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PERIOD analysis for net "clock_gen_inst/C | SETUP       |     0.132ns|    13.201ns|       0|           0
-  LKFX_BUF" derived from  NET "clk_50m_in"  | HOLD        |     0.718ns|            |       0|           0
-  PERIOD = 20 ns HIGH 50%                   |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |     0.294ns|     7.224ns|       0|           0
-  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.647ns|            |       0|           0
+  PERIOD analysis for net "ddr_mgr_main_ins | SETUP       |     0.195ns|     7.323ns|       0|           0
+  t/u_mem_controller/infrastructure_top0/cl | HOLD        |     0.609ns|            |       0|           0
   k_dcm0/clk90dcm" derived from  NET "mem_c |             |            |            |        |            
   lk_s" PERIOD = 7.5187 ns HIGH 50%         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PERIOD analysis for net "clock_gen_inst/C | SETUP       |     0.213ns|    13.120ns|       0|           0
+  LKFX_BUF" derived from  NET "clk_50m_in"  | HOLD        |     0.777ns|            |       0|           0
+  PERIOD = 20 ns HIGH 50%                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   NET "mem_clk_s" PERIOD = 7.5187 ns HIGH 5 | MINLOWPULSE |     2.718ns|     4.800ns|       0|           0
   0%                                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.128ns|     1.872ns|       0|           0
-   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     1.362ns|            |       0|           0
+  PERIOD analysis for net "ddr_mgr_main_ins | MINPERIOD   |     3.519ns|     3.999ns|       0|           0
+  t/u_mem_controller/infrastructure_top0/cl |             |            |            |        |            
+  k_dcm0/clk180dcm" derived from  NET "mem_ |             |            |            |        |            
+  clk_s" PERIOD = 7.5187 ns HIGH 50%        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" | SETUP       |    13.298ns|     1.702ns|       0|           0
+   TO TIMEGRP "U_CLK" 15 ns                 | HOLD        |     1.251ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   NET "clk_50m_in" PERIOD = 20 ns HIGH 50%  | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_D2_TO_T2_ila_pro_0_path" TIG     | SETUP       |         N/A|     5.891ns|     N/A|           0
+  PATH "TS_D2_TO_T2_ila_pro_0_path" TIG     | SETUP       |         N/A|     5.779ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_J2_TO_D2_ila_pro_0_path" TIG     | N/A         |         N/A|         N/A|     N/A|         N/A
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_J3_TO_D2_ila_pro_0_path" TIG     | N/A         |         N/A|         N/A|     N/A|         N/A
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_J4_TO_D2_ila_pro_0_path" TIG     | MAXDELAY    |         N/A|     6.064ns|     N/A|           0
+  PATH "TS_J4_TO_D2_ila_pro_0_path" TIG     | MAXDELAY    |         N/A|     5.751ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -310,8 +429,8 @@ Derived Constraints for clk_50m_in
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|clk_50m_in                     |     20.000ns|      6.000ns|     19.802ns|            0|            0|            0|        11177|
-| clock_gen_inst/CLKFX_BUF      |     13.333ns|     13.201ns|          N/A|            0|            0|        11177|            0|
+|clk_50m_in                     |     20.000ns|      6.000ns|     19.680ns|            0|            0|            0|        13257|
+| clock_gen_inst/CLKFX_BUF      |     13.333ns|     13.120ns|          N/A|            0|            0|        13257|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 Derived Constraints for mem_clk_s
@@ -320,19 +439,22 @@ Derived Constraints for mem_clk_s
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|mem_clk_s                      |      7.519ns|      4.800ns|     10.334ns|            0|          123|            0|         6427|
-| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      7.430ns|          N/A|            0|            0|         3687|            0|
+|mem_clk_s                      |      7.519ns|      4.800ns|     11.740ns|            0|          207|            0|         6710|
+| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      7.433ns|          N/A|            0|            0|         3688|            0|
 | ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
 | cm0/clk0dcm                   |             |             |             |             |             |             |             |
-| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      7.224ns|          N/A|            0|            0|         1207|            0|
+| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      7.323ns|          N/A|            0|            0|         1263|            0|
 | ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
 | cm0/clk90dcm                  |             |             |             |             |             |             |             |
-| ddr_mgr_main_inst/u_mem_contro|      3.759ns|      5.167ns|          N/A|          123|            0|         1533|            0|
+| ddr_mgr_main_inst/u_mem_contro|      7.519ns|      3.999ns|          N/A|            0|            0|            0|            0|
+| ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
+| cm0/clk180dcm                 |             |             |             |             |             |             |             |
+| ddr_mgr_main_inst/u_mem_contro|      3.759ns|      5.870ns|          N/A|          207|            0|         1759|            0|
 | ller/infrastructure_top0/clk_d|             |             |             |             |             |             |             |
 | cm0/clk2x                     |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-1 constraint not met.
+7 constraints not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -346,14 +468,14 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 4 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 19 secs 
-Total CPU time to PAR completion: 1 mins 18 secs 
+Total REAL time to PAR completion: 2 mins 2 secs 
+Total CPU time to PAR completion: 2 mins 
 
-Peak Memory Usage:  684 MB
+Peak Memory Usage:  397 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - 123 errors found.
+Timing: Completed - 213 errors found.
 
 Number of error messages: 0
 Number of warning messages: 9

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.ncd
-OUTFILE=/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/pcb.bit
+INFILE=C:\Users\Merlionfire\Documents\FPGA_Project\test_ddr_mgr\ISE\proj\test_ddr_mgr\pcb.ncd
+OUTFILE=C:\Users\Merlionfire\Documents\FPGA_Project\test_ddr_mgr\ISE\proj\test_ddr_mgr\pcb.bit
 FAMILY=Spartan3A and Spartan3AN
 PART=xc3s700an-4fgg484
-WORKINGDIR=/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr
+WORKINGDIR=C:\Users\Merlionfire\Documents\FPGA_Project\test_ddr_mgr\ISE\proj\test_ddr_mgr
 LICENSE=WebPack
 USER_INFO=__0_0_0

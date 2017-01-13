@@ -1,5 +1,5 @@
 The following files were generated for 'ila_pro_0' in directory
-/home/cct/FPGA_Project/test_ddr_mgr/ISE/proj/test_ddr_mgr/_ngo/cs_ila_pro_0/
+C:\Users\Merlionfire\Documents\FPGA_Project\test_ddr_mgr\ISE\proj\test_ddr_mgr\_ngo\cs_ila_pro_0\
 
 XCO file generator:
    Generate an XCO file for compatibility with legacy flows.

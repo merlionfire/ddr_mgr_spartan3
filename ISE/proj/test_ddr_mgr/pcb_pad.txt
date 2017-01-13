@@ -1,7 +1,7 @@
-Release 14.7 - par P.20131013 (lin64)
+Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Dec  4 00:39:59 2016
+Thu Jan 12 19:04:23 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -391,7 +391,7 @@ Pinout by Pin Number:
 |R17       |           |DIFFMI_NDT|IP_L12P_1             |UNUSED   |             |1             |          |         |           |         |         |          |           |                |
 |R18       |           |DIFFSI_NDT|IP_L12N_1/VREF_1      |UNUSED   |             |1             |          |         |           |         |         |          |           |                |
 |R19       |           |DIFFMLR   |IO_L17P_1/A2          |UNUSED   |             |1             |          |         |           |         |         |          |           |                |
-|R20       |LED<0>     |IOB       |IO_L13P_1             |OUTPUT   |LVCMOS33     |1             |8         |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|R20       |LED<0>     |IOB       |IO_L13P_1             |OUTPUT   |LVCMOS33     |1             |8         |SLOW     |NONE**     |         |         |LOCATED   |YES        |NONE            |
 |R21       |           |DIFFMLR   |IO_L14P_1             |UNUSED   |             |1             |          |         |           |         |         |          |           |                |
 |R22       |           |DIFFSLR   |IO_L14N_1             |UNUSED   |             |1             |          |         |           |         |         |          |           |                |
 |T1        |           |DIFFMLR   |IO_L36P_3/VREF_3      |         |             |3             |          |         |           |         |0.90     |          |           |                |

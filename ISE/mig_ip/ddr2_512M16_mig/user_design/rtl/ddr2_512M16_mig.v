@@ -96,6 +96,7 @@ module ddr2_512M16_mig
 
    wire       wait_200us;
    wire       clk_0;
+   wire       clk_180;
    wire       clk90_0;
    wire       sys_rst;
    wire       sys_rst90;
@@ -126,6 +127,9 @@ module ddr2_512M16_mig
   assign sys_clkb = 1'b0;
   assign sys_clk = 1'b0;
 
+   
+  //assign  vio_out_dqs_en = 1'b1 ; 
+  //assign  vio_out_dqs    = 5'b1_0111 ;  
 ddr2_512M16_mig_top_0 top_00
   (
      .ddr2_dq                   (cntrl0_ddr2_dq),
@@ -162,6 +166,7 @@ ddr2_512M16_mig_top_0 top_00
      .ddr2_ck_n                 (cntrl0_ddr2_ck_n),
      .wait_200us                (wait_200us),
      .clk_int                   (clk_0),
+     .clk180_int                (clk_180),
      .clk90_int                 (clk90_0),
      .sys_rst                   (sys_rst),
      .sys_rst90                 (sys_rst90),
@@ -189,6 +194,7 @@ ddr2_512M16_mig_infrastructure_top infrastructure_top0
    .sys_rst_val            (sys_rst),
    .sys_rst90_val          (sys_rst90),
    .clk_int_val            (clk_0),
+   .clk180_int_val         (clk_180),
    .clk90_int_val          (clk90_0),
    .sys_rst180_val         (sys_rst180),
    .dbg_phase_cnt          (dbg_phase_cnt),

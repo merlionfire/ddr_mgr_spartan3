@@ -8,109 +8,312 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v&quot; line 62
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/Picoblaze_verilog/kcpsm3.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/lib/btn_filter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/lib/debounce.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/lib/glitch_free.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/lib/io_filter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/lib/pulse_gen.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/lib/synchro.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_ctl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_cal_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_clk_dcm.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_0.v&quot; line 62
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v&quot; line 55
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_controller_iobs_0.v&quot; line 55
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v&quot; line 57
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_0.v&quot; line 57
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v&quot; line 56
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_path_iobs_0.v&quot; line 56
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v</arg>&quot; Line <arg fmt="%d" index="2">58</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v&quot; line 58
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v</arg>&quot; Line <arg fmt="%d" index="2">58</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_0.v&quot; line 58
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v&quot; line 56
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_read_controller_0.v&quot; line 56
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v&quot; line 56
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_data_write_0.v&quot; line 56
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v&quot; line 54
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_dqs_delay.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_fifo_0_wr_en_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_fifo_1_wr_en_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_iobs_0.v&quot; line 54
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v&quot; line 56
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_infrastructure_top.v&quot; line 56
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v&quot; line 55
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_iobs_0.v&quot; line 55
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v&quot; line 57
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0.v&quot; line 57
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v&quot; line 56
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0_changed.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0_changed.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_0_changed.v&quot; line 57
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr2_mgr.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/src/ddr2_mgr.v</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr2_mgr.v&quot; line 68
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_1_changed.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_1_changed.v</arg>&quot; Line <arg fmt="%d" index="2">57</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_ram8d_1_changed.v&quot; line 57
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr_mgr_main.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">3</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr_mgr_main.v&quot; line 3
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_rd_gray_cntr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dm_iob.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dq_iob.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_s3_dqs_iob.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_tap_dly.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Include file found: &apos;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/../rtl/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_top_0.v&quot; line 56
 </arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/cct/FPGA_Project/test_ddr_mgr/src/pcb.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/cct/FPGA_Project/test_ddr_mgr/src/pcb.v</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/cct/FPGA_Project/test_ddr_mgr/src/ddr2_512M16_mig_parameters_0.v&apos; in file &quot;/home/cct/FPGA_Project/test_ddr_mgr/src/pcb.v&quot; line 63
-</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_wr_gray_cntr.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/picocode/picocode.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/ddr2_mgr.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/ddr2_mgr.v</arg>&quot; Line <arg fmt="%d" index="2">68</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ddr2_512M16_mig_parameters_0.v&quot;.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/ddr_mgr_main.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/ddr_mgr_main.v</arg>&quot; Line <arg fmt="%d" index="2">3</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ddr2_512M16_mig_parameters_0.v&quot;.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/pcb.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/pcb.v</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;ddr2_512M16_mig_parameters_0.v&quot;.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/mig_ip/ddr2_512M16_mig/user_design/rtl/ddr2_512M16_mig_parameters_0.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/src/picoblaze.v&quot; into library work</arg>
 </msg>
 
 </messages>

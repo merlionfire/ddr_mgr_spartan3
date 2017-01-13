@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.7
 //  \   \         Application : xaw2verilog
 //  /   /         Filename : clock_gen.v
-// /___/   /\     Timestamp : 11/07/2016 07:24:04
+// /___/   /\     Timestamp : 12/23/2016 22:37:01
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: xaw2verilog -intstyle /home/cct/FPGA_Project/test_ddr_mgr/ISE/DCM_IP/clock_gen.xaw -st clock_gen.v
+//Command: xaw2verilog -intstyle C:/Users/Merlionfire/Documents/FPGA_Project/test_ddr_mgr/ISE/DCM_IP/clock_gen.xaw -st clock_gen.v
 //Design Name: clock_gen
 //Device: xc3s700an-4fgg484
 //

@@ -377,7 +377,11 @@ module ddr2_mgr(
   */
 
    always @( posedge clk90 ) begin    
-      data_output_r   <= write_data_0 ; 
+      if ( wr_data_1_en ) begin 
+         data_output_r   <= write_data_1 ; 
+      end else begin 
+         data_output_r   <= write_data_0 ; 
+      end
    end
    //---------------------------------------
    //   Output interface signals  

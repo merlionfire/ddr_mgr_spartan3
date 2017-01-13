@@ -58,6 +58,7 @@
 module ddr2_512M16_mig_data_path_iobs_0
   (
    input                             clk,
+   input                             clk180,
    input                             clk90,
    input                             dqs_reset,
    input                             dqs_enable,
@@ -112,6 +113,7 @@ module ddr2_512M16_mig_data_path_iobs_0
          ddr2_512M16_mig_s3_dqs_iob  s3_dqs_iob_inst
      (
       .clk            (clk),
+      .clk180         (clk180),
       .ddr_dqs_reset  (dqs_reset),
       .ddr_dqs_enable (dqs_enable),
       .ddr_dqs        (ddr_dqs[dqs_i]),

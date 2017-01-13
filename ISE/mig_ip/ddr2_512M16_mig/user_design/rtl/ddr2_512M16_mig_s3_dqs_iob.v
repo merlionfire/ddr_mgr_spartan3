@@ -60,6 +60,7 @@
 module ddr2_512M16_mig_s3_dqs_iob
   (
    input            clk,
+   input            clk180,
    input            ddr_dqs_reset,
    input            ddr_dqs_enable,
    inout            ddr_dqs,
@@ -75,16 +76,18 @@ module ddr2_512M16_mig_s3_dqs_iob
    wire ddr_dqs_enable_b;
    wire data1;
 
+   wire  clk_buf ; 
    assign ddr_dqs_enable_b = ~ddr_dqs_enable;
    assign data1 = (ddr_dqs_reset == 1'b1) ? 1'b0 : 1'b1;
 
-
+`ifdef 0
   (* IOB = "FORCE" *) FD  U1
       (
        .D(ddr_dqs_enable_b),
        .Q(ddr_dqs_enable1),
        .C(clk)
        )/* synthesis syn_useioff = 1 */;
+
 
 
    FDDRRSE U2 (
@@ -97,8 +100,31 @@ module ddr2_512M16_mig_s3_dqs_iob
              .R(GND),
              .S(GND)
              );
-
-
+`else 
+ /*
+  BUFCF b1 (
+     .I ( clk ),
+     .O  (clk_buf ) 
+  ); 	  
+*/
+  (* IOB = "FORCE" *) FD  U1
+      (
+       .D(ddr_dqs_enable_b),
+       .Q(ddr_dqs_enable1),
+       .C(clk)
+       )/* synthesis syn_useioff = 1 */;
+		 
+   FDDRRSE U2 (
+             .Q(dqs_q),
+             .C0(clk),
+             .C1(clk180),
+             .CE(VCC),
+             .D0(data1),
+             .D1(GND),
+             .R(GND),
+             .S(GND)
+             );
+`endif
 
 //***********************************************************************
 //IO buffer for dqs signal. Allows for distribution of dqsto the data(DQ) loads.

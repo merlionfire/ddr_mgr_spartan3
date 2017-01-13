@@ -66,6 +66,7 @@ module ddr2_512M16_mig_infrastructure_top
    output       sys_rst180_val,
    output reg   wait_200us_rout,
    output       clk_int_val,
+   output       clk180_int_val,
    output       clk90_int_val,
    // debug signals
    output [4:0] dbg_phase_cnt,
@@ -78,6 +79,7 @@ module ddr2_512M16_mig_infrastructure_top
 
    wire       user_rst;
    wire       clk_int;
+	wire       clk180_int;
    wire       clk90_int;
    wire       dcm_lock;
    wire       sys_clk_ibuf;
@@ -136,6 +138,7 @@ module ddr2_512M16_mig_infrastructure_top
    endgenerate
 
    assign clk_int_val        = clk_int;
+   assign clk180_int_val     = clk180_int;
    assign clk90_int_val      = clk90_int;
    assign sys_rst_val        = sys_rst;
    assign sys_rst90_val      = sys_rst90;
@@ -237,6 +240,7 @@ module ddr2_512M16_mig_infrastructure_top
       .input_clk   (sys_clk_ibuf),
       .rst         (user_rst),
       .clk         (clk_int),
+      .clk180      (clk180_int),
       .clk90       (clk90_int),
       .dcm_lock    (dcm_lock)
       );

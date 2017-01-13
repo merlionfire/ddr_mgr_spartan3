@@ -60,6 +60,7 @@
 module ddr2_512M16_mig_iobs_0
   (
    input                              clk,
+   input                              clk180,
    input                              clk90,
    input                              ddr_rasb_cntrl,
    input                              ddr_casb_cntrl,
@@ -133,6 +134,7 @@ module ddr2_512M16_mig_iobs_0
    ddr2_512M16_mig_data_path_iobs_0 datapath_iobs0
      (
       .clk                (clk),
+      .clk180             (clk180),
       .clk90              (clk90),
       .dqs_reset          (dqs_reset),
       .dqs_enable         (dqs_enable),

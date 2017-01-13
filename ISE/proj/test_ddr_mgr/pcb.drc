@@ -1,7 +1,7 @@
-Release 14.7 Drc P.20131013 (lin64)
+Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Dec  4 00:40:07 2016
+Thu Jan 12 19:04:34 2017
 
 drc -z pcb.ncd pcb.pcf
 
@@ -9,11 +9,7 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net icon_control0<13> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0> is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0> is
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -21,7 +17,11 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<1> is
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col0<0> is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   ddr_mgr_main_inst/u_mem_controller/top_00/data_path0/dqs_delayed_col1<0> is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal <SW<1>_IBUF> is incomplete. The signal
@@ -147,6 +147,66 @@ WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
    AM[1].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
    block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[16].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[16].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[16].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[16].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[15].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[15].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[15].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[15].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[14].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[14].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[14].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[14].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[13].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[13].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[13].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[13].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[12].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[12].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB2> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[12].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB3> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
+   AM[12].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
+WARNING:PhysDesignRules:812 - Dangling pin <DOB0> on
+   block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
    AM[11].U_BRAM/ram_rt1_s1_s4_if.ram_rt1_s1_s4_i>:<RAMB16BWE_RAMB16BWE>.
 WARNING:PhysDesignRules:812 - Dangling pin <DOB1> on
    block:<U_ila_pro_0/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BR
@@ -229,5 +289,5 @@ WARNING:PhysDesignRules:812 - Dangling pin <DIA14> on
 WARNING:PhysDesignRules:812 - Dangling pin <DIA15> on
    block:<ddr_mgr_main_inst/picoblaze_inst/picocode_inst/ram_1024_x_18>:<RAMB16B
    WE_RAMB16BWE>.
-DRC detected 0 errors and 73 warnings.  Please see the previously displayed
+DRC detected 0 errors and 93 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

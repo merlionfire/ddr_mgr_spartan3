@@ -219,6 +219,12 @@ CONSTANT BYTE_1         , 86  ;
 CONSTANT BYTE_2         , CB  ;
 CONSTANT BYTE_3         , FD  ;
 
+CONSTANT BYTE_4         , 72  ;
+CONSTANT BYTE_5         , e5  ;
+CONSTANT BYTE_6         , 6c  ;
+CONSTANT BYTE_7         , 93  ;
+
+
 CONSTANT EXTRA_BYTE_0   , EF  ;
 CONSTANT EXTRA_BYTE_1   , 7C  ;
 CONSTANT EXTRA_BYTE_2   , 36  ;
@@ -366,19 +372,29 @@ CONSTANT PRE_MAX_ROW_1    ,  06 ;
                   ; Set btyes for 4 words of data. 
                   LOAD     s0,   BYTE_0
                   OUTPUT   s0,   reg_ddr2_data0_7_0
-                  OUTPUT   s0,   reg_ddr2_data1_7_0
 
                   LOAD     s0,   BYTE_1
                   OUTPUT   s0,   reg_ddr2_data0_15_8
-                  OUTPUT   s0,   reg_ddr2_data1_15_8
 
                   LOAD     s0,   BYTE_2
                   OUTPUT   s0,   reg_ddr2_data0_23_16
-                  OUTPUT   s0,   reg_ddr2_data1_23_16
 
                   LOAD     s0,   BYTE_3
                   OUTPUT   s0,   reg_ddr2_data0_31_24
+
+
+                  LOAD     s0,   BYTE_4
+                  OUTPUT   s0,   reg_ddr2_data1_7_0
+
+                  LOAD     s0,   BYTE_5
+                  OUTPUT   s0,   reg_ddr2_data1_15_8
+
+                  LOAD     s0,   BYTE_6
+                  OUTPUT   s0,   reg_ddr2_data1_23_16
+
+                  LOAD     s0,   BYTE_7
                   OUTPUT   s0,   reg_ddr2_data1_31_24
+
                   RETURN
 
       set_extra_data_reg:
